@@ -1,7 +1,10 @@
 /**********************************************************************
  * main.js
+ * behaviours for avm landingpage
+ * @author: Sven Kesting <sven@v26.org>
+ * @author: Elina Sundukova <elina.sundukova@thinkmoto.de>
+ * @dependencies: jQuery
  *********************************************************************/
-
 
 // global landingpage object
 var avmlp = {
@@ -185,6 +188,15 @@ jQuery( document ).ready(function( $ ) {
     } else {
         avmlp.debug = false;
     }
+
+    // clickable bullets in Navigation
+    $("#primary li").on("click", function(e) {
+        e.preventDefault();
+        var href = $(this).children("a").attr("href");
+        if (href) {
+            window.location = href;
+        }
+    });
 
     avmlp.resizeSections();
 
