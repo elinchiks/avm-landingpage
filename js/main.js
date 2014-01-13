@@ -51,7 +51,7 @@ var avmlp = {
             showFullLinks : false
         });
     },
-  
+
 
     resizeSections: function() {
         var h = jQuery("html").height();
@@ -131,7 +131,7 @@ var avmlp = {
     },
 
     setViewportContent: function() {
-        var $currentSlide = $(this.$slides[this.currentSectionIndex]);
+        var $currentSlide = $( this.$slides[this.currentSectionIndex] );
 
         this.$viewport.find("header").html(
             $currentSlide.find("header").html()
@@ -142,7 +142,7 @@ var avmlp = {
         this.$viewport.find("p").html(
             $currentSlide.find("p").html()
         );
-
+        // Start
         if (this.currentSectionIndex === 0) {
             this.$viewport.find(".logo-fritz-color").show();
             this.$viewport.find(".logo-fritz").hide();
@@ -151,11 +151,16 @@ var avmlp = {
             this.$viewport.find(".logo-fritz").show();
         }
 
+        // Look Inside
         if(this.currentSectionIndex === 1) {
+            this.$viewport.find("#packshot").hide();
             this.$viewport.append($currentSlide.find("#detailed-view"));
+            console.log($currentSlide.find("#detailed-view"));
             this.initInsideView();
         } else {
-            this.$viewport.remove("#detailed-view");
+            console.log("removing slider");
+            this.$viewport.find("#packshot").show();
+            this.$viewport.find("#detailed-view").remove();
         }
 
         if (this.debug) {
@@ -206,7 +211,7 @@ jQuery( document ).ready(function( $ ) {
     });
 
     avmlp.resizeSections();
-
+    avmlp.initInsideView();
     // initialise view port - all slides will displayed in there
     avmlp.initViewPort();
 
@@ -214,7 +219,7 @@ jQuery( document ).ready(function( $ ) {
     avmlp.setNavigationState();
 
     avmlp.initAnimationImages();
-  
+
 
 
 });
