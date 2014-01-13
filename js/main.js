@@ -28,23 +28,26 @@ var avmlp = {
     $viewport: null,
 
     // product animation
-    aniStart: 1200,
+    aniStart: 1800,
     aniStep: 1,
     aniTargetStep: 1,
     aniImages: [],
     aniTotalImages: 250,
-    aniImagesLowSrcPrefix: ".frames/400px/",
-    aniImagesHiSrcPrefix: ".frames/960px/",
-
+    aniImagesLowSrcPrefix: "./frames/320px/",
+    aniImagesHighSrcPrefix: "./frames/960px/",
+    aniTimeoutID: null,
 
     // methods
     initAnimationImages: function() {
         for(var i = 0; i < this.aniTotalImages; i++) { // loop for each image in sequence
-            this.aniImages[i] =  new Image(); // add image object to array
-            this.aniImages[i].src = "./frames/400px/comp_" + this.pad(i, 4) + ".png";
+            this.aniImages[i] = {
+                "low": new Image(),
+                "high": new Image(),
+                "highSrc": this.aniImagesHighSrcPrefix + "comp_" + this.pad(i, 4) + ".png"
+            };
+            this.aniImages[i].low.src = this.aniImagesLowSrcPrefix + "comp_" + this.pad(i, 4) + ".png";
         }
     },
-
 
     initInsideView :function(){
         $('#detailed-view').beforeAfter({
@@ -54,7 +57,6 @@ var avmlp = {
             showFullLinks : false
         });
     },
-
 
     resizeSections: function() {
         var h = jQuery("html").height();
@@ -179,10 +181,10 @@ var avmlp = {
             "left": $(sectionId).find("header").css("left")
         });
 
-        this.$viewport.find("#packshot").css({
-            "top": $(sectionId).find(".packshot").css("top"),
-            "left": $(sectionId).find(".packshot").css("left")
-        });
+        // this.$viewport.find("#packshot").css({
+        //     "top": $(sectionId).find(".packshot").css("top"),
+        //     "left": $(sectionId).find(".packshot").css("left")
+        // });
 
         this.$viewport.find("p").css({
             "bottom": $(sectionId).find("p").css("bottom"),
@@ -199,14 +201,22 @@ var avmlp = {
 
     // change product animation image
     changeFrame: function() {
-        console.log("changeFrame")
         // if the image exists in the array
         if(this.aniImages.length > 0 && this.aniImages[this.aniStep]) {
-            if(this.aniImages[this.aniStep].complete) { // if the image is downloaded and ready
-                if($('#packshot').attr('src') !== this.aniImages[this.aniStep].src) {
-                    // change the source of our placeholder image
-                    $('#packshot').attr('src',this.aniImages[this.aniStep].src);
+            var aniImage = this.aniImages[this.aniStep];
 
+            if(aniImage.low.complete) { // if the image is downloaded and ready
+                if($('#packshot').attr('src') !== aniImage.low.src &&
+                    $('#packshot').attr('src') !== aniImage.highSrc ) {
+                    window.clearTimeout(this.aniTimeoutID);
+
+                    // load hi-quality src
+                    this.aniTimeoutID = window.setTimeout(function() {
+                        $('#packshot').attr('src', aniImage.highSrc);
+                    }, 100);
+
+                    // change the source of our placeholder image
+                    $('#packshot').attr('src', aniImage.low.src);
                 }
             }
         }
@@ -286,10 +296,10 @@ var requestAnimFrame = (function() {
     var t = $(window).scrollTop();
     if (t > avmlp.aniStart * avmlp.zoom) {
 
-        avmlp.aniTargetStep = Math.ceil ( ( t - (avmlp.aniStart * avmlp.zoom ) ) / 12 ); // what frame to animate to
+        avmlp.aniTargetStep = Math.ceil ( ( t - ( avmlp.aniStart * avmlp.zoom ) ) / 12 ); // what frame to animate to
         if( avmlp.aniTargetStep !== avmlp.aniStep ) {
             // increment the step until we arrive at the target step
-            avmlp.aniStep += Math.ceil((avmlp.aniTargetStep - avmlp.aniStep) / 5);
+            avmlp.aniStep += Math.ceil(( avmlp.aniTargetStep - avmlp.aniStep) / 5);
         }
         avmlp.changeFrame();
     }
