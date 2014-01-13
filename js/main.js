@@ -39,6 +39,17 @@ var avmlp = {
         }
     },
 
+
+    initInsideView :function(){
+        $('#detailed-view').beforeAfter({
+            animateIntro : true,
+            introDelay : 2000,
+            introDuration : 300,
+            showFullLinks : false
+        });
+    },
+  
+
     resizeSections: function() {
         var h = jQuery("html").height();
         var w = jQuery("html").width();
@@ -184,6 +195,7 @@ jQuery( document ).ready(function( $ ) {
     avmlp.setNavigationState();
 
     avmlp.initAnimationImages();
+    avmlp.initInsideView();
 
 
 });

@@ -54,10 +54,13 @@ template {
 html {
   font-family: sans-serif;
   /* 1 */
+
   -ms-text-size-adjust: 100%;
   /* 2 */
+
   -webkit-text-size-adjust: 100%;
   /* 2 */
+
 }
 /**
  * Remove default margin.
@@ -218,8 +221,10 @@ fieldset {
 legend {
   border: 0;
   /* 1 */
+
   padding: 0;
   /* 2 */
+
 }
 /**
  * 1. Correct font family not being inherited in all browsers.
@@ -232,10 +237,13 @@ select,
 textarea {
   font-family: inherit;
   /* 1 */
+
   font-size: 100%;
   /* 2 */
+
   margin: 0;
   /* 3 */
+
 }
 /**
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
@@ -268,8 +276,10 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
+
   cursor: pointer;
   /* 3 */
+
 }
 /**
  * Re-set default cursor for disabled elements.
@@ -286,8 +296,10 @@ input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
   /* 1 */
+
   padding: 0;
   /* 2 */
+
 }
 /**
  * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
@@ -297,9 +309,11 @@ input[type="radio"] {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
+
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   /* 2 */
+
   box-sizing: content-box;
 }
 /**
@@ -325,8 +339,10 @@ input::-moz-focus-inner {
 textarea {
   overflow: auto;
   /* 1 */
+
   vertical-align: top;
   /* 2 */
+
 }
 /* ==========================================================================
    Tables
@@ -342,19 +358,19 @@ table {
   font-family: 'AVMMetaOT-CondBlack';
   font-style: normal;
   font-weight: normal;
-  src: url("fonts/AVMMetaOTCond-Black.otf") format("opentype");
+  src: url("./fonts/AVMMetaOTCond-Black.otf") format("opentype");
 }
 @font-face {
   font-family: 'AVMMetaOT-CondBook';
   font-style: normal;
   font-weight: normal;
-  src: url("fonts/AVMMetaOTCond-Book.otf") format("opentype");
+  src: url("./fonts/AVMMetaOTCond-Book.otf") format("opentype");
 }
 @font-face {
   font-family: 'AVMMetaOT-Book';
   font-style: normal;
   font-weight: normal;
-  src: url("fonts/AVMMetaOT-Book.otf") format("opentype");
+  src: url("./fonts/AVMMetaOT-Book.otf") format("opentype");
 }
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 /*
@@ -601,6 +617,17 @@ TODO: Remove me before deployment */
   padding: 5px;
   background: rgba(255, 255, 255, 0.4);
 }
+#detailed-view {
+  position: relative;
+  width: 940px;
+  height: 360px;
+  float: left;
+  overflow: hidden;
+  transition: none;
+}
+#detailed-view * {
+  transition: none;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -658,8 +685,10 @@ TODO: Remove me before deployment */
 .clearfix:after {
   content: " ";
   /* 1 */
+
   display: table;
   /* 2 */
+
 }
 .clearfix:after {
   clear: both;
@@ -684,6 +713,7 @@ TODO: Remove me before deployment */
     background: transparent !important;
     color: #000 !important;
     /* Black prints faster: h5bp.com/s */
+  
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -698,8 +728,8 @@ TODO: Remove me before deployment */
     content: " (" attr(title) ")";
   }
   /*
-     * Don't show links for images, or javascript/internal links
-     */
+       * Don't show links for images, or javascript/internal links
+       */
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
@@ -712,6 +742,7 @@ TODO: Remove me before deployment */
   thead {
     display: table-header-group;
     /* h5bp.com/t */
+  
   }
   tr,
   img {
