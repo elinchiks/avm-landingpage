@@ -372,6 +372,240 @@ table {
   font-weight: normal;
   src: url("./fonts/AVMMetaOT-Book.otf") format("opentype");
 }
+.bar-1 {
+  -webkit-transition-delay: 200ms !important;
+  -moz-transition-delay: 200ms !important;
+  -o-transition-delay: 200ms !important;
+  transition-delay: 200ms !important;
+}
+.bar-2 {
+  -webkit-transition-delay: 235ms !important;
+  -moz-transition-delay: 235ms !important;
+  -o-transition-delay: 235ms !important;
+  transition-delay: 235ms !important;
+}
+.bar-3 {
+  -webkit-transition-delay: 270ms !important;
+  -moz-transition-delay: 270ms !important;
+  -o-transition-delay: 270ms !important;
+  transition-delay: 270ms !important;
+}
+.bar-4 {
+  -webkit-transition-delay: 275ms !important;
+  -moz-transition-delay: 275ms !important;
+  -o-transition-delay: 275ms !important;
+  transition-delay: 275ms !important;
+}
+.bar-5 {
+  -webkit-transition-delay: 300ms !important;
+  -moz-transition-delay: 300ms !important;
+  -o-transition-delay: 300ms !important;
+  transition-delay: 300ms !important;
+}
+.bar-6 {
+  -webkit-transition-delay: 325ms !important;
+  -moz-transition-delay: 325ms !important;
+  -o-transition-delay: 325ms !important;
+  transition-delay: 325ms !important;
+}
+.bar-7 {
+  -webkit-transition-delay: 350ms !important;
+  -moz-transition-delay: 350ms !important;
+  -o-transition-delay: 350ms !important;
+  transition-delay: 350ms !important;
+}
+.bar-8 {
+  -webkit-transition-delay: 375ms !important;
+  -moz-transition-delay: 375ms !important;
+  -o-transition-delay: 375ms !important;
+  transition-delay: 375ms !important;
+}
+.bar-9 {
+  -webkit-transition-delay: 400ms !important;
+  -moz-transition-delay: 400ms !important;
+  -o-transition-delay: 400ms !important;
+  transition-delay: 400ms !important;
+}
+.bar-10 {
+  -webkit-transition-delay: 425ms !important;
+  -moz-transition-delay: 425ms !important;
+  -o-transition-delay: 425ms !important;
+  transition-delay: 425ms !important;
+}
+.bar-11 {
+  -webkit-transition-delay: 450ms !important;
+  -moz-transition-delay: 450ms !important;
+  -o-transition-delay: 450ms !important;
+  transition-delay: 450ms !important;
+}
+.bar-12 {
+  -webkit-transition-delay: 475ms !important;
+  -moz-transition-delay: 475ms !important;
+  -o-transition-delay: 475ms !important;
+  transition-delay: 475ms !important;
+}
+.bar-13 {
+  -webkit-transition-delay: 500ms !important;
+  -moz-transition-delay: 500ms !important;
+  -o-transition-delay: 500ms !important;
+  transition-delay: 500ms !important;
+}
+.bar-14 {
+  -webkit-transition-delay: 525ms !important;
+  -moz-transition-delay: 525ms !important;
+  -o-transition-delay: 525ms !important;
+  transition-delay: 525ms !important;
+}
+.bar-15 {
+  -webkit-transition-delay: 550ms !important;
+  -moz-transition-delay: 550ms !important;
+  -o-transition-delay: 550ms !important;
+  transition-delay: 550ms !important;
+}
+.bar-16 {
+  -webkit-transition-delay: 575ms !important;
+  -moz-transition-delay: 575ms !important;
+  -o-transition-delay: 575ms !important;
+  transition-delay: 575ms !important;
+}
+.bar-17 {
+  -webkit-transition-delay: 600ms !important;
+  -moz-transition-delay: 600ms !important;
+  -o-transition-delay: 600ms !important;
+  transition-delay: 600ms !important;
+}
+.bar-18 {
+  -webkit-transition-delay: 625ms !important;
+  -moz-transition-delay: 625ms !important;
+  -o-transition-delay: 625ms !important;
+  transition-delay: 625ms !important;
+}
+.bar-19 {
+  -webkit-transition-delay: 650ms !important;
+  -moz-transition-delay: 650ms !important;
+  -o-transition-delay: 650ms !important;
+  transition-delay: 650ms !important;
+}
+.bar-20 {
+  -webkit-transition-delay: 675ms !important;
+  -moz-transition-delay: 675ms !important;
+  -o-transition-delay: 675ms !important;
+  transition-delay: 675ms !important;
+}
+.bar-21 {
+  -webkit-transition-delay: 700ms !important;
+  -moz-transition-delay: 700ms !important;
+  -o-transition-delay: 700ms !important;
+  transition-delay: 700ms !important;
+}
+.bar-22 {
+  -webkit-transition-delay: 725ms !important;
+  -moz-transition-delay: 725ms !important;
+  -o-transition-delay: 725ms !important;
+  transition-delay: 725ms !important;
+}
+.bar-23 {
+  -webkit-transition-delay: 750ms !important;
+  -moz-transition-delay: 750ms !important;
+  -o-transition-delay: 750ms !important;
+  transition-delay: 750ms !important;
+}
+.bar-24 {
+  -webkit-transition-delay: 775ms !important;
+  -moz-transition-delay: 775ms !important;
+  -o-transition-delay: 775ms !important;
+  transition-delay: 775ms !important;
+}
+.bar-25 {
+  -webkit-transition-delay: 800ms !important;
+  -moz-transition-delay: 800ms !important;
+  -o-transition-delay: 800ms !important;
+  transition-delay: 800ms !important;
+}
+.bar-26 {
+  -webkit-transition-delay: 825ms !important;
+  -moz-transition-delay: 825ms !important;
+  -o-transition-delay: 825ms !important;
+  transition-delay: 825ms !important;
+}
+.bar-27 {
+  -webkit-transition-delay: 850ms !important;
+  -moz-transition-delay: 850ms !important;
+  -o-transition-delay: 850ms !important;
+  transition-delay: 850ms !important;
+}
+.bar-28 {
+  -webkit-transition-delay: 875ms !important;
+  -moz-transition-delay: 875ms !important;
+  -o-transition-delay: 875ms !important;
+  transition-delay: 875ms !important;
+}
+.bar-29 {
+  -webkit-transition-delay: 900ms !important;
+  -moz-transition-delay: 900ms !important;
+  -o-transition-delay: 900ms !important;
+  transition-delay: 900ms !important;
+}
+.bar-30 {
+  -webkit-transition-delay: 925ms !important;
+  -moz-transition-delay: 925ms !important;
+  -o-transition-delay: 925ms !important;
+  transition-delay: 925ms !important;
+}
+.bar-28 {
+  -webkit-transition-delay: 875ms !important;
+  -moz-transition-delay: 875ms !important;
+  -o-transition-delay: 875ms !important;
+  transition-delay: 875ms !important;
+}
+.bar-29 {
+  -webkit-transition-delay: 900ms !important;
+  -moz-transition-delay: 900ms !important;
+  -o-transition-delay: 900ms !important;
+  transition-delay: 900ms !important;
+}
+.bar-30 {
+  -webkit-transition-delay: 925ms !important;
+  -moz-transition-delay: 925ms !important;
+  -o-transition-delay: 925ms !important;
+  transition-delay: 925ms !important;
+}
+.bar-31 {
+  -webkit-transition-delay: 950ms !important;
+  -moz-transition-delay: 950ms !important;
+  -o-transition-delay: 950ms !important;
+  transition-delay: 950ms !important;
+}
+.bar-32 {
+  -webkit-transition-delay: 975ms !important;
+  -moz-transition-delay: 975ms !important;
+  -o-transition-delay: 975ms !important;
+  transition-delay: 975ms !important;
+}
+.bar-33 {
+  -webkit-transition-delay: 1000ms !important;
+  -moz-transition-delay: 1000ms !important;
+  -o-transition-delay: 1000ms !important;
+  transition-delay: 1000ms !important;
+}
+.bar-34 {
+  -webkit-transition-delay: 1025ms !important;
+  -moz-transition-delay: 1025ms !important;
+  -o-transition-delay: 1025ms !important;
+  transition-delay: 1025ms !important;
+}
+.bar-35 {
+  -webkit-transition-delay: 1050ms !important;
+  -moz-transition-delay: 1050ms !important;
+  -o-transition-delay: 1050ms !important;
+  transition-delay: 1050ms !important;
+}
+.bar-36 {
+  -webkit-transition-delay: 1075ms !important;
+  -moz-transition-delay: 1075ms !important;
+  -o-transition-delay: 1075ms !important;
+  transition-delay: 1075ms !important;
+}
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 /*
  * What follows is the result of much research on cross-browser styling.
@@ -603,8 +837,6 @@ section .arrow-next:hover,
 #usb3 p {
   bottom: 100px;
 }
-/* --- DEBUG ---
-TODO: Remove me before deployment */
 #debug-bar {
   position: fixed;
   right: 0;
@@ -628,6 +860,24 @@ TODO: Remove me before deployment */
 #detailed-view * {
   transition: none;
 }
+.white-bars b,
+.blue-bars b {
+  width: 9px;
+  height: 30px;
+  display: inline-block;
+  background: white;
+  margin-right: 3px;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transform: translateZ(0);
+}
+.blue-bars b {
+  background: #87bade;
+}
+/* --- DEBUG ---
+TODO: Remove me before deployment */
 /* ==========================================================================
    Helper classes
    ========================================================================== */

@@ -275,10 +275,6 @@ section,
         bottom: 100px;
     }
 }
-
-
-/* --- DEBUG ---
-TODO: Remove me before deployment */
 #debug-bar {
     position: fixed;
     right: 0;
@@ -303,6 +299,25 @@ TODO: Remove me before deployment */
         transition:none;
     }
 }
+
+.white-bars b, .blue-bars b {
+    width:9px;
+    height:30px;
+    display:inline-block;
+    background: white;
+    margin-right:3px;
+    .transition(opacity 0.3s ease-in-out);
+    -webkit-transform: translateZ(0);
+
+}
+
+.blue-bars b {
+    background: #87bade;
+}
+
+/* --- DEBUG ---
+TODO: Remove me before deployment */
+
 
 
 /* ==========================================================================

@@ -1,4 +1,16 @@
 
+.transition(@props) {
+	-webkit-transition: @props;
+	-moz-transition: @props;
+	-o-transition: @props;
+	transition: @props;
+}
+.transition-delay(@time) {
+	-webkit-transition-delay: @time;
+	-moz-transition-delay: @time;
+	-o-transition-delay: @time;
+	transition-delay: @time;
+}
 .gradient-blue(){
 	background: #002c5a; // Old browsers
 	background: -moz-radial-gradient(center, ellipse cover,  #026fb6 0%, #002c5a 50%); // FF3.6+

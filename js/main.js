@@ -155,7 +155,7 @@ var avmlp = {
             this.$viewport.append($currentSlide.find("#detailed-view"));
             this.initInsideView();
         } else {
-            this.$viewport.remove("#detailed-view");
+            this.$viewport.find("#detailed-view").remove();
         }
 
         if (this.debug) {
