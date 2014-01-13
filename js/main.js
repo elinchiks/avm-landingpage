@@ -153,14 +153,19 @@ var avmlp = {
 
         // Look Inside
         if(this.currentSectionIndex === 1) {
+            if (!this.$viewport.find("#detailed-view").length) {
+                // first run - init before/after slider
+                this.$viewport.append($currentSlide.find("#detailed-view"));
+                this.initInsideView();
+            } else {
+                // just show the slider
+                this.$viewport.find("#detailed-view").show();
+            }
             this.$viewport.find("#packshot").hide();
-            this.$viewport.append($currentSlide.find("#detailed-view"));
-            console.log($currentSlide.find("#detailed-view"));
-            this.initInsideView();
+
         } else {
-            console.log("removing slider");
+            this.$viewport.find("#detailed-view").hide();
             this.$viewport.find("#packshot").show();
-            this.$viewport.find("#detailed-view").remove();
         }
 
         if (this.debug) {
@@ -211,7 +216,7 @@ jQuery( document ).ready(function( $ ) {
     });
 
     avmlp.resizeSections();
-    avmlp.initInsideView();
+    // avmlp.initInsideView();
     // initialise view port - all slides will displayed in there
     avmlp.initViewPort();
 
