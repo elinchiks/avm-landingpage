@@ -87,7 +87,6 @@ body {
 }
 
 // Navigation
-
 nav#primary {
     z-index: 20;
     position: fixed;
@@ -132,8 +131,6 @@ nav#primary {
 
     }
 }
-
-// Viewport
 
 // Section Defaults
 section,
@@ -257,7 +254,7 @@ section,
 }
 
 // section 2 - interior
-#innenleben {
+#heimnetz {
     // background-image: url("../images/bg-layout-02.jpg");
     p {
         bottom: 120px;
@@ -268,10 +265,7 @@ section,
 #wlan {
     // background-image: url("../images/bg-layout-03.jpg");
     .packshot {
-        width: 120%;
-        height: 120%;
         top: 580px;
-        left: -120px;
     }
 }
 
@@ -285,6 +279,15 @@ section,
         bottom: 100px;
     }
 }
+
+// http://stackoverflow.com/questions/4770025/how-to-disable-scrolling-temporarily
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+/* --- DEBUG ---
+TODO: Remove me before deployment */
 #debug-bar {
     position: fixed;
     right: 0;
@@ -314,8 +317,6 @@ section,
     background: #87bade;
 }
 
-/* --- DEBUG ---
-TODO: Remove me before deployment */
 
 
 

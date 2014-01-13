@@ -16,7 +16,7 @@ var avmlp = {
     zoom: 1,
     sectionNames: [
         "start",
-        "innenleben",
+        "heimnetz",
         "wlan",
         "usb3",
         "telefonie",
@@ -162,12 +162,9 @@ var avmlp = {
                 this.$viewport.find("#detailed-view").show();
             }
             this.$viewport.find("#packshot").hide();
-
         } else {
-
             this.$viewport.find("#detailed-view").hide();
             this.$viewport.find("#packshot").show();
-
         }
 
         if (this.debug) {
