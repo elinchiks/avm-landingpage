@@ -41,12 +41,109 @@ var avmlp = {
     initAnimationImages: function() {
         for(var i = 0; i < this.aniTotalImages; i++) { // loop for each image in sequence
             this.aniImages[i] = {
+                "top": "136px",
+                "left": "122px",
                 "low": new Image(),
                 "high": new Image(),
                 "highSrc": this.aniImagesHighSrcPrefix + "comp_" + this.pad(i, 4) + ".png"
             };
             this.aniImages[i].low.src = this.aniImagesLowSrcPrefix + "comp_" + this.pad(i, 4) + ".png";
         }
+        // override the positions
+        this.aniImages[20].top = "154px";
+        this.aniImages[21].top = "172px";
+        this.aniImages[22].top = "190px";
+        this.aniImages[23].top = "208px";
+        this.aniImages[24].top = "226px";
+        this.aniImages[25].top = "244px";
+        this.aniImages[26].top = "262px";
+        this.aniImages[27].top = "280px";
+        this.aniImages[28].top = "298px";
+        this.aniImages[29].top = "316px";
+        this.aniImages[30].top = "334px";
+        this.aniImages[31].top = "352px";
+        this.aniImages[32].top = "370px";
+        this.aniImages[33].top = "388px";
+        this.aniImages[34].top = "406px";
+        this.aniImages[35].top = "424px";
+        this.aniImages[36].top = "442px";
+        this.aniImages[37].top = "460px";
+        this.aniImages[38].top = "478px";
+        this.aniImages[39].top = "496px";
+        this.aniImages[40].top = "514px";
+        this.aniImages[41].top = "532px";
+        this.aniImages[42].top = "550px";
+        this.aniImages[43].top = "560px";
+        this.aniImages[44].top = "575px";
+        this.aniImages[45].top = "580px";
+        this.aniImages[46].top = "570px";
+        this.aniImages[47].top = "560px";
+        this.aniImages[48].top = "550px";
+        this.aniImages[49].top = "540px";
+        this.aniImages[50].top = "530px";
+        this.aniImages[51].top = "520px";
+        this.aniImages[52].top = "510px";
+        this.aniImages[53].top = "500px";
+        this.aniImages[54].top = "490px";
+        this.aniImages[55].top = "480px";
+        this.aniImages[55].top = "470px";
+        this.aniImages[56].top = "460px";
+        this.aniImages[57].top = "450px";
+        this.aniImages[58].top = "440px";
+        this.aniImages[59].top = "430px";
+        this.aniImages[60].top = "420px";
+        this.aniImages[61].top = "410px";
+        this.aniImages[62].top = "400px";
+        this.aniImages[63].top = "390px";
+        this.aniImages[64].top = "380px";
+        this.aniImages[65].top = "370px";
+        this.aniImages[66].top = "360px";
+        this.aniImages[67].top = "350px";
+        this.aniImages[68].top = "340px";
+        this.aniImages[69].top = "330px";
+        this.aniImages[70].top = "320px";
+        this.aniImages[71].top = "310px";
+        this.aniImages[72].top = "300px";
+        this.aniImages[73].top = "290px";
+        this.aniImages[74].top = "280px";
+        this.aniImages[75].top = "290px";
+        this.aniImages[76].top = "270px";
+        this.aniImages[77].top = "270px";
+        this.aniImages[78].top = "270px";
+        this.aniImages[79].top = "260px";
+        this.aniImages[80].top = "260px";
+        this.aniImages[81].top = "260px";
+        this.aniImages[82].top = "260px";
+        this.aniImages[83].top = "260px";
+        this.aniImages[84].top = "260px";
+        this.aniImages[85].top = "260px";
+        this.aniImages[86].top = "260px";
+        this.aniImages[87].top = "260px";
+        this.aniImages[88].top = "260px";
+        this.aniImages[89].top = "260px";
+        this.aniImages[90].top = "260px";
+        this.aniImages[91].top = "260px";
+        this.aniImages[92].top = "260px";
+        this.aniImages[93].top = "260px";
+        this.aniImages[94].top = "260px";
+        this.aniImages[95].top = "260px";
+        this.aniImages[96].top = "260px";
+        this.aniImages[97].top = "260px";
+        this.aniImages[98].top = "260px";
+        this.aniImages[99].top = "260px";
+        this.aniImages[100].top = "250px";
+        this.aniImages[101].top = "240px";
+        this.aniImages[102].top = "230px";
+        this.aniImages[103].top = "220px";
+        this.aniImages[104].top = "210px";
+        this.aniImages[105].top = "200px";
+        this.aniImages[106].top = "190px";
+        this.aniImages[108].top = "180px";
+        this.aniImages[109].top = "170px";
+        this.aniImages[110].top = "160px";
+        this.aniImages[111].top = "150px";
+        this.aniImages[112].top = "140px";
+        this.aniImages[113].top = "136px";
     },
 
     initInsideView :function(){
@@ -206,6 +303,7 @@ var avmlp = {
             var aniImage = this.aniImages[this.aniStep];
 
             if(aniImage.low.complete) { // if the image is downloaded and ready
+
                 if($('#packshot').attr('src') !== aniImage.low.src &&
                     $('#packshot').attr('src') !== aniImage.highSrc ) {
                     window.clearTimeout(this.aniTimeoutID);
@@ -217,6 +315,14 @@ var avmlp = {
 
                     // change the source of our placeholder image
                     $('#packshot').attr('src', aniImage.low.src);
+                    $('#packshot').css({
+                        "top": aniImage.top,
+                        "left": aniImage.left,
+                    });
+
+                    if (this.debug) {
+                        $("#debug-animation-step").text(this.aniStep);
+                    }
                 }
             }
         }
