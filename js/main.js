@@ -33,6 +33,9 @@ var avmlp = {
     aniTargetStep: 1,
     aniImages: [],
     aniTotalImages: 250,
+    aniImagesLowSrcPrefix: ".frames/400px/",
+    aniImagesHiSrcPrefix: ".frames/960px/",
+
 
     // methods
     initAnimationImages: function() {
@@ -132,7 +135,6 @@ var avmlp = {
 
     setViewportContent: function() {
         var $currentSlide = $( this.$slides[this.currentSectionIndex] );
-
         this.$viewport.find("header").html(
             $currentSlide.find("header").html()
         );
@@ -142,13 +144,16 @@ var avmlp = {
         this.$viewport.find("p").html(
             $currentSlide.find("p").html()
         );
+
         // Start
         if (this.currentSectionIndex === 0) {
             this.$viewport.find(".logo-fritz-color").show();
             this.$viewport.find(".logo-fritz").hide();
+            this.$viewport.find(".link-next").show();
         } else {
             this.$viewport.find(".logo-fritz-color").hide();
             this.$viewport.find(".logo-fritz").show();
+            this.$viewport.find(".link-next").hide();
         }
 
         // Look Inside
@@ -167,6 +172,25 @@ var avmlp = {
             this.$viewport.find("#packshot").show();
         }
 
+        // Fix positions
+        var sectionId = "#" + this.sectionNames[this.currentSectionIndex];
+        this.$viewport.find("header").css({
+            "top": $(sectionId).find("header").css("top"),
+            "left": $(sectionId).find("header").css("left")
+        });
+
+        this.$viewport.find("#packshot").css({
+            "top": $(sectionId).find(".packshot").css("top"),
+            "left": $(sectionId).find(".packshot").css("left")
+        });
+
+        this.$viewport.find("p").css({
+            "bottom": $(sectionId).find("p").css("bottom"),
+            "left": $(sectionId).find("p").css("left")
+        });
+
+
+
         if (this.debug) {
             jQuery("#debug-section-index").text(this.currentSectionIndex);
         }
@@ -175,11 +199,14 @@ var avmlp = {
 
     // change product animation image
     changeFrame: function() {
+        console.log("changeFrame")
         // if the image exists in the array
         if(this.aniImages.length > 0 && this.aniImages[this.aniStep]) {
             if(this.aniImages[this.aniStep].complete) { // if the image is downloaded and ready
                 if($('#packshot').attr('src') !== this.aniImages[this.aniStep].src) {
-                    $('#packshot').attr('src',this.aniImages[this.aniStep].src); // change the source of our placeholder image
+                    // change the source of our placeholder image
+                    $('#packshot').attr('src',this.aniImages[this.aniStep].src);
+
                 }
             }
         }
@@ -223,8 +250,6 @@ jQuery( document ).ready(function( $ ) {
     avmlp.setNavigationState();
 
     avmlp.initAnimationImages();
-
-
 
 });
 

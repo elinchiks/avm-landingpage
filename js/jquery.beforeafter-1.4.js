@@ -33,13 +33,12 @@
 
 		var randID =  Math.round(Math.random()*100000000);
 
-			return this.each(function() {
+    		return this.each(function() {
 			var o=options;
 			var obj = $(this);
 
-			var imgWidth = $("#device-view-after", obj).width();
-			var imgHeight = $("#device-view-after", obj).height();
-			console.log("ba w/h", imgWidth, imgHeight);
+			var imgWidth = $('img:first', obj).width();
+			var imgHeight = $('img:first', obj).height();
 
 			if( $('div',obj).length != 2 ) $('img',obj).wrap('<div>'); // For backwards compatability. Used to require images to be wrapped in div tags.
 
