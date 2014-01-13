@@ -8,10 +8,10 @@
  * @license CC Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0) - http://creativecommons.org/licenses/by-nc-sa/3.0/
  */
 (function($){
-	$.fn.extend({ 
+	$.fn.extend({
 		beforeAfter: function(options)
 		{
-			var defaults = 
+			var defaults =
 			{
 				animateIntro : false,
 				introDelay : 1000,
@@ -33,13 +33,14 @@
 
 		var randID =  Math.round(Math.random()*100000000);
 
-    		return this.each(function() {
+			return this.each(function() {
 			var o=options;
 			var obj = $(this);
 
-			var imgWidth = $('img:first', obj).width();
-			var imgHeight = $('img:first', obj).height();
-			
+			var imgWidth = $("#device-view-after", obj).width();
+			var imgHeight = $("#device-view-after", obj).height();
+			console.log("ba w/h", imgWidth, imgHeight);
+
 			if( $('div',obj).length != 2 ) $('img',obj).wrap('<div>'); // For backwards compatability. Used to require images to be wrapped in div tags.
 
 			$(obj)
@@ -49,10 +50,10 @@
 
 			var bef = $('img:first', obj).attr('src');
 			var aft = $('img:last', obj).attr('src');
-			
+
 			$('img:first', obj).attr('id','beforeimage'+randID);
 			$('img:last', obj).attr('id','afterimage'+randID);
-		
+
 			// Create an inner div wrapper (dragwrapper) to hold the images.
 			$(obj).prepend('<div id="dragwrapper'+randID+'"><div id="drag'+randID+'"><img width="8" height="56" alt="handle" src="'+o.imagePath+'handle.gif" id="handle'+randID+'" /></div></div>'); // Create drag handle
 			$('#dragwrapper'+randID).css({'opacity':.25,'position':'absolute','padding':'0','left':(imgWidth*o.introPosition)-($('#handle'+randID).width()/2)+'px','z-index':'20'}).width($('#handle'+randID).width()).height(imgHeight);
@@ -67,7 +68,7 @@
 			$(obj).append('<img src="'+o.imagePath+'lt-small.png" width="7" height="15" id="lt-arrow'+randID+'"><img src="'+o.imagePath+'rt-small.png" width="7" height="15" id="rt-arrow'+randID+'">');
 
 			if(o.showFullLinks)
-			{	
+			{
 				$(obj).after('<div class="balinks" id="links'+randID+'" style="position:relative"><span class="balinks"><a id="showleft'+randID+'" href="javascript:void(0)">'+o.beforeLinkText+'</a></span><span class="balinks"><a id="showright'+randID+'" href="javascript:void(0)">'+o.afterLinkText+'</a></span></div>');
 				$('#links'+randID).width(imgWidth);
 				$('#showleft'+randID).css({'position':'relative','left':'0px'}).click(function(){

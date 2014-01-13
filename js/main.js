@@ -51,7 +51,7 @@ var avmlp = {
             showFullLinks : false
         });
     },
-  
+
 
     resizeSections: function() {
         var h = jQuery("html").height();
@@ -131,7 +131,7 @@ var avmlp = {
     },
 
     setViewportContent: function() {
-        var $currentSlide = $(this.$slides[this.currentSectionIndex]);
+        var $currentSlide = $( this.$slides[this.currentSectionIndex] );
 
         this.$viewport.find("header").html(
             $currentSlide.find("header").html()
@@ -142,7 +142,7 @@ var avmlp = {
         this.$viewport.find("p").html(
             $currentSlide.find("p").html()
         );
-
+        // Start
         if (this.currentSectionIndex === 0) {
             this.$viewport.find(".logo-fritz-color").show();
             this.$viewport.find(".logo-fritz").hide();
@@ -151,11 +151,23 @@ var avmlp = {
             this.$viewport.find(".logo-fritz").show();
         }
 
+        // Look Inside
         if(this.currentSectionIndex === 1) {
-            this.$viewport.append($currentSlide.find("#detailed-view"));
-            this.initInsideView();
+            if (!this.$viewport.find("#detailed-view").length) {
+                // first run - init before/after slider
+                this.$viewport.append($currentSlide.find("#detailed-view"));
+                this.initInsideView();
+            } else {
+                // just show the slider
+                this.$viewport.find("#detailed-view").show();
+            }
+            this.$viewport.find("#packshot").hide();
+
         } else {
-            this.$viewport.find("#detailed-view").remove();
+
+            this.$viewport.find("#detailed-view").hide();
+            this.$viewport.find("#packshot").show();
+
         }
 
         if (this.debug) {
@@ -206,7 +218,7 @@ jQuery( document ).ready(function( $ ) {
     });
 
     avmlp.resizeSections();
-
+    // avmlp.initInsideView();
     // initialise view port - all slides will displayed in there
     avmlp.initViewPort();
 
@@ -214,7 +226,7 @@ jQuery( document ).ready(function( $ ) {
     avmlp.setNavigationState();
 
     avmlp.initAnimationImages();
-  
+
 
 
 });

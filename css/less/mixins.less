@@ -21,3 +21,13 @@
 	background: radial-gradient(ellipse at center,  #026fb6 0%,#002c5a 50%); // W3C
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#026fb6', endColorstr='#002c5a',GradientType=1 ); // IE6-9 fallback on horizontal gradient
 }
+
+.font-face(@fontname, @fontfile) {
+    font-family: '@{fontname}';
+    src: url('fonts/@{fontfile}-webfont.eot');
+    src: url('fonts/@{fontfile}-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/@{fontfile}-webfont.woff') format('woff'),
+       url('fonts/@{fontfile}-webfont.svg#@{fontname}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
