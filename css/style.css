@@ -619,8 +619,8 @@ TODO: Remove me before deployment */
 }
 #detailed-view {
   position: relative;
-  width: 940px;
-  height: 360px;
+  width: 940px !important;
+  height: 360px !important;
   float: left;
   overflow: hidden;
   transition: none;

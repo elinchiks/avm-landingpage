@@ -151,6 +151,13 @@ var avmlp = {
             this.$viewport.find(".logo-fritz").show();
         }
 
+        if(this.currentSectionIndex === 1) {
+            this.$viewport.append($currentSlide.find("#detailed-view"));
+            this.initInsideView();
+        } else {
+            this.$viewport.remove("#detailed-view");
+        }
+
         if (this.debug) {
             jQuery("#debug-section-index").text(this.currentSectionIndex);
         }
@@ -207,7 +214,7 @@ jQuery( document ).ready(function( $ ) {
     avmlp.setNavigationState();
 
     avmlp.initAnimationImages();
-    avmlp.initInsideView();
+  
 
 
 });
