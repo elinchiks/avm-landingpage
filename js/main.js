@@ -406,14 +406,17 @@ var requestAnimFrame = (function() {
 
     var t = $(window).scrollTop();
     if (t > avmlp.aniStart * avmlp.zoom) {
-
-        avmlp.aniTargetStep = Math.ceil ( ( t - ( avmlp.aniStart * avmlp.zoom ) ) / 12 ); // what frame to animate to
-        if( avmlp.aniTargetStep !== avmlp.aniStep ) {
-            // increment the step until we arrive at the target step
-            avmlp.aniStep += Math.ceil(( avmlp.aniTargetStep - avmlp.aniStep) / 5);
-        }
-        avmlp.changeFrame();
+        avmlp.aniTargetStep = Math.ceil ( ( t - ( avmlp.aniStart * avmlp.zoom ) ) / 12 );
+    } else {
+        avmlp.aniTargetStep = 0;
     }
+
+    // what frame to animate to
+    if( avmlp.aniTargetStep !== avmlp.aniStep ) {
+        // increment the step until we arrive at the target step
+        avmlp.aniStep += Math.ceil(( avmlp.aniTargetStep - avmlp.aniStep) / 5);
+    }
+    avmlp.changeFrame();
 
     if (avmlp.debug) {
         $("#debug-scroll-top").text(t + "px");
