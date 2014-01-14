@@ -184,7 +184,6 @@ var avmlp = {
 
     positionViewport: function() {
         var width = $('#viewport').width();
-        console.log(width);
         $('#viewport').css({'left':'50%', 'margin-left': -width /2 });
     },
 
@@ -240,9 +239,11 @@ var avmlp = {
     },
 
     setViewportContent: function() {
-        $('#viewport').find(".product-graphics").removeClass('active');
+
+        // Active class is added again - to display animations
+        $('#viewport').removeClass('active');
         setTimeout ( function(){
-            $('#viewport').find(".product-graphics").addClass("active");
+            $('#viewport').addClass("active");
         }, 1000);
       
         var $currentSlide = $( this.$slides[this.currentSectionIndex] );
