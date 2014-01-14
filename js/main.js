@@ -241,8 +241,10 @@ var avmlp = {
         this.$viewport.find("#packshot").attr("src",
             $currentSlide.find(".packshot").attr("src")
         );
-        this.$viewport.find("p").html(
-            $currentSlide.find("p").html()
+
+        
+        this.$viewport.find(".description").html(
+            $currentSlide.find(".description").html()
         );
 
         // Start
@@ -250,11 +252,37 @@ var avmlp = {
             this.$viewport.find(".logo-fritz-color").show();
             this.$viewport.find(".logo-fritz").hide();
             this.$viewport.find(".link-next").show();
+
+
         } else {
             this.$viewport.find(".logo-fritz-color").hide();
             this.$viewport.find(".logo-fritz").show();
             this.$viewport.find(".link-next").hide();
         }
+
+
+       // Showing product graphics and fetures (WLAN)
+        if($currentSlide.find(".product-graphics").length) {
+            this.$viewport.find(".product-graphics").html(
+            $currentSlide.find(".product-graphics").html()
+        );
+            this.$viewport.find(".product-graphics").show();
+        } else {
+            this.$viewport.find(".product-graphics").hide();
+        }
+
+        // Showing product fetures (WLAN)
+
+        if($currentSlide.find(".product-features").length) {
+            this.$viewport.find(".product-features").html(
+            $currentSlide.find(".product-features").html()
+        );
+            this.$viewport.find(".product-features").show();
+        } else {
+            this.$viewport.find(".product-features").hide();
+        }
+
+
 
         // Look Inside
         if(this.currentSectionIndex === 1) {
@@ -288,9 +316,9 @@ var avmlp = {
         );
 
 
-        this.$viewport.find("p").css({
-            "bottom": $(sectionId).find("p").css("bottom"),
-            "left": $(sectionId).find("p").css("left")
+        this.$viewport.find(".description").css({
+            "bottom": $(sectionId).find(".description").css("bottom"),
+            "left": $(sectionId).find(".description").css("left")
         });
 
 
