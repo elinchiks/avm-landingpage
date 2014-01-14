@@ -320,6 +320,73 @@ TODO: Remove me before deployment */
     background: #87bade;
 }
 
+.white-bars {
+    color: @white;
+}
+.blue-bars {
+    color: #87bade;
+}
+.white-bars b, .blue-bars b {
+    width:9px;
+    height:30px;
+    display:inline-block;
+    background: white;
+    margin-right:3px;
+    -webkit-transform: translateZ(0);
+
+}
+.white-bars.vertical-list {
+    text-align:left;
+    width:25%;
+}
+.blue-bars.vertical-list {
+    text-align:right;
+    width:25%;
+}
+.white-bars.vertical-list b, .blue-bars.vertical-list b {
+    width:62px;
+    height:9px;
+    display:block;
+    margin-bottom:4px;
+}
+div[class*='bar'] {
+    .animation(fade-in 2s);
+}
+.packshot {
+ .transition(bottom 1s ease-out);
+
+}
+
+#product-graphics {
+    float:left;
+    width:50%;
+    box-sizing:border-box;
+}
+
+#product-features {
+    border-left:1px solid white;
+    padding-left:60px;
+    float:right;
+    width:50%;
+    box-sizing:border-box;
+    li {
+        margin-bottom: 60px;
+    }
+}
+
+.wlan {
+    .packshot {
+        top:auto !important;
+        bottom:-300px;
+        .transition(bottom 1s cubic-bezier(0.5, -0.5, 0.5, 1.5));
+
+    }
+}
+.mega-text {
+    font-size:50px;
+    font-family:'AVMMetaOT-CondBlack' !important;
+}
+
 
 
 
