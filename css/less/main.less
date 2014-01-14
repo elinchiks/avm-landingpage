@@ -299,10 +299,23 @@ section,
         }
     }
 }
+#telefonie, .telefonie {
+}
 
-// Icons
+#fritzos, .fritzos {
+    .icon-list {
+        margin-top:70px;
+        li {
+            width:25%;
+        }
+    }
+}
+
 .icon-list {
     width:100%;
+    margin-top:110px;
+    position:relative;
+    float:left;
     ul {
         list-style-type: none;
         margin:0;
@@ -311,20 +324,28 @@ section,
         .border-box();
         li {
            text-align: center; 
-           display:inline-block;
+           display:block;
+           float:left;
            width:19%;
            .border-box();
            margin:0;
            padding:0;
+           p {
+            width:150px;
+            ma-width:100%;
+            margin:0 auto;
+           }
         }
     }
 }
 
+// Icons
+
 [class$=icon] {
-    width:45px;
+    width:100%;
     height:62px;
-    display:block;
     margin:0 auto;
+    display:block;
 }
 .dect-icon {
     background: url("../images/dec-icon.png") no-repeat center center;
@@ -342,7 +363,42 @@ section,
 .sound-icon {
     background: url("../images/sound-icon.png") no-repeat center center;
 }
+.wlan-icon {
+    background: url("../images/wlan-icon.png") no-repeat center center;
 
+    width:37px;
+    height:36px;
+}
+.dsl-icon {
+    background: url("../images/dsl-icon.png") no-repeat center center; 
+    width: 58px; 
+    height:33px;
+}
+.tv-icon {
+    width:44px;
+    height:37px;
+    background: url("../images/tv-icon.png") no-repeat center center;
+}
+.server-icon {
+    background: url("../images/server-icon.png") no-repeat center center;
+    width:44px;
+    height:31px;
+}
+.fritz-icon {
+    background: url("../images/fritz-icon.png") no-repeat center center;
+    width:50px;
+    height:47px;
+}
+.home-icon {
+    background: url("../images/home-icon.png") no-repeat center center;
+    width:30px;
+    height:38px;
+}
+.vpn-icon {
+    background: url("../images/vpn-icon.png") no-repeat center center;
+    width:58px;
+    height:49px;
+}
 
 // http://stackoverflow.com/questions/4770025/how-to-disable-scrolling-temporarily
 .stop-scrolling {
