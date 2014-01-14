@@ -249,9 +249,15 @@ var avmlp = {
         );
 
 
-        this.$viewport.find(".description").html(
-            $currentSlide.find(".description").html()
-        );
+        // Showing description (lowest paragraph)
+         if($currentSlide.find(".description").length) {
+             this.$viewport.find(".description").html(
+             $currentSlide.find(".description").html()
+         );
+             this.$viewport.find(".description").show();
+         } else {
+             this.$viewport.find(".description").hide();
+         }
 
         // Start
         if (this.currentSectionIndex === 0) {
