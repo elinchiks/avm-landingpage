@@ -339,6 +339,17 @@ var avmlp = {
         }
 
 
+        // Showing buttons
+       if($currentSlide.find(".action-buttons").length) {
+           this.$viewport.find(".action-buttons").html(
+           $currentSlide.find(".action-buttons").html()
+       );
+           this.$viewport.find(".action-buttons").show();
+       } else {
+           this.$viewport.find(".action-buttons").hide();
+       }
+
+
 
         // Look Inside
         if(this.currentSectionIndex === 1) {

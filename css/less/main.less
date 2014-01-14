@@ -465,11 +465,17 @@ TODO: Remove me before deployment */
 div[class*='bar'] , b{
     opacity:0 !important;
 }
-#viewport.active {
+// #viewport.active {
+//     div[class*='bar'] , b{
+//         opacity:1 !important;
+//     }
+// }
+#viewport {
     div[class*='bar'] , b{
-        opacity:1 !important;
+        opacity:0 !important;
     }
 }
+
 .packshot {
  .transition(bottom 1s ease-out);
 
@@ -554,6 +560,18 @@ div[class*='bar'] , b{
 
 .product-graphics ul {
     list-style-type: none;
+}
+
+.action-buttons{
+    a {
+        background:@action-color;
+        text-align:center;
+        color:@white;
+        padding:15px 55px;
+        .border-radius(10px);
+        display:inline-block;
+        .border-box();
+    }
 }
 
 
