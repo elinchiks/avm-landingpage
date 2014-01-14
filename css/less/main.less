@@ -320,14 +320,7 @@ TODO: Remove me before deployment */
     color: @white;
 }
 
-.white-bars b, .blue-bars b {
-    width:9px;
-    height:30px;
-    display:inline-block;
-    background: white;
-    margin-right:3px;
-    -webkit-transform: translateZ(0);
-}
+
 .blue-bars {
     b {
         background: #809cb6;
@@ -386,6 +379,12 @@ div[class*='bar'] , b{
             }
         }
     }
+    .right-box {
+        float:right;
+        li {
+            display:block;
+        }
+    }
 
 }
 
@@ -398,6 +397,16 @@ div[class*='bar'] , b{
     position:relative;
     li {
         margin-bottom: 60px;
+    }
+    span {
+        font-size:16px;
+        font-family: 'AVMMetaOT-Book';
+    }
+    .featured-text {
+        color:@featured-text !important;
+        font-size:20px;
+        font-family: 'AVMMetaOT-Bold';
+
     }
 }
 
@@ -419,9 +428,7 @@ div[class*='bar'] , b{
         margin-bottom:4px;
     }
 }
-.featured-text {
-    color:@featured-text !important;
-}
+
 .info-text {
     font-size: 50px;
     margin-bottom: 30px;

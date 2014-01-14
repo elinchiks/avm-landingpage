@@ -240,8 +240,35 @@ var avmlp = {
 
     setViewportContent: function() {
 
+        // Switch id for the viewport depending on section displayed
+        switch (this.currentSectionIndex) {
+           case (0):
+               this.$viewport.attr('class', 'start');
+               break;
+           case (1):
+               this.$viewport.attr('class', 'heimnetz');
+                break;
+           case (2):
+                this.$viewport.attr('class', 'wlan');
+               break;
+           case (3):
+                this.$viewport.attr('class', 'usb3');
+               break;
+           case (4):
+                this.$viewport.attr('class', 'telefonie');
+               break;
+            case (5):
+                 this.$viewport.attr('class', 'fritzos');
+                break;
+            case (6):
+                 this.$viewport.attr('class', 'auszeichnungen');
+                break;
+           default:
+              this.$viewport.attr('class', '');
+       }
+
         // Active class is added again - to display animations
-        $('#viewport').removeClass('active');
+        this.$viewport.removeClass('active');
         setTimeout ( function(){
             $('#viewport').addClass("active");
         }, 1000);
