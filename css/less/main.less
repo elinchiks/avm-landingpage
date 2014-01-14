@@ -311,9 +311,7 @@ TODO: Remove me before deployment */
     display:inline-block;
     background: white;
     margin-right:3px;
-    .transition(opacity 0.3s ease-in-out);
     -webkit-transform: translateZ(0);
-
 }
 
 
@@ -329,7 +327,6 @@ TODO: Remove me before deployment */
     background: white;
     margin-right:3px;
     -webkit-transform: translateZ(0);
-
 }
 .blue-bars {
     b {
@@ -356,7 +353,12 @@ TODO: Remove me before deployment */
     margin-bottom:4px;
 }
 div[class*='bar'] {
-    .animation(fade-in 2s);
+    opacity:0 !important;
+}
+.active {
+    div[class*='bar'] {
+        opacity:1 !important;
+    }
 }
 .packshot {
  .transition(bottom 1s ease-out);
@@ -368,12 +370,20 @@ div[class*='bar'] {
     width:50%;
     box-sizing:border-box;
     position:relative;
+    ul {
+        position:relative;
+    }
     li {
-        width:50%;
+        width:45%;
         .border-box();
-        float:left;
+        float:right;
         &.blue-bars {
             text-align:right !important;
+            float:left;
+            .vertical-list {
+                width:61px;
+                float:right;
+            }
         }
     }
 

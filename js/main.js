@@ -240,6 +240,11 @@ var avmlp = {
     },
 
     setViewportContent: function() {
+        $('#viewport').find(".product-graphics").removeClass('active');
+        setTimeout ( function(){
+            $('#viewport').find(".product-graphics").addClass("active");
+        }, 1000);
+      
         var $currentSlide = $( this.$slides[this.currentSectionIndex] );
         this.$viewport.find("header").html(
             $currentSlide.find("header").html()
@@ -279,7 +284,7 @@ var avmlp = {
             $currentSlide.find(".product-graphics").html()
         );
             this.$viewport.find(".product-graphics").show();
-        } else {
+       } else {
             this.$viewport.find(".product-graphics").hide();
         }
 
