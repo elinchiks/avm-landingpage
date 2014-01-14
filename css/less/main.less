@@ -290,8 +290,59 @@ section,
             width:100%;
             text-align:right;
         }
+        p {
+            font-size: 18px;
+            font-family:  'AVMMetaOT-Book';
+            &.secondary-text {
+                color: @grey-text;
+            }
+        }
     }
 }
+
+// Icons
+.icon-list {
+    width:100%;
+    ul {
+        list-style-type: none;
+        margin:0;
+        padding:0;
+        width:100%;
+        .border-box();
+        li {
+           text-align: center; 
+           display:inline-block;
+           width:19%;
+           .border-box();
+           margin:0;
+           padding:0;
+        }
+    }
+}
+
+[class$=icon] {
+    width:45px;
+    height:62px;
+    display:block;
+    margin:0 auto;
+}
+.dect-icon {
+    background: url("../images/dec-icon.png") no-repeat center center;
+}
+.telefon-icon {
+    background: url("../images/telefon-icon.png") no-repeat center center;
+}
+.app-icon {
+    background: url("../images/app-icon.png") no-repeat center center;
+
+}
+.antworter-icon {
+    background: url("../images/antworter-icon.png") no-repeat center center;
+}
+.sound-icon {
+    background: url("../images/sound-icon.png") no-repeat center center;
+}
+
 
 // http://stackoverflow.com/questions/4770025/how-to-disable-scrolling-temporarily
 .stop-scrolling {
@@ -412,12 +463,13 @@ div[class*='bar'] , b{
         font-size:16px;
         font-family: 'AVMMetaOT-Book';
     }
-    .featured-text {
-        color:@featured-text !important;
-        font-size:20px;
-        font-family: 'AVMMetaOT-Bold';
+}
 
-    }
+.featured-text {
+    color:@featured-text !important;
+    font-size:20px;
+    font-family: 'AVMMetaOT-Bold';
+
 }
 
 .wlan {

@@ -271,7 +271,7 @@ var avmlp = {
         this.$viewport.removeClass('active');
         setTimeout ( function(){
             $('#viewport').addClass("active");
-        }, 1000);
+        }, 300);
       
         var $currentSlide = $( this.$slides[this.currentSectionIndex] );
         this.$viewport.find("header").html(
@@ -325,6 +325,17 @@ var avmlp = {
             this.$viewport.find(".product-features").show();
         } else {
             this.$viewport.find(".product-features").hide();
+        }
+
+        // Showing icons (telefonie)
+
+        if($currentSlide.find(".icon-list").length) {
+            this.$viewport.find(".icon-list").html(
+            $currentSlide.find(".icon-list").html()
+        );
+            this.$viewport.find(".icon-list").show();
+        } else {
+            this.$viewport.find(".icon-list").hide();
         }
 
 
