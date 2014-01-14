@@ -151,8 +151,8 @@ section,
     }
 
     header {
-        position: absolute;
-        top: 55px;
+        position: relative;
+        margin-top: 55px;
         left: @para-left;
         font-family: @font-headline;
         text-align: center;
@@ -335,6 +335,9 @@ TODO: Remove me before deployment */
     b {
         background: #809cb6;
     }
+    .info-text {
+        color:@grey-text;
+    }
 }
 
 
@@ -364,6 +367,7 @@ div[class*='bar'] {
     float:left;
     width:50%;
     box-sizing:border-box;
+    position:relative;
 }
 
 .product-features {
@@ -372,6 +376,7 @@ div[class*='bar'] {
     float:right;
     width:50%;
     box-sizing:border-box;
+    position:relative;
     li {
         margin-bottom: 60px;
     }
@@ -397,6 +402,13 @@ div[class*='bar'] {
 }
 .featured-text {
     color:@featured-text !important;
+}
+.info-text {
+    font-size: 50px;
+}
+
+.product-graphics ul {
+    list-style-type: none;
 }
 
 

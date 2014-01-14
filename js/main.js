@@ -182,6 +182,12 @@ var avmlp = {
         }
     },
 
+    positionViewport: function() {
+        var width = $('#viewport').width();
+        console.log(width);
+        $('#viewport').css({'left':'50%', 'margin-left': -width /2 });
+    },
+
     applyZoom: function() {
         var top = -(this.defaultHeight - this.defaultHeight * this.zoom) / 2;
         // TODO: left needs to be set, especially for narrow viewports
@@ -242,7 +248,7 @@ var avmlp = {
             $currentSlide.find(".packshot").attr("src")
         );
 
-        
+
         this.$viewport.find(".description").html(
             $currentSlide.find(".description").html()
         );
@@ -399,6 +405,7 @@ jQuery( document ).ready(function( $ ) {
     avmlp.setNavigationState();
 
     avmlp.initAnimationImages();
+    avmlp.positionViewport();
 
 });
 
