@@ -11,7 +11,7 @@
 	-o-transition-delay: @time;
 	transition-delay: @time;
 }
-.gradient-blue(){
+.gradient-blue() {
 	background: #002c5a; // Old browsers
 	background: -moz-radial-gradient(center, ellipse cover,  #026fb6 0%, #002c5a 50%); // FF3.6+
 	background: -webkit-gradient(radial, center center, 0px, center center, 50%, color-stop(0%,#026fb6), color-stop(50%,#002c5a)); // Chrome,Safari4+
@@ -67,10 +67,20 @@
   -o-box-sizing: border-box; 
   box-sizing: border-box;         
 }
-.border-radius(@value){
+.border-radius(@value) {
   -webkit-border-radius: @value; 
   -moz-border-radius: @value;   
   -ms-border-radius: @value; 
   -o-border-radius: @value; 
   border-radius: @value;         
+}
+.no-underline() {
+  text-decoration:none;
+}
+.box-shadow(@value) {
+  -webkit-box-shadow: @value; 
+  -moz-box-shadow: @value;   
+  -ms-box-shadow: @value; 
+  -o-box-shadow: @value; 
+  box-shadow: @value;   
 }

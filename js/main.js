@@ -41,7 +41,7 @@ var avmlp = {
     initAnimationImages: function() {
         for(var i = 0; i < this.aniTotalImages; i++) { // loop for each image in sequence
             this.aniImages[i] = {
-                "top": 136,
+                "top": '136',
                 "left": 122,
                 "low": new Image(),
                 "high": new Image(),
@@ -148,7 +148,7 @@ var avmlp = {
     },
 
     initInsideView :function(){
-        $('#detailed-view').beforeAfter({
+        $('#viewport').find('#detailed-view').beforeAfter({
             animateIntro : true,
             introDelay : 2000,
             introDuration : 300,
@@ -181,7 +181,7 @@ var avmlp = {
             jQuery("#debug-zoom").text(this.zoom.toPrecision(3));
         }
     },
-
+    // Positioning viewport in the middle
     positionViewport: function() {
         var width = $('#viewport').width();
         $('#viewport').css({'left':'50%', 'margin-left': -width /2 });
@@ -271,7 +271,7 @@ var avmlp = {
         this.$viewport.removeClass('active');
         setTimeout ( function(){
             $('#viewport').addClass("active");
-        }, 300);
+        }, 600);
       
         var $currentSlide = $( this.$slides[this.currentSectionIndex] );
         this.$viewport.find("header").html(
@@ -349,6 +349,16 @@ var avmlp = {
            this.$viewport.find(".action-buttons").hide();
        }
 
+        // Showing bottom logo section
+       if($currentSlide.find(".logo-section").length) {
+           this.$viewport.find(".logo-section").html(
+           $currentSlide.find(".logo-section").html()
+       );
+           this.$viewport.find(".logo-section").show();
+       } else {
+           this.$viewport.find(".logo-section").hide();
+       }
+
 
 
         // Look Inside
@@ -356,7 +366,11 @@ var avmlp = {
             if (!this.$viewport.find("#detailed-view").length) {
                 // first run - init before/after slider
                 this.$viewport.append($currentSlide.find("#detailed-view"));
+          
                 this.initInsideView();
+
+
+
             } else {
                 // just show the slider
                 this.$viewport.find("#detailed-view").show();
