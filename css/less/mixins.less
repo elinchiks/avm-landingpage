@@ -11,7 +11,7 @@
 	-o-transition-delay: @time;
 	transition-delay: @time;
 }
-.gradient-blue(){
+.gradient-blue() {
 	background: #002c5a; // Old browsers
 	background: -moz-radial-gradient(center, ellipse cover,  #026fb6 0%, #002c5a 50%); // FF3.6+
 	background: -webkit-gradient(radial, center center, 0px, center center, 50%, color-stop(0%,#026fb6), color-stop(50%,#002c5a)); // Chrome,Safari4+
@@ -30,4 +30,57 @@
        url('fonts/@{fontfile}-webfont.svg#@{fontname}') format('svg');
     font-weight: normal;
     font-style: normal;
+}
+
+@-webkit-keyframes fade-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes fade-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes fade-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fade-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+.animation(@name) {
+  -webkit-animation: @name; 
+  -moz-animation:    @name; 
+  -o-animation:      @name; 
+  animation:         @name;  
+}
+
+.block(@width, @height) {
+  display: block;
+  width: @width;
+  height: @height;
+}
+.border-box(){
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box;   
+  -ms-box-sizing: border-box;  
+  -o-box-sizing: border-box; 
+  box-sizing: border-box;         
+}
+.border-radius(@value) {
+  -webkit-border-radius: @value; 
+  -moz-border-radius: @value;   
+  -ms-border-radius: @value; 
+  -o-border-radius: @value; 
+  border-radius: @value;         
+}
+.no-underline() {
+  text-decoration:none;
+}
+.box-shadow(@value) {
+  -webkit-box-shadow: @value; 
+  -moz-box-shadow: @value;   
+  -ms-box-shadow: @value; 
+  -o-box-shadow: @value; 
+  box-shadow: @value;   
 }

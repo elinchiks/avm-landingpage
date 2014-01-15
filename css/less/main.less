@@ -151,8 +151,8 @@ section,
     }
 
     header {
-        position: absolute;
-        top: 55px;
+        position: relative;
+        margin-top: 55px;
         left: @para-left;
         font-family: @font-headline;
         text-align: center;
@@ -183,12 +183,12 @@ section,
         margin: 0 auto;
         position: absolute;
         left: 122px;
-        top: 136px;
+        bottom:0;
         width: 960px;
         height: 640px;
     }
 
-    p {
+    .description {
         position: absolute;
         width: @para-width;
         left: @para-left;
@@ -230,14 +230,16 @@ section,
 
     }
 
-    #detailed-view {
-        position: absolute;
-        width:940px !important;
-        height:360px !important;
-        overflow:hidden;
-        top: 300px;
-        left: 140px;
-    }
+    // #detailed-view {
+    //     width:940px !important;
+    //     height:360px !important;
+    //     overflow:hidden;
+    //     top: 300px;
+    //     left: 140px;
+    //     * {
+    //         opacity:1;
+    //     }
+    // }
 
 }
 
@@ -252,8 +254,11 @@ section,
 
 
 // section 1 - visible at start
-#start {
+#start, .start {
     // background-image: url("../images/bg-layout-01.jpg");
+    .packshot {
+        top: 136px;
+    }
 }
 
 // section 2 - interior
@@ -281,6 +286,126 @@ section,
     p {
         bottom: 100px;
     }
+}
+.usb3, #usb3 {
+    .product-graphics {
+        width:100%;
+        li {
+            display:block;
+            width:100%;
+            text-align:right;
+        }
+        p {
+            font-size: 18px;
+            font-family:  'AVMMetaOT-Book';
+            &.secondary-text {
+                color: @grey-text;
+            }
+        }
+    }
+}
+#telefonie, .telefonie {
+}
+
+#fritzos, .fritzos {
+    .icon-list {
+        margin-top:70px;
+        li {
+            width:25%;
+            h4 {
+                margin:20px 0 10px;
+            }
+        }
+    }
+}
+
+.icon-list {
+    width:100%;
+    margin-top:110px;
+    position:relative;
+    float:left;
+    ul {
+        list-style-type: none;
+        margin:0;
+        padding:0;
+        width:100%;
+        .border-box();
+        li {
+           text-align: center; 
+           display:block;
+           float:left;
+           width:19%;
+           .border-box();
+           margin:0;
+           padding:0;
+           p {
+            width:150px;
+            ma-width:100%;
+            margin:0 auto;
+           }
+        }
+    }
+}
+
+// Icons
+
+[class$=icon] {
+    width:100%;
+    height:62px;
+    margin:0 auto;
+    display:block;
+}
+.dect-icon {
+    background: url("../images/dec-icon.png") no-repeat center center;
+}
+.telefon-icon {
+    background: url("../images/telefon-icon.png") no-repeat center center;
+}
+.app-icon {
+    background: url("../images/app-icon.png") no-repeat center center;
+
+}
+.antworter-icon {
+    background: url("../images/antworter-icon.png") no-repeat center center;
+}
+.sound-icon {
+    background: url("../images/sound-icon.png") no-repeat center center;
+}
+.wlan-icon {
+    background: url("../images/wlan-icon.png") no-repeat center center;
+
+    width:37px;
+    height:36px;
+}
+.dsl-icon {
+    background: url("../images/dsl-icon.png") no-repeat center center; 
+    width: 58px; 
+    height:33px;
+}
+.tv-icon {
+    width:44px;
+    height:37px;
+    background: url("../images/tv-icon.png") no-repeat center center;
+}
+.server-icon {
+    background: url("../images/server-icon.png") no-repeat center center;
+    width:44px;
+    height:31px;
+}
+.fritz-icon {
+    background: url("../images/fritz-icon.png") no-repeat center center;
+    width:50px;
+    height:47px;
+}
+.home-icon {
+    background: url("../images/home-icon.png") no-repeat center center;
+    width:30px;
+    height:38px;
+}
+.vpn-icon {
+    background: url("../images/vpn-icon.png") no-repeat center center;
+    width:58px;
+    height:49px;
 }
 
 // http://stackoverflow.com/questions/4770025/how-to-disable-scrolling-temporarily
@@ -311,16 +436,160 @@ TODO: Remove me before deployment */
     display:inline-block;
     background: white;
     margin-right:3px;
-    .transition(opacity 0.3s ease-in-out);
     -webkit-transform: translateZ(0);
-
-}
-
-.blue-bars b {
-    background: #87bade;
 }
 
 
+
+.white-bars {
+    color: @white;
+}
+
+
+.blue-bars {
+    b {
+        background: #809cb6;
+    }
+    .info-text {
+        color:@grey-text;
+    }
+}
+
+
+.white-bars.vertical-list {
+    text-align:left;
+    width:25%;
+}
+.blue-bars.vertical-list {
+    text-align:right;
+    width:25%;
+}
+.white-bars.vertical-list b, .blue-bars.vertical-list b {
+    width:62px;
+    height:9px;
+    display:block;
+    margin-bottom:4px;
+}
+div[class*='bar'] , b{
+    opacity:0 !important;
+}
+// #viewport.active {
+//     div[class*='bar'] , b{
+//         opacity:1 !important;
+//     }
+// }
+#viewport {
+    div[class*='bar'] , b{
+        opacity:0 !important;
+    }
+}
+
+.packshot {
+ .transition(bottom 1s ease-out);
+
+}
+
+.product-graphics {
+    float:left;
+    width:50%;
+    box-sizing:border-box;
+    position:relative;
+    ul {
+        position:relative;
+    }
+    li {
+        width:45%;
+        .border-box();
+        float:right;
+        &.blue-bars {
+            text-align:right !important;
+            float:left;
+            .vertical-list {
+                width:61px;
+                float:right;
+            }
+        }
+    }
+    .right-box {
+        float:right;
+        li {
+            display:block;
+        }
+    }
+
+}
+
+.product-features {
+    border-left:1px solid white;
+    padding-left:60px;
+    float:right;
+    width:50%;
+    box-sizing:border-box;
+    position:relative;
+    li {
+        margin-bottom: 60px;
+    }
+    span {
+        font-size:16px;
+        font-family: 'AVMMetaOT-Book';
+    }
+}
+
+.featured-text {
+    color:@featured-text !important;
+    font-size:20px;
+    font-family: 'AVMMetaOT-Bold';
+
+}
+
+.wlan {
+    .packshot {
+        top:auto !important;
+        bottom:-300px;
+        .transition(bottom 1s cubic-bezier(0.5, -0.5, 0.5, 1.5));
+
+    }
+}
+.mega-text {
+    font-size:50px;
+    font-family:'AVMMetaOT-CondBlack' !important;
+}
+.vertical-list {
+    b {
+        .block(61px, 9px);
+        margin-bottom:4px;
+    }
+}
+
+.info-text {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.product-graphics ul {
+    list-style-type: none;
+}
+
+.action-buttons{
+    text-align:center;
+    margin-top:70px;
+    a {
+        background:@action-color;
+        text-align:center;
+        color:@white;
+        padding:15px 55px;
+        .border-radius(10px);
+        display:inline-block;
+        .border-box();
+        .no-underline();
+        .box-shadow(1px -1px 1px #3c426a);
+    }
+}
+.logo-section {
+    position:absolute;
+    left:40px;
+    bottom:45px;
+}
 
 
 /* ==========================================================================

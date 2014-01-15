@@ -41,7 +41,7 @@ var avmlp = {
     initAnimationImages: function() {
         for(var i = 0; i < this.aniTotalImages; i++) { // loop for each image in sequence
             this.aniImages[i] = {
-                "top": 136,
+                "top": 'auto',
                 "left": 122,
                 "low": new Image(),
                 "high": new Image(),
@@ -148,7 +148,7 @@ var avmlp = {
     },
 
     initInsideView :function(){
-        $('#detailed-view').beforeAfter({
+        $('#viewport').find('#detailed-view').beforeAfter({
             animateIntro : true,
             introDelay : 2000,
             introDuration : 300,
@@ -180,6 +180,11 @@ var avmlp = {
             jQuery("#debug-section-height").text(h + "px");
             jQuery("#debug-zoom").text(this.zoom.toPrecision(3));
         }
+    },
+    // Positioning viewport in the middle
+    positionViewport: function() {
+        var width = $('#viewport').width();
+        $('#viewport').css({'left':'50%', 'margin-left': -width /2 });
     },
 
     applyZoom: function() {
@@ -234,6 +239,40 @@ var avmlp = {
     },
 
     setViewportContent: function() {
+
+        // Switch id for the viewport depending on section displayed
+        switch (this.currentSectionIndex) {
+           case (0):
+               this.$viewport.attr('class', 'start');
+               break;
+           case (1):
+               this.$viewport.attr('class', 'heimnetz');
+                break;
+           case (2):
+                this.$viewport.attr('class', 'wlan');
+               break;
+           case (3):
+                this.$viewport.attr('class', 'usb3');
+               break;
+           case (4):
+                this.$viewport.attr('class', 'telefonie');
+               break;
+            case (5):
+                 this.$viewport.attr('class', 'fritzos');
+                break;
+            case (6):
+                 this.$viewport.attr('class', 'auszeichnungen');
+                break;
+           default:
+              this.$viewport.attr('class', '');
+       }
+
+        // Active class is added again - to display animations
+        this.$viewport.removeClass('active');
+        setTimeout ( function(){
+            $('#viewport').addClass("active");
+        }, 600);
+      
         var $currentSlide = $( this.$slides[this.currentSectionIndex] );
         this.$viewport.find("header").html(
             $currentSlide.find("header").html()
@@ -241,27 +280,95 @@ var avmlp = {
         this.$viewport.find("#packshot").attr("src",
             $currentSlide.find(".packshot").attr("src")
         );
-        this.$viewport.find("p").html(
-            $currentSlide.find("p").html()
-        );
+
+
+        // Showing description (lowest paragraph)
+         if($currentSlide.find(".description").length) {
+             this.$viewport.find(".description").html(
+             $currentSlide.find(".description").html()
+         );
+             this.$viewport.find(".description").show();
+         } else {
+             this.$viewport.find(".description").hide();
+         }
 
         // Start
         if (this.currentSectionIndex === 0) {
             this.$viewport.find(".logo-fritz-color").show();
             this.$viewport.find(".logo-fritz").hide();
             this.$viewport.find(".link-next").show();
+
+
         } else {
             this.$viewport.find(".logo-fritz-color").hide();
             this.$viewport.find(".logo-fritz").show();
             this.$viewport.find(".link-next").hide();
         }
 
-        // Look Inside
+
+       // Showing product graphics and fetures (WLAN)
+        if($currentSlide.find(".product-graphics").length) {
+            this.$viewport.find(".product-graphics").html(
+            $currentSlide.find(".product-graphics").html()
+        );
+            this.$viewport.find(".product-graphics").show();
+       } else {
+            this.$viewport.find(".product-graphics").hide();
+        }
+
+        // Showing product fetures (WLAN)
+
+        if($currentSlide.find(".product-features").length) {
+            this.$viewport.find(".product-features").html(
+            $currentSlide.find(".product-features").html()
+        );
+            this.$viewport.find(".product-features").show();
+        } else {
+            this.$viewport.find(".product-features").hide();
+        }
+
+        // Showing icons (telefonie)
+
+        if($currentSlide.find(".icon-list").length) {
+            this.$viewport.find(".icon-list").html(
+            $currentSlide.find(".icon-list").html()
+        );
+            this.$viewport.find(".icon-list").show();
+        } else {
+            this.$viewport.find(".icon-list").hide();
+        }
+
+
+        // Showing buttons
+       if($currentSlide.find(".action-buttons").length) {
+           this.$viewport.find(".action-buttons").html(
+           $currentSlide.find(".action-buttons").html()
+       );
+           this.$viewport.find(".action-buttons").show();
+       } else {
+           this.$viewport.find(".action-buttons").hide();
+       }
+
+        // Showing bottom logo section
+       if($currentSlide.find(".logo-section").length) {
+           this.$viewport.find(".logo-section").html(
+           $currentSlide.find(".logo-section").html()
+       );
+           this.$viewport.find(".logo-section").show();
+       } else {
+           this.$viewport.find(".logo-section").hide();
+       }
+
+
+
+        // // Look Inside
         if(this.currentSectionIndex === 1) {
             if (!this.$viewport.find("#detailed-view").length) {
                 // first run - init before/after slider
                 this.$viewport.append($currentSlide.find("#detailed-view"));
+          
                 this.initInsideView();
+
             } else {
                 // just show the slider
                 this.$viewport.find("#detailed-view").show();
@@ -271,6 +378,9 @@ var avmlp = {
             this.$viewport.find("#detailed-view").hide();
             this.$viewport.find("#packshot").show();
         }
+
+
+    
 
         // Fix positions
         var sectionId = "#" + this.sectionNames[this.currentSectionIndex];
@@ -288,9 +398,9 @@ var avmlp = {
         );
 
 
-        this.$viewport.find("p").css({
-            "bottom": $(sectionId).find("p").css("bottom"),
-            "left": $(sectionId).find("p").css("left")
+        this.$viewport.find(".description").css({
+            "bottom": $(sectionId).find(".description").css("bottom"),
+            "left": $(sectionId).find(".description").css("left")
         });
 
 
@@ -355,7 +465,7 @@ jQuery( document ).ready(function( $ ) {
     // clickable bullets in Navigation
     $("#primary li").on("click", function(e) {
         e.preventDefault();
-        var href = $(this).children("a").attr("href");
+        var href = $(this).find("a").attr("href");
         if (href) {
             window.location = href;
         }
@@ -370,6 +480,7 @@ jQuery( document ).ready(function( $ ) {
     avmlp.setNavigationState();
 
     avmlp.initAnimationImages();
+    avmlp.positionViewport();
 
 });
 
