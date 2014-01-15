@@ -260,6 +260,10 @@ section,
     // background-image: url("../images/bg-layout-01.jpg");
     .packshot {
         top: 136px;
+        .animation(scale-in 1s ease-in-out 200ms forwards);
+        .bar-5 {
+            .animation(fade-in 1s ease-in-out 300ms forwards);
+        }
     }
 }
 
@@ -338,10 +342,36 @@ section,
     h1 {
         margin-bottom: 100px !important;
     }
+    &.active {
+        .product-graphics {
+            border-left: 1px solid rgba(255, 255, 255, 1);
+            .secondary-text {
+                border-bottom:1px solid rgba(255, 255, 255, 1);
+            }
+            &:before {
+                opacity:1;
+            }
+        }
+
+    }
     .product-graphics {
         width:50%;
         float:right;
-        border-left: 1px solid rgba(255, 255, 255, 1);
+        border-left: 1px solid rgba(255, 255, 255, 0);
+        .transition(border-left 400ms ease-in 500ms);
+
+        &:before {
+            content:"";
+            .block(10px, 10px);
+            background: @white;
+            position:absolute;
+            top:0;
+            left:0;
+            .border-radius(50%);
+            left:-5px;
+            opacity:0;
+            .transition(opacity 0.1s ease-in-out 1.5s);
+        }
         ul {
             padding-bottom:0;
             padding-top:0;
@@ -368,13 +398,14 @@ section,
             }
         }
         .secondary-text {
-            border-bottom:1px solid rgba(255, 255, 255, 1);
+            border-bottom:1px solid rgba(255, 255, 255, 0);
             margin-bottom:0;
             max-width:205px;
             width:205px;
             margin-left:-40px;
             padding-left:40px;
             padding-bottom:180px;
+            .transition(border-bottom 400ms ease-in-out);
         }
     }
 }
