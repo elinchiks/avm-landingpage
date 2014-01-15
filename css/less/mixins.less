@@ -11,6 +11,12 @@
 	-o-transition-delay: @time;
 	transition-delay: @time;
 }
+.transform(@props) {
+  -webkit-transform: @props;
+  -moz-transform: @props;
+  -o-transform: @props;
+  transform: @props;
+}
 .gradient-blue() {
 	background: #002c5a; // Old browsers
 	background: -moz-radial-gradient(center, ellipse cover,  #026fb6 0%, #002c5a 50%); // FF3.6+
@@ -47,6 +53,22 @@
 @keyframes fade-in {
   0%   { opacity: 0; }
   100% { opacity: 1; }
+}
+@-webkit-keyframes scale-in {
+  0%   { .transform(scale(0)); }
+  100% { .transform(scale(1)); }
+}
+@-moz-keyframes scale-in {
+  0%   { .transform(scale(0)); }
+  100% { .transform(scale(1)); }
+}
+@-o-keyframes scale-in {
+  0%   { .transform(scale(0)); }
+  100% { .transform(scale(1)); }
+}
+@keyframes scale-in {
+  0%   { .transform(scale(0)); }
+  100% { .transform(scale(1)); }
 }
 .animation(@name) {
   -webkit-animation: @name; 

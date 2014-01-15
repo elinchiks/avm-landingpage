@@ -51,7 +51,7 @@ var avmlp = {
         }
 
         // override the positions
-        /*
+
         this.aniImages[20].top = 154;
         this.aniImages[21].top = 172;
         this.aniImages[22].top = 190;
@@ -146,7 +146,62 @@ var avmlp = {
         this.aniImages[111].top = 150;
         this.aniImages[112].top = 140;
         this.aniImages[113].top = 136;
-        */
+
+
+
+        this.aniImages[200].top = 280;
+        this.aniImages[201].top = 290;
+        this.aniImages[202].top = 300;
+        this.aniImages[203].top = 310;
+        this.aniImages[204].top = 320;
+        this.aniImages[205].top = 330;
+        this.aniImages[206].top = 340;
+        this.aniImages[207].top = 350;
+        this.aniImages[208].top = 360;
+        this.aniImages[209].top = 370;
+        this.aniImages[210].top = 380;
+        this.aniImages[211].top = 390;
+        this.aniImages[212].top = 400;
+        this.aniImages[213].top = 410;
+
+
+        this.aniImages[213].top = 420;
+        this.aniImages[214].top = 420;
+        this.aniImages[215].top = 420;
+        this.aniImages[216].top = 420;
+        this.aniImages[217].top = 420;
+        this.aniImages[218].top = 420;
+        this.aniImages[219].top = 420;
+        this.aniImages[220].top = 420;
+        this.aniImages[221].top = 420;
+        this.aniImages[222].top = 420;
+        this.aniImages[223].top = 420;
+        this.aniImages[224].top = 420;
+        this.aniImages[225].top = 420;
+        this.aniImages[226].top = 420;
+        this.aniImages[227].top = 420;
+        this.aniImages[228].top = 420;
+        this.aniImages[229].top = 420;
+        this.aniImages[230].top = 420;
+        this.aniImages[231].top = 420;
+        this.aniImages[232].top = 420;
+        this.aniImages[233].top = 420;
+        this.aniImages[234].top = 420;
+        this.aniImages[235].top = 420;
+        this.aniImages[236].top = 420;
+        this.aniImages[237].top = 420;
+        this.aniImages[238].top = 420;
+        this.aniImages[239].top = 420;
+        this.aniImages[240].top = 420;
+        this.aniImages[241].top = 420;
+        this.aniImages[242].top = 420;
+        this.aniImages[243].top = 420;
+        this.aniImages[244].top = 420;
+        this.aniImages[245].top = 420;
+        this.aniImages[246].top = 420;
+        this.aniImages[247].top = 420;
+        this.aniImages[248].top = 420;
+        this.aniImages[249].top = 420;
     },
 
 
@@ -193,7 +248,9 @@ var avmlp = {
             "top": top + "px"
         });
     },
-
+    //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // Doesnt work when navigation has been clicked
+    //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     setNavigationState: function() {
         var currentSectionIndex = Math.floor( $(window).scrollTop() / ( this.defaultHeight * this.zoom ) );
         if (currentSectionIndex < 0) {
@@ -212,9 +269,13 @@ var avmlp = {
 
         // set Navigation Hilite
         var currentSection = this.sectionNames[currentSectionIndex];
+        console.log(currentSection);
         if ( ! $("#primary ." + currentSection).hasClass("active") ) {
-            $("#primary li").removeClass("active");
+            $("#primary li").each(function(){
+                $(this).removeClass("active");
+            });
             $("#primary ." + currentSection).addClass("active");
+
         }
     },
 
@@ -258,7 +319,7 @@ var avmlp = {
                  this.$viewport.attr('class', 'auszeichnungen');
                 break;
            default:
-              this.$viewport.attr('class', '');
+              this.$viewport.attr('class', 'start');
        }
 
         // Active class is added again - to display animations
@@ -358,6 +419,7 @@ var avmlp = {
             if (!this.$viewport.find(".inside-view").length) {
                 // first run - init before/after slider
                 this.$viewport.append($currentSlide.find(".inside-view"));
+                this.initInsideView();
             } else {
                 // just show the slider
                 this.$viewport.find(".inside-view").show();
@@ -497,6 +559,8 @@ jQuery( document ).ready(function( $ ) {
 jQuery( window ).on( "resize", function() {
     avmlp.resizeSections();
 });
+
+
 
 
 /* Taken from

@@ -84,6 +84,8 @@ body {
     padding: 0;
     background-color: #002c5a;
     color: #fff;
+    font-family: 'AVMMetaOT';
+    font-size:18px;
 }
 
 // Navigation
@@ -303,6 +305,13 @@ section,
     // .slide{
     //     background-image: url("../images/bg-layout-01.jpg");
     // }
+    .packshot {
+        top: 136px;
+        .animation(scale-in 1s ease-in-out 200ms forwards);
+        .bar-5 {
+            .animation(fade-in 1s ease-in-out 300ms forwards);
+        }
+    }
 }
 
 // section 2 - interior
@@ -352,6 +361,12 @@ section,
         .info-text {
             margin-top: 0;
         }
+        ul {
+            list-style-type: none;
+        }
+        .vertical-list {
+            margin-bottom:20px;
+        }
     }
     .product-features {
         ul {
@@ -376,12 +391,56 @@ section,
     }
 }
 .usb3, #usb3 {
+    h1 {
+        margin-bottom: 100px !important;
+    }
+    &.active {
+        .product-graphics {
+            border-left: 1px solid rgba(255, 255, 255, 1);
+            .secondary-text {
+                border-bottom:1px solid rgba(255, 255, 255, 1);
+            }
+            &:before {
+                opacity:1;
+            }
+        }
+
+    }
     .product-graphics {
-        width:100%;
+        width:50%;
+        float:right;
+        border-left: 1px solid rgba(255, 255, 255, 0);
+        .transition(border-left 400ms ease-in 500ms);
+
+        &:before {
+            content:"";
+            .block(10px, 10px);
+            background: @white;
+            position:absolute;
+            top:0;
+            left:0;
+            .border-radius(50%);
+            left:-5px;
+            opacity:0;
+            .transition(opacity 0.1s ease-in-out 1.5s);
+        }
+        ul {
+            padding-bottom:0;
+            padding-top:0;
+            margin-top:0;
+            margin-bottom:0;
+            p {
+                margin:0;
+            }
+        }
+
         li {
             display:block;
             width:100%;
-            text-align:right;
+            text-align:left;
+            &.blue-bars {
+                text-align:left !important;
+            }
         }
         p {
             font-size: 18px;
@@ -390,24 +449,54 @@ section,
                 color: @grey-text;
             }
         }
+        .secondary-text {
+            border-bottom:1px solid rgba(255, 255, 255, 0);
+            margin-bottom:0;
+            max-width:205px;
+            width:205px;
+            margin-left:-40px;
+            padding-left:40px;
+            padding-bottom:180px;
+            .transition(border-bottom 400ms ease-in-out);
+        }
     }
 }
 #telefonie, .telefonie {
 }
-
+#wlan, .wlan {
+    .product-features {
+        li:nth-child(2) {
+            margin-bottom: 0;
+        }
+    }
+}
 #fritzos, .fritzos {
+    header {
+        width:100% !important;
+        max-width:100%;
+        left:0;
+       h1 {
+           margin-bottom:70px;
+       }
+    }
+
     .icon-list {
         margin-top:70px;
         li {
             width:25%;
             margin-bottom:60px;
-            h4 {
-                margin:20px 0 10px;
+
+            p {
+                max-width:255px;
+                width:100%;
             }
             &.clearfix {
                 clear:left;
             }
         }
+    }
+    .packshot {
+        top:420px;
     }
 }
 
@@ -431,9 +520,12 @@ section,
            margin:0;
            padding:0;
            p {
-            width:150px;
-            ma-width:100%;
+            max-width:170px;
+            width:100%;
             margin:0 auto;
+           }
+           h4 {
+               margin:20px 0 10px;
            }
         }
     }
@@ -464,40 +556,32 @@ section,
     background: url("../images/sound-icon.png") no-repeat center center;
 }
 .wlan-icon {
-    background: url("../images/wlan-icon.png") no-repeat center center;
-
-    width:37px;
-    height:36px;
+    background: url("../images/wlan-icon.png") no-repeat top center;
+    height:40px;
 }
 .dsl-icon {
-    background: url("../images/dsl-icon.png") no-repeat center center;
-    width: 58px;
-    height:33px;
+    background: url("../images/dsl-icon.png") no-repeat top center;
+    height:40px;
 }
 .tv-icon {
-    width:44px;
-    height:37px;
-    background: url("../images/tv-icon.png") no-repeat center center;
+    height:40px;
+    background: url("../images/tv-icon.png") no-repeat top center;
 }
 .server-icon {
-    background: url("../images/server-icon.png") no-repeat center center;
-    width:44px;
-    height:31px;
+    background: url("../images/server-icon.png") no-repeat top center;
+    height:40px;
 }
 .fritz-icon {
-    background: url("../images/fritz-icon.png") no-repeat center center;
-    width:50px;
-    height:47px;
+    background: url("../images/fritz-icon.png") no-repeat top center;
+    height:40px;
 }
 .home-icon {
-    background: url("../images/home-icon.png") no-repeat center center;
-    width:30px;
-    height:38px;
+    background: url("../images/home-icon.png") no-repeat top center;
+    height:40px;
 }
 .vpn-icon {
-    background: url("../images/vpn-icon.png") no-repeat center center;
-    width:58px;
-    height:49px;
+    background: url("../images/vpn-icon.png") no-repeat top center;
+    height:40px;
 }
 
 // http://stackoverflow.com/questions/4770025/how-to-disable-scrolling-temporarily
@@ -523,7 +607,7 @@ TODO: Remove me before deployment */
 
 
 .white-bars b, .blue-bars b {
-    width:9px;
+    width:8px;
     height:30px;
     display:inline-block;
     background: white;
@@ -655,12 +739,10 @@ div[class*='bar'] , b{
 
 .info-text {
     font-size: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
-.product-graphics ul {
-    list-style-type: none;
-}
+
 
 .action-buttons{
     text-align:center;
