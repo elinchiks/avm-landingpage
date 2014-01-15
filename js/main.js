@@ -263,7 +263,8 @@ var avmlp = {
         this.currentSectionIndex = currentSectionIndex;
 
         // update content!
-        this.setViewportContent();
+
+        // this.setViewportContent();
 
         // set Navigation Hilite
         var currentSection = this.sectionNames[currentSectionIndex];
@@ -322,6 +323,7 @@ var avmlp = {
                 this.$viewport.attr('class', 'start');
         }
         */
+
         // Active class is added again - to display animations
         this.$viewport.removeClass('active');
         setTimeout ( function(){
@@ -505,8 +507,8 @@ var avmlp = {
         $(".inside-view-after").css("background-position", 960 - (w+18) + "px 0");
     },
 
-    animateSlider: function() {
-        $(".drag-wrapper").animate({ left: "450" }, {
+    animateSlider: function(pos) {
+        $(".drag-wrapper").animate({ "left": pos }, {
             duration: 1200,
             easing: "easeOutElastic",
             progress: function() {
@@ -570,7 +572,17 @@ jQuery( document ).ready(function( $ ) {
     });
     // TODO:    Animate Slider when user see's section #heimnetz
     //          => throw event when #heimnetz is in viewport and react accordingly
-    avmlp.animateSlider();
+    avmlp.animateSlider(450);
+
+    // make hotspot callout's sticky
+    $(".hotspot").on("mouseenter", function() {
+        // if ($(".drag-wrapper").position().left < 900) {
+        //     avmlp.animateSlider(900);
+        // }
+        $(".hotspot").removeClass("active");
+        $(this).addClass("active");
+    });
+
 
 });
 
