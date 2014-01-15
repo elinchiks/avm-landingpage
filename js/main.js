@@ -41,7 +41,7 @@ var avmlp = {
     initAnimationImages: function() {
         for(var i = 0; i < this.aniTotalImages; i++) { // loop for each image in sequence
             this.aniImages[i] = {
-                "top": '136',
+                "top": 'auto',
                 "left": 122,
                 "low": new Image(),
                 "high": new Image(),
@@ -361,15 +361,13 @@ var avmlp = {
 
 
 
-        // Look Inside
+        // // Look Inside
         if(this.currentSectionIndex === 1) {
             if (!this.$viewport.find("#detailed-view").length) {
                 // first run - init before/after slider
                 this.$viewport.append($currentSlide.find("#detailed-view"));
           
                 this.initInsideView();
-
-
 
             } else {
                 // just show the slider
@@ -380,6 +378,9 @@ var avmlp = {
             this.$viewport.find("#detailed-view").hide();
             this.$viewport.find("#packshot").show();
         }
+
+
+    
 
         // Fix positions
         var sectionId = "#" + this.sectionNames[this.currentSectionIndex];
@@ -465,7 +466,7 @@ jQuery( document ).ready(function( $ ) {
     // clickable bullets in Navigation
     $("#primary li").on("click", function(e) {
         e.preventDefault();
-        var href = $(this).children("a").attr("href");
+        var href = $(this).find("a").attr("href");
         if (href) {
             window.location = href;
         }

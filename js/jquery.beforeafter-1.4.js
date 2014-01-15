@@ -112,7 +112,7 @@
 				});
 			}
 
-			$('#dragwrapper'+randID).draggable( { containment:obj,drag:drag,stop:drag });
+			$('#dragwrapper').draggable( { containment:obj,drag:drag,stop:drag });
 
 			function drag()
 			{
