@@ -45,12 +45,13 @@ var avmlp = {
                 "left": 122,
                 "low": new Image(),
                 "high": new Image(),
-                "highSrc": this.aniImagesHighSrcPrefix + "comp_" + this.pad(i, 4) + ".png"
+                "highSrc": this.aniImagesHighSrcPrefix + this.pad(i, 4) + ".png"
             };
-            this.aniImages[i].low.src = this.aniImagesLowSrcPrefix + "comp_" + this.pad(i, 4) + ".png";
+            this.aniImages[i].low.src = this.aniImagesLowSrcPrefix + this.pad(i, 4) + ".png";
         }
 
         // override the positions
+        /*
         this.aniImages[20].top = 154;
         this.aniImages[21].top = 172;
         this.aniImages[22].top = 190;
@@ -145,16 +146,9 @@ var avmlp = {
         this.aniImages[111].top = 150;
         this.aniImages[112].top = 140;
         this.aniImages[113].top = 136;
+        */
     },
 
-    initInsideView :function(){
-        $('#viewport').find('#detailed-view').beforeAfter({
-            animateIntro : true,
-            introDelay : 2000,
-            introDuration : 300,
-            showFullLinks : false
-        });
-    },
 
     resizeSections: function() {
         var h = jQuery("html").height();
@@ -272,7 +266,7 @@ var avmlp = {
         setTimeout ( function(){
             $('#viewport').addClass("active");
         }, 600);
-      
+
         var $currentSlide = $( this.$slides[this.currentSectionIndex] );
         this.$viewport.find("header").html(
             $currentSlide.find("header").html()
@@ -297,8 +291,6 @@ var avmlp = {
             this.$viewport.find(".logo-fritz-color").show();
             this.$viewport.find(".logo-fritz").hide();
             this.$viewport.find(".link-next").show();
-
-
         } else {
             this.$viewport.find(".logo-fritz-color").hide();
             this.$viewport.find(".logo-fritz").show();
@@ -363,24 +355,21 @@ var avmlp = {
 
         // // Look Inside
         if(this.currentSectionIndex === 1) {
-            if (!this.$viewport.find("#detailed-view").length) {
+            if (!this.$viewport.find(".inside-view").length) {
                 // first run - init before/after slider
-                this.$viewport.append($currentSlide.find("#detailed-view"));
-          
-                this.initInsideView();
-
+                this.$viewport.append($currentSlide.find(".inside-view"));
             } else {
                 // just show the slider
-                this.$viewport.find("#detailed-view").show();
+                this.$viewport.find(".inside-view").show();
             }
             this.$viewport.find("#packshot").hide();
         } else {
-            this.$viewport.find("#detailed-view").hide();
+            this.$viewport.find(".inside-view").hide();
             this.$viewport.find("#packshot").show();
         }
 
 
-    
+
 
         // Fix positions
         var sectionId = "#" + this.sectionNames[this.currentSectionIndex];
@@ -472,16 +461,36 @@ jQuery( document ).ready(function( $ ) {
     });
 
     avmlp.resizeSections();
-    // avmlp.initInsideView();
+
     // initialise view port - all slides will displayed in there
-    avmlp.initViewPort();
+    // avmlp.initViewPort();
 
     // TODO: initial Navigation State isn't correct when url fragment is set.
-    avmlp.setNavigationState();
+    // avmlp.setNavigationState();
 
-    avmlp.initAnimationImages();
-    avmlp.positionViewport();
+    // avmlp.initAnimationImages();
+    // avmlp.positionViewport();
 
+
+    // inside/outside image
+    $(".drag-wrapper").draggable({
+        axis: "x",
+        cursor: "move",
+        handle: ".drag-handle",
+        containment: ".inside-view",
+        drag: function() {
+            var w = Math.floor( $(this).position().left / avmlp.zoom);
+            $(".inside-view-before").width(w+18);
+            $(".inside-view-after").width( 960 - (w+18) );
+            $(".inside-view-after").css("background-position", 960 - (w+18) + "px 0");
+        },
+        stop: function() {
+            var w = Math.floor( $(this).position().left / avmlp.zoom);
+            $(".inside-view-before").width(w+18);
+            $(".inside-view-after").width( 960 - (w+18) );
+            $(".inside-view-after").css("background-position", 960 - (w+18) + "px 0");
+        }
+    });
 });
 
 // resize handler

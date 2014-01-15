@@ -40,12 +40,10 @@
 			var imgWidth = $('img:first', obj).width();
 			var imgHeight = $('img:first', obj).height();
 
-			if( $('div',obj).length != 2 ) $('img',obj).wrap('<div>'); // For backwards compatability. Used to require images to be wrapped in div tags.
-
 			$(obj)
 			.width(imgWidth)
 			.height(imgHeight)
-			.css({'overflow':'hidden','position':'relative','padding':'0'});
+			.css({'overflow':'hidden','padding':'0'});
 
 			var bef = $('img:first', obj).attr('src');
 			var aft = $('img:last', obj).attr('src');
@@ -54,8 +52,8 @@
 			$('img:last', obj).attr('id','afterimage'+randID);
 
 			// Create an inner div wrapper (dragwrapper) to hold the images.
-			$(obj).prepend('<div id="dragwrapper'+randID+'"><div id="drag'+randID+'"><img width="8" height="56" alt="handle" src="'+o.imagePath+'handle.gif" id="handle'+randID+'" /></div></div>'); // Create drag handle
-			$('#dragwrapper'+randID).css({'opacity':.25,'position':'absolute','padding':'0','left':(imgWidth*o.introPosition)-($('#handle'+randID).width()/2)+'px','z-index':'20'}).width($('#handle'+randID).width()).height(imgHeight);
+			$(obj).prepend('<div id="dragwrapper'+randID+'"><div id="drag'+randID+'"><img width="36" height="37" alt="handle" src="'+o.imagePath+'drag-handle.png" id="handle'+randID+'" /></div></div>'); // Create drag handle
+			$('#dragwrapper'+randID).css({'opacity':.25,'position':'absolute','padding':'0','left':(imgWidth*o.introPosition)-($('#handle'+randID).width()/2)-18+'px','z-index':'20'}).width($('#handle'+randID).width()).height(imgHeight);
 
 			$('div:eq(2)', obj).height(imgHeight).width(imgWidth*o.introPosition).css({'position':'absolute','overflow':'hidden','left':'0px','z-index':'10'}); // Set CSS properties of the before image div
 			$('div:eq(3)', obj).height(imgHeight).width(imgWidth).css({'position':'absolute','overflow':'hidden','right':'0px'});	// Set CSS properties of the after image div
@@ -63,8 +61,6 @@
 			$('#beforeimage'+randID).css({'position':'absolute','top':'0px','left':'0px'});
 			$('#afterimage'+randID).css({'position':'absolute','top':'0px','right':'0px'});
 			$('#handle'+randID).css({'z-index':'100','position':'relative','cursor':o.cursor,'top':(imgHeight/2)-($('#handle'+randID).height()/2)+'px','left':'-3px'})
-
-			$(obj).append('<img src="'+o.imagePath+'lt-small.png" width="7" height="15" id="lt-arrow'+randID+'"><img src="'+o.imagePath+'rt-small.png" width="7" height="15" id="rt-arrow'+randID+'">');
 
 			if(o.showFullLinks)
 			{
@@ -116,7 +112,6 @@
 
 			function drag()
 			{
-				$('#lt-arrow'+randID+', #rt-arrow'+randID).stop().css('opacity',0);
 				$('div:eq(2)', obj).width( parseInt( $(this).css('left') ) + 4 );
 			}
 
@@ -138,12 +133,8 @@
 			function clickit()
 			{
 				$(obj).hover(function(){
-						$('#lt-arrow'+randID).stop().css({'z-index':'20','position':'absolute','top':imgHeight/2-$('#lt-arrow'+randID).height()/2+'px','left':parseInt($('#dragwrapper'+randID).css('left'))-10+'px'}).animate({opacity:1,left:parseInt($('#lt-arrow'+randID).css('left'))-6+'px'},200);
-						$('#rt-arrow'+randID).stop().css({'position':'absolute','top':imgHeight/2-$('#lt-arrow'+randID).height()/2+'px','left':parseInt($('#dragwrapper'+randID).css('left'))+10+'px'}).animate({opacity:1,left:parseInt($('#rt-arrow'+randID).css('left'))+6+'px'},200);
 						$('#dragwrapper'+randID).animate({'opacity':1},200);
 					},function(){
-						$('#lt-arrow'+randID).animate({opacity:0,left:parseInt($('#lt-arrow'+randID).css('left'))-6+'px'},350);
-						$('#rt-arrow'+randID).animate({opacity:0,left:parseInt($('#rt-arrow'+randID).css('left'))+6+'px'},350);
 						$('#dragwrapper'+randID).animate({'opacity':.25},350);
 					}
 				);
@@ -153,7 +144,6 @@
 					var clickX = e.pageX - $(this).offset().left;
 					$('#dragwrapper'+randID).stop().animate({'left':clickX-($('#dragwrapper'+randID).width()/2)+'px'},o.clickSpeed);
 					$('div:eq(2)', obj).stop().animate({'width':clickX+'px'},o.clickSpeed);
-					$('#lt-arrow'+randID+',#rt-arrow'+randID).stop().animate({opacity:0},50);
 				});
 				$(obj).one('mousemove', function(){$('#dragwrapper'+randID).stop().animate({'opacity':1},500);}); // If the mouse is over the container and we animate the intro, we run this to change the opacity when the mouse moves since the hover event doesnt get triggered yet
 			}
