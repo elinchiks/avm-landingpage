@@ -41,7 +41,7 @@ var avmlp = {
     initAnimationImages: function() {
         for(var i = 0; i < this.aniTotalImages; i++) { // loop for each image in sequence
             this.aniImages[i] = {
-                "top": 'auto',
+                "top": '200',
                 "left": 122,
                 "low": new Image(),
                 "high": new Image(),
