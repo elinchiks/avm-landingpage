@@ -55,20 +55,20 @@
   100% { opacity: 1; }
 }
 @-webkit-keyframes scale-in {
-  0%   { .transform(scale(0)); }
-  100% { .transform(scale(1)); }
+  0%   { .transform(scale(0.7)); opacity:0;}
+  100% { .transform(scale(1)); opacity:1;}
 }
 @-moz-keyframes scale-in {
-  0%   { .transform(scale(0)); }
-  100% { .transform(scale(1)); }
+  0%   { .transform(scale(0.7)); opacity:0; }
+  100% { .transform(scale(1)); opacity:1;}
 }
 @-o-keyframes scale-in {
-  0%   { .transform(scale(0)); }
-  100% { .transform(scale(1)); }
+  0%   { .transform(scale(0.7)); opacity:0;}
+  100% { .transform(scale(1)); opacity:1;}
 }
 @keyframes scale-in {
-  0%   { .transform(scale(0)); }
-  100% { .transform(scale(1)); }
+  0%   { .transform(scale(0.7)); opacity:0;}
+  100% { .transform(scale(1)); opacity:1; }
 }
 .animation(@name) {
   -webkit-animation: @name; 
