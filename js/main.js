@@ -322,7 +322,6 @@ var avmlp = {
                     $('#packshot').attr('src', aniImage.low.src);
                     $('#packshot').css({
                         "top": aniImage.top + "px",
-                        "left": aniImage.left + "px",
                     });
 
                     if (this.debug) {
