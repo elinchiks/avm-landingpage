@@ -284,7 +284,11 @@ section,
             display:table !important;
             overflow:hidden;
             padding-top:0;
+            padding-left: 0;
             margin-top:0;
+            width: 110%;
+            left: -10%;
+           
         }
         li {
             display:table-cell !important;
@@ -304,6 +308,7 @@ section,
         ul {
             margin-top:0;
             padding-top:0;
+            padding-left:0;
         }
         p {
             margin-top:0;
@@ -346,8 +351,12 @@ section,
         margin-top:70px;
         li {
             width:25%;
+            margin-bottom:60px;
             h4 {
                 margin:20px 0 10px;
+            }
+            &.clearfix {
+                clear:left;
             }
         }
     }
