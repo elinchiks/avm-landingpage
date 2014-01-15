@@ -270,10 +270,44 @@ section,
 }
 
 // section 3 - wlan
-#wlan {
+#wlan, .wlan{
     // background-image: url("../images/bg-layout-03.jpg");
     .packshot {
         top: 580px;
+    }
+    h1 {
+        margin-bottom: 115px !important;
+    }
+    .product-graphics {
+
+        ul {
+            display:table !important;
+            overflow:hidden;
+            padding-top:0;
+            margin-top:0;
+        }
+        li {
+            display:table-cell !important;
+            vertical-align:bottom !important;
+            height:100%;
+            clear:both;
+            float:none !important;
+            &.white-bars {
+                padding-left:20px;
+            }
+        }
+        .info-text {
+            margin-top: 0;
+        }
+    }
+    .product-features {
+        ul {
+            margin-top:0;
+            padding-top:0;
+        }
+        p {
+            margin-top:0;
+        }
     }
 }
 
