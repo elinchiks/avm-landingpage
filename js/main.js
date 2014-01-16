@@ -164,8 +164,6 @@ jQuery( document ).ready(function( $ ) {
         var href = $(this).find("a").attr("href");
 
         if (href) {
-            console.log(href);
-           // $('body, html').animate({scrollTop: $(href).offset().top}, 800);           
             window.location = href;
         }
     });
@@ -219,8 +217,10 @@ jQuery( window ).on( "sectionChange", function(e, sectionName ) {
     setTimeout(
         function(){
             $('#' + sectionName ).addClass('active');
+
         }, 100);
             
+
     switch (sectionName) {
         case "start":
             break;
