@@ -299,7 +299,7 @@ section,
         height: 31px;
         position: absolute;
         background: url("../images/icon-hotspot.png") no-repeat;
-   
+
 
         &.active {
             .callout {
@@ -465,7 +465,9 @@ section,
 #wlan, .wlan{
     // background-image: url("../images/bg-layout-03.jpg");
     .packshot {
-        top: 580px;
+        top: 716px;
+        width: 941px;
+        height: 244px;
     }
     h1 {
         margin-bottom: 115px !important;
@@ -659,25 +661,34 @@ section,
         top:730px;
     }
 }
+
+// slide 6 - fritz os
 #fritzos, .fritzos {
+    // .slide {
+    //     background-image: url("../images/bg-layout-06.jpg");
+    // }
+
     header {
-        width:100% !important;
+        width:100%;
         max-width:100%;
         left:0;
-       h1 {
-           margin-bottom:70px;
-       }
     }
 
     .icon-list {
-        margin-top:70px;
+        position: absolute;
+        left: 120px;
+        top: 62px;
+        width: 960px;
         li {
             width:25%;
-            margin-bottom:60px;
-
+            margin-bottom:30px;
+            h4 {
+                margin-top: 10px;
+                margin-bottom: 6px;
+            }
             p {
-                max-width:255px;
-                width:100%;
+                font-size: 16px;
+                line-height: 20px;
             }
             &.clearfix {
                 clear:left;
@@ -685,7 +696,7 @@ section,
         }
     }
     .packshot {
-        top:420px;
+        top:400px;
     }
 }
 .auszeichnungen, #auszeichnungen {
@@ -706,77 +717,48 @@ section,
         width:100%;
         .border-box();
         li {
-           text-align: center;
-           display:block;
-           float:left;
-           width:19%;
-           .border-box();
-           margin:0;
-           padding:0;
-           p {
-            max-width:170px;
-            width:100%;
-            margin:0 auto;
-           }
-           h4 {
-               margin:20px 0 10px;
-           }
+            text-align: center;
+            display: block;
+            float: left;
+            width: 19%;
+            .border-box();
+            margin: 0;
+            padding: 0;
+            p {
+                width: 90%;
+                margin: 0 auto;
+            }
+            h4 {
+                margin: 20px 0 10px;
+            }
         }
     }
 }
 
 // Icons
+.icon {
+    width: 60px;
+    height: 60px;
+    display: block;
+    background-image: url("../images/icon-sprite.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    margin: 0 auto;
 
-[class$=icon] {
-    width:100%;
-    height:62px;
-    margin:0 auto;
-    display:block;
+    &.icon-ab { background-position: 0 0; }
+    &.icon-app { background-position: -60px 0; }
+    &.icon-dect { background-position: -120px 0; }
+    &.icon-dsl { background-position: -180px 0; }
+    &.icon-fritz { background-position: -240px 0; }
+    &.icon-home { background-position: -300px 0; }
+    &.icon-mediaserver { background-position: 0 -60px; }
+    &.icon-sound { background-position: -60px -60px; }
+    &.icon-telefon { background-position: -120px -60px; }
+    &.icon-tv { background-position: -180px -60px; }
+    &.icon-vpn { background-position: -240px -60px; }
+    &.icon-wlan { background-position: -300px -60px; }
 }
-.dect-icon {
-    background: url("../images/dec-icon.png") no-repeat center center;
-}
-.telefon-icon {
-    background: url("../images/telefon-icon.png") no-repeat center center;
-}
-.app-icon {
-    background: url("../images/app-icon.png") no-repeat center center;
 
-}
-.antworter-icon {
-    background: url("../images/antworter-icon.png") no-repeat center center;
-}
-.sound-icon {
-    background: url("../images/sound-icon.png") no-repeat center center;
-}
-.wlan-icon {
-    background: url("../images/wlan-icon.png") no-repeat top center;
-    height:40px;
-}
-.dsl-icon {
-    background: url("../images/dsl-icon.png") no-repeat top center;
-    height:40px;
-}
-.tv-icon {
-    height:40px;
-    background: url("../images/tv-icon.png") no-repeat top center;
-}
-.server-icon {
-    background: url("../images/server-icon.png") no-repeat top center;
-    height:40px;
-}
-.fritz-icon {
-    background: url("../images/fritz-icon.png") no-repeat top center;
-    height:40px;
-}
-.home-icon {
-    background: url("../images/home-icon.png") no-repeat top center;
-    height:40px;
-}
-.vpn-icon {
-    background: url("../images/vpn-icon.png") no-repeat top center;
-    height:40px;
-}
 
 // http://stackoverflow.com/questions/4770025/how-to-disable-scrolling-temporarily
 .stop-scrolling {
