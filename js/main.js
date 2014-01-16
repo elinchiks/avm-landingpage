@@ -235,6 +235,10 @@ var avmlp = {
         var width = $('#viewport').width();
         $('#viewport').css({'left':'50%', 'margin-left': -width /2 });
     },
+    positionSlide: function() {
+        var width = $('.slide').width();
+        $('.slide').css({'left':'50%', 'margin-left': -width /2 });
+    },
 
     applyZoom: function() {
         var top = -(this.defaultHeight - this.defaultHeight * this.zoom) / 2;
@@ -555,6 +559,7 @@ jQuery( document ).ready(function( $ ) {
 
     // avmlp.initAnimationImages();
     avmlp.positionViewport();
+    avmlp.positionSlide();
 
 
     // inside/outside image - using jquery ui draggable
