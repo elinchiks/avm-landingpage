@@ -142,8 +142,11 @@ jQuery( document ).ready(function( $ ) {
     $("#primary li").on("click", function(e) {
         e.preventDefault();
         var href = $(this).find("a").attr("href");
+
         if (href) {
             window.location = href;
+
+
             // $(this).parents("ul").find("li").removeClass("active");
             // $(this).addClass("active");
         }
@@ -188,6 +191,13 @@ jQuery( window ).on( "resize", function() {
 });
 
 jQuery( window ).on( "sectionChange", function(e, sectionName ) {
+    $('section').removeClass('active');
+    setTimeout(
+        function(){
+            $('#' + sectionName ).addClass('active');
+        }, 300
+        );
+            
     switch (sectionName) {
         case "start":
             break;
