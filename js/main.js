@@ -34,6 +34,7 @@ var avmlp = {
     aniImagesLowSrcPrefix: "./frames/320px/",
     aniImagesHighSrcPrefix: "./frames/960px/",
     aniTimeoutID: null,
+    desktop: !Modernizr.touch,
 
     // methods
     resizeSections: function() {
@@ -144,14 +145,13 @@ jQuery( document ).ready(function( $ ) {
         var href = $(this).find("a").attr("href");
         if (href) {
             window.location = href;
-            // $(this).parents("ul").find("li").removeClass("active");
-            // $(this).addClass("active");
         }
     });
 
     avmlp.resizeSections();
     avmlp.positionViewport();
     avmlp.positionSlide();
+
 
     // inside/outside image - using jquery ui draggable
     $(".drag-wrapper").draggable({
@@ -184,7 +184,7 @@ jQuery( document ).ready(function( $ ) {
 // resize handler
 jQuery( window ).on( "resize", function() {
     avmlp.resizeSections();
-    positionSlide();
+    avmlp.positionSlide();
 });
 
 jQuery( window ).on( "sectionChange", function(e, sectionName ) {
