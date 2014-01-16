@@ -41,7 +41,7 @@ var avmlp = {
     initAnimationImages: function() {
         for(var i = 0; i < this.aniTotalImages; i++) { // loop for each image in sequence
             this.aniImages[i] = {
-                "top": '200',
+                "top": '136',
                 "left": 122,
                 "low": new Image(),
                 "high": new Image(),
@@ -421,7 +421,7 @@ var avmlp = {
             if (!this.$viewport.find(".inside-view").length) {
                 // first run - init before/after slider
                 this.$viewport.append($currentSlide.find(".inside-view"));
-                this.initInsideView();
+                // this.initInsideView();
             } else {
                 // just show the slider
                 this.$viewport.find(".inside-view").show();
@@ -548,13 +548,13 @@ jQuery( document ).ready(function( $ ) {
     avmlp.resizeSections();
 
     // initialise view port - all slides will displayed in there
-    // avmlp.initViewPort();
+    avmlp.initViewPort();
 
     // TODO: initial Navigation State isn't correct when url fragment is set.
-    // avmlp.setNavigationState();
+    avmlp.setNavigationState();
 
-    // avmlp.initAnimationImages();
-    // avmlp.positionViewport();
+    avmlp.initAnimationImages();
+    avmlp.positionViewport();
 
 
     // inside/outside image - using jquery ui draggable
