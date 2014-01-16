@@ -9,8 +9,6 @@
 // global landingpage object
 var avmlp = {
     // properties
-    debug: false,
-
     defaultHeight: 960,
     defaultWidth: 1200,
     zoom: 1,
@@ -58,10 +56,6 @@ var avmlp = {
             this.applyZoom();
         }
 
-        if (this.debug) {
-            jQuery("#debug-section-height").text(h + "px");
-            jQuery("#debug-zoom").text(this.zoom.toPrecision(3));
-        }
     },
 
     // Positioning viewport in the middle
@@ -139,18 +133,6 @@ var avmlp = {
 
 // Document ready handler
 jQuery( document ).ready(function( $ ) {
-
-    // Debug
-    if ($("#debug-bar").length) {
-        $("#debug-bar").on("click", function(e) {
-            e.preventDefault();
-            $("#debug-bar").remove();
-            avmlp.debug = false;
-        });
-    } else {
-        avmlp.debug = false;
-    }
-
     // clickable bullets in Navigation
     $("#primary li").css("cursor", "pointer");
     $("#primary li").on("click", function(e) {
