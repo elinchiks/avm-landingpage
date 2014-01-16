@@ -124,34 +124,34 @@ var avmlp = {
         });
     },
 
-    animateVerticalSpeed: function() {
-        $(".speed-vert-fast .inner").parents("li").find(".info-text").css("opacity", 0);
-        $(".speed-vert-fast .inner").parents("ul").find(".additional-info").css("opacity", 0);
-        $(".speed-vert-fast .inner").height(0);
-        $(".speed-vert-fast .inner").animate({ "height": 234 }, {
-            duration: 400,
-            easing: "easeInOutCubic",
-            complete: function() {
-                $(this).parents("li").find(".info-text").animate({opacity: 1}, 400);
-            }
-        });
-        $(".speed-vert-slow .inner").parents("li").find(".info-text").css("opacity", 0);
-        $(".speed-vert-slow .inner").height(0);
-        $(".speed-vert-slow .inner").animate({ "height": 78 }, {
-            duration: 500,
-            easing: "easeInOutCubic",
-            complete: function() {
-                $(this).parents("li").find(".info-text").animate({opacity: 1}, {
-                    duration: 400,
-                    complete: function() {
-                        $(this).parents("ul").find(".additional-info").animate({opacity: 1}, 200);
-                    }
-                } );
-            }
-        });
+    // animateVerticalSpeed: function() {
+    //     $(".speed-vert-fast .inner").parents("li").find(".info-text").css("opacity", 0);
+    //     $(".speed-vert-fast .inner").parents("ul").find(".additional-info").css("opacity", 0);
+    //     $(".speed-vert-fast .inner").height(0);
+    //     $(".speed-vert-fast .inner").animate({ "height": 234 }, {
+    //         duration: 400,
+    //         easing: "easeInOutCubic",
+    //         complete: function() {
+    //             $(this).parents("li").find(".info-text").animate({opacity: 1}, 400);
+    //         }
+    //     });
+    //     $(".speed-vert-slow .inner").parents("li").find(".info-text").css("opacity", 0);
+    //     $(".speed-vert-slow .inner").height(0);
+    //     $(".speed-vert-slow .inner").animate({ "height": 78 }, {
+    //         duration: 500,
+    //         easing: "easeInOutCubic",
+    //         complete: function() {
+    //             $(this).parents("li").find(".info-text").animate({opacity: 1}, {
+    //                 duration: 400,
+    //                 complete: function() {
+    //                     $(this).parents("ul").find(".additional-info").animate({opacity: 1}, 200);
+    //                 }
+    //             } );
+    //         }
+    //     });
 
 
-    }
+    // }
 
 };
 
@@ -235,9 +235,9 @@ jQuery( window ).on( "sectionChange", function(e, sectionName ) {
             $(".speed-vert-fast .inner").height(0);
             $(".speed-vert-slow .inner").parents("li").find(".info-text").css("opacity", 0);
             $(".speed-vert-slow .inner").height(0);
-            window.setTimeout(function() {
-                avmlp.animateVerticalSpeed();
-            }, 400);
+            // window.setTimeout(function() {
+            //     avmlp.animateVerticalSpeed();
+            // }, 400);
             break;
         case "usb3":
             break;
