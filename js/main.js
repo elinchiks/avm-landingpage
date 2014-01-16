@@ -219,7 +219,7 @@ jQuery( window ).on( "sectionChange", function(e, sectionName ) {
     setTimeout(
         function(){
             $('#' + sectionName ).addClass('active');
-        }, 300);
+        }, 100);
             
     switch (sectionName) {
         case "start":
