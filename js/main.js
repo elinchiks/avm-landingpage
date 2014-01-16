@@ -3,7 +3,7 @@
  * behaviours for avm landingpage
  * @author: Sven Kesting <sven@v26.org>
  * @author: Elina Sundukova <elina.sundukova@thinkmoto.de>
- * @dependencies: jQuery, jQuery UI Draggable
+ * @dependencies: jQuery, jQuery UI Draggable, modernizr
  *********************************************************************/
 
 // global landingpage object
@@ -25,6 +25,8 @@ var avmlp = {
     $slides: null,
     $viewport: null,
 
+    isDesktop: !window.Modernizr.touch,
+
     // product animation
     aniStart: 1800,
     aniStep: 1,
@@ -34,7 +36,7 @@ var avmlp = {
     aniImagesLowSrcPrefix: "./frames/320px/",
     aniImagesHighSrcPrefix: "./frames/960px/",
     aniTimeoutID: null,
-    desktop: !Modernizr.touch,
+
 
     // methods
     resizeSections: function() {
@@ -107,7 +109,6 @@ var avmlp = {
             });
             $("#primary ." + currentSection).addClass("active");
             // trigger event
-            // console.log(currentSection);
             $( window ).trigger( "sectionChange", [ currentSection ] );
         }
     },
@@ -152,25 +153,29 @@ jQuery( document ).ready(function( $ ) {
     avmlp.positionViewport();
     avmlp.positionSlide();
 
+    if (avmlp.isDesktop) {
+        // inside/outside image - using jquery ui draggable
+        $(".drag-wrapper").draggable({
+            axis: "x",
+            cursor: "move",
+            handle: ".drag-handle",
+            containment: ".inside-view",
+            start: function(){
+                $('.inside-view-before').find('.hotspot.active').removeClass('active');
+            },
+            drag: function() {
+                avmlp.updateSlider();
 
-    // inside/outside image - using jquery ui draggable
-    $(".drag-wrapper").draggable({
-        axis: "x",
-        cursor: "move",
-        handle: ".drag-handle",
-        containment: ".inside-view",
-        start: function(){
-            $('.inside-view-before').find('.hotspot.active').removeClass('active');
-        },
-        drag: function() {
-            avmlp.updateSlider();
-
-        },
-        stop: function() {
-            avmlp.updateSlider();
-        }
-    });
-    // avmlp.animateSlider(450);
+            },
+            stop: function() {
+                avmlp.updateSlider();
+            }
+        });
+    } else {
+        $(".drag-wrapper").remove();
+        $(".inside-view-after").remove();
+        $(".inside-view-before").width(960);
+    }
 
     // make hotspot callout's sticky
     $(".hotspot").on("mouseenter", function() {
@@ -187,6 +192,7 @@ jQuery( window ).on( "resize", function() {
     avmlp.positionSlide();
 });
 
+// with the sectionChange event we can control some animations taht should play when a slide is entered
 jQuery( window ).on( "sectionChange", function(e, sectionName ) {
     switch (sectionName) {
         case "start":
