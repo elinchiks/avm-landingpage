@@ -362,17 +362,15 @@ section,
     width:100%;
     overflow:hidden;
 }
+
 #hotspot-1 {
     left: 147px;
     top: 306px;
-
     .callout {
         top: -206px;
-        height: 195px;
+        height: 185px;
     }
 }
-
-
 
 #hotspot-2 {
     left: 392px;
@@ -506,7 +504,7 @@ section,
             float:right;
             &.additional-info {
                 position: absolute;
-                top: 64px;
+                top: 67px;
                 width: auto;
                 margin-left: 80px;
 
@@ -533,6 +531,37 @@ section,
             margin-top:0;
         }
     }
+
+    .speed-vert-fast {
+        position: absolute;
+        width: 61px;
+        height: 234px;
+        .inner {
+            position: absolute;
+            bottom: 0;
+            width: 61px;
+            height: 234px;
+            background: url("../images/bg-fast-vertical.png");
+        }
+    }
+
+    .speed-vert-slow {
+        position: absolute;
+        width: 61px;
+        height: 78px;
+        .inner {
+            position: absolute;
+            bottom: 0;
+            width: 61px;
+            height: 78px;
+            background: url("../images/bg-slow-vertical.png");
+
+        }
+    }
+
+
+
+
 }
 
 // section 4 - usb3
@@ -834,7 +863,7 @@ div[class*='bar'] , b{
 .active {
    div[class*='bar'] , b{
        opacity:1 !important;
-   } 
+   }
 }
 
 // #viewport.active {
