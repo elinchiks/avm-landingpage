@@ -144,7 +144,7 @@ section,
     height: 960px;
 
     .slide {
-        position: absolute;
+        position: relative;
         margin: 0 auto;
         background-image: url("../images/bg-section.jpg");
         width: 1200px;
@@ -437,6 +437,15 @@ section,
             .animation(fade-in 1s ease-in-out 300ms forwards);
         }
     }
+    .description {
+        text-align:center;
+        p {
+            width:500px;
+            max-width:100%;
+            margin-left:auto;
+            margin-right:auto;
+        }
+    }
 }
 
 // section 2 - interior
@@ -677,6 +686,11 @@ section,
     }
     .packshot {
         top:420px;
+    }
+}
+.auszeichnungen, #auszeichnungen {
+    .packshot {
+        top:285px;
     }
 }
 
