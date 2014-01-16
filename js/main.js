@@ -136,7 +136,8 @@ jQuery( document ).ready(function( $ ) {
 
         if (href) {
             console.log(href);
-           $('body, html').animate({scrollTop: $(href).offset().top}, 800);            // window.location = href;
+           // $('body, html').animate({scrollTop: $(href).offset().top}, 800);           
+            window.location = href;
         }
     });
 
@@ -189,7 +190,7 @@ jQuery( window ).on( "sectionChange", function(e, sectionName ) {
     setTimeout(
         function(){
             $('#' + sectionName ).addClass('active');
-        }, 500);
+        }, 300);
             
     switch (sectionName) {
         case "start":
