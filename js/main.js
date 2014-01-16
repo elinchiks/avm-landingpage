@@ -135,7 +135,8 @@ jQuery( document ).ready(function( $ ) {
         var href = $(this).find("a").attr("href");
 
         if (href) {
-            window.location = href;
+            console.log(href);
+           $('body, html').animate({scrollTop: $(href).offset().top}, 800);            // window.location = href;
         }
     });
 
