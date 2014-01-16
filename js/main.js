@@ -184,6 +184,7 @@ jQuery( document ).ready(function( $ ) {
 // resize handler
 jQuery( window ).on( "resize", function() {
     avmlp.resizeSections();
+    positionSlide();
 });
 
 jQuery( window ).on( "sectionChange", function(e, sectionName ) {
