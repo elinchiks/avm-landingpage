@@ -264,7 +264,7 @@ var avmlp = {
 
         // update content!
 
-        // this.setViewportContent();
+        this.setViewportContent();
 
         // set Navigation Hilite
         var currentSection = this.sectionNames[currentSectionIndex];
@@ -293,9 +293,9 @@ var avmlp = {
     setViewportContent: function() {
 
         // Switch id for the viewport depending on section displayed
-        /*
-        TODO:   Für Klassen funktioniert das leider so nicht.
-                this.$viewport.addClass('start'); sollte z.B. funkionieren, die müssen dann aber mit removeClass oder toggleClass wieder entfernt werden.
+        
+        // TODO:   Für Klassen funktioniert das leider so nicht.
+        //         this.$viewport.addClass('start'); sollte z.B. funkionieren, die müssen dann aber mit removeClass oder toggleClass wieder entfernt werden.
 
         switch (this.currentSectionIndex) {
             case (0):
@@ -322,7 +322,7 @@ var avmlp = {
             default:
                 this.$viewport.attr('class', 'start');
         }
-        */
+        
 
         // Active class is added again - to display animations
         this.$viewport.removeClass('active');
@@ -548,12 +548,12 @@ jQuery( document ).ready(function( $ ) {
     avmlp.resizeSections();
 
     // initialise view port - all slides will displayed in there
-    avmlp.initViewPort();
+    // avmlp.initViewPort();
 
     // TODO: initial Navigation State isn't correct when url fragment is set.
-    avmlp.setNavigationState();
+    // avmlp.setNavigationState();
 
-    avmlp.initAnimationImages();
+    // avmlp.initAnimationImages();
     avmlp.positionViewport();
 
 
