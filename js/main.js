@@ -27,17 +27,6 @@ var avmlp = {
 
     isDesktop: !window.Modernizr.touch,
 
-    // product animation
-    aniStart: 1800,
-    aniStep: 1,
-    aniTargetStep: 1,
-    aniImages: [],
-    aniTotalImages: 250,
-    aniImagesLowSrcPrefix: "./frames/320px/",
-    aniImagesHighSrcPrefix: "./frames/960px/",
-    aniTimeoutID: null,
-
-
     // methods
     resizeSections: function() {
         var h = jQuery("html").height();
@@ -51,8 +40,8 @@ var avmlp = {
             this.zoom = 1;
         }
         if (w < this.defaultWidth) {
-            if ( (w / this.defaultHeight) < this.zoom ) {
-                this.zoom = w / this.defaultHeight;
+            if ( (w / this.defaultWidth) < this.zoom ) {
+                this.zoom = w / this.defaultWidth;
             }
         }
         if (zoom !== this.zoom) {
