@@ -3,7 +3,7 @@
  * behaviours for avm landingpage
  * @author: Sven Kesting <sven@v26.org>
  * @author: Elina Sundukova <elina.sundukova@thinkmoto.de>
- * @dependencies: jQuery, jQuery UI Draggable
+ * @dependencies: jQuery, jQuery UI Draggable, modernizr
  *********************************************************************/
 
 // global landingpage object
@@ -25,15 +25,7 @@ var avmlp = {
     $slides: null,
     $viewport: null,
 
-    // product animation
-    aniStart: 1800,
-    aniStep: 1,
-    aniTargetStep: 1,
-    aniImages: [],
-    aniTotalImages: 250,
-    aniImagesLowSrcPrefix: "./frames/320px/",
-    aniImagesHighSrcPrefix: "./frames/960px/",
-    aniTimeoutID: null,
+    isDesktop: !window.Modernizr.touch,
 
     // methods
     resizeSections: function() {
@@ -48,8 +40,8 @@ var avmlp = {
             this.zoom = 1;
         }
         if (w < this.defaultWidth) {
-            if ( (w / this.defaultHeight) < this.zoom ) {
-                this.zoom = w / this.defaultHeight;
+            if ( (w / this.defaultWidth) < this.zoom ) {
+                this.zoom = w / this.defaultWidth;
             }
         }
         if (zoom !== this.zoom) {
@@ -106,7 +98,6 @@ var avmlp = {
             });
             $("#primary ." + currentSection).addClass("active");
             // trigger event
-            // console.log(currentSection);
             $( window ).trigger( "sectionChange", [ currentSection ] );
         }
     },
@@ -145,10 +136,6 @@ jQuery( document ).ready(function( $ ) {
 
         if (href) {
             window.location = href;
-
-
-            // $(this).parents("ul").find("li").removeClass("active");
-            // $(this).addClass("active");
         }
     });
 
@@ -156,24 +143,29 @@ jQuery( document ).ready(function( $ ) {
     avmlp.positionViewport();
     avmlp.positionSlide();
 
-    // inside/outside image - using jquery ui draggable
-    $(".drag-wrapper").draggable({
-        axis: "x",
-        cursor: "move",
-        handle: ".drag-handle",
-        containment: ".inside-view",
-        start: function(){
-            $('.inside-view-before').find('.hotspot.active').removeClass('active');
-        },
-        drag: function() {
-            avmlp.updateSlider();
+    if (avmlp.isDesktop) {
+        // inside/outside image - using jquery ui draggable
+        $(".drag-wrapper").draggable({
+            axis: "x",
+            cursor: "move",
+            handle: ".drag-handle",
+            containment: ".inside-view",
+            start: function(){
+                $('.inside-view-before').find('.hotspot.active').removeClass('active');
+            },
+            drag: function() {
+                avmlp.updateSlider();
 
-        },
-        stop: function() {
-            avmlp.updateSlider();
-        }
-    });
-    // avmlp.animateSlider(450);
+            },
+            stop: function() {
+                avmlp.updateSlider();
+            }
+        });
+    } else {
+        $(".drag-wrapper").remove();
+        $(".inside-view-after").remove();
+        $(".inside-view-before").width(960);
+    }
 
     // make hotspot callout's sticky
     $(".hotspot").on("mouseenter", function() {
@@ -187,16 +179,16 @@ jQuery( document ).ready(function( $ ) {
 // resize handler
 jQuery( window ).on( "resize", function() {
     avmlp.resizeSections();
-    positionSlide();
+    avmlp.positionSlide();
 });
 
+// with the sectionChange event we can control some animations taht should play when a slide is entered
 jQuery( window ).on( "sectionChange", function(e, sectionName ) {
     $('section').removeClass('active');
     setTimeout(
         function(){
             $('#' + sectionName ).addClass('active');
-        }, 300
-        );
+        }, 500);
             
     switch (sectionName) {
         case "start":
