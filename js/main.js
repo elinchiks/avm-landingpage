@@ -568,8 +568,12 @@ jQuery( document ).ready(function( $ ) {
         cursor: "move",
         handle: ".drag-handle",
         containment: ".inside-view",
+        start: function(){
+            $('.inside-view-before').find('.hotspot.active').removeClass('active');
+        },
         drag: function() {
             avmlp.updateSlider();
+
         },
         stop: function() {
             avmlp.updateSlider();
@@ -581,9 +585,6 @@ jQuery( document ).ready(function( $ ) {
 
     // make hotspot callout's sticky
     $(".hotspot").on("mouseenter", function() {
-        // if ($(".drag-wrapper").position().left < 900) {
-        //     avmlp.animateSlider(900);
-        // }
         $(".hotspot").removeClass("active");
         $(this).addClass("active");
     });

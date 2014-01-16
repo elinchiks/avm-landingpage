@@ -279,7 +279,7 @@ section,
         width: 18px;
         height: 640px;
         position: absolute;
-        overflow: hidden;
+        overflow: visible;
         left: 0;
     }
 
@@ -299,6 +299,14 @@ section,
         height: 31px;
         position: absolute;
         background: url("../images/icon-hotspot.png") no-repeat;
+   
+
+        &.active {
+            .callout {
+                opacity:1;
+            }
+
+        }
 
         .callout {
             display: none;
@@ -307,6 +315,9 @@ section,
             left: 15px;
             border-left: 1px solid #fff;
             padding: 0 0 20px 20px;
+            z-index:2;
+            opacity:0;
+            .transition(opacity 1s cubic-bezier(0.25,0.1,0.25,1));
 
             .tip { // the round tip
                 display: block;
