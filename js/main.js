@@ -162,7 +162,10 @@ jQuery( document ).ready(function( $ ) {
     $("#primary li").on("click", function(e) {
         e.preventDefault();
         var href = $(this).find("a").attr("href");
+
         if (href) {
+            console.log(href);
+           // $('body, html').animate({scrollTop: $(href).offset().top}, 800);           
             window.location = href;
         }
     });
@@ -212,6 +215,12 @@ jQuery( window ).on( "resize", function() {
 
 // with the sectionChange event we can control some animations taht should play when a slide is entered
 jQuery( window ).on( "sectionChange", function(e, sectionName ) {
+    $('section').removeClass('active');
+    setTimeout(
+        function(){
+            $('#' + sectionName ).addClass('active');
+        }, 300);
+            
     switch (sectionName) {
         case "start":
             break;
