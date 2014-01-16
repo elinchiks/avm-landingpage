@@ -499,10 +499,10 @@ section,
             width:100%;
             float:right;
             &.additional-info {
-                position:absolute;
-                top:84px;
-                width:auto;
-                margin-left:80px;
+                position: absolute;
+                top: 64px;
+                width: auto;
+                margin-left: 80px;
 
             }
         }
@@ -513,8 +513,8 @@ section,
             list-style-type: none;
         }
         .vertical-list {
-            margin-bottom:20px;
-            position:relative;
+            margin-bottom: 20px;
+            position: relative;
         }
     }
     .product-features {
@@ -825,6 +825,12 @@ TODO: Remove me before deployment */
 div[class*='bar'] , b{
     opacity:0 !important;
 }
+.active {
+   div[class*='bar'] , b{
+       opacity:1 !important;
+   } 
+}
+
 // #viewport.active {
 //     div[class*='bar'] , b{
 //         opacity:1 !important;
@@ -843,7 +849,7 @@ div[class*='bar'] , b{
 
 .product-graphics {
     float:left;
-    width:50%;
+    width:45%;
     box-sizing:border-box;
     position:relative;
     ul {
@@ -875,11 +881,11 @@ div[class*='bar'] , b{
     border-left:1px solid white;
     padding-left:60px;
     float:right;
-    width:50%;
+    width:45%;
     box-sizing:border-box;
     position:relative;
     li {
-        margin-bottom: 60px;
+        margin-bottom: 45px;
     }
     span {
         font-size:16px;
@@ -921,8 +927,11 @@ div[class*='bar'] , b{
 
 
 .action-buttons{
-    text-align:center;
-    margin-top:70px;
+    text-align: center;
+    margin-top: 70px;
+    position: absolute;
+    width: 100%;
+    z-index: 999;
     a {
         background:@action-color;
         text-align:center;
@@ -937,7 +946,6 @@ div[class*='bar'] , b{
 }
 .logo-section {
     position:absolute;
-    left:40px;
     bottom:45px;
 }
 
