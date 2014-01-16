@@ -264,7 +264,7 @@ var avmlp = {
 
         // update content!
 
-        this.setViewportContent();
+        // this.setViewportContent();
 
         // set Navigation Hilite
         var currentSection = this.sectionNames[currentSectionIndex];
@@ -299,32 +299,32 @@ var avmlp = {
 
         switch (this.currentSectionIndex) {
             case (0):
-                this.$viewport.attr('class', 'start');
+                this.$viewport.className('start');
                 break;
             case (1):
-                this.$viewport.attr('class', 'heimnetz');
+                this.$viewport.className('heimnetz');
                 break;
             case (2):
-                this.$viewport.attr('class', 'wlan');
+                this.$viewport.className('wlan');
                 break;
             case (3):
-                this.$viewport.attr('class', 'usb3');
+                this.$viewport.className('usb3');
                 break;
             case (4):
-                this.$viewport.attr('class', 'telefonie');
+                this.$viewport.className('telefonie');
                 break;
             case (5):
-                this.$viewport.attr('class', 'fritzos');
+                this.$viewport.className('fritzos');
                 break;
             case (6):
-                this.$viewport.attr('class', 'auszeichnungen');
+                this.$viewport.className('auszeichnungen');
                 break;
             default:
-                this.$viewport.attr('class', 'start');
+                this.$viewport.className('start');
         }
         
 
-        // Active class is added again - to display animations
+        // // Active class is added again - to display animations
         this.$viewport.removeClass('active');
         setTimeout ( function(){
             $('#viewport').addClass("active");
