@@ -304,16 +304,27 @@ section,
             border-left: 1px solid #fff;
             padding: 0 0 20px 20px;
 
+            .tip { // the round tip
+                display: block;
+                position: absolute;
+                background: #fff;
+                width: 8px;
+                height: 8px;
+                .border-radius(4px);
+                left: -4px;
+                top: 0;
+            }
             h3 {
-                font-family: @font-headline;
-                color: @featured-text;
                 width: 180px;
-                margin: 0;
-
+                margin: -3px 0 0;
+                font-size: 20px;
+                line-height: 22px;
             }
             p {
                 width: 180px;
                 margin: 0;
+                font-size: 18px;
+                line-height: 20px;
             }
         }
 
@@ -322,18 +333,9 @@ section,
             .callout {
                 display: block;
             }
+
         }
-        // &:before { // the round tip
-        //     content: "";
-        //     display: block;
-        //     position: absolute;
-        //     background: #fff;
-        //     width: 8px;
-        //     height: 8px;
-        //     .border-radius(4px);
-        //     left: 11px;
-        //     top: -216px;
-        // }
+
     }
 
 
@@ -344,7 +346,7 @@ section,
     top: 306px;
 
     .callout {
-        top: -216px;
+        top: -206px;
         height: 195px;
     }
 }
@@ -356,8 +358,8 @@ section,
     top: 255px;
 
     .callout {
-        top: -195px;
-        height: 174px;
+        top: -155px;
+        height: 134px;
     }
 }
 
@@ -366,8 +368,8 @@ section,
     top: 306px;
 
     .callout {
-        top: -246px;
-        height: 225px;
+        top: -206px;
+        height: 185px;
     }
 }
 
@@ -375,8 +377,8 @@ section,
     left: 650px;
     top: 255px;
     .callout {
-        top: -195px;
-        height: 174px;
+        top: -155px;
+        height: 134px;
     }
 }
 
@@ -384,8 +386,8 @@ section,
     left: 696px;
     top: 393px;
     .callout {
-        top: -333px;
-        height: 312px;
+        top: -293px;
+        height: 272px;
     }
 }
 
@@ -393,8 +395,8 @@ section,
     left: 698px;
     top: 282px;
     .callout {
-        top: -222px;
-        height: 201px;
+        top: -182px;
+        height: 161px;
     }
 }
 
@@ -424,9 +426,9 @@ section,
 
 // section 2 - interior
 #heimnetz {
-    .slide {
-        background-image: url("../images/bg-layout-02.jpg");
-    }
+    // .slide {
+    //     background-image: url("../images/bg-layout-02.jpg");
+    // }
     .packshot {
         top: 160px;
     }
