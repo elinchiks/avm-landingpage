@@ -3,7 +3,7 @@
  * behaviours for avm landingpage
  * @author: Sven Kesting <sven@v26.org>
  * @author: Elina Sundukova <elina.sundukova@thinkmoto.de>
- * @dependencies: jQuery
+ * @dependencies: jQuery, jQuery UI Draggable
  *********************************************************************/
 
 // global landingpage object
@@ -63,6 +63,7 @@ var avmlp = {
         var width = $('#viewport').width();
         $('#viewport').css({'left':'50%', 'margin-left': -width /2 });
     },
+
     positionSlide: function() {
         var width = $('.slide').width();
         $('.slide').css({'left':'50%', 'margin-left': -width /2 });
@@ -148,7 +149,6 @@ jQuery( document ).ready(function( $ ) {
     avmlp.resizeSections();
     avmlp.positionViewport();
     avmlp.positionSlide();
-
 
     // inside/outside image - using jquery ui draggable
     $(".drag-wrapper").draggable({
