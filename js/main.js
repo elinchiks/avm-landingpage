@@ -105,6 +105,9 @@ var avmlp = {
                 $(this).removeClass("active");
             });
             $("#primary ." + currentSection).addClass("active");
+            // trigger event
+            // console.log(currentSection);
+            $( window ).trigger( "sectionChange", [ currentSection ] );
         }
     },
 
@@ -141,8 +144,8 @@ jQuery( document ).ready(function( $ ) {
         var href = $(this).find("a").attr("href");
         if (href) {
             window.location = href;
-            $(this).parents("ul").find("li").removeClass("active");
-            $(this).addClass("active");
+            // $(this).parents("ul").find("li").removeClass("active");
+            // $(this).addClass("active");
         }
     });
 
@@ -167,9 +170,7 @@ jQuery( document ).ready(function( $ ) {
             avmlp.updateSlider();
         }
     });
-    // TODO:    Animate Slider when user see's section #heimnetz
-    //          => throw event when #heimnetz is in viewport and react accordingly
-    avmlp.animateSlider(450);
+    // avmlp.animateSlider(450);
 
     // make hotspot callout's sticky
     $(".hotspot").on("mouseenter", function() {
@@ -185,6 +186,27 @@ jQuery( window ).on( "resize", function() {
     avmlp.resizeSections();
 });
 
+jQuery( window ).on( "sectionChange", function(e, sectionName ) {
+    switch (sectionName) {
+        case "start":
+            break;
+        case "heimnetz":
+            window.setTimeout(function() {
+                avmlp.animateSlider(450);
+            }, 400);
+            break;
+        case "wlan":
+            break;
+        case "usb3":
+            break;
+        case "telefonie":
+            break;
+        case "fritzos":
+            break;
+        case "auszeichnungen":
+            break;
+    }
+});
 
 
 
