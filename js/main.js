@@ -202,7 +202,6 @@ jQuery( document ).ready(function( $ ) {
         $(this).addClass("active");
     });
 
-
 });
 
 // resize handler

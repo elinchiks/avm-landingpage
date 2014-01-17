@@ -90,6 +90,10 @@ body {
     max-width:100%;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
 // Navigation
 nav#primary,
 nav.primary {
@@ -1076,7 +1080,8 @@ section.active {
 }
 
 .featured-text {
-    color:@featured-text !important;
+    color: @featured-text !important;
+    letter-spacing: 1px;
     font-size:20px;
     font-family: @font-featured;
 }
@@ -1108,25 +1113,39 @@ section.active {
 
 
 
-.action-buttons{
+.action-buttons {
     text-align: center;
     margin-top: 30px;
     position: absolute;
     width: 100%;
     z-index: 999;
-    font-size: 24px;
     a {
+        height: 50px;
+        width: 400px;
+        line-height: 50px;
+        position: relative;
+        margin: 0 auto;
+        font-size: 24px;
         background:@action-color;
         text-align:center;
         color:@white;
-        padding:13px 55px 15px;
+        padding: 0;
+
         .border-radius(10px);
-        display:inline-block;
+        display: block;
         .border-box();
         .no-underline();
         .box-shadow(1px -1px 1px #3c426a);
     }
 }
+
+// FUCKING HACK
+@-moz-document url-prefix() {
+    .action-buttons a {
+        padding-bottom: 60px;
+    }
+}
+
 .logo-section {
     position:absolute;
     bottom:35px;
