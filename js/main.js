@@ -110,8 +110,8 @@ var avmlp = {
 
     animateSlider: function(pos) {
         $(".drag-wrapper").animate({ "left": pos }, {
-            duration: 1200,
-            easing: "easeOutElastic",
+            duration: 800,
+            easing: "easeOutBack",
             progress: function() {
                 avmlp.updateSlider();
             }
@@ -224,14 +224,6 @@ jQuery( window ).on( "sectionChange", function(e, sectionName ) {
             }, 400);
             break;
         case "wlan":
-            $(".speed-vert-fast .inner").parents("li").find(".info-text").css("opacity", 0);
-            $(".speed-vert-fast .inner").parents("ul").find(".additional-info").css("opacity", 0);
-            $(".speed-vert-fast .inner").height(0);
-            $(".speed-vert-slow .inner").parents("li").find(".info-text").css("opacity", 0);
-            $(".speed-vert-slow .inner").height(0);
-            // window.setTimeout(function() {
-            //     avmlp.animateVerticalSpeed();
-            // }, 400);
             break;
         case "usb3":
             break;
