@@ -92,14 +92,8 @@ var avmlp = {
 
         // set Navigation Hilite
         var currentSection = this.sectionNames[currentSectionIndex];
-        if ( ! $("#primary ." + currentSection).hasClass("active") ) {
-            $("#primary li").each(function(){
-                $(this).removeClass("active");
-            });
-            $("#primary ." + currentSection).addClass("active");
-            // trigger event
-            $( window ).trigger( "sectionChange", [ currentSection ] );
-        }
+        // trigger event
+        $( window ).trigger( "sectionChange", [ currentSection ] );
     },
 
     pad: function(number, length) { // pad numbers with leading zeros for JPEG sequence file names
@@ -219,7 +213,7 @@ jQuery( window ).on( "sectionChange", function(e, sectionName ) {
             $('#' + sectionName ).addClass('active');
 
         }, 100);
-            
+
 
     switch (sectionName) {
         case "start":

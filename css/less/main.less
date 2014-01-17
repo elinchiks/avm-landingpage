@@ -91,11 +91,12 @@ body {
 }
 
 // Navigation
-nav#primary {
+nav#primary,
+nav.primary {
     z-index: 20;
     position: fixed;
-    top: 40px;
-    left: 50px;
+    top: 60px;
+    left: 30px;
     width: 200px;
     h2 {
         margin: 0;
@@ -739,9 +740,31 @@ section,
         top:400px;
     }
 }
+
+// section 7 - Awards
 .auszeichnungen, #auszeichnungen {
     .packshot {
         top:285px;
+    }
+    .logo-fritz-color {
+        position: absolute;
+        top: 360px;
+    }
+    .imprint {
+        font-size: 14px;
+        color: #fff;
+        position: absolute;
+        bottom: 38px;
+        right: 150px;
+        a {
+            color: #fff;
+            text-decoration: none;
+            opacity: .6;
+            &:hover {
+                opacity: 1;
+
+            }
+        }
     }
 }
 
@@ -1107,6 +1130,7 @@ section.active {
 .logo-section {
     position:absolute;
     bottom:45px;
+    left: 120px;
 }
 
 
