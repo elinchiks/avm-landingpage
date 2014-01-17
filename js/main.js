@@ -76,7 +76,7 @@ var avmlp = {
 
     setNavigationState: function() {
         var currentSectionIndex;
-        if( /iPad/i.test(navigator.userAgent.toLowerCase()) == true) {
+        if( /iPad|Nexus/i.test(navigator.userAgent.toLowerCase()) == true) {
              currentSectionIndex = Math.floor( $(window).scrollTop() /  $(window).height()  );
         }  else {
             currentSectionIndex = Math.floor( $(window).scrollTop() / ( this.defaultHeight * this.zoom ) );
