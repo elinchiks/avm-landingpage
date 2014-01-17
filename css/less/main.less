@@ -96,7 +96,7 @@ nav.primary {
     z-index: 20;
     position: fixed;
     top: 60px;
-    left: 30px;
+    left: 10px;
     width: 200px;
     h2 {
         margin: 0;
@@ -167,7 +167,9 @@ section,
             margin: 0 auto;
             font-size: 58px;
             line-height: 70px;
-            letter-spacing: -1px;
+            &.smaller {
+                font-size: 56px;
+            }
         }
         h2 {
             font-family: @font-subline;
@@ -462,13 +464,15 @@ section,
         top: 160px;
     }
     p {
-        bottom: 60px;
+        bottom: 80px;
     }
 }
 
 // section 3 - wlan
 #wlan, .wlan{
-    // background-image: url("../images/bg-layout-03.jpg");
+    // .slide{
+    //     background-image: url("../images/bg-layout-03.jpg");
+    // }
     .packshot {
         top: 716px;
         width: 941px;
@@ -512,7 +516,10 @@ section,
             }
         }
         .info-text {
+            font-family: @font-headline;
             margin-top: 0;
+            margin-bottom: 2px;
+            font-size: 42px;
         }
         ul {
             list-style-type: none;
@@ -523,6 +530,11 @@ section,
         }
     }
     .product-features {
+        position: absolute;
+        top: 280px;
+        left: 550px;
+        width: 500px;
+
         ul {
             margin-top:0;
             padding-top:0;
@@ -567,7 +579,9 @@ section,
 
 // section 4 - usb3
 #usb3 {
-    // background-image: url("../images/bg-layout-04.jpg");
+    // .slide{
+    //     background-image: url("../images/bg-layout-04.jpg");
+    // }
     .packshot {
         top: 260px;
     }
@@ -644,6 +658,7 @@ section,
             margin-bottom:15px;
             &.blue-bars {
                 text-align:left !important;
+                margin-bottom: 8px;
             }
             &.last {
                 margin-bottom:0;
@@ -675,7 +690,7 @@ section,
     //     background-image: url("../images/bg-layout-05.jpg");
     // }
     .packshot {
-        top: 270px;
+        top: 250px;
     }
     .icon-list {
         width: 1000px;
@@ -684,7 +699,7 @@ section,
         top: 110px;
     }
     p {
-        bottom: 60px;
+        bottom: 90px;
     }
 }
 
@@ -737,12 +752,16 @@ section,
         }
     }
     .packshot {
-        top:400px;
+        top:380px;
     }
 }
 
 // section 7 - Awards
 .auszeichnungen, #auszeichnungen {
+    // .slide{
+    //     background-image: url("../images/bg-layout-07.jpg");
+    // }
+
     .packshot {
         top:285px;
     }
@@ -846,11 +865,11 @@ TODO: Remove me before deployment */
 
 
 .white-bars b, .blue-bars b {
-    width:8px;
+    width:7px;
     height:30px;
     display:inline-block;
     background: white;
-    margin-right:3px;
+    margin-right:2px;
     -webkit-transform: translateZ(0);
 }
 
