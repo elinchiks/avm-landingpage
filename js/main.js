@@ -9,7 +9,7 @@
 // global landingpage object
 var avmlp = {
     // properties
-    debug: false,
+    debug: true,
 
     defaultHeight: 960,
     defaultWidth: 1200,
@@ -272,6 +272,8 @@ var avmlp = {
 
         // set Navigation Hilite
         var currentSection = this.sectionNames[currentSectionIndex];
+        $( window ).trigger( "sectionChange", [ currentSection ] );
+
         if ( ! $("#primary ." + currentSection).hasClass("active") ) {
             $("#primary li").each(function(){
                 $(this).removeClass("active");
@@ -297,42 +299,6 @@ var avmlp = {
     setViewportContent: function() {
 
         // Switch id for the viewport depending on section displayed
-        
-        // TODO:   Für Klassen funktioniert das leider so nicht.
-        //         this.$viewport.addClass('start'); sollte z.B. funkionieren, die müssen dann aber mit removeClass oder toggleClass wieder entfernt werden.
-
-        switch (this.currentSectionIndex) {
-            case (0):
-                this.$viewport.className('start');
-                break;
-            case (1):
-                this.$viewport.className('heimnetz');
-                break;
-            case (2):
-                this.$viewport.className('wlan');
-                break;
-            case (3):
-                this.$viewport.className('usb3');
-                break;
-            case (4):
-                this.$viewport.className('telefonie');
-                break;
-            case (5):
-                this.$viewport.className('fritzos');
-                break;
-            case (6):
-                this.$viewport.className('auszeichnungen');
-                break;
-            default:
-                this.$viewport.className('start');
-        }
-        
-
-        // // Active class is added again - to display animations
-        this.$viewport.removeClass('active');
-        setTimeout ( function(){
-            $('#viewport').addClass("active");
-        }, 600);
 
         var $currentSlide = $( this.$slides[this.currentSectionIndex] );
         this.$viewport.find("header").html(
@@ -555,7 +521,7 @@ jQuery( document ).ready(function( $ ) {
     // avmlp.initViewPort();
 
     // TODO: initial Navigation State isn't correct when url fragment is set.
-    // avmlp.setNavigationState();
+    avmlp.setNavigationState();
 
     // avmlp.initAnimationImages();
     avmlp.positionViewport();
@@ -573,15 +539,12 @@ jQuery( document ).ready(function( $ ) {
         },
         drag: function() {
             avmlp.updateSlider();
-
         },
         stop: function() {
             avmlp.updateSlider();
         }
     });
-    // TODO:    Animate Slider when user see's section #heimnetz
-    //          => throw event when #heimnetz is in viewport and react accordingly
-    avmlp.animateSlider(450);
+
 
     // make hotspot callout's sticky
     $(".hotspot").on("mouseenter", function() {
@@ -598,6 +561,33 @@ jQuery( window ).on( "resize", function() {
 });
 
 
+// with the sectionChange event we can control some animations taht should play when a slide is entered
+jQuery( window ).on( "sectionChange", function(e, sectionName ) {
+    $('section').removeClass('active');
+    setTimeout(function(){
+        $('#' + sectionName ).addClass('active');
+    }, 100);
+
+    switch (sectionName) {
+        case "start":
+            break;
+        case "heimnetz":
+            window.setTimeout(function() {
+                avmlp.animateSlider(450);
+            }, 400);
+            break;
+        case "wlan":
+            break;
+        case "usb3":
+            break;
+        case "telefonie":
+            break;
+        case "fritzos":
+            break;
+        case "auszeichnungen":
+            break;
+    }
+});
 
 
 /* Taken from
