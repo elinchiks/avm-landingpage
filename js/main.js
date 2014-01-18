@@ -66,12 +66,9 @@ var avmlp = {
     loadAnimationImages: function() {
 
         var frames = this.animationData.frames;
-        var i = 0;
-        for (var frame in frames) {
-            if (!frames.hasOwnProperty(frame)) {
-                continue;
-            }
-            if (!frames[frame].img) {
+
+        for (var i = 0; i < frames.length; i++) {
+            if (!frames[i].img) {
                 this.aniImages[i] = {
                     "low": null,
                     "high": null,
@@ -81,14 +78,13 @@ var avmlp = {
                 this.aniImages[i] = {
                     "low": new Image(),
                     "high": new Image(),
-                    "highSrc": this.animationData.hiSrcPrefix + frames[frame].img
+                    "highSrc": this.animationData.hiSrcPrefix + frames[i].img
                 };
-                this.aniImages[i].low.src = this.animationData.lowSrcPrefix + frames[frame].img;
+                this.aniImages[i].low.src = this.animationData.lowSrcPrefix + frames[i].img;
                 // $(this.aniImages[i].low).on("load", function(e) {
                 //     // TODO: this handler could be used to toggle a loading indicator
                 // })
             }
-            i++;
         }
     },
 
