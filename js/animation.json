@@ -1,0 +1,1613 @@
+{
+    "_author": "Sven Kesting <sven@v26.org>",
+
+    "_comment": "This file describes the animated properties for the avm landingpage",
+    "_comment": "we have 48 frames per slide",
+    "_comment": "'s': the visible slide",
+    "_comment": "'img': low img src - some path's link to the hi src here anyway",
+    "_comment": "'imgHi': high img src",
+
+    "lowSrcPrefix": "320px/",
+    "hiSrcPrefix": "960px/",
+    "frames": {
+        "0": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "1": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "2": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "3": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "4": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "5": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "6": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "7": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "8": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "9": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "10": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "11": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "12": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "13": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "14": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "15": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "16": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "17": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "18": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "19": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "20": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "21": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "22": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "23": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "24": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "25": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "26": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "27": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "28": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "29": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "30": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "31": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "32": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "33": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "34": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "35": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "36": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "37": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "38": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "39": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "40": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "41": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "42": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "43": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "44": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "45": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "46": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "47": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "48": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "49": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "50": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "51": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "52": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "53": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "54": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "55": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "56": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "57": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "58": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "59": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "60": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "61": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "62": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "63": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "64": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "65": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "66": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "67": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "68": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "69": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "70": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "71": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "72": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "73": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "74": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "75": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "76": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "77": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "78": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "79": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "80": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "81": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "82": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "83": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "84": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "85": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "86": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "87": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "88": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "89": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "90": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "91": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "92": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "93": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "94": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "95": {
+            "s": "heimnetz",
+            "img": "../960px/0000.png"
+        },
+        "96": {
+            "s": "wlan",
+            "img": "0001.png"
+        },
+        "97": {
+            "s": "wlan",
+            "img": "0002.png"
+        },
+        "98": {
+            "s": "wlan",
+            "img": "0003.png"
+        },
+        "99": {
+            "s": "wlan",
+            "img": "0004.png"
+        },
+        "100": {
+            "s": "wlan",
+            "img": "0005.png"
+        },
+        "101": {
+            "s": "wlan",
+            "img": "0006.png"
+        },
+        "102": {
+            "s": "wlan",
+            "img": "0007.png"
+        },
+        "103": {
+            "s": "wlan",
+            "img": "0008.png"
+        },
+        "104": {
+            "s": "wlan",
+            "img": "0009.png"
+        },
+        "105": {
+            "s": "wlan",
+            "img": "0010.png"
+        },
+        "106": {
+            "s": "wlan",
+            "img": "0011.png"
+        },
+        "107": {
+            "s": "wlan",
+            "img": "0012.png"
+        },
+        "108": {
+            "s": "wlan",
+            "img": "0013.png"
+        },
+        "109": {
+            "s": "wlan",
+            "img": "00014.png"
+        },
+        "110": {
+            "s": "wlan",
+            "img": "0016.png"
+        },
+        "111": {
+            "s": "wlan",
+            "img": "0017.png"
+        },
+        "112": {
+            "s": "wlan",
+            "img": "0018.png"
+        },
+        "113": {
+            "s": "wlan",
+            "img": "0019.png"
+        },
+        "114": {
+            "s": "wlan",
+            "img": "0020.png"
+        },
+        "115": {
+            "s": "wlan",
+            "img": "0021.png"
+        },
+        "116": {
+            "s": "wlan",
+            "img": "0022.png"
+        },
+        "117": {
+            "s": "wlan",
+            "img": "0023.png"
+        },
+        "118": {
+            "s": "wlan",
+            "img": "0024.png"
+        },
+        "119": {
+            "s": "wlan",
+            "img": "0025.png"
+        },
+        "120": {
+            "s": "wlan",
+            "img": "0027.png"
+        },
+        "121": {
+            "s": "wlan",
+            "img": "0028.png"
+        },
+        "122": {
+            "s": "wlan",
+            "img": "0029.png"
+        },
+        "123": {
+            "s": "wlan",
+            "img": "0030.png"
+        },
+        "124": {
+            "s": "wlan",
+            "img": "0031.png"
+        },
+        "125": {
+            "s": "wlan",
+            "img": "0032.png"
+        },
+        "126": {
+            "s": "wlan",
+            "img": "0033.png"
+        },
+        "127": {
+            "s": "wlan",
+            "img": "0034.png"
+        },
+        "128": {
+            "s": "wlan",
+            "img": "0035.png"
+        },
+        "129": {
+            "s": "wlan",
+            "img": "0036.png"
+        },
+        "130": {
+            "s": "wlan",
+            "img": "0037.png"
+        },
+        "131": {
+            "s": "wlan",
+            "img": "0038.png"
+        },
+        "132": {
+            "s": "wlan",
+            "img": "0039.png"
+        },
+        "133": {
+            "s": "wlan",
+            "img": "0040.png"
+        },
+        "134": {
+            "s": "wlan",
+            "img": "0041.png"
+        },
+        "135": {
+            "s": "wlan",
+            "img": "0042.png"
+        },
+        "136": {
+            "s": "wlan",
+            "img": "0043.png"
+        },
+        "137": {
+            "s": "wlan",
+            "img": "0044.png"
+        },
+        "138": {
+            "s": "wlan",
+            "img": "0045.png"
+        },
+        "139": {
+            "s": "wlan",
+            "img": "0046.png"
+        },
+        "140": {
+            "s": "wlan",
+            "img": "0047.png"
+        },
+        "141": {
+            "s": "wlan",
+            "img": "0048.png"
+        },
+        "142": {
+            "s": "wlan",
+            "img": "0049.png"
+        },
+        "143": {
+            "s": "wlan",
+            "img": "0050.png"
+        },
+        "144": {
+            "s": "usb3",
+            "img": "0051.png"
+        },
+        "145": {
+            "s": "usb3",
+            "img": "0052.png"
+        },
+        "146": {
+            "s": "usb3",
+            "img": "0053.png"
+        },
+        "147": {
+            "s": "usb3",
+            "img": "0054.png"
+        },
+        "148": {
+            "s": "usb3",
+            "img": "0055.png"
+        },
+        "149": {
+            "s": "usb3",
+            "img": "0056.png"
+        },
+        "150": {
+            "s": "usb3",
+            "img": "0057.png"
+        },
+        "151": {
+            "s": "usb3",
+            "img": "0058.png"
+        },
+        "152": {
+            "s": "usb3",
+            "img": "0059.png"
+        },
+        "153": {
+            "s": "usb3",
+            "img": "0060.png"
+        },
+        "154": {
+            "s": "usb3",
+            "img": "0061.png"
+        },
+        "155": {
+            "s": "usb3",
+            "img": "0062.png"
+        },
+        "156": {
+            "s": "usb3",
+            "img": "0063.png"
+        },
+        "157": {
+            "s": "usb3",
+            "img": "0064.png"
+        },
+        "158": {
+            "s": "usb3",
+            "img": "0065.png"
+        },
+        "159": {
+            "s": "usb3",
+            "img": "0066.png"
+        },
+        "160": {
+            "s": "usb3",
+            "img": "0067.png"
+        },
+        "161": {
+            "s": "usb3",
+            "img": "0068.png"
+        },
+        "162": {
+            "s": "usb3",
+            "img": "0069.png"
+        },
+        "163": {
+            "s": "usb3",
+            "img": "0070.png"
+        },
+        "164": {
+            "s": "usb3",
+            "img": "0071.png"
+        },
+        "165": {
+            "s": "usb3",
+            "img": "0072.png"
+        },
+        "166": {
+            "s": "usb3",
+            "img": "0073.png"
+        },
+        "167": {
+            "s": "usb3",
+            "img": "0074.png"
+        },
+        "168": {
+            "s": "usb3",
+            "img": "0075.png"
+        },
+        "169": {
+            "s": "usb3",
+            "img": "0076.png"
+        },
+        "170": {
+            "s": "usb3",
+            "img": "0077.png"
+        },
+        "171": {
+            "s": "usb3",
+            "img": "0078.png"
+        },
+        "172": {
+            "s": "usb3",
+            "img": "0079.png"
+        },
+        "173": {
+            "s": "usb3",
+            "img": "0080.png"
+        },
+        "174": {
+            "s": "usb3",
+            "img": "0081.png"
+        },
+        "175": {
+            "s": "usb3",
+            "img": "0082.png"
+        },
+        "176": {
+            "s": "usb3",
+            "img": "0083.png"
+        },
+        "177": {
+            "s": "usb3",
+            "img": "0084.png"
+        },
+        "178": {
+            "s": "usb3",
+            "img": "0085.png"
+        },
+        "179": {
+            "s": "usb3",
+            "img": "0086.png"
+        },
+        "180": {
+            "s": "usb3",
+            "img": "0087.png"
+        },
+        "181": {
+            "s": "usb3",
+            "img": "0088.png"
+        },
+        "182": {
+            "s": "usb3",
+            "img": "0089.png"
+        },
+        "183": {
+            "s": "usb3",
+            "img": "0090.png"
+        },
+        "184": {
+            "s": "usb3",
+            "img": "0091.png"
+        },
+        "185": {
+            "s": "usb3",
+            "img": "0092.png"
+        },
+        "186": {
+            "s": "usb3",
+            "img": "0093.png"
+        },
+        "187": {
+            "s": "usb3",
+            "img": "0094.png"
+        },
+        "188": {
+            "s": "usb3",
+            "img": "0095.png"
+        },
+        "189": {
+            "s": "usb3",
+            "img": "0096.png"
+        },
+        "190": {
+            "s": "usb3",
+            "img": "0097.png"
+        },
+        "191": {
+            "s": "usb3",
+            "img": "0098.png"
+        },
+        "192": {
+            "s": "telefonie",
+            "img": "0099.png"
+        },
+        "193": {
+            "s": "telefonie",
+            "img": "0100.png"
+        },
+        "194": {
+            "s": "telefonie",
+            "img": "0101.png"
+        },
+        "195": {
+            "s": "telefonie",
+            "img": "0102.png"
+        },
+        "196": {
+            "s": "telefonie",
+            "img": "0103.png"
+        },
+        "197": {
+            "s": "telefonie",
+            "img": "0104.png"
+        },
+        "198": {
+            "s": "telefonie",
+            "img": "0105.png"
+        },
+        "199": {
+            "s": "telefonie",
+            "img": "0106.png"
+        },
+        "200": {
+            "s": "telefonie",
+            "img": "00107.png"
+        },
+        "201": {
+            "s": "telefonie",
+            "img": "0108.png"
+        },
+        "202": {
+            "s": "telefonie",
+            "img": "0109.png"
+        },
+        "203": {
+            "s": "telefonie",
+            "img": "0110.png"
+        },
+        "204": {
+            "s": "telefonie",
+            "img": "0111.png"
+        },
+        "205": {
+            "s": "telefonie",
+            "img": "0112.png"
+        },
+        "206": {
+            "s": "telefonie",
+            "img": "0113.png"
+        },
+        "207": {
+            "s": "telefonie",
+            "img": "0114.png"
+        },
+        "208": {
+            "s": "telefonie",
+            "img": "0115.png"
+        },
+        "209": {
+            "s": "telefonie",
+            "img": "0116.png"
+        },
+        "210": {
+            "s": "telefonie",
+            "img": "0117.png"
+        },
+        "211": {
+            "s": "telefonie",
+            "img": "0118.png"
+        },
+        "212": {
+            "s": "telefonie",
+            "img": "0119.png"
+        },
+        "213": {
+            "s": "telefonie",
+            "img": "0120.png"
+        },
+        "214": {
+            "s": "telefonie",
+            "img": "0121.png"
+        },
+        "215": {
+            "s": "telefonie",
+            "img": "0121.png"
+        },
+        "216": {
+            "s": "telefonie",
+            "img": "0122.png"
+        },
+        "217": {
+            "s": "telefonie",
+            "img": "0123.png"
+        },
+        "218": {
+            "s": "telefonie",
+            "img": "0124.png"
+        },
+        "219": {
+            "s": "telefonie",
+            "img": "0125.png"
+        },
+        "220": {
+            "s": "telefonie",
+            "img": "0126.png"
+        },
+        "221": {
+            "s": "telefonie",
+            "img": "0127.png"
+        },
+        "222": {
+            "s": "telefonie",
+            "img": "0128.png"
+        },
+        "223": {
+            "s": "telefonie",
+            "img": "0129.png"
+        },
+        "224": {
+            "s": "telefonie",
+            "img": "0130.png"
+        },
+        "225": {
+            "s": "telefonie",
+            "img": "0131.png"
+        },
+        "226": {
+            "s": "telefonie",
+            "img": "0131.png"
+        },
+        "227": {
+            "s": "telefonie",
+            "img": "0132.png"
+        },
+        "228": {
+            "s": "telefonie",
+            "img": "0133.png"
+        },
+        "229": {
+            "s": "telefonie",
+            "img": "0134.png"
+        },
+        "230": {
+            "s": "telefonie",
+            "img": "0135.png"
+        },
+        "231": {
+            "s": "telefonie",
+            "img": "0136.png"
+        },
+        "232": {
+            "s": "telefonie",
+            "img": "0137.png"
+        },
+        "233": {
+            "s": "telefonie",
+            "img": "0138.png"
+        },
+        "234": {
+            "s": "telefonie",
+            "img": "0139.png"
+        },
+        "235": {
+            "s": "telefonie",
+            "img": "0140.png"
+        },
+        "236": {
+            "s": "telefonie",
+            "img": "0141.png"
+        },
+        "237": {
+            "s": "telefonie",
+            "img": "0142.png"
+        },
+        "238": {
+            "s": "telefonie",
+            "img": "0143.png"
+        },
+        "239": {
+            "s": "telefonie",
+            "img": "0144.png"
+        },
+        "240": {
+            "s": "fritzos",
+            "img": "0145.png"
+        },
+        "241": {
+            "s": "fritzos",
+            "img": "0146.png"
+        },
+        "242": {
+            "s": "fritzos",
+            "img": "0147.png"
+        },
+        "243": {
+            "s": "fritzos",
+            "img": "0148.png"
+        },
+        "244": {
+            "s": "fritzos",
+            "img": "0149.png"
+        },
+        "245": {
+            "s": "fritzos",
+            "img": "0150.png"
+        },
+        "246": {
+            "s": "fritzos",
+            "img": "0151.png"
+        },
+        "247": {
+            "s": "fritzos",
+            "img": "0152.png"
+        },
+        "248": {
+            "s": "fritzos",
+            "img": "0153.png"
+        },
+        "249": {
+            "s": "fritzos",
+            "img": "0154.png"
+        },
+        "250": {
+            "s": "fritzos",
+            "img": "0155.png"
+        },
+        "251": {
+            "s": "fritzos",
+            "img": "0156.png"
+        },
+        "252": {
+            "s": "fritzos",
+            "img": "0157.png"
+        },
+        "253": {
+            "s": "fritzos",
+            "img": "0158.png"
+        },
+        "254": {
+            "s": "fritzos",
+            "img": "0159.png"
+        },
+        "255": {
+            "s": "fritzos",
+            "img": "0160.png"
+        },
+        "256": {
+            "s": "fritzos",
+            "img": "0161.png"
+        },
+        "257": {
+            "s": "fritzos",
+            "img": "0162.png"
+        },
+        "258": {
+            "s": "fritzos",
+            "img": "0163.png"
+        },
+        "259": {
+            "s": "fritzos",
+            "img": "0164.png"
+        },
+        "260": {
+            "s": "fritzos",
+            "img": "0165.png"
+        },
+        "261": {
+            "s": "fritzos",
+            "img": "0166.png"
+        },
+        "262": {
+            "s": "fritzos",
+            "img": "0167.png"
+        },
+        "263": {
+            "s": "fritzos",
+            "img": "0168.png"
+        },
+        "264": {
+            "s": "fritzos",
+            "img": "0169.png"
+        },
+        "265": {
+            "s": "fritzos",
+            "img": "0170.png"
+        },
+        "266": {
+            "s": "fritzos",
+            "img": "0171.png"
+        },
+        "267": {
+            "s": "fritzos",
+            "img": "0172.png"
+        },
+        "268": {
+            "s": "fritzos",
+            "img": "0173.png"
+        },
+        "269": {
+            "s": "fritzos",
+            "img": "0174.png"
+        },
+        "270": {
+            "s": "fritzos",
+            "img": "0175.png"
+        },
+        "271": {
+            "s": "fritzos",
+            "img": "0176.png"
+        },
+        "272": {
+            "s": "fritzos",
+            "img": "0177.png"
+        },
+        "273": {
+            "s": "fritzos",
+            "img": "0178.png"
+        },
+        "274": {
+            "s": "fritzos",
+            "img": "0179.png"
+        },
+        "275": {
+            "s": "fritzos",
+            "img": "0180.png"
+        },
+        "276": {
+            "s": "fritzos",
+            "img": "0181.png"
+        },
+        "277": {
+            "s": "fritzos",
+            "img": "0182.png"
+        },
+        "278": {
+            "s": "fritzos",
+            "img": "0183.png"
+        },
+        "279": {
+            "s": "fritzos",
+            "img": "0184.png"
+        },
+        "280": {
+            "s": "fritzos",
+            "img": "0185.png"
+        },
+        "281": {
+            "s": "fritzos",
+            "img": "0186.png"
+        },
+        "282": {
+            "s": "fritzos",
+            "img": "0187.png"
+        },
+        "283": {
+            "s": "fritzos",
+            "img": "0188.png"
+        },
+        "284": {
+            "s": "fritzos",
+            "img": "0189.png"
+        },
+        "285": {
+            "s": "fritzos",
+            "img": "0190.png"
+        },
+        "286": {
+            "s": "fritzos",
+            "img": "0191.png"
+        },
+        "287": {
+            "s": "fritzos",
+            "img": "0192.png"
+        },
+        "288": {
+            "s": "auszeichnungen",
+            "img": "0193.png"
+        },
+        "289": {
+            "s": "auszeichnungen",
+            "img": "0194.png"
+        },
+        "290": {
+            "s": "auszeichnungen",
+            "img": "0195.png"
+        },
+        "291": {
+            "s": "auszeichnungen",
+            "img": "0196.png"
+        },
+        "292": {
+            "s": "auszeichnungen",
+            "img": "0197.png"
+        },
+        "293": {
+            "s": "auszeichnungen",
+            "img": "0198.png"
+        },
+        "294": {
+            "s": "auszeichnungen",
+            "img": "0199.png"
+        },
+        "295": {
+            "s": "auszeichnungen",
+            "img": "0200.png"
+        },
+        "296": {
+            "s": "auszeichnungen",
+            "img": "0201.png"
+        },
+        "297": {
+            "s": "auszeichnungen",
+            "img": "0202.png"
+        },
+        "298": {
+            "s": "auszeichnungen",
+            "img": "0203.png"
+        },
+        "299": {
+            "s": "auszeichnungen",
+            "img": "0204.png"
+        },
+        "300": {
+            "s": "auszeichnungen",
+            "img": "0205.png"
+        },
+        "301": {
+            "s": "auszeichnungen",
+            "img": "0206.png"
+        },
+        "302": {
+            "s": "auszeichnungen",
+            "img": "0207.png"
+        },
+        "303": {
+            "s": "auszeichnungen",
+            "img": "0208.png"
+        },
+        "304": {
+            "s": "auszeichnungen",
+            "img": "0209.png"
+        },
+        "305": {
+            "s": "auszeichnungen",
+            "img": "0210.png"
+        },
+        "306": {
+            "s": "auszeichnungen",
+            "img": "0211.png"
+        },
+        "307": {
+            "s": "auszeichnungen",
+            "img": "0212.png"
+        },
+        "308": {
+            "s": "auszeichnungen",
+            "img": "0213.png"
+        },
+        "309": {
+            "s": "auszeichnungen",
+            "img": "0214.png"
+        },
+        "310": {
+            "s": "auszeichnungen",
+            "img": "0215.png"
+        },
+        "311": {
+            "s": "auszeichnungen",
+            "img": "0216.png"
+        },
+        "312": {
+            "s": "auszeichnungen",
+            "img": "0217.png"
+        },
+        "313": {
+            "s": "auszeichnungen",
+            "img": "0218.png"
+        },
+        "314": {
+            "s": "auszeichnungen",
+            "img": "0219.png"
+        },
+        "315": {
+            "s": "auszeichnungen",
+            "img": "0220.png"
+        },
+        "316": {
+            "s": "auszeichnungen",
+            "img": "0221.png"
+        },
+        "317": {
+            "s": "auszeichnungen",
+            "img": "0222.png"
+        },
+        "318": {
+            "s": "auszeichnungen",
+            "img": "0223.png"
+        },
+        "319": {
+            "s": "auszeichnungen",
+            "img": "0224.png"
+        },
+        "320": {
+            "s": "auszeichnungen",
+            "img": "0225.png"
+        },
+        "321": {
+            "s": "auszeichnungen",
+            "img": "0226.png"
+        },
+        "322": {
+            "s": "auszeichnungen",
+            "img": "0227.png"
+        },
+        "323": {
+            "s": "auszeichnungen",
+            "img": "0228.png"
+        },
+        "324": {
+            "s": "auszeichnungen",
+            "img": "0229.png"
+        },
+        "325": {
+            "s": "auszeichnungen",
+            "img": "0230.png"
+        },
+        "326": {
+            "s": "auszeichnungen",
+            "img": "0231.png"
+        },
+        "327": {
+            "s": "auszeichnungen",
+            "img": "0232.png"
+        },
+        "328": {
+            "s": "auszeichnungen",
+            "img": "0233.png"
+        },
+        "329": {
+            "s": "auszeichnungen",
+            "img": "0234.png"
+        },
+        "330": {
+            "s": "auszeichnungen",
+            "img": "0235.png"
+        },
+        "331": {
+            "s": "auszeichnungen",
+            "img": "0236.png"
+        },
+        "332": {
+            "s": "auszeichnungen",
+            "img": "0237.png"
+        },
+        "333": {
+            "s": "auszeichnungen",
+            "img": "0238.png"
+        },
+        "334": {
+            "s": "auszeichnungen",
+            "img": "0239.png"
+        },
+        "335": {
+            "s": "auszeichnungen",
+            "img": "0240.png"
+        },
+        "336": {
+            "s": "auszeichnungen",
+            "img": "0241.png"
+        },
+        "337": {
+            "s": "auszeichnungen",
+            "img": "0242.png"
+        },
+        "338": {
+            "s": "auszeichnungen",
+            "img": "0243.png"
+        },
+        "339": {
+            "s": "auszeichnungen",
+            "img": "0244.png"
+        },
+        "340": {
+            "s": "auszeichnungen",
+            "img": "0245.png"
+        },
+        "341": {
+            "s": "auszeichnungen",
+            "img": "0246.png"
+        },
+        "342": {
+            "s": "auszeichnungen",
+            "img": "0247.png"
+        },
+        "343": {
+            "s": "auszeichnungen",
+            "img": "0248.png"
+        },
+        "344": {
+            "s": "auszeichnungen",
+            "img": "0249.png"
+        },
+        "345": {
+            "s": "auszeichnungen",
+            "img": "0250.png"
+        },
+        "346": {
+            "s": "auszeichnungen",
+            "img": "../960px/0000.png"
+        },
+        "347": {
+            "s": "auszeichnungen",
+            "img": "../960px/0000.png"
+        },
+        "348": {
+            "s": "auszeichnungen",
+            "img": "../960px/0000.png"
+        },
+        "349": {
+            "s": "auszeichnungen",
+            "img": "../960px/0000.png"
+        },
+        "350": {
+            "s": "auszeichnungen",
+            "img": "../960px/0000.png"
+        },
+        "351": {
+            "s": "auszeichnungen",
+            "img": "../960px/0000.png"
+        },
+        "352": {
+            "s": "auszeichnungen",
+            "img": "../960px/0000.png"
+        },
+        "253": {
+            "s": "auszeichnungen",
+            "img": "../960px/0000.png"
+        },
+        "354": {
+            "s": "auszeichnungen",
+            "img": "../960px/0000.png"
+        },
+        "355": {
+            "s": "auszeichnungen",
+            "img": "../960px/0000.png"
+        },
+        "356": {
+            "s": "auszeichnungen",
+            "img": "../960px/0000.png"
+        },
+        "357": {
+            "s": "auszeichnungen",
+            "img": "../960px/0000.png"
+        },
+        "358": {
+            "s": "auszeichnungen",
+            "img": "../960px/0000.png"
+        },
+        "359": {
+            "s": "auszeichnungen",
+            "img": "../960px/0000.png"
+        },
+        "360": {
+            "s": "auszeichnungen",
+            "img": "../960px/0000.png"
+        },
+        "361": {
+            "s": "auszeichnungen",
+            "img": "../960px/0000.png"
+        },
+        "362": {
+            "s": "auszeichnungen",
+            "img": "../960px/0000.png"
+        },
+        "363": {
+            "s": "auszeichnungen",
+            "img": "../960px/0000.png"
+        },
+        "364": {
+            "s": "auszeichnungen",
+            "img": "../960px/0000.png"
+        },
+        "365": {
+            "s": "auszeichnungen",
+            "img": "../960px/0000.png"
+        },
+        "366": {
+            "s": "auszeichnungen",
+            "img": "../960px/0000.png"
+        },
+        "367": {
+            "s": "auszeichnungen",
+            "img": "../960px/0000.png"
+        },
+        "368": {
+            "s": "auszeichnungen",
+            "img": "../960px/0000.png"
+        },
+        "369": {
+            "s": "auszeichnungen",
+            "img": "../960px/0000.png"
+        },
+        "370": {
+            "s": "auszeichnungen",
+            "img": "../960px/0000.png"
+        },
+        "371": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "372": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "373": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "374": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "375": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "376": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "377": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "378": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "379": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "380": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "381": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "382": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "383": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "384": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "385": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "386": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "387": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "388": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "389": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "390": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "391": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "392": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "393": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "394": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "395": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "396": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "397": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "398": {
+            "s": "start",
+            "img": "../960px/0000.png"
+        },
+        "399": {
+            "s": "start"
+        }
+    }
+}

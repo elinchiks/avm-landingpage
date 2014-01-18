@@ -121,9 +121,9 @@ nav.primary {
             opacity: 0;
         }
         &.active {
-            opacity: 0.4;
+            opacity: 1;
             a {
-                opacity: 1;
+                opacity: 0;
             }
         }
         &:hover {
@@ -328,7 +328,7 @@ section,
             padding: 0 0 20px 20px;
             z-index:2;
             opacity:0;
-            .transition( opacity 0.4s cubic-bezier(0.25,0.1,0.25,1));
+            // .transition( opacity 0.4s cubic-bezier(0.25,0.1,0.25,1));
 
             .tip { // the round tip
                 display: block;
@@ -462,7 +462,7 @@ section,
 }
 
 // section 2 - interior
-#heimnetz {
+#heimnetz, .heimnetz {
     // .slide {
     //     background-image: url("../images/bg-layout-02.jpg");
     // }
@@ -475,7 +475,7 @@ section,
 }
 
 // section 3 - wlan
-#wlan, .wlan{
+#wlan, .wlan {
     // .slide{
     //     background-image: url("../images/bg-layout-03.jpg");
     // }
@@ -572,7 +572,7 @@ section,
 }
 
 // section 4 - usb3
-#usb3 {
+#usb3, .usb3 {
     // .slide{
     //     background-image: url("../images/bg-layout-04.jpg");
     // }
@@ -582,8 +582,7 @@ section,
     p {
         bottom: 100px;
     }
-}
-.usb3, #usb3 {
+
     h1 {
         margin-bottom: 100px !important;
     }
@@ -752,7 +751,7 @@ section,
         color: #fff;
         position: absolute;
         bottom: 38px;
-        right: 150px;
+        right: 160px;
         a {
             color: #fff;
             text-decoration: none;
@@ -830,6 +829,7 @@ section,
 /* --- DEBUG ---
 TODO: Remove me before deployment */
 #debug-bar {
+    font-family: "Lucida Grande", sans-serif;
     position: fixed;
     right: 0;
     bottom: 0;
@@ -851,8 +851,6 @@ TODO: Remove me before deployment */
     margin-right:2px;
     -webkit-transform: translateZ(0);
 }
-
-
 
 .white-bars {
     color: @white;
@@ -1018,11 +1016,11 @@ section.active {
 //         opacity:1 !important;
 //     }
 // }
-#viewport {
-    div[class*='bar'] , b {
-        opacity:0 !important;
-    }
-}
+// #viewport {
+//     div[class*='bar'] , b {
+//         opacity:0 !important;
+//     }
+// }
 
 .packshot {
     .transition(bottom 1s ease-out);

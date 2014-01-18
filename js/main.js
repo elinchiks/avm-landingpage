@@ -24,18 +24,23 @@ var avmlp = {
         "auszeichnungen"
     ],
     currentSectionIndex: 0,
+    sectionTop: [
+        0,
+        960,
+        1920,
+        2880,
+        3840,
+        4800,
+        5760
+    ],
     $slides: null,
     $viewport: null,
 
-    // product animation
-    aniStart: 1800,
-    aniStep: 1,
-    aniTargetStep: 1,
-    aniImages: [],
-    aniTotalImages: 250,
-    aniImagesLowSrcPrefix: "./frames/320px/",
-    aniImagesHighSrcPrefix: "./frames/960px/",
     aniTimeoutID: null,
+    aniImages: false,
+    aniStep: 0,
+    aniTargetStep: 0,
+
 
     // methods
     initAnimationImages: function() {
@@ -147,8 +152,6 @@ var avmlp = {
         this.aniImages[112].top = 140;
         this.aniImages[113].top = 136;
 
-
-
         this.aniImages[200].top = 280;
         this.aniImages[201].top = 290;
         this.aniImages[202].top = 300;
@@ -163,8 +166,6 @@ var avmlp = {
         this.aniImages[211].top = 390;
         this.aniImages[212].top = 400;
         this.aniImages[213].top = 410;
-
-
         this.aniImages[213].top = 420;
         this.aniImages[214].top = 420;
         this.aniImages[215].top = 420;
@@ -204,11 +205,10 @@ var avmlp = {
         this.aniImages[249].top = 420;
     },
 
-
     resizeSections: function() {
         var h = jQuery("html").height();
         var w = jQuery("html").width();
-        jQuery("section").css("height", h + "px");
+        // jQuery("section").css("height", h + "px");
         var zoom = this.zoom;
         // update zoom
         if (h < this.defaultHeight) {
@@ -230,22 +230,18 @@ var avmlp = {
             jQuery("#debug-zoom").text(this.zoom.toPrecision(3));
         }
     },
+
     // Positioning viewport in the middle
-    positionViewport: function() {
-        var width = $('#viewport').width();
-        $('#viewport').css({'left':'50%', 'margin-left': -width /2 });
-    },
+
     positionSlide: function() {
         var width = $('.slide').width();
-        $('.slide').css({'left':'50%', 'margin-left': -width /2 });
+        $('.slide').css({'left':'50%', 'margin-left': - width /2 });
     },
 
     applyZoom: function() {
         var top = -(this.defaultHeight - this.defaultHeight * this.zoom) / 2;
-        // TODO: left needs to be set, especially for narrow viewports
-
-        // apply scaling to slides and viewport
-        jQuery("section .slide, #viewport").css({
+        // apply scaling to slides
+        jQuery("section .slide").css({
             "-webkit-transform": "scale(" + this.zoom + ", " + this.zoom + ")",
             "-ms-transform": "scale(" + this.zoom + ", " + this.zoom + ")",
             "transform": "scale(" + this.zoom + ", " + this.zoom + ")",
@@ -282,161 +278,48 @@ var avmlp = {
         }
     },
 
-    initViewPort: function() {
-        // clone sections
-        this.$slides = $(".slide").clone();
-        this.$viewport = $("#viewport");
+    initScrollAnimation: function() {
 
-        this.setViewportContent();
-        // this.setNavigationState();
-        this.$viewport.show();
 
-        // hide original slides
-        $(".slide").hide();
+        // all sections get a fixed position, the top values are stored in the this.sectionTop array
+        $("section").css({
+            "position": "fixed",
+            "top": 0
+        });
 
+        // we need an element with the original height to re-enable scrolling
+        var docHeight = this.sectionTop[this.sectionTop.length - 1] + this.defaultHeight;
+        $("#scroll-placeholder").height(docHeight);
+
+        // the fragment links need fixing
+        var _this = this;
+        $(".link-next").on("click", function(e) {
+            e.preventDefault();
+            _this.scrollToSection($(this).attr("href"));
+        });
+
+        // TODO: Nav-Links
+
+        $("section").hide();
+        // TODO: Show section requested by url fragment
+        $("section#start").show();
     },
 
-    setViewportContent: function() {
 
-        // Switch id for the viewport depending on section displayed
-
-        var $currentSlide = $( this.$slides[this.currentSectionIndex] );
-        this.$viewport.find("header").html(
-            $currentSlide.find("header").html()
-        );
-        this.$viewport.find("#packshot").attr("src",
-            $currentSlide.find(".packshot").attr("src")
-        );
-
-
-        // Showing description (lowest paragraph)
-         if($currentSlide.find(".description").length) {
-             this.$viewport.find(".description").html(
-             $currentSlide.find(".description").html()
-         );
-             this.$viewport.find(".description").show();
-         } else {
-             this.$viewport.find(".description").hide();
-         }
-
-        // Start
-        if (this.currentSectionIndex === 0) {
-            this.$viewport.find(".logo-fritz-color").show();
-            this.$viewport.find(".logo-fritz").hide();
-            this.$viewport.find(".link-next").show();
-        } else {
-            this.$viewport.find(".logo-fritz-color").hide();
-            this.$viewport.find(".logo-fritz").show();
-            this.$viewport.find(".link-next").hide();
-        }
-
-
-       // Showing product graphics and fetures (WLAN)
-        if($currentSlide.find(".product-graphics").length) {
-            this.$viewport.find(".product-graphics").html(
-            $currentSlide.find(".product-graphics").html()
-        );
-            this.$viewport.find(".product-graphics").show();
-       } else {
-            this.$viewport.find(".product-graphics").hide();
-        }
-
-        // Showing product fetures (WLAN)
-
-        if($currentSlide.find(".product-features").length) {
-            this.$viewport.find(".product-features").html(
-            $currentSlide.find(".product-features").html()
-        );
-            this.$viewport.find(".product-features").show();
-        } else {
-            this.$viewport.find(".product-features").hide();
-        }
-
-        // Showing icons (telefonie)
-
-        if($currentSlide.find(".icon-list").length) {
-            this.$viewport.find(".icon-list").html(
-            $currentSlide.find(".icon-list").html()
-        );
-            this.$viewport.find(".icon-list").show();
-        } else {
-            this.$viewport.find(".icon-list").hide();
-        }
-
-
-        // Showing buttons
-       if($currentSlide.find(".action-buttons").length) {
-           this.$viewport.find(".action-buttons").html(
-           $currentSlide.find(".action-buttons").html()
-       );
-           this.$viewport.find(".action-buttons").show();
-       } else {
-           this.$viewport.find(".action-buttons").hide();
-       }
-
-        // Showing bottom logo section
-       if($currentSlide.find(".logo-section").length) {
-           this.$viewport.find(".logo-section").html(
-           $currentSlide.find(".logo-section").html()
-       );
-           this.$viewport.find(".logo-section").show();
-       } else {
-           this.$viewport.find(".logo-section").hide();
-       }
-
-
-
-        // // Look Inside
-        if(this.currentSectionIndex === 1) {
-            if (!this.$viewport.find(".inside-view").length) {
-                // first run - init before/after slider
-                this.$viewport.append($currentSlide.find(".inside-view"));
-                // this.initInsideView();
-            } else {
-                // just show the slider
-                this.$viewport.find(".inside-view").show();
-            }
-            this.$viewport.find("#packshot").hide();
-        } else {
-            this.$viewport.find(".inside-view").hide();
-            this.$viewport.find("#packshot").show();
-        }
-
-
-
-
-        // Fix positions
-        var sectionId = "#" + this.sectionNames[this.currentSectionIndex];
-        this.$viewport.find("header").css({
-            "top": $(sectionId).find("header").css("top"),
-            "left": $(sectionId).find("header").css("left")
-        });
-
-        this.$viewport.find("#packshot").css({
-            "top": $(sectionId).find(".packshot").css("top"),
-            "left": $(sectionId).find(".packshot").css("left")
-        });
-        this.$viewport.find("#packshot").attr("src",
-            $(sectionId).find(".packshot").attr("src")
-        );
-
-
-        this.$viewport.find(".description").css({
-            "bottom": $(sectionId).find(".description").css("bottom"),
-            "left": $(sectionId).find(".description").css("left")
-        });
-
-
-
-        if (this.debug) {
-            jQuery("#debug-section-index").text(this.currentSectionIndex);
-        }
-
+    scrollToSection: function(fragment) {
+        // TODO
+        console.log("scrollToSection:", fragment);
     },
 
     // change product animation image
     changeFrame: function() {
+        // console.log("anistep", this.aniStep);
         // if the image exists in the array
+
+        if (this.debug) { // FIXME: SLOW!!!
+            $("#debug-animation-step").text(this.aniStep);
+        }
+
         if(this.aniImages.length > 0 && this.aniImages[this.aniStep]) {
             var aniImage = this.aniImages[this.aniStep];
 
@@ -457,9 +340,7 @@ var avmlp = {
                         "top": aniImage.top + "px",
                     });
 
-                    if (this.debug) {
-                        $("#debug-animation-step").text(this.aniStep);
-                    }
+
                 }
             }
         }
@@ -503,6 +384,16 @@ jQuery( document ).ready(function( $ ) {
         avmlp.debug = false;
     }
 
+    // Ajax-Load animation properties
+    $.ajax({
+        url: "js/animation.json",
+        dataType: "json",
+        success: function(data) {
+            console.log("JSON", data);
+        }
+
+    });
+
     // clickable bullets in Navigation
     $("#primary li").css("cursor", "pointer");
     $("#primary li").on("click", function(e) {
@@ -516,17 +407,9 @@ jQuery( document ).ready(function( $ ) {
     });
 
     avmlp.resizeSections();
-
-    // initialise view port - all slides will displayed in there
-    // avmlp.initViewPort();
-
-    // TODO: initial Navigation State isn't correct when url fragment is set.
-    avmlp.setNavigationState();
-
-    // avmlp.initAnimationImages();
-    avmlp.positionViewport();
     avmlp.positionSlide();
 
+    avmlp.initScrollAnimation();
 
     // inside/outside image - using jquery ui draggable
     $(".drag-wrapper").draggable({
@@ -544,7 +427,6 @@ jQuery( document ).ready(function( $ ) {
             avmlp.updateSlider();
         }
     });
-
 
     // make hotspot callout's sticky
     $(".hotspot").on("mouseenter", function() {
@@ -615,11 +497,7 @@ var requestAnimFrame = (function() {
     avmlp.setNavigationState();
 
     var t = $(window).scrollTop();
-    if (t > avmlp.aniStart * avmlp.zoom) {
-        avmlp.aniTargetStep = Math.ceil ( ( t - ( avmlp.aniStart * avmlp.zoom ) ) / 12 );
-    } else {
-        avmlp.aniTargetStep = 0;
-    }
+    avmlp.aniTargetStep = Math.ceil ( t / 20 );
 
     // what frame to animate to
     if( avmlp.aniTargetStep !== avmlp.aniStep ) {
