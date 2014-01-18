@@ -1,1613 +1,4034 @@
 {
-    "_author": "Sven Kesting <sven@v26.org>",
-
     "_comment": "This file describes the animated properties for the avm landingpage",
-    "_comment": "we have 48 frames per slide",
+    "_comment": "by default we have 48 frames per slide",
     "_comment": "'s': the visible slide",
+    "_comment": "'ho': header opacity",
+    "_comment": "'po': paragraph opacity",
+    "_comment": "'flo': fritz logo opacity",
+    "_comment": "'alo': avm logo opacity",
+    "_comment": "'a': additional elements, an object with the selector and the css properties to set",
+    "_comment": "'code': this will get eval'd",
     "_comment": "'img': low img src - some path's link to the hi src here anyway",
     "_comment": "'imgHi': high img src",
-
-    "lowSrcPrefix": "320px/",
-    "hiSrcPrefix": "960px/",
+    "_comment": "'imgCss' additional styles for image #packshot (e.g. top)",
+    "lowSrcPrefix": "frames/320px/",
+    "hiSrcPrefix": "frames/960px/",
     "frames": {
         "0": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 1,
+            "alo": 1
         },
         "1": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 1,
+            "alo": 1
         },
         "2": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 1,
+            "alo": 1
         },
         "3": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 1,
+            "alo": 1
         },
         "4": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 1,
+            "alo": 1
         },
         "5": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 1,
+            "alo": 1
         },
         "6": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 1,
+            "alo": 1
         },
         "7": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 1,
+            "alo": 1
         },
         "8": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 1,
+            "alo": 1
         },
         "9": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 1,
+            "alo": 1
         },
         "10": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 1,
+            "alo": 1
         },
         "11": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 1,
+            "alo": 1
         },
         "12": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 1,
+            "alo": 1
         },
         "13": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 1,
+            "alo": 1
         },
         "14": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 1,
+            "alo": 1
         },
         "15": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 1,
+            "alo": 1
         },
         "16": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 1,
+            "alo": 1
         },
         "17": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 1,
+            "alo": 1
         },
         "18": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 1,
+            "alo": 1
         },
         "19": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 1,
+            "alo": 1
         },
         "20": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 1,
+            "alo": 1
         },
         "21": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 1,
+            "alo": 1
         },
         "22": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 1,
+            "alo": 1
         },
         "23": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 1,
+            "alo": 1
         },
         "24": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 1,
+            "alo": 1
         },
         "25": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 0.9,
+            "po": 1,
+            "flo": 1,
+            "alo": 1
         },
         "26": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 0.8,
+            "po": 1,
+            "flo": 1,
+            "alo": 1
         },
         "27": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 0.7,
+            "po": 1,
+            "flo": 1,
+            "alo": 1
         },
         "28": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 0.6,
+            "po": 1,
+            "flo": 1,
+            "alo": 1
         },
         "29": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 0.5,
+            "po": 1,
+            "flo": 0.9,
+            "alo": 1
         },
         "30": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 0.4,
+            "po": 1,
+            "flo": 0.8,
+            "alo": 1
         },
         "31": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 0.3,
+            "po": 1,
+            "flo": 0.7,
+            "alo": 1
         },
         "32": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 0.2,
+            "po": 1,
+            "flo": 0.6,
+            "alo": 1
         },
         "33": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 0.1,
+            "po": 1,
+            "flo": 0.5,
+            "alo": 1
         },
         "34": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 0,
+            "po": 1,
+            "flo": 0.4,
+            "alo": 1
         },
         "35": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 0,
+            "po": 1,
+            "flo": 0.3,
+            "alo": 1
         },
         "36": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 0,
+            "po": 1,
+            "flo": 0.2,
+            "alo": 1
         },
         "37": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 0,
+            "po": 1,
+            "flo": 0.1,
+            "alo": 1
         },
         "38": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 0,
+            "po": 0.9,
+            "flo": 0,
+            "alo": 1
         },
         "39": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 0,
+            "po": 0.8,
+            "flo": 1,
+            "alo": 0
         },
         "40": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 0,
+            "po": 0.7,
+            "flo": 0,
+            "alo": 1
         },
         "41": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 0,
+            "po": 0.6,
+            "flo": 0,
+            "alo": 0.9
         },
         "42": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 0,
+            "po": 0.5,
+            "flo": 0,
+            "alo": 0.75
         },
         "43": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 0,
+            "po": 0.4,
+            "flo": 0,
+            "alo": 0.6
         },
         "44": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 0,
+            "po": 0.3,
+            "flo": 0,
+            "alo": 0.45
         },
         "45": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 0,
+            "po": 0.2,
+            "flo": 0,
+            "alo": 0.3
         },
         "46": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 0,
+            "po": 0.1,
+            "flo": 0,
+            "alo": 0.15
         },
         "47": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 0,
+            "po": 0,
+            "flo": 0,
+            "alo": 0
         },
         "48": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 0,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 0
+                }
+            },
+            "code": "avmlp.setSliderPosition(10)"
         },
         "49": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 0.1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 0.2
+                }
+            },
+            "code": "avmlp.setSliderPosition(50)"
         },
         "50": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 0.2,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 0.4
+                }
+            },
+            "code": "avmlp.setSliderPosition(90)"
         },
         "51": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 0.3,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 0.6
+                }
+            },
+            "code": "avmlp.setSliderPosition(130)"
         },
         "52": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 0.4,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 0.8
+                }
+            },
+            "code": "avmlp.setSliderPosition(170)"
         },
         "53": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 0.5,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(200)"
         },
         "54": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 0.6,
+            "po": 0.1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(240)"
         },
         "55": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 0.7,
+            "po": 0.2,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(280)"
         },
         "56": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 0.8,
+            "po": 0.3,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(320)"
         },
         "57": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 0.9,
+            "po": 0.4,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(360)"
         },
         "58": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 1,
+            "po": 0.5,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(400)"
         },
         "59": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 1,
+            "po": 0.6,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(440)"
         },
         "60": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 1,
+            "po": 0.7,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(480)"
         },
         "61": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 1,
+            "po": 0.8,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(480)"
         },
         "62": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 1,
+            "po": 0.9,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(480)"
         },
         "63": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(480)"
         },
         "64": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(480)"
         },
         "65": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(480)"
         },
         "66": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(480)"
         },
         "67": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(480)"
         },
         "68": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(480)"
         },
         "69": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(480)"
         },
         "70": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(480)"
         },
         "71": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(480)"
         },
         "72": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(480)"
         },
         "73": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(480)"
         },
         "74": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(480)"
         },
         "75": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(480)"
         },
         "76": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(480)"
         },
         "77": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 0.9,
+            "po": 1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(480)"
         },
         "78": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 0.8,
+            "po": 1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(480)"
         },
         "79": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 0.7,
+            "po": 1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(480)"
         },
         "80": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 0.6,
+            "po": 1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(480)"
         },
         "81": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 0.5,
+            "po": 1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(440)"
         },
         "82": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 0.4,
+            "po": 1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(400)"
         },
         "83": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 0.3,
+            "po": 1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(360)"
         },
         "84": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 0.2,
+            "po": 1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(320)"
         },
         "85": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 0.2,
+            "po": 1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(280)"
         },
         "86": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 0.1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(240)"
         },
         "87": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 0,
+            "po": 0.9,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(200)"
         },
         "88": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 0,
+            "po": 0.8,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(170)"
         },
         "89": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 0,
+            "po": 0.7,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(130)"
         },
         "90": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 0,
+            "po": 0.6,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(90)"
         },
         "91": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 0,
+            "po": 0.4,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 0.8
+                }
+            },
+            "code": "avmlp.setSliderPosition(50)"
         },
         "92": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 0,
+            "po": 0.3,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 0.6
+                }
+            },
+            "code": "avmlp.setSliderPosition(10)"
         },
         "93": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 0,
+            "po": 0.2,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 0.4
+                }
+            },
+            "code": "avmlp.setSliderPosition(10)"
         },
         "94": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "",
+            "ho": 0,
+            "po": 0.1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 0.2
+                }
+            },
+            "code": "avmlp.setSliderPosition(10)"
         },
         "95": {
             "s": "heimnetz",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 0,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 0
+                }
+            },
+            "code": "avmlp.setSliderPosition(10)"
         },
         "96": {
             "s": "wlan",
-            "img": "0001.png"
+            "img": "0001.png",
+            "imgCss": {
+                "top": "136px"
+            },
+            "ho": 0,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "97": {
             "s": "wlan",
-            "img": "0002.png"
+            "img": "0002.png",
+            "imgCss": {
+                "top": "140px"
+            },
+            "ho": 0.1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "98": {
             "s": "wlan",
-            "img": "0003.png"
+            "img": "0003.png",
+            "imgCss": {
+                "top": "146px"
+            },
+            "ho": 0.2,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "99": {
             "s": "wlan",
-            "img": "0004.png"
+            "img": "0004.png",
+            "imgCss": {
+                "top": "154px"
+            },
+            "ho": 0.3,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "100": {
             "s": "wlan",
-            "img": "0005.png"
+            "img": "0005.png",
+            "imgCss": {
+                "top": "166px"
+            },
+            "ho": 0.4,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "101": {
             "s": "wlan",
-            "img": "0006.png"
+            "img": "0006.png",
+            "imgCss": {
+                "top": "178px"
+            },
+            "ho": 0.5,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "102": {
             "s": "wlan",
-            "img": "0007.png"
+            "img": "0007.png",
+            "imgCss": {
+                "top": "190px"
+            },
+            "ho": 0.6,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "103": {
             "s": "wlan",
-            "img": "0008.png"
+            "img": "0008.png",
+            "imgCss": {
+                "top": "202px"
+            },
+            "ho": 0.7,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "104": {
             "s": "wlan",
-            "img": "0009.png"
+            "img": "0009.png",
+            "imgCss": {
+                "top": "214px"
+            },
+            "ho": 0.8,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "105": {
             "s": "wlan",
-            "img": "0010.png"
+            "img": "0010.png",
+            "imgCss": {
+                "top": "226px"
+            },
+            "ho": 0.9,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "106": {
             "s": "wlan",
-            "img": "0011.png"
+            "img": "0011.png",
+            "imgCss": {
+                "top": "238px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "107": {
             "s": "wlan",
-            "img": "0012.png"
+            "img": "0012.png",
+            "imgCss": {
+                "top": "250px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "108": {
             "s": "wlan",
-            "img": "0013.png"
+            "img": "0013.png",
+            "imgCss": {
+                "top": "262px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "109": {
             "s": "wlan",
-            "img": "00014.png"
+            "img": "0014.png",
+            "imgCss": {
+                "top": "274px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "110": {
             "s": "wlan",
-            "img": "0016.png"
+            "img": "0016.png",
+            "imgCss": {
+                "top": "286px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "111": {
             "s": "wlan",
-            "img": "0017.png"
+            "img": "0017.png",
+            "imgCss": {
+                "top": "298px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "112": {
             "s": "wlan",
-            "img": "0018.png"
+            "img": "0018.png",
+            "imgCss": {
+                "top": "310px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "113": {
             "s": "wlan",
-            "img": "0019.png"
+            "img": "0019.png",
+            "imgCss": {
+                "top": "322px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "114": {
             "s": "wlan",
-            "img": "0020.png"
+            "img": "0020.png",
+            "imgCss": {
+                "top": "334px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "115": {
             "s": "wlan",
-            "img": "0021.png"
+            "img": "0021.png",
+            "imgCss": {
+                "top": "346px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "116": {
             "s": "wlan",
-            "img": "0022.png"
+            "img": "0022.png",
+            "imgCss": {
+                "top": "358px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "117": {
             "s": "wlan",
-            "img": "0023.png"
+            "img": "0023.png",
+            "imgCss": {
+                "top": "370px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "118": {
             "s": "wlan",
-            "img": "0024.png"
+            "img": "0024.png",
+            "imgCss": {
+                "top": "382px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "119": {
             "s": "wlan",
-            "img": "0025.png"
+            "img": "0025.png",
+            "imgCss": {
+                "top": "394px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "120": {
             "s": "wlan",
-            "img": "0027.png"
+            "img": "0027.png",
+            "imgCss": {
+                "top": "406px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "121": {
             "s": "wlan",
-            "img": "0028.png"
+            "img": "0028.png",
+            "imgCss": {
+                "top": "418px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "122": {
             "s": "wlan",
-            "img": "0029.png"
+            "img": "0029.png",
+            "imgCss": {
+                "top": "430px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "123": {
             "s": "wlan",
-            "img": "0030.png"
+            "img": "0030.png",
+            "imgCss": {
+                "top": "442px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "124": {
             "s": "wlan",
-            "img": "0031.png"
+            "img": "0031.png",
+            "imgCss": {
+                "top": "454px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "125": {
             "s": "wlan",
-            "img": "0032.png"
+            "img": "0032.png",
+            "imgCss": {
+                "top": "466px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "126": {
             "s": "wlan",
-            "img": "0033.png"
+            "img": "0033.png",
+            "imgCss": {
+                "top": "478px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "127": {
             "s": "wlan",
-            "img": "0034.png"
+            "img": "0034.png",
+            "imgCss": {
+                "top": "490px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "128": {
             "s": "wlan",
-            "img": "0035.png"
+            "img": "0035.png",
+            "imgCss": {
+                "top": "502px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "129": {
             "s": "wlan",
-            "img": "0036.png"
+            "img": "0036.png",
+            "imgCss": {
+                "top": "514px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "130": {
             "s": "wlan",
-            "img": "0037.png"
+            "img": "0037.png",
+            "imgCss": {
+                "top": "526px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "131": {
             "s": "wlan",
-            "img": "0038.png"
+            "img": "0038.png",
+            "imgCss": {
+                "top": "538px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "132": {
             "s": "wlan",
-            "img": "0039.png"
+            "img": "0039.png",
+            "imgCss": {
+                "top": "550px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "133": {
             "s": "wlan",
-            "img": "0040.png"
+            "img": "0040.png",
+            "imgCss": {
+                "top": "562px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "134": {
             "s": "wlan",
-            "img": "0041.png"
+            "img": "0041.png",
+            "imgCss": {
+                "top": "574px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "135": {
             "s": "wlan",
-            "img": "0042.png"
+            "img": "0042.png",
+            "imgCss": {
+                "top": "586px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "136": {
             "s": "wlan",
-            "img": "0043.png"
+            "img": "0043.png",
+            "imgCss": {
+                "top": "598px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "137": {
             "s": "wlan",
-            "img": "0044.png"
+            "img": "0044.png",
+            "imgCss": {
+                "top": "610px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "138": {
             "s": "wlan",
-            "img": "0045.png"
+            "img": "0045.png",
+            "imgCss": {
+                "top": "622px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "139": {
             "s": "wlan",
-            "img": "0046.png"
+            "img": "0046.png",
+            "imgCss": {
+                "top": "634px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "140": {
             "s": "wlan",
-            "img": "0047.png"
+            "img": "0047.png",
+            "imgCss": {
+                "top": "648px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "141": {
             "s": "wlan",
-            "img": "0048.png"
+            "img": "0048.png",
+            "imgCss": {
+                "top": "656px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "142": {
             "s": "wlan",
-            "img": "0049.png"
+            "img": "0049.png",
+            "imgCss": {
+                "top": "660px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "143": {
             "s": "wlan",
-            "img": "0050.png"
+            "img": "0050.png",
+            "imgCss": {
+                "top": "662px"
+            },
+            "ho": 1,
+            "po": 0,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".product-graphics": {
+                    "opacity": 0
+                },
+                ".product-features": {
+                    "opacity": 0
+                }
+            }
         },
         "144": {
             "s": "usb3",
-            "img": "0051.png"
+            "img": "0051.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "145": {
             "s": "usb3",
-            "img": "0052.png"
+            "img": "0052.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "146": {
             "s": "usb3",
-            "img": "0053.png"
+            "img": "0053.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "147": {
             "s": "usb3",
-            "img": "0054.png"
+            "img": "0054.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "148": {
             "s": "usb3",
-            "img": "0055.png"
+            "img": "0055.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "149": {
             "s": "usb3",
-            "img": "0056.png"
+            "img": "0056.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "150": {
             "s": "usb3",
-            "img": "0057.png"
+            "img": "0057.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "151": {
             "s": "usb3",
-            "img": "0058.png"
+            "img": "0058.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "152": {
             "s": "usb3",
-            "img": "0059.png"
+            "img": "0059.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "153": {
             "s": "usb3",
-            "img": "0060.png"
+            "img": "0060.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "154": {
             "s": "usb3",
-            "img": "0061.png"
+            "img": "0061.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "155": {
             "s": "usb3",
-            "img": "0062.png"
+            "img": "0062.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "156": {
             "s": "usb3",
-            "img": "0063.png"
+            "img": "0063.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "157": {
             "s": "usb3",
-            "img": "0064.png"
+            "img": "0064.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "158": {
             "s": "usb3",
-            "img": "0065.png"
+            "img": "0065.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "159": {
             "s": "usb3",
-            "img": "0066.png"
+            "img": "0066.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "160": {
             "s": "usb3",
-            "img": "0067.png"
+            "img": "0067.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "161": {
             "s": "usb3",
-            "img": "0068.png"
+            "img": "0068.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "162": {
             "s": "usb3",
-            "img": "0069.png"
+            "img": "0069.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "163": {
             "s": "usb3",
-            "img": "0070.png"
+            "img": "0070.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "164": {
             "s": "usb3",
-            "img": "0071.png"
+            "img": "0071.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "165": {
             "s": "usb3",
-            "img": "0072.png"
+            "img": "0072.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "166": {
             "s": "usb3",
-            "img": "0073.png"
+            "img": "0073.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "167": {
             "s": "usb3",
-            "img": "0074.png"
+            "img": "0074.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "168": {
             "s": "usb3",
-            "img": "0075.png"
+            "img": "0075.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "169": {
             "s": "usb3",
-            "img": "0076.png"
+            "img": "0076.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "170": {
             "s": "usb3",
-            "img": "0077.png"
+            "img": "0077.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "171": {
             "s": "usb3",
-            "img": "0078.png"
+            "img": "0078.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "172": {
             "s": "usb3",
-            "img": "0079.png"
+            "img": "0079.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "173": {
             "s": "usb3",
-            "img": "0080.png"
+            "img": "0080.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "174": {
             "s": "usb3",
-            "img": "0081.png"
+            "img": "0081.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "175": {
             "s": "usb3",
-            "img": "0082.png"
+            "img": "0082.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "176": {
             "s": "usb3",
-            "img": "0083.png"
+            "img": "0083.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "177": {
             "s": "usb3",
-            "img": "0084.png"
+            "img": "0084.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "178": {
             "s": "usb3",
-            "img": "0085.png"
+            "img": "0085.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "179": {
             "s": "usb3",
-            "img": "0086.png"
+            "img": "0086.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "180": {
             "s": "usb3",
-            "img": "0087.png"
+            "img": "0087.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "181": {
             "s": "usb3",
-            "img": "0088.png"
+            "img": "0088.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "182": {
             "s": "usb3",
-            "img": "0089.png"
+            "img": "0089.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "183": {
             "s": "usb3",
-            "img": "0090.png"
+            "img": "0090.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "184": {
             "s": "usb3",
-            "img": "0091.png"
+            "img": "0091.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "185": {
             "s": "usb3",
-            "img": "0092.png"
+            "img": "0092.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "186": {
             "s": "usb3",
-            "img": "0093.png"
+            "img": "0093.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "187": {
             "s": "usb3",
-            "img": "0094.png"
+            "img": "0094.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "188": {
             "s": "usb3",
-            "img": "0095.png"
+            "img": "0095.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "189": {
             "s": "usb3",
-            "img": "0096.png"
+            "img": "0096.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "190": {
             "s": "usb3",
-            "img": "0097.png"
+            "img": "0097.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "191": {
             "s": "usb3",
-            "img": "0098.png"
+            "img": "0098.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "192": {
             "s": "telefonie",
-            "img": "0099.png"
+            "img": "0099.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "193": {
             "s": "telefonie",
-            "img": "0100.png"
+            "img": "0100.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "194": {
             "s": "telefonie",
-            "img": "0101.png"
+            "img": "0101.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "195": {
             "s": "telefonie",
-            "img": "0102.png"
+            "img": "0102.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "196": {
             "s": "telefonie",
-            "img": "0103.png"
+            "img": "0103.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "197": {
             "s": "telefonie",
-            "img": "0104.png"
+            "img": "0104.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "198": {
             "s": "telefonie",
-            "img": "0105.png"
+            "img": "0105.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "199": {
             "s": "telefonie",
-            "img": "0106.png"
+            "img": "0106.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "200": {
             "s": "telefonie",
-            "img": "00107.png"
+            "img": "0107.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "201": {
             "s": "telefonie",
-            "img": "0108.png"
+            "img": "0108.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "202": {
             "s": "telefonie",
-            "img": "0109.png"
+            "img": "0109.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "203": {
             "s": "telefonie",
-            "img": "0110.png"
+            "img": "0110.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "204": {
             "s": "telefonie",
-            "img": "0111.png"
+            "img": "0111.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "205": {
             "s": "telefonie",
-            "img": "0112.png"
+            "img": "0112.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "206": {
             "s": "telefonie",
-            "img": "0113.png"
+            "img": "0113.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "207": {
             "s": "telefonie",
-            "img": "0114.png"
+            "img": "0114.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "208": {
             "s": "telefonie",
-            "img": "0115.png"
+            "img": "0115.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "209": {
             "s": "telefonie",
-            "img": "0116.png"
+            "img": "0116.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "210": {
             "s": "telefonie",
-            "img": "0117.png"
+            "img": "0117.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "211": {
             "s": "telefonie",
-            "img": "0118.png"
+            "img": "0118.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "212": {
             "s": "telefonie",
-            "img": "0119.png"
+            "img": "0119.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "213": {
             "s": "telefonie",
-            "img": "0120.png"
+            "img": "0120.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "214": {
             "s": "telefonie",
-            "img": "0121.png"
+            "img": "0121.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "215": {
             "s": "telefonie",
-            "img": "0121.png"
+            "img": "0121.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "216": {
             "s": "telefonie",
-            "img": "0122.png"
+            "img": "0122.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "217": {
             "s": "telefonie",
-            "img": "0123.png"
+            "img": "0123.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "218": {
             "s": "telefonie",
-            "img": "0124.png"
+            "img": "0124.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "219": {
             "s": "telefonie",
-            "img": "0125.png"
+            "img": "0125.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "220": {
             "s": "telefonie",
-            "img": "0126.png"
+            "img": "0126.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "221": {
             "s": "telefonie",
-            "img": "0127.png"
+            "img": "0127.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "222": {
             "s": "telefonie",
-            "img": "0128.png"
+            "img": "0128.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "223": {
             "s": "telefonie",
-            "img": "0129.png"
+            "img": "0129.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "224": {
             "s": "telefonie",
-            "img": "0130.png"
+            "img": "0130.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "225": {
             "s": "telefonie",
-            "img": "0131.png"
+            "img": "0131.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "226": {
             "s": "telefonie",
-            "img": "0131.png"
+            "img": "0131.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "227": {
             "s": "telefonie",
-            "img": "0132.png"
+            "img": "0132.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "228": {
             "s": "telefonie",
-            "img": "0133.png"
+            "img": "0133.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "229": {
             "s": "telefonie",
-            "img": "0134.png"
+            "img": "0134.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "230": {
             "s": "telefonie",
-            "img": "0135.png"
+            "img": "0135.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "231": {
             "s": "telefonie",
-            "img": "0136.png"
+            "img": "0136.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "232": {
             "s": "telefonie",
-            "img": "0137.png"
+            "img": "0137.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "233": {
             "s": "telefonie",
-            "img": "0138.png"
+            "img": "0138.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "234": {
             "s": "telefonie",
-            "img": "0139.png"
+            "img": "0139.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "235": {
             "s": "telefonie",
-            "img": "0140.png"
+            "img": "0140.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "236": {
             "s": "telefonie",
-            "img": "0141.png"
+            "img": "0141.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "237": {
             "s": "telefonie",
-            "img": "0142.png"
+            "img": "0142.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "238": {
             "s": "telefonie",
-            "img": "0143.png"
+            "img": "0143.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "239": {
             "s": "telefonie",
-            "img": "0144.png"
+            "img": "0144.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "240": {
             "s": "fritzos",
-            "img": "0145.png"
+            "img": "0145.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "241": {
             "s": "fritzos",
-            "img": "0146.png"
+            "img": "0146.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "242": {
             "s": "fritzos",
-            "img": "0147.png"
+            "img": "0147.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "243": {
             "s": "fritzos",
-            "img": "0148.png"
+            "img": "0148.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "244": {
             "s": "fritzos",
-            "img": "0149.png"
+            "img": "0149.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "245": {
             "s": "fritzos",
-            "img": "0150.png"
+            "img": "0150.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "246": {
             "s": "fritzos",
-            "img": "0151.png"
+            "img": "0151.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "247": {
             "s": "fritzos",
-            "img": "0152.png"
+            "img": "0152.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "248": {
             "s": "fritzos",
-            "img": "0153.png"
+            "img": "0153.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "249": {
             "s": "fritzos",
-            "img": "0154.png"
+            "img": "0154.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "250": {
             "s": "fritzos",
-            "img": "0155.png"
+            "img": "0155.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "251": {
             "s": "fritzos",
-            "img": "0156.png"
+            "img": "0156.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "252": {
             "s": "fritzos",
-            "img": "0157.png"
+            "img": "0157.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "253": {
             "s": "fritzos",
-            "img": "0158.png"
+            "img": "0158.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "254": {
             "s": "fritzos",
-            "img": "0159.png"
+            "img": "0159.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "255": {
             "s": "fritzos",
-            "img": "0160.png"
+            "img": "0160.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "256": {
             "s": "fritzos",
-            "img": "0161.png"
+            "img": "0161.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "257": {
             "s": "fritzos",
-            "img": "0162.png"
+            "img": "0162.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "258": {
             "s": "fritzos",
-            "img": "0163.png"
+            "img": "0163.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "259": {
             "s": "fritzos",
-            "img": "0164.png"
+            "img": "0164.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "260": {
             "s": "fritzos",
-            "img": "0165.png"
+            "img": "0165.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "261": {
             "s": "fritzos",
-            "img": "0166.png"
+            "img": "0166.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "262": {
             "s": "fritzos",
-            "img": "0167.png"
+            "img": "0167.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "263": {
             "s": "fritzos",
-            "img": "0168.png"
+            "img": "0168.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "264": {
             "s": "fritzos",
-            "img": "0169.png"
+            "img": "0169.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "265": {
             "s": "fritzos",
-            "img": "0170.png"
+            "img": "0170.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "266": {
             "s": "fritzos",
-            "img": "0171.png"
+            "img": "0171.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "267": {
             "s": "fritzos",
-            "img": "0172.png"
+            "img": "0172.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "268": {
             "s": "fritzos",
-            "img": "0173.png"
+            "img": "0173.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "269": {
             "s": "fritzos",
-            "img": "0174.png"
+            "img": "0174.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "270": {
             "s": "fritzos",
-            "img": "0175.png"
+            "img": "0175.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "271": {
             "s": "fritzos",
-            "img": "0176.png"
+            "img": "0176.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "272": {
             "s": "fritzos",
-            "img": "0177.png"
+            "img": "0177.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "273": {
             "s": "fritzos",
-            "img": "0178.png"
+            "img": "0178.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "274": {
             "s": "fritzos",
-            "img": "0179.png"
+            "img": "0179.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "275": {
             "s": "fritzos",
-            "img": "0180.png"
+            "img": "0180.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "276": {
             "s": "fritzos",
-            "img": "0181.png"
+            "img": "0181.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "277": {
             "s": "fritzos",
-            "img": "0182.png"
+            "img": "0182.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "278": {
             "s": "fritzos",
-            "img": "0183.png"
+            "img": "0183.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "279": {
             "s": "fritzos",
-            "img": "0184.png"
+            "img": "0184.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "280": {
             "s": "fritzos",
-            "img": "0185.png"
+            "img": "0185.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "281": {
             "s": "fritzos",
-            "img": "0186.png"
+            "img": "0186.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "282": {
             "s": "fritzos",
-            "img": "0187.png"
+            "img": "0187.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "283": {
             "s": "fritzos",
-            "img": "0188.png"
+            "img": "0188.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "284": {
             "s": "fritzos",
-            "img": "0189.png"
+            "img": "0189.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "285": {
             "s": "fritzos",
-            "img": "0190.png"
+            "img": "0190.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "286": {
             "s": "fritzos",
-            "img": "0191.png"
+            "img": "0191.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "287": {
             "s": "fritzos",
-            "img": "0192.png"
+            "img": "0192.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "288": {
             "s": "auszeichnungen",
-            "img": "0193.png"
+            "img": "0193.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "289": {
             "s": "auszeichnungen",
-            "img": "0194.png"
+            "img": "0194.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "290": {
             "s": "auszeichnungen",
-            "img": "0195.png"
+            "img": "0195.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "291": {
             "s": "auszeichnungen",
-            "img": "0196.png"
+            "img": "0196.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "292": {
             "s": "auszeichnungen",
-            "img": "0197.png"
+            "img": "0197.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "293": {
             "s": "auszeichnungen",
-            "img": "0198.png"
+            "img": "0198.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "294": {
             "s": "auszeichnungen",
-            "img": "0199.png"
+            "img": "0199.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "295": {
             "s": "auszeichnungen",
-            "img": "0200.png"
+            "img": "0200.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "296": {
             "s": "auszeichnungen",
-            "img": "0201.png"
+            "img": "0201.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "297": {
             "s": "auszeichnungen",
-            "img": "0202.png"
+            "img": "0202.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "298": {
             "s": "auszeichnungen",
-            "img": "0203.png"
+            "img": "0203.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "299": {
             "s": "auszeichnungen",
-            "img": "0204.png"
+            "img": "0204.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "300": {
             "s": "auszeichnungen",
-            "img": "0205.png"
+            "img": "0205.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "301": {
             "s": "auszeichnungen",
-            "img": "0206.png"
+            "img": "0206.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "302": {
             "s": "auszeichnungen",
-            "img": "0207.png"
+            "img": "0207.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "303": {
             "s": "auszeichnungen",
-            "img": "0208.png"
+            "img": "0208.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "304": {
             "s": "auszeichnungen",
-            "img": "0209.png"
+            "img": "0209.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "305": {
             "s": "auszeichnungen",
-            "img": "0210.png"
+            "img": "0210.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "306": {
             "s": "auszeichnungen",
-            "img": "0211.png"
+            "img": "0211.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "307": {
             "s": "auszeichnungen",
-            "img": "0212.png"
+            "img": "0212.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "308": {
             "s": "auszeichnungen",
-            "img": "0213.png"
+            "img": "0213.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "309": {
             "s": "auszeichnungen",
-            "img": "0214.png"
+            "img": "0214.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "310": {
             "s": "auszeichnungen",
-            "img": "0215.png"
+            "img": "0215.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "311": {
             "s": "auszeichnungen",
-            "img": "0216.png"
+            "img": "0216.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "312": {
             "s": "auszeichnungen",
-            "img": "0217.png"
+            "img": "0217.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "313": {
             "s": "auszeichnungen",
-            "img": "0218.png"
+            "img": "0218.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "314": {
             "s": "auszeichnungen",
-            "img": "0219.png"
+            "img": "0219.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "315": {
             "s": "auszeichnungen",
-            "img": "0220.png"
+            "img": "0220.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "316": {
             "s": "auszeichnungen",
-            "img": "0221.png"
+            "img": "0221.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "317": {
             "s": "auszeichnungen",
-            "img": "0222.png"
+            "img": "0222.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "318": {
             "s": "auszeichnungen",
-            "img": "0223.png"
+            "img": "0223.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "319": {
             "s": "auszeichnungen",
-            "img": "0224.png"
+            "img": "0224.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "320": {
             "s": "auszeichnungen",
-            "img": "0225.png"
+            "img": "0225.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "321": {
             "s": "auszeichnungen",
-            "img": "0226.png"
+            "img": "0226.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "322": {
             "s": "auszeichnungen",
-            "img": "0227.png"
+            "img": "0227.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "323": {
             "s": "auszeichnungen",
-            "img": "0228.png"
+            "img": "0228.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "324": {
             "s": "auszeichnungen",
-            "img": "0229.png"
+            "img": "0229.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "325": {
             "s": "auszeichnungen",
-            "img": "0230.png"
+            "img": "0230.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "326": {
             "s": "auszeichnungen",
-            "img": "0231.png"
+            "img": "0231.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "327": {
             "s": "auszeichnungen",
-            "img": "0232.png"
+            "img": "0232.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "328": {
             "s": "auszeichnungen",
-            "img": "0233.png"
+            "img": "0233.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "329": {
             "s": "auszeichnungen",
-            "img": "0234.png"
+            "img": "0234.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "330": {
             "s": "auszeichnungen",
-            "img": "0235.png"
+            "img": "0235.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "331": {
             "s": "auszeichnungen",
-            "img": "0236.png"
+            "img": "0236.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "332": {
             "s": "auszeichnungen",
-            "img": "0237.png"
+            "img": "0237.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "333": {
             "s": "auszeichnungen",
-            "img": "0238.png"
+            "img": "0238.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "334": {
             "s": "auszeichnungen",
-            "img": "0239.png"
+            "img": "0239.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "335": {
             "s": "auszeichnungen",
-            "img": "0240.png"
+            "img": "0240.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "336": {
             "s": "auszeichnungen",
-            "img": "0241.png"
+            "img": "0241.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "337": {
             "s": "auszeichnungen",
-            "img": "0242.png"
+            "img": "0242.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "338": {
             "s": "auszeichnungen",
-            "img": "0243.png"
+            "img": "0243.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "339": {
             "s": "auszeichnungen",
-            "img": "0244.png"
+            "img": "0244.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "340": {
             "s": "auszeichnungen",
-            "img": "0245.png"
+            "img": "0245.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "341": {
             "s": "auszeichnungen",
-            "img": "0246.png"
+            "img": "0246.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "342": {
             "s": "auszeichnungen",
-            "img": "0247.png"
+            "img": "0247.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "343": {
             "s": "auszeichnungen",
-            "img": "0248.png"
+            "img": "0248.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "344": {
             "s": "auszeichnungen",
-            "img": "0249.png"
+            "img": "0249.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "345": {
             "s": "auszeichnungen",
-            "img": "0250.png"
+            "img": "0250.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "346": {
             "s": "auszeichnungen",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "347": {
             "s": "auszeichnungen",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "348": {
             "s": "auszeichnungen",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "349": {
             "s": "auszeichnungen",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "350": {
             "s": "auszeichnungen",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "351": {
             "s": "auszeichnungen",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "352": {
             "s": "auszeichnungen",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "253": {
             "s": "auszeichnungen",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "354": {
             "s": "auszeichnungen",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "355": {
             "s": "auszeichnungen",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "356": {
             "s": "auszeichnungen",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "357": {
             "s": "auszeichnungen",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "358": {
             "s": "auszeichnungen",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "359": {
             "s": "auszeichnungen",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "360": {
             "s": "auszeichnungen",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "361": {
             "s": "auszeichnungen",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "362": {
             "s": "auszeichnungen",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "363": {
             "s": "auszeichnungen",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "364": {
             "s": "auszeichnungen",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "365": {
             "s": "auszeichnungen",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "366": {
             "s": "auszeichnungen",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "367": {
             "s": "auszeichnungen",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "368": {
             "s": "auszeichnungen",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "369": {
             "s": "auszeichnungen",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "370": {
             "s": "auszeichnungen",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "371": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "372": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "373": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "374": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "375": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "376": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "377": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "378": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "379": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "380": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "381": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "382": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "383": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "384": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "385": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "386": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "387": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "388": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "389": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "390": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "391": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "392": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "393": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "394": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "395": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "396": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "397": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "398": {
             "s": "start",
-            "img": "../960px/0000.png"
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         },
         "399": {
-            "s": "start"
+            "s": "start",
+            "img": "../960px/0000.png",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0
         }
     }
 }

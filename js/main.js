@@ -23,186 +23,73 @@ var avmlp = {
         "fritzos",
         "auszeichnungen"
     ],
-    currentSectionIndex: 0,
-    sectionTop: [
-        0,
-        960,
-        1920,
-        2880,
-        3840,
-        4800,
-        5760
+    currentSection: false,
+    lastSection: false,
+    sectionTop: [],
+    sectionFrames: [
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48
     ],
-    $slides: null,
-    $viewport: null,
 
+    aniSpeed: 20,
     aniTimeoutID: null,
-    aniImages: false,
+    aniImages: [],
     aniStep: 0,
     aniTargetStep: 0,
-
+    aniLastStep: null,
+    animationData: false,
+    isAnimationReady: false,
 
     // methods
-    initAnimationImages: function() {
-        for(var i = 0; i < this.aniTotalImages; i++) { // loop for each image in sequence
-            this.aniImages[i] = {
-                "top": '136',
-                "left": 122,
-                "low": new Image(),
-                "high": new Image(),
-                "highSrc": this.aniImagesHighSrcPrefix + this.pad(i, 4) + ".png"
-            };
-            this.aniImages[i].low.src = this.aniImagesLowSrcPrefix + this.pad(i, 4) + ".png";
+    setSectionTop: function() {
+        var h = 0;
+        for(var i = 0; i < this.sectionFrames.length; i++) {
+            this.sectionTop[i] = h;
+            h += this.sectionFrames[i] * this.aniSpeed;
         }
+        // this.sectionTop = [
+        //     0,
+        //     48 * this.aniSpeed,
+        //     96 * this.aniSpeed,
+        //     144 * this.aniSpeed,
+        //     192 * this.aniSpeed,
+        //     240 * this.aniSpeed,
+        //     345 * this.aniSpeed
+        // ];
+    },
 
-        // TODO: this should probably be a separate json-file, with all the animation properties
-        // override the positions
-        this.aniImages[20].top = 154;
-        this.aniImages[21].top = 172;
-        this.aniImages[22].top = 190;
-        this.aniImages[23].top = 208;
-        this.aniImages[24].top = 226;
-        this.aniImages[25].top = 244;
-        this.aniImages[26].top = 262;
-        this.aniImages[27].top = 280;
-        this.aniImages[28].top = 298;
-        this.aniImages[29].top = 316;
-        this.aniImages[30].top = 334;
-        this.aniImages[31].top = 352;
-        this.aniImages[32].top = 370;
-        this.aniImages[33].top = 388;
-        this.aniImages[34].top = 406;
-        this.aniImages[35].top = 424;
-        this.aniImages[36].top = 442;
-        this.aniImages[37].top = 460;
-        this.aniImages[38].top = 478;
-        this.aniImages[39].top = 496;
-        this.aniImages[40].top = 514;
-        this.aniImages[41].top = 532;
-        this.aniImages[42].top = 550;
-        this.aniImages[43].top = 560;
-        this.aniImages[44].top = 575;
-        this.aniImages[45].top = 580;
-        this.aniImages[46].top = 570;
-        this.aniImages[47].top = 560;
-        this.aniImages[48].top = 550;
-        this.aniImages[49].top = 540;
-        this.aniImages[50].top = 530;
-        this.aniImages[51].top = 520;
-        this.aniImages[52].top = 510;
-        this.aniImages[53].top = 500;
-        this.aniImages[54].top = 490;
-        this.aniImages[55].top = 480;
-        this.aniImages[55].top = 470;
-        this.aniImages[56].top = 460;
-        this.aniImages[57].top = 450;
-        this.aniImages[58].top = 440;
-        this.aniImages[59].top = 430;
-        this.aniImages[60].top = 420;
-        this.aniImages[61].top = 410;
-        this.aniImages[62].top = 400;
-        this.aniImages[63].top = 390;
-        this.aniImages[64].top = 380;
-        this.aniImages[65].top = 370;
-        this.aniImages[66].top = 360;
-        this.aniImages[67].top = 350;
-        this.aniImages[68].top = 340;
-        this.aniImages[69].top = 330;
-        this.aniImages[70].top = 320;
-        this.aniImages[71].top = 310;
-        this.aniImages[72].top = 300;
-        this.aniImages[73].top = 290;
-        this.aniImages[74].top = 280;
-        this.aniImages[75].top = 290;
-        this.aniImages[76].top = 270;
-        this.aniImages[77].top = 270;
-        this.aniImages[78].top = 270;
-        this.aniImages[79].top = 260;
-        this.aniImages[80].top = 260;
-        this.aniImages[81].top = 260;
-        this.aniImages[82].top = 260;
-        this.aniImages[83].top = 260;
-        this.aniImages[84].top = 260;
-        this.aniImages[85].top = 260;
-        this.aniImages[86].top = 260;
-        this.aniImages[87].top = 260;
-        this.aniImages[88].top = 260;
-        this.aniImages[89].top = 260;
-        this.aniImages[90].top = 260;
-        this.aniImages[91].top = 260;
-        this.aniImages[92].top = 260;
-        this.aniImages[93].top = 260;
-        this.aniImages[94].top = 260;
-        this.aniImages[95].top = 260;
-        this.aniImages[96].top = 260;
-        this.aniImages[97].top = 260;
-        this.aniImages[98].top = 260;
-        this.aniImages[99].top = 260;
-        this.aniImages[100].top = 250;
-        this.aniImages[101].top = 240;
-        this.aniImages[102].top = 230;
-        this.aniImages[103].top = 220;
-        this.aniImages[104].top = 210;
-        this.aniImages[105].top = 200;
-        this.aniImages[106].top = 190;
-        this.aniImages[108].top = 180;
-        this.aniImages[109].top = 170;
-        this.aniImages[110].top = 160;
-        this.aniImages[111].top = 150;
-        this.aniImages[112].top = 140;
-        this.aniImages[113].top = 136;
+    loadAnimationImages: function() {
 
-        this.aniImages[200].top = 280;
-        this.aniImages[201].top = 290;
-        this.aniImages[202].top = 300;
-        this.aniImages[203].top = 310;
-        this.aniImages[204].top = 320;
-        this.aniImages[205].top = 330;
-        this.aniImages[206].top = 340;
-        this.aniImages[207].top = 350;
-        this.aniImages[208].top = 360;
-        this.aniImages[209].top = 370;
-        this.aniImages[210].top = 380;
-        this.aniImages[211].top = 390;
-        this.aniImages[212].top = 400;
-        this.aniImages[213].top = 410;
-        this.aniImages[213].top = 420;
-        this.aniImages[214].top = 420;
-        this.aniImages[215].top = 420;
-        this.aniImages[216].top = 420;
-        this.aniImages[217].top = 420;
-        this.aniImages[218].top = 420;
-        this.aniImages[219].top = 420;
-        this.aniImages[220].top = 420;
-        this.aniImages[221].top = 420;
-        this.aniImages[222].top = 420;
-        this.aniImages[223].top = 420;
-        this.aniImages[224].top = 420;
-        this.aniImages[225].top = 420;
-        this.aniImages[226].top = 420;
-        this.aniImages[227].top = 420;
-        this.aniImages[228].top = 420;
-        this.aniImages[229].top = 420;
-        this.aniImages[230].top = 420;
-        this.aniImages[231].top = 420;
-        this.aniImages[232].top = 420;
-        this.aniImages[233].top = 420;
-        this.aniImages[234].top = 420;
-        this.aniImages[235].top = 420;
-        this.aniImages[236].top = 420;
-        this.aniImages[237].top = 420;
-        this.aniImages[238].top = 420;
-        this.aniImages[239].top = 420;
-        this.aniImages[240].top = 420;
-        this.aniImages[241].top = 420;
-        this.aniImages[242].top = 420;
-        this.aniImages[243].top = 420;
-        this.aniImages[244].top = 420;
-        this.aniImages[245].top = 420;
-        this.aniImages[246].top = 420;
-        this.aniImages[247].top = 420;
-        this.aniImages[248].top = 420;
-        this.aniImages[249].top = 420;
+        var frames = this.animationData.frames;
+        var i = 0;
+        for (var frame in frames) {
+            if (!frames.hasOwnProperty(frame)) {
+                continue;
+            }
+            if (!frames[frame].img) {
+                this.aniImages[i] = {
+                    "low": null,
+                    "high": null,
+                    "highSrc": null
+                };
+            } else {
+                this.aniImages[i] = {
+                    "low": new Image(),
+                    "high": new Image(),
+                    "highSrc": this.animationData.hiSrcPrefix + frames[frame].img
+                };
+                this.aniImages[i].low.src = this.animationData.lowSrcPrefix + frames[frame].img;
+                // $(this.aniImages[i].low).on("load", function(e) {
+                //     // TODO: this handler could be used to toggle a loading indicator
+                // })
+            }
+            i++;
+        }
     },
 
     resizeSections: function() {
@@ -217,8 +104,8 @@ var avmlp = {
             this.zoom = 1;
         }
         if (w < this.defaultWidth) {
-            if ( (w / this.defaultHeight) < this.zoom ) {
-                this.zoom = w / this.defaultHeight;
+            if ( (w / this.defaultWidth) < this.zoom ) {
+                this.zoom = w / this.defaultWidth;
             }
         }
         if (zoom !== this.zoom) {
@@ -231,61 +118,59 @@ var avmlp = {
         }
     },
 
-    // Positioning viewport in the middle
-
-    positionSlide: function() {
-        var width = $('.slide').width();
-        $('.slide').css({'left':'50%', 'margin-left': - width /2 });
-    },
-
     applyZoom: function() {
-        var top = -(this.defaultHeight - this.defaultHeight * this.zoom) / 2;
+        // var top = -(this.defaultHeight - this.defaultHeight * this.zoom) / 2;
         // apply scaling to slides
+        var left = ($("body").width() - (1200 * this.zoom)) / 2;
+        if (left < 0) {
+            left = 0;
+        }
         jQuery("section .slide").css({
             "-webkit-transform": "scale(" + this.zoom + ", " + this.zoom + ")",
             "-ms-transform": "scale(" + this.zoom + ", " + this.zoom + ")",
             "transform": "scale(" + this.zoom + ", " + this.zoom + ")",
-            "top": top + "px"
+            "left": left + "px"
         });
     },
 
     setNavigationState: function() {
-        var currentSectionIndex = Math.floor( $(window).scrollTop() / ( this.defaultHeight * this.zoom ) );
-        if (currentSectionIndex < 0) {
-            currentSectionIndex = 0;
-        }
-        if (currentSectionIndex >= avmlp.sectionNames.length) {
-            currentSectionIndex = avmlp.sectionNames.length - 1;
-        }
-        if (currentSectionIndex === this.currentSectionIndex) {
-            return; // section hasn't changed
-        }
-        this.currentSectionIndex = currentSectionIndex;
 
-        // update content!
+        $( window ).trigger( "sectionChange", [ this.currentSection ] );
 
-        // this.setViewportContent();
-
-        // set Navigation Hilite
-        var currentSection = this.sectionNames[currentSectionIndex];
-        $( window ).trigger( "sectionChange", [ currentSection ] );
-
-        if ( ! $("#primary ." + currentSection).hasClass("active") ) {
-            $("#primary li").each(function(){
-                $(this).removeClass("active");
-            });
-            $("#primary ." + currentSection).addClass("active");
-        }
     },
 
-    initScrollAnimation: function() {
+    initScrollAnimation: function(animationData) {
+        this.animationData = animationData;
+        this.isAnimationReady = true;
+        this.loadAnimationImages();
 
 
         // all sections get a fixed position, the top values are stored in the this.sectionTop array
-        $("section").css({
+        $("#viewport").css({
             "position": "fixed",
             "top": 0
         });
+        $("section").css({
+            "position": "absolute",
+            "top": 0
+        });
+
+        // create new slide for the packshot animation
+        var $section = $('<section id="packshot-wrapper" />');
+        var $slide = $('<div class="slide packshot-slide" />');
+        var $packshot =$('<img src="frames/960px/0000.png" id="packshot" width="960" height="640" alt="FRITZ!Box 7490" />');
+        $packshot.appendTo($slide);
+        $slide.appendTo($section);
+        $section.prependTo($("#viewport"));
+
+        // set scale for new slide as well
+        this.applyZoom();
+
+        // remove packshot-images from slides
+        $("img.packshot").remove();
+
+        // remove background from other slides, we'll use the background from the packshot-wrapper
+        $(".slide").not(".packshot-slide").css("background", "transparent");
 
         // we need an element with the original height to re-enable scrolling
         var docHeight = this.sectionTop[this.sectionTop.length - 1] + this.defaultHeight;
@@ -303,6 +188,7 @@ var avmlp = {
         $("section").hide();
         // TODO: Show section requested by url fragment
         $("section#start").show();
+        $("section#packshot-wrapper").show();
     },
 
 
@@ -311,43 +197,96 @@ var avmlp = {
         console.log("scrollToSection:", fragment);
     },
 
-    // change product animation image
+    // change product animation
     changeFrame: function() {
-        // console.log("anistep", this.aniStep);
-        // if the image exists in the array
-
-        if (this.debug) { // FIXME: SLOW!!!
-            $("#debug-animation-step").text(this.aniStep);
+        if (this.debug) {
+            $("#debug-section").text(this.animationData.frames[this.aniStep].s);
         }
 
-        if(this.aniImages.length > 0 && this.aniImages[this.aniStep]) {
+        // show/hide sections
+        var currentSection = this.animationData.frames[this.aniStep].s;
+        if (this.lastSection !== currentSection) {
+            $("#" + currentSection).show();
+            $("#" + this.lastSection).hide();
+            if (!this.animationData.frames[this.aniStep].imgCss) { // reset img position
+                $("#packshot").css({
+                    "top": "136px"
+                });
+            }
+        }
+        this.lastSection = currentSection;
+
+        // Opacity for header
+        if ($("#" + currentSection + " header").css("opacity") != this.animationData.frames[this.aniStep].ho ) {
+            $("#" + currentSection + " header").css("opacity", this.animationData.frames[this.aniStep].ho);
+        }
+
+        // Opacity for paragraph
+        if ($("#" + currentSection + " p").css("opacity") != this.animationData.frames[this.aniStep].po ) {
+            $("#" + currentSection + " p").css("opacity", this.animationData.frames[this.aniStep].po);
+        }
+
+        // opacity fritz logo - not on every slide
+        if ($("#" + currentSection + " .logo-fritz-color").length && $("#" + currentSection + " .logo-fritz-color").css("opacity") !== this.animationData.frames[this.aniStep].flo ) {
+            $("#" + currentSection + " .logo-fritz-color").css("opacity", this.animationData.frames[this.aniStep].flo);
+        }
+
+        // opacity avm logo - not on every slide
+        if ($("#" + currentSection + " .logo-avm").length && $("#" + currentSection + " .logo-avm").css("opacity") !== this.animationData.frames[this.aniStep].flo ) {
+            $("#" + currentSection + " .logo-avm").css("opacity", this.animationData.frames[this.aniStep].alo);
+        }
+
+        // additional properties
+        var a;
+        var properties;
+        if (a = this.animationData.frames[this.aniStep].a) {
+            for (var e in a) {
+                if (!a.hasOwnProperty(e)) {
+                    continue;
+                }
+                properties = a[e];
+                $("#" + currentSection + " " + e).css(properties);
+            }
+        }
+
+        // execute code - always remember, eval is evil
+        if (this.animationData.frames[this.aniStep].code) {
+            eval(this.animationData.frames[this.aniStep].code);
+        }
+
+        // css code for #packshot
+        if (this.animationData.frames[this.aniStep].imgCss) {
+            $("#packshot").css(this.animationData.frames[this.aniStep].imgCss);
+        }
+
+        // packshot images
+        if(this.aniImages.length && this.aniImages[this.aniStep]) {
             var aniImage = this.aniImages[this.aniStep];
-
+            if (!aniImage.low) {
+                if ($("#packshot:visible").length) {
+                    $('#packshot').hide();
+                }
+                return;
+            }
             if(aniImage.low.complete) { // if the image is downloaded and ready
-
+                if (!$("#packshot:visible").length) {
+                    $('#packshot').show();
+                }
                 if($('#packshot').attr('src') !== aniImage.low.src &&
                     $('#packshot').attr('src') !== aniImage.highSrc ) {
                     window.clearTimeout(this.aniTimeoutID);
-
                     // load hi-quality src
                     this.aniTimeoutID = window.setTimeout(function() {
                         $('#packshot').attr('src', aniImage.highSrc);
                     }, 100);
-
                     // change the source of our placeholder image
                     $('#packshot').attr('src', aniImage.low.src);
                     $('#packshot').css({
                         "top": aniImage.top + "px",
                     });
-
-
                 }
             }
         }
-    },
-
-    pad: function(number, length) { // pad numbers with leading zeros for JPEG sequence file names
-        var str = '' + number; while (str.length < length) { str = '0' + str; } return str;
     },
 
     // set inside/outside slider positions
@@ -366,17 +305,24 @@ var avmlp = {
                 avmlp.updateSlider();
             }
         });
+    },
+
+    setSliderPosition: function(pos) {
+        $(".drag-wrapper").css({ "left": pos });
+        avmlp.updateSlider();
     }
 
 };
 
 // Document ready handler
 jQuery( document ).ready(function( $ ) {
+    avmlp.setSectionTop();
 
     // Debug
     if ($("#debug-bar").length) {
         $("#debug-bar").on("click", function(e) {
             e.preventDefault();
+            $("body").removeClass("debug");
             $("#debug-bar").remove();
             avmlp.debug = false;
         });
@@ -384,14 +330,16 @@ jQuery( document ).ready(function( $ ) {
         avmlp.debug = false;
     }
 
-    // Ajax-Load animation properties
+    // Ajax-Load animation properties & and initialize animation
     $.ajax({
         url: "js/animation.json",
         dataType: "json",
         success: function(data) {
-            console.log("JSON", data);
+            avmlp.initScrollAnimation(data);
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log("Oh noes! Getting animation properties failed because: ", errorThrown);
         }
-
     });
 
     // clickable bullets in Navigation
@@ -407,9 +355,6 @@ jQuery( document ).ready(function( $ ) {
     });
 
     avmlp.resizeSections();
-    avmlp.positionSlide();
-
-    avmlp.initScrollAnimation();
 
     // inside/outside image - using jquery ui draggable
     $(".drag-wrapper").draggable({
@@ -493,20 +438,22 @@ var requestAnimFrame = (function() {
 (function animloop(){ // the smoothest animation loop possible
     requestAnimFrame(animloop);
 
-    // Highlight Navigation
-    avmlp.setNavigationState();
-
     var t = $(window).scrollTop();
-    avmlp.aniTargetStep = Math.ceil ( t / 20 );
+    avmlp.aniTargetStep = Math.ceil ( t / avmlp.aniSpeed );
 
     // what frame to animate to
     if( avmlp.aniTargetStep !== avmlp.aniStep ) {
         // increment the step until we arrive at the target step
-        avmlp.aniStep += Math.ceil(( avmlp.aniTargetStep - avmlp.aniStep) / 5);
+        avmlp.aniStep += Math.ceil( ( avmlp.aniTargetStep - avmlp.aniStep) / 5);
     }
-    avmlp.changeFrame();
+
+    if (avmlp.isAnimationReady && avmlp.aniStep !== avmlp.aniLastStep) {
+        avmlp.changeFrame();
+        avmlp.aniLastStep = avmlp.aniStep;
+    }
 
     if (avmlp.debug) {
+        $("#debug-animation-step").text(avmlp.aniStep);
         $("#debug-scroll-top").text(t + "px");
     }
 

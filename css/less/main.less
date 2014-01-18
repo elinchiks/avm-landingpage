@@ -89,7 +89,9 @@ body {
     width:100%;
     max-width:100%;
 }
-
+body.debug {
+    background-color: #666;
+}
 // Navigation
 nav#primary,
 nav.primary {
@@ -138,15 +140,17 @@ nav.primary {
 }
 
 // Section Defaults
-section,
-#viewport {
+section {
     position: relative;
     margin: 0 auto;
     width: 100%;
     max-width: 1200px;
     height: 960px;
 
+    // [1]: transform-origin so we don't need to set top
     .slide {
+        -webkit-transform-origin: 0% 0%; // [1]
+        transform-origin: 0% 0%; // [1]
         position: relative;
         margin: 0 auto;
         background-image: url("../images/bg-section.jpg");
@@ -324,11 +328,10 @@ section,
             z-index: 25;
             position: absolute;
             left: 15px;
-            border-left: 1px solid #fff;
+            border-left: 2px solid #fff; // 2px border-width to prevent line from disappearing on small scales
             padding: 0 0 20px 20px;
             z-index:2;
             opacity:0;
-            // .transition( opacity 0.4s cubic-bezier(0.25,0.1,0.25,1));
 
             .tip { // the round tip
                 display: block;
@@ -337,7 +340,7 @@ section,
                 width: 8px;
                 height: 8px;
                 .border-radius(4px);
-                left: -4px;
+                left: -5px;
                 top: 0;
             }
             h3 {
@@ -428,15 +431,22 @@ section,
     }
 }
 
-#viewport {
-    display: none;
-    width: 1200px;
-    height: 960px;
-    position:fixed;
-    background-image: url("../images/bg-section.jpg");
-    background-repeat: no-repeat;
-}
+// #viewport {
+//     display: none;
+//     width: 1200px;
+//     height: 960px;
+//     position:fixed;
+//     background-image: url("../images/bg-section.jpg");
+//     background-repeat: no-repeat;
+// }
 
+#packshot {
+    position: absolute;
+    z-index: 50;
+    left: 118px;
+    // top: 118px;
+    top: 136px;
+}
 
 // section 1 - visible at start
 #start, .start {
@@ -881,13 +891,13 @@ TODO: Remove me before deployment */
     display:block;
     margin-bottom:4px;
 }
-div[class*='bar'] , b{
+div[class*='bar'] , b {
     opacity:0;
     // .transition(opacity 1s ease-in);
 }
 
 section.active {
-   div[class*='bar'] , b{
+   div[class*='bar'] , b {
        // Animations
        &.bar-1 {
            .animation(fade-in 1s ease-in-out 200ms forwards);
@@ -1011,17 +1021,6 @@ section.active {
 
 }
 
-// #viewport.active {
-//     div[class*='bar'] , b{
-//         opacity:1 !important;
-//     }
-// }
-// #viewport {
-//     div[class*='bar'] , b {
-//         opacity:0 !important;
-//     }
-// }
-
 .packshot {
     .transition(bottom 1s ease-out);
 }
@@ -1086,6 +1085,7 @@ section.active {
 
     }
 }
+
 .mega-text {
     font-size:50px;
     font-family:'AVMMetaOT-CondBlack' !important;
