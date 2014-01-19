@@ -64,11 +64,11 @@ var avmlp = {
                     "highSrc": this.animationData.hiSrcPrefix + frames[i].img
                 };
                 this.aniImages[i].low.src = this.animationData.lowSrcPrefix + frames[i].img;
-                $(this.aniImages[i].low).on("load", function(e) {
+                $(this.aniImages[i].low).on("load", function() {
                     $("#led-5-off").toggle();
                     window.setTimeout(function() {
                         $("#led-5-off").hide();
-                    }, 200);
+                    }, 400);
                 });
             }
         }
@@ -89,10 +89,7 @@ var avmlp = {
                 this.zoom = w / this.defaultWidth;
             }
         }
-        if (zoom !== this.zoom) {
-            this.applyZoom();
-        }
-
+        this.applyZoom();
         if (this.debug) {
             jQuery("#debug-section-height").text(h + "px");
             jQuery("#debug-zoom").text(this.zoom.toPrecision(3));
@@ -131,21 +128,19 @@ var avmlp = {
         $packshot.appendTo($slide);
 
         // LED's off to visualize loading
-        // $('<img src="images/led-1-off.png" width="41" height="98" id="led-1-off" />').appendTo($slide);
         $('<img src="images/led-2-off.png" width="39" height="101" id="led-2-off" />').appendTo($slide);
         $('<img src="images/led-3-off.png" width="34" height="104" id="led-3-off" />').appendTo($slide);
         $('<img src="images/led-4-off.png" width="36" height="104" id="led-4-off" />').appendTo($slide);
         $('<img src="images/led-5-off.png" width="38" height="104" id="led-5-off" />').appendTo($slide);
-        // $("#led-1-off").hide();
         window.setTimeout(function() {
             $("#led-2-off").hide();
-        }, 200);
-        window.setTimeout(function() {
-            $("#led-3-off").hide();
         }, 400);
         window.setTimeout(function() {
+            $("#led-3-off").hide();
+        }, 800);
+        window.setTimeout(function() {
             $("#led-4-off").hide();
-        }, 600);
+        }, 1200);
 
 
         this.loadAnimationImages();
@@ -186,14 +181,23 @@ var avmlp = {
 
         // the fragment links need fixing
         var _this = this;
-        $(window).on('hashchange',function() { // FIXME: Doesn't work in Firefox
+        $(window).on('hashchange',function() {
             _this.scrollToSection(location.hash);
         });
 
         $("section").hide();
-        // TODO: Show section requested by url fragment
         $("section#start").show();
         $("section#packshot-wrapper").show();
+
+        // jump to section if hash is set
+        if (location.hash) {
+            window.setTimeout(function() {
+                // give it a little time
+                _this.scrollToSection(location.hash);
+            }, 200);
+
+        }
+
     },
 
     scrollToSection: function(fragment) {
@@ -202,7 +206,7 @@ var avmlp = {
         if (this.sectionNames.indexOf(sectionName) > -1) {
             offset = this.sectionOffset[this.sectionNames.indexOf(sectionName)];
         }
-        $("body").scrollTop(offset);
+        $(window).scrollTop(offset);
     },
 
     // change product animation
