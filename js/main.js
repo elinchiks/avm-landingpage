@@ -64,9 +64,12 @@ var avmlp = {
                     "highSrc": this.animationData.hiSrcPrefix + frames[i].img
                 };
                 this.aniImages[i].low.src = this.animationData.lowSrcPrefix + frames[i].img;
-                // $(this.aniImages[i].low).on("load", function(e) {
-                //     // TODO: this handler could be used to toggle a loading indicator
-                // })
+                $(this.aniImages[i].low).on("load", function(e) {
+                    $("#led-5-off").toggle();
+                    window.setTimeout(function() {
+                        $("#led-5-off").hide();
+                    }, 200);
+                });
             }
         }
     },
@@ -120,6 +123,31 @@ var avmlp = {
     initScrollAnimation: function(animationData) {
         this.animationData = animationData;
         this.isAnimationReady = true;
+
+        // create new slide for the packshot animation
+        var $section = $('<section id="packshot-wrapper" />');
+        var $slide = $('<div class="slide packshot-slide" />');
+        var $packshot =$('<img src="frames/960px/0000.png" id="packshot" width="960" height="640" alt="FRITZ!Box 7490" />');
+        $packshot.appendTo($slide);
+
+        // LED's off to visualize loading
+        // $('<img src="images/led-1-off.png" width="41" height="98" id="led-1-off" />').appendTo($slide);
+        $('<img src="images/led-2-off.png" width="39" height="101" id="led-2-off" />').appendTo($slide);
+        $('<img src="images/led-3-off.png" width="34" height="104" id="led-3-off" />').appendTo($slide);
+        $('<img src="images/led-4-off.png" width="36" height="104" id="led-4-off" />').appendTo($slide);
+        $('<img src="images/led-5-off.png" width="38" height="104" id="led-5-off" />').appendTo($slide);
+        // $("#led-1-off").hide();
+        window.setTimeout(function() {
+            $("#led-2-off").hide();
+        }, 200);
+        window.setTimeout(function() {
+            $("#led-3-off").hide();
+        }, 400);
+        window.setTimeout(function() {
+            $("#led-4-off").hide();
+        }, 600);
+
+
         this.loadAnimationImages();
 
         // multiple frame-offset with speed to get actual pixels
@@ -138,11 +166,8 @@ var avmlp = {
             "top": 0
         });
 
-        // create new slide for the packshot animation
-        var $section = $('<section id="packshot-wrapper" />');
-        var $slide = $('<div class="slide packshot-slide" />');
-        var $packshot =$('<img src="frames/960px/0000.png" id="packshot" width="960" height="640" alt="FRITZ!Box 7490" />');
-        $packshot.appendTo($slide);
+
+
         $slide.appendTo($section);
         $section.prependTo($("#viewport"));
 
@@ -161,7 +186,7 @@ var avmlp = {
 
         // the fragment links need fixing
         var _this = this;
-        $(window).on('hashchange',function(){
+        $(window).on('hashchange',function() { // FIXME: Doesn't work in Firefox
             _this.scrollToSection(location.hash);
         });
 
@@ -200,12 +225,12 @@ var avmlp = {
         this.lastSection = currentSection;
 
         // Opacity for header
-        if ($("#" + currentSection + " header").css("opacity") != this.animationData.frames[this.aniStep].ho ) {
+        if ($("#" + currentSection + " header").css("opacity") !== this.animationData.frames[this.aniStep].ho ) {
             $("#" + currentSection + " header").css("opacity", this.animationData.frames[this.aniStep].ho);
         }
 
         // Opacity for paragraph
-        if ($("#" + currentSection + " p.para").css("opacity") != this.animationData.frames[this.aniStep].po ) {
+        if ($("#" + currentSection + " p.para").css("opacity") !== this.animationData.frames[this.aniStep].po ) {
             $("#" + currentSection + " p.para").css("opacity", this.animationData.frames[this.aniStep].po);
         }
 
@@ -220,9 +245,9 @@ var avmlp = {
         }
 
         // additional properties
-        var a;
+        var a = this.animationData.frames[this.aniStep].a;
         var properties;
-        if (a = this.animationData.frames[this.aniStep].a) {
+        if (a) {
             for (var e in a) {
                 if (!a.hasOwnProperty(e)) {
                     continue;
