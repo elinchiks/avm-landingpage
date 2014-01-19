@@ -299,8 +299,11 @@ var avmlp = {
 
 // Document ready handler
 jQuery( document ).ready(function( $ ) {
-
     // Debug
+    if (window.location.search.slice(1) === "debug") {
+        avmlp.debug = true;
+        $("body").addClass("debug");
+    }
     if ($("#debug-bar").length) {
         $("#debug-bar").on("click", function(e) {
             e.preventDefault();

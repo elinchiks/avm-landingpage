@@ -839,6 +839,7 @@ section {
 /* --- DEBUG ---
 TODO: Remove me before deployment */
 #debug-bar {
+    display: none;
     font-family: "Lucida Grande", sans-serif;
     position: fixed;
     right: 0;
@@ -850,6 +851,10 @@ TODO: Remove me before deployment */
     cursor: pointer;
     padding: 5px;
     background: rgba(255,255,255,0.4);
+}
+
+.debug #debug-bar {
+    display: block;
 }
 
 
