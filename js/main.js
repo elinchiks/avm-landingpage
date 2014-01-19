@@ -77,7 +77,6 @@ var avmlp = {
     resizeSections: function() {
         var h = jQuery("html").height();
         var w = jQuery("html").width();
-        var zoom = this.zoom;
         // update zoom
         if (h < this.defaultHeight) {
             this.zoom = h / this.defaultHeight;
@@ -461,7 +460,7 @@ var requestAnimFrame = (function() {
         avmlp.aniStep += Math.ceil( ( avmlp.aniTargetStep - avmlp.aniStep) / 5);
     }
 
-    if (avmlp.isAnimationReady && avmlp.aniStep !== avmlp.aniLastStep) {
+    if (avmlp.isAnimationReady && avmlp.aniStep !== avmlp.aniLastStep && avmlp.aniStep < avmlp.animationData.frames.length) {
         avmlp.changeFrame();
         avmlp.aniLastStep = avmlp.aniStep;
     }
