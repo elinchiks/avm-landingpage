@@ -35,7 +35,7 @@ var avmlp = {
     aniLastStep: null,
     animationData: false,
     isAnimationReady: false,
-    sectionOffset: [
+    sectionOffset: [ // update these, if you insert new frames in animation.json
         0,
         69,
         148,
@@ -64,12 +64,12 @@ var avmlp = {
                     "highSrc": this.animationData.hiSrcPrefix + frames[i].img
                 };
                 this.aniImages[i].low.src = this.animationData.lowSrcPrefix + frames[i].img;
-                $(this.aniImages[i].low).on("load", function() {
-                    $("#led-5-off").toggle();
-                    window.setTimeout(function() {
-                        $("#led-5-off").hide();
-                    }, 400);
-                });
+                // $(this.aniImages[i].low).on("load", function() {
+                //     $("#led-5-off").toggle();
+                //     window.setTimeout(function() {
+                //         $("#led-5-off").hide();
+                //     }, 400);
+                // });
             }
         }
     },
@@ -128,19 +128,19 @@ var avmlp = {
         $packshot.appendTo($slide);
 
         // LED's off to visualize loading
-        $('<img src="images/led-2-off.png" width="39" height="101" id="led-2-off" />').appendTo($slide);
-        $('<img src="images/led-3-off.png" width="34" height="104" id="led-3-off" />').appendTo($slide);
-        $('<img src="images/led-4-off.png" width="36" height="104" id="led-4-off" />').appendTo($slide);
-        $('<img src="images/led-5-off.png" width="38" height="104" id="led-5-off" />').appendTo($slide);
-        window.setTimeout(function() {
-            $("#led-2-off").hide();
-        }, 400);
-        window.setTimeout(function() {
-            $("#led-3-off").hide();
-        }, 800);
-        window.setTimeout(function() {
-            $("#led-4-off").hide();
-        }, 1200);
+        // $('<img src="images/led-2-off.png" width="39" height="101" id="led-2-off" />').appendTo($slide);
+        // $('<img src="images/led-3-off.png" width="34" height="104" id="led-3-off" />').appendTo($slide);
+        // $('<img src="images/led-4-off.png" width="36" height="104" id="led-4-off" />').appendTo($slide);
+        // $('<img src="images/led-5-off.png" width="38" height="104" id="led-5-off" />').appendTo($slide);
+        // window.setTimeout(function() {
+        //     $("#led-2-off").hide();
+        // }, 400);
+        // window.setTimeout(function() {
+        //     $("#led-3-off").hide();
+        // }, 800);
+        // window.setTimeout(function() {
+        //     $("#led-4-off").hide();
+        // }, 1200);
 
 
         this.loadAnimationImages();
