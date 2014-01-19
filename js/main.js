@@ -25,17 +25,8 @@ var avmlp = {
     ],
     currentSection: false,
     lastSection: false,
-    sectionTop: [],
-    sectionFrames: [
-        48,
-        48,
-        48,
-        48,
-        48,
-        48,
-        48
-    ],
 
+    aniJsonFile: "js/animation.min.json", // set this to "js/animation.json" if you want to make changes
     aniSpeed: 20,
     aniTimeoutID: null,
     aniImages: [],
@@ -44,25 +35,17 @@ var avmlp = {
     aniLastStep: null,
     animationData: false,
     isAnimationReady: false,
+    sectionOffset: [
+        0,
+        69,
+        148,
+        266,
+        323,
+        400,
+        485
+    ],
 
     // methods
-    setSectionTop: function() {
-        var h = 0;
-        for(var i = 0; i < this.sectionFrames.length; i++) {
-            this.sectionTop[i] = h;
-            h += this.sectionFrames[i] * this.aniSpeed;
-        }
-        // this.sectionTop = [
-        //     0,
-        //     48 * this.aniSpeed,
-        //     96 * this.aniSpeed,
-        //     144 * this.aniSpeed,
-        //     192 * this.aniSpeed,
-        //     240 * this.aniSpeed,
-        //     345 * this.aniSpeed
-        // ];
-    },
-
     loadAnimationImages: function() {
 
         var frames = this.animationData.frames;
@@ -91,7 +74,6 @@ var avmlp = {
     resizeSections: function() {
         var h = jQuery("html").height();
         var w = jQuery("html").width();
-        // jQuery("section").css("height", h + "px");
         var zoom = this.zoom;
         // update zoom
         if (h < this.defaultHeight) {
@@ -140,8 +122,13 @@ var avmlp = {
         this.isAnimationReady = true;
         this.loadAnimationImages();
 
+        // multiple frame-offset with speed to get actual pixels
+        for(var i = 0; i < this.sectionOffset.length; i++) {
+            this.sectionOffset[i] = this.sectionOffset[i] * this.aniSpeed;
+        }
 
-        // all sections get a fixed position, the top values are stored in the this.sectionTop array
+        // the section wrapper get's a fixed position
+        // all sections have absolute pos with top 0
         $("#viewport").css({
             "position": "fixed",
             "top": 0
@@ -169,17 +156,14 @@ var avmlp = {
         $(".slide").not(".packshot-slide").css("background", "transparent");
 
         // we need an element with the original height to re-enable scrolling
-        var docHeight = this.sectionTop[this.sectionTop.length - 1] + this.defaultHeight;
+        var docHeight = this.animationData.frames.length * this.aniSpeed + this.defaultHeight;
         $("#scroll-placeholder").height(docHeight);
 
         // the fragment links need fixing
         var _this = this;
-        $(".link-next").on("click", function(e) {
-            e.preventDefault();
-            _this.scrollToSection($(this).attr("href"));
+        $(window).on('hashchange',function(){
+            _this.scrollToSection(location.hash);
         });
-
-        // TODO: Nav-Links
 
         $("section").hide();
         // TODO: Show section requested by url fragment
@@ -187,10 +171,13 @@ var avmlp = {
         $("section#packshot-wrapper").show();
     },
 
-
     scrollToSection: function(fragment) {
-        // TODO
-        console.log("scrollToSection:", fragment);
+        var sectionName = fragment.slice(1);
+        var offset=0;
+        if (this.sectionNames.indexOf(sectionName) > -1) {
+            offset = this.sectionOffset[this.sectionNames.indexOf(sectionName)];
+        }
+        $("body").scrollTop(offset);
     },
 
     // change product animation
@@ -218,8 +205,8 @@ var avmlp = {
         }
 
         // Opacity for paragraph
-        if ($("#" + currentSection + " p").css("opacity") != this.animationData.frames[this.aniStep].po ) {
-            $("#" + currentSection + " p").css("opacity", this.animationData.frames[this.aniStep].po);
+        if ($("#" + currentSection + " p.para").css("opacity") != this.animationData.frames[this.aniStep].po ) {
+            $("#" + currentSection + " p.para").css("opacity", this.animationData.frames[this.aniStep].po);
         }
 
         // opacity fritz logo - not on every slide
@@ -274,7 +261,7 @@ var avmlp = {
                     // load hi-quality src
                     this.aniTimeoutID = window.setTimeout(function() {
                         $('#packshot').attr('src', aniImage.highSrc);
-                    }, 100);
+                    }, 50);
                     // change the source of our placeholder image
                     $('#packshot').attr('src', aniImage.low.src);
                     $('#packshot').css({
@@ -312,7 +299,6 @@ var avmlp = {
 
 // Document ready handler
 jQuery( document ).ready(function( $ ) {
-    avmlp.setSectionTop();
 
     // Debug
     if ($("#debug-bar").length) {
@@ -328,7 +314,7 @@ jQuery( document ).ready(function( $ ) {
 
     // Ajax-Load animation properties & and initialize animation
     $.ajax({
-        url: "js/animation.json",
+        url: avmlp.aniJsonFile,
         dataType: "json",
         success: function(data) {
             avmlp.initScrollAnimation(data);
