@@ -92,6 +92,10 @@ body {
 body.debug {
     background-color: #666;
 }
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    letter-spacing: 1px;
+}
 // Navigation
 nav#primary,
 nav.primary {
@@ -203,6 +207,10 @@ section {
         width: 960px;
         height: 640px;
     }
+    #packshot {
+
+    }
+
 
     .description {
         position: absolute;
@@ -928,22 +936,21 @@ TODO: Remove me before deployment */
     display:block;
     margin-bottom:4px;
 }
-div[class*='bar'] , b {
+ b {
     opacity:0;
-    // .transition(opacity 1s ease-in);
 }
 
 section.active {
-   div[class*='bar'] , b {
+   b {
        // Animations
        &.bar-1 {
-           .animation(fade-in 1s ease-in-out 200ms forwards);
+           .animation(fade-in 1s  ease-in-out  200ms forwards);
        }
        &.bar-2 {
            .animation(fade-in 1s ease-in-out 225ms forwards);
        }
        &.bar-3 {
-           .animation(fade-in 1s ease-in-out 250ms forwards);
+           .animation(fade-in 1s ease-in-out 250ms forwards) ;
        }
        &.bar-4 {
            .animation(fade-in 1s ease-in-out 275ms forwards);
@@ -955,16 +962,16 @@ section.active {
            .animation(fade-in 1s ease-in-out 325ms forwards);
        }
        &.bar-7 {
-           .animation(fade-in 1s ease-in-out 350ms forwards);
+           .animation(fade-in 1s ease-in-out 350ms forwards) ;
        }
        &.bar-8 {
-           .animation(fade-in 1s ease-in-out 375ms forwards);
+           .animation(fade-in 1s ease-in-out 375ms forwards) ;
        }
        &.bar-9 {
            .animation(fade-in 1s ease-in-out 400ms forwards);
        }
        &.bar-10 {
-           .animation(fade-in 1s ease-in-out 425ms forwards);
+           .animation(fade-in 1s ease-in-out 425ms forwards) ;
        }
        &.bar-11 {
            .animation(fade-in 1s ease-in-out 450ms forwards);

@@ -1477,7 +1477,8 @@
             "s": "wlan",
             "img": "0023.png",
             "imgCss": {
-                "top": "370px"
+                "top": "370px",
+                "width": "960px"
             },
             "ho": 1,
             "po": 0,
@@ -1496,7 +1497,11 @@
             "s": "wlan",
             "img": "0024.png",
             "imgCss": {
-                "top": "382px"
+                "top": "382px",
+                "width": "960px",
+                "left" : "50%",
+                "marginLeft" : "-480px"
+                
             },
             "ho": 1,
             "po": 0,
@@ -1515,7 +1520,10 @@
             "s": "wlan",
             "img": "0025.png",
             "imgCss": {
-                "top": "394px"
+                "top": "394px",
+                "width": "970px",
+                "left" : "50%",
+                "marginLeft" : "-485px"
             },
             "ho": 1,
             "po": 0,
@@ -1534,7 +1542,10 @@
             "s": "wlan",
             "img": "0027.png",
             "imgCss": {
-                "top": "406px"
+                "top": "406px",
+                "width": "980px",
+                "left" : "50%",
+                "marginLeft" : "-490px"
             },
             "ho": 1,
             "po": 0,
@@ -1553,7 +1564,10 @@
             "s": "wlan",
             "img": "0028.png",
             "imgCss": {
-                "top": "418px"
+                "top": "418px",
+               "width": "990px",
+               "left" : "50%",
+               "marginLeft" : "-495px"
             },
             "ho": 1,
             "po": 0,
@@ -1572,7 +1586,10 @@
             "s": "wlan",
             "img": "0029.png",
             "imgCss": {
-                "top": "430px"
+                "top": "430px",
+                "width": "1000px",
+                "left" : "50%",
+                "marginLeft" : "-500px"
             },
             "ho": 1,
             "po": 0,
@@ -1591,7 +1608,10 @@
             "s": "wlan",
             "img": "0030.png",
             "imgCss": {
-                "top": "442px"
+                "top": "442px",
+                "width": "1010px",
+                "left" : "50%",
+                "marginLeft" : "-505px"
             },
             "ho": 1,
             "po": 0,
@@ -1610,7 +1630,10 @@
             "s": "wlan",
             "img": "0031.png",
             "imgCss": {
-                "top": "454px"
+                "top": "454px",
+                "width": "1020px",
+                "left" : "50%",
+                "marginLeft" : "-510px"
             },
             "ho": 1,
             "po": 0,
@@ -1629,7 +1652,10 @@
             "s": "wlan",
             "img": "0032.png",
             "imgCss": {
-                "top": "466px"
+                "top": "466px",
+                "width": "1030px",
+                "left" : "50%",
+                "marginLeft" : "-515px"
             },
             "ho": 1,
             "po": 0,
@@ -1648,7 +1674,10 @@
             "s": "wlan",
             "img": "0033.png",
             "imgCss": {
-                "top": "478px"
+                "top": "478px",
+               "width": "1040px",
+               "left" : "50%",
+               "marginLeft" : "-520px"
             },
             "ho": 1,
             "po": 0,
@@ -1667,7 +1696,10 @@
             "s": "wlan",
             "img": "0034.png",
             "imgCss": {
-                "top": "490px"
+                "top": "490px",
+                "width": "1050px",
+                "left" : "50%",
+                "marginLeft" : "-525px"
             },
             "ho": 1,
             "po": 0,
@@ -1686,7 +1718,10 @@
             "s": "wlan",
             "img": "0035.png",
             "imgCss": {
-                "top": "502px"
+                "top": "502px",
+               "width": "1060px",
+               "left" : "50%",
+               "marginLeft" : "-530px"
             },
             "ho": 1,
             "po": 0,
@@ -1705,7 +1740,10 @@
             "s": "wlan",
             "img": "0036.png",
             "imgCss": {
-                "top": "514px"
+                "top": "514px",
+                "width": "1070px",
+                "left" : "50%",
+                "marginLeft" : "-535px"
             },
             "ho": 1,
             "po": 0,
@@ -1724,7 +1762,10 @@
             "s": "wlan",
             "img": "0037.png",
             "imgCss": {
-                "top": "526px"
+                "top": "526px",
+                 "width": "1080px",
+                 "left" : "50%",
+                 "marginLeft" : "-540px"
             },
             "ho": 1,
             "po": 0,
@@ -1743,7 +1784,10 @@
             "s": "wlan",
             "img": "0038.png",
             "imgCss": {
-                "top": "538px"
+                "top": "538px",
+                "width": "1090px",
+                "left" : "50%",
+                "marginLeft" : "-545px"
             },
             "ho": 1,
             "po": 0,
@@ -1762,7 +1806,10 @@
             "s": "wlan",
             "img": "0039.png",
             "imgCss": {
-                "top": "550px"
+                "top": "550px",
+                 "width": "1100px",
+                 "left" : "50%",
+                 "marginLeft" : "-550px"
             },
             "ho": 1,
             "po": 0,
@@ -1781,7 +1828,10 @@
             "s": "wlan",
             "img": "0040.png",
             "imgCss": {
-                "top": "562px"
+                "top": "562px",
+                "width": "1110px",
+                "left" : "50%",
+                "marginLeft" : "-555px"
             },
             "ho": 1,
             "po": 0,
@@ -1800,7 +1850,10 @@
             "s": "wlan",
             "img": "0041.png",
             "imgCss": {
-                "top": "574px"
+                "top": "574px",
+                "width": "1120px",
+                "left" : "50%",
+                "marginLeft" : "-560px"
             },
             "ho": 1,
             "po": 0,
@@ -1819,7 +1872,10 @@
             "s": "wlan",
             "img": "0042.png",
             "imgCss": {
-                "top": "586px"
+                "top": "586px",
+                "width": "1130px",
+                "left" : "50%",
+                "marginLeft" : "-565px"
             },
             "ho": 1,
             "po": 0,
@@ -1838,7 +1894,10 @@
             "s": "wlan",
             "img": "0043.png",
             "imgCss": {
-                "top": "598px"
+                "top": "598px",
+                "width": "1140px",
+                "left" : "50%",
+                "marginLeft" : "-570px"
             },
             "ho": 1,
             "po": 0,
@@ -1857,7 +1916,10 @@
             "s": "wlan",
             "img": "0044.png",
             "imgCss": {
-                "top": "610px"
+                "top": "610px",
+                 "width": "1150px",
+                 "left" : "50%",
+                 "marginLeft" : "-575px"
             },
             "ho": 1,
             "po": 0,
@@ -1876,7 +1938,10 @@
             "s": "wlan",
             "img": "0045.png",
             "imgCss": {
-                "top": "622px"
+                "top": "622px",
+                "width": "1160px",
+                "left" : "50%",
+                "marginLeft" : "-580px"
             },
             "ho": 1,
             "po": 0,
@@ -1895,7 +1960,10 @@
             "s": "wlan",
             "img": "0046.png",
             "imgCss": {
-                "top": "634px"
+                "top": "634px",
+                "width": "1170px",
+                "left" : "50%",
+                "marginLeft" : "-585px"
             },
             "ho": 1,
             "po": 0,
@@ -1914,7 +1982,10 @@
             "s": "wlan",
             "img": "0047.png",
             "imgCss": {
-                "top": "648px"
+                "top": "648px",
+                "width": "1180px",
+                "left" : "50%",
+                "marginLeft" : "-590px"
             },
             "ho": 1,
             "po": 0,
@@ -1933,7 +2004,10 @@
             "s": "wlan",
             "img": "0048.png",
             "imgCss": {
-                "top": "656px"
+                "top": "656px",
+                "width": "1190px",
+                "left" : "50%",
+                "marginLeft" : "-595px"
             },
             "ho": 1,
             "po": 0,
@@ -1952,7 +2026,10 @@
             "s": "wlan",
             "img": "0049.png",
             "imgCss": {
-                "top": "660px"
+                "top": "660px",
+                "width": "1200px",
+                "left" : "50%",
+                "marginLeft" : "-600px"
             },
             "ho": 1,
             "po": 0,
@@ -1971,7 +2048,10 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px"
+                "top": "662px",
+                "width": "1200px",
+                "left" : "50%",
+                "marginLeft" : "-600px"
             },
             "ho": 1,
             "po": 0,
@@ -1990,7 +2070,10 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px"
+                "top": "662px",
+                "width": "1200px",
+                "left" : "50%",
+                "marginLeft" : "-600px"
             },
             "ho": 1,
             "po": 0,
@@ -2009,7 +2092,10 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px"
+                "top": "662px",
+                "width": "1200px",
+                "left" : "50%",
+                "marginLeft" : "-600px"
             },
             "ho": 1,
             "po": 0,
@@ -2028,7 +2114,10 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px"
+                "top": "662px",
+                "width": "1200px",
+                "left" : "50%",
+                "marginLeft" : "-600px"
             },
             "ho": 1,
             "po": 0,
@@ -2047,7 +2136,10 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px"
+                "top": "662px",
+                "width": "1200px",
+                "left" : "50%",
+                "marginLeft" : "-600px"
             },
             "ho": 1,
             "po": 0,
@@ -2066,7 +2158,10 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px"
+                "top": "662px",
+                "width": "1200px",
+                "left" : "50%",
+                "marginLeft" : "-600px"
             },
             "ho": 1,
             "po": 0,
@@ -2085,7 +2180,10 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px"
+                "top": "662px",
+                "width": "1200px",
+                "left" : "50%",
+                "marginLeft" : "-600px"
             },
             "ho": 1,
             "po": 0,
@@ -2104,7 +2202,10 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px"
+                "top": "662px",
+                "width": "1200px",
+                "left" : "50%",
+                "marginLeft" : "-600px"
             },
             "ho": 1,
             "po": 0,
@@ -2123,7 +2224,10 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px"
+                "top": "662px",
+                "width": "1200px",
+                "left" : "50%",
+                "marginLeft" : "-600px"
             },
             "ho": 1,
             "po": 0,
@@ -2142,7 +2246,10 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px"
+                "top": "662px",
+                "width": "1200px",
+                "left" : "50%",
+                "marginLeft" : "-600px"
             },
             "ho": 1,
             "po": 0,
@@ -2161,7 +2268,10 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px"
+                "top": "662px",
+                "width": "1200px",
+                "left" : "50%",
+                "marginLeft" : "-600px"
             },
             "ho": 1,
             "po": 0,
@@ -2180,7 +2290,10 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px"
+                "top": "662px",
+                "width": "1200px",
+                "left" : "50%",
+                "marginLeft" : "-600px"
             },
             "ho": 1,
             "po": 0,
@@ -2199,7 +2312,10 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px"
+                "top": "662px",
+                "width": "1200px",
+                "left" : "50%",
+                "marginLeft" : "-600px"
             },
             "ho": 1,
             "po": 0,
@@ -2218,7 +2334,10 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px"
+                "top": "662px",
+                "width": "1200px",
+                "left" : "50%",
+                "marginLeft" : "-600px"
             },
             "ho": 1,
             "po": 0,
@@ -2237,7 +2356,10 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px"
+                "top": "662px",
+                "width": "1200px",
+                "left" : "50%",
+                "marginLeft" : "-600px"
             },
             "ho": 1,
             "po": 0,
@@ -2256,7 +2378,10 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px"
+                "top": "662px",
+                "width": "1200px",
+                "left" : "50%",
+                "marginLeft" : "-600px"
             },
             "ho": 0.9,
             "po": 0,
@@ -2275,7 +2400,10 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px"
+                "top": "662px",
+                "width": "1200px",
+                "left" : "50%",
+                "marginLeft" : "-600px"
             },
             "ho": 0.8,
             "po": 0,
@@ -2294,7 +2422,10 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px"
+                "top": "662px",
+                "width": "1200px",
+                "left" : "50%",
+                "marginLeft" : "-600px"
             },
             "ho": 0.7,
             "po": 0,
@@ -2313,7 +2444,10 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px"
+                "top": "662px",
+                "width": "1200px",
+                "left" : "50%",
+                "marginLeft" : "-600px"
             },
             "ho": 0.6,
             "po": 0,
@@ -2332,7 +2466,10 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px"
+                "top": "662px",
+                "width": "1200px",
+                "left" : "50%",
+                "marginLeft" : "-600px"
             },
             "ho": 0.5,
             "po": 0,
@@ -2351,7 +2488,10 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px"
+                "top": "662px",
+                "width": "1200px",
+                "left" : "50%",
+                "marginLeft" : "-600px"
             },
             "ho": 0.4,
             "po": 0,
@@ -2370,7 +2510,10 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px"
+                "top": "662px",
+                "width": "1200px",
+                "left" : "50%",
+                "marginLeft" : "-600px"
             },
             "ho": 0.3,
             "po": 0,
@@ -2389,7 +2532,10 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px"
+                "top": "662px",
+                "width": "1200px",
+                "left" : "50%",
+                "marginLeft" : "-600px"
             },
             "ho": 0.2,
             "po": 0,
@@ -2408,7 +2554,10 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px"
+                "top": "662px",
+                "width": "1200px",
+                "left" : "50%",
+                "marginLeft" : "-600px"
             },
             "ho": 0.1,
             "po": 0,
@@ -2428,7 +2577,10 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px"
+                "top": "662px",
+                "width": "1200px",
+                "left" : "50%",
+                "marginLeft" : "-600px"
             },
             "ho": 0,
             "po": 0,
@@ -2448,7 +2600,10 @@
             "s": "usb3",
             "img": "0051.png",
             "imgCss": {
-                "top": "662px"
+                "top": "662px",
+                "width": "1190px",
+                "left" : "50%",
+                "marginLeft" : "-595px"
             },
             "ho": 0,
             "po": 0,
@@ -2467,7 +2622,10 @@
             "s": "usb3",
             "img": "0052.png",
             "imgCss": {
-                "top": "642px"
+                "top": "642px",
+                "width": "1180px",
+                "left" : "50%",
+                "marginLeft" : "-590px"
             },
             "ho": 0.1,
             "po": 0,
@@ -2486,7 +2644,10 @@
             "s": "usb3",
             "img": "0053.png",
             "imgCss": {
-                "top": "622px"
+                "top": "622px",
+                "width": "1170px",
+                "left" : "50%",
+                "marginLeft" : "-585px"
             },
             "ho": 0.2,
             "po": 0,
@@ -2505,7 +2666,10 @@
             "s": "usb3",
             "img": "0054.png",
             "imgCss": {
-                "top": "602px"
+                "top": "602px",
+                "width": "1160px",
+                "left" : "50%",
+                "marginLeft" : "-580px"
             },
             "ho": 0.3,
             "po": 0,
@@ -2524,7 +2688,10 @@
             "s": "usb3",
             "img": "0055.png",
             "imgCss": {
-                "top": "580px"
+                "top": "580px",
+                "width": "1150px",
+                "left" : "50%",
+                "marginLeft" : "-575px"
             },
             "ho": 0.4,
             "po": 0,
@@ -2543,7 +2710,10 @@
             "s": "usb3",
             "img": "0056.png",
             "imgCss": {
-                "top": "560px"
+                "top": "560px",
+                "width": "1140px",
+                "left" : "50%",
+                "marginLeft" : "-570px"
             },
             "ho": 0.5,
             "po": 0,
@@ -2562,7 +2732,10 @@
             "s": "usb3",
             "img": "0057.png",
             "imgCss": {
-                "top": "540px"
+                "top": "540px",
+                "width": "1130px",
+                "left" : "50%",
+                "marginLeft" : "-565px"
             },
             "ho": 0.6,
             "po": 0,
@@ -2581,7 +2754,10 @@
             "s": "usb3",
             "img": "0058.png",
             "imgCss": {
-                "top": "520px"
+                "top": "520px",
+                "width": "1120px",
+                "left" : "50%",
+                "marginLeft" : "-560px"
             },
             "ho": 0.7,
             "po": 0,
@@ -2600,7 +2776,10 @@
             "s": "usb3",
             "img": "0059.png",
             "imgCss": {
-                "top": "500px"
+                "top": "500px",
+                "width": "1110px",
+                "left" : "50%",
+                "marginLeft" : "-555px"
             },
             "ho": 0.8,
             "po": 0,
@@ -2619,7 +2798,10 @@
             "s": "usb3",
             "img": "0060.png",
             "imgCss": {
-                "top": "470px"
+                "top": "470px",
+                "width": "1100px",
+                "left" : "50%",
+                "marginLeft" : "-550px"
             },
             "ho": 0.9,
             "po": 0,
@@ -2638,7 +2820,10 @@
             "s": "usb3",
             "img": "0061.png",
             "imgCss": {
-                "top": "450px"
+                "top": "450px",
+                "width": "1090px",
+                "left" : "50%",
+                "marginLeft" : "-545px"
             },
             "ho": 1,
             "po": 0,
@@ -2657,7 +2842,10 @@
             "s": "usb3",
             "img": "0062.png",
             "imgCss": {
-                "top": "430px"
+                "top": "430px",
+                "width": "1080px",
+                "left" : "50%",
+                "marginLeft" : "-540px"
             },
             "ho": 1,
             "po": 0,
@@ -2676,7 +2864,10 @@
             "s": "usb3",
             "img": "0063.png",
             "imgCss": {
-                "top": "410px"
+                "top": "410px",
+                "width": "1070px",
+                "left" : "50%",
+                "marginLeft" : "-535px"
             },
             "ho": 1,
             "po": 0,
@@ -2695,7 +2886,10 @@
             "s": "usb3",
             "img": "0064.png",
             "imgCss": {
-                "top": "390px"
+                "top": "390px",
+                "width": "1060px",
+                "left" : "50%",
+                "marginLeft" : "-530px"
             },
             "ho": 1,
             "po": 0,
@@ -2714,7 +2908,10 @@
             "s": "usb3",
             "img": "0065.png",
             "imgCss": {
-                "top": "370px"
+                "top": "370px",
+                "width": "1050px",
+                "left" : "50%",
+                "marginLeft" : "-525px"
             },
             "ho": 1,
             "po": 0,
@@ -2733,7 +2930,10 @@
             "s": "usb3",
             "img": "0066.png",
             "imgCss": {
-                "top": "350px"
+                "top": "350px",
+                "width": "1040px",
+                "left" : "50%",
+                "marginLeft" : "-520px"
             },
             "ho": 1,
             "po": 0,
@@ -2752,7 +2952,10 @@
             "s": "usb3",
             "img": "0067.png",
             "imgCss": {
-                "top": "330px"
+                "top": "330px",
+                "width": "1030px",
+                "left" : "50%",
+                "marginLeft" : "-515px"
             },
             "ho": 1,
             "po": 0,
@@ -2771,7 +2974,10 @@
             "s": "usb3",
             "img": "0068.png",
             "imgCss": {
-                "top": "310px"
+                "top": "310px",
+                "width": "1020px",
+                "left" : "50%",
+                "marginLeft" : "-510px"
             },
             "ho": 1,
             "po": 0,
@@ -2790,7 +2996,10 @@
             "s": "usb3",
             "img": "0069.png",
             "imgCss": {
-                "top": "290px"
+                "top": "290px",
+                "width": "1010px",
+                "left" : "50%",
+                "marginLeft" : "-505px"
             },
             "ho": 1,
             "po": 0,
@@ -2809,7 +3018,10 @@
             "s": "usb3",
             "img": "0070.png",
             "imgCss": {
-                "top": "270px"
+                "top": "270px",
+                "width": "1000px",
+                "left" : "50%",
+                "marginLeft" : "-500px"
             },
             "ho": 1,
             "po": 0,
@@ -2828,7 +3040,10 @@
             "s": "usb3",
             "img": "0071.png",
             "imgCss": {
-                "top": "250px"
+                "top": "250px",
+                "width": "990px",
+                "left" : "50%",
+                "marginLeft" : "-495px"
             },
             "ho": 1,
             "po": 0,
@@ -2847,7 +3062,10 @@
             "s": "usb3",
             "img": "0072.png",
             "imgCss": {
-                "top": "250px"
+                "top": "250px",
+                "width": "980px",
+                "left" : "50%",
+                "marginLeft" : "-490px"
             },
             "ho": 1,
             "po": 0,
@@ -2866,7 +3084,10 @@
             "s": "usb3",
             "img": "0073.png",
             "imgCss": {
-                "top": "250px"
+                "top": "250px",
+                "width": "970px",
+                "left" : "50%",
+                "marginLeft" : "-485px"
             },
             "ho": 1,
             "po": 0,
@@ -2885,7 +3106,10 @@
             "s": "usb3",
             "img": "0074.png",
             "imgCss": {
-                "top": "250px"
+                "top": "250px",
+                "width": "960px",
+                "left" : "50%",
+                "marginLeft" : "-480px"
             },
             "ho": 1,
             "po": 0,

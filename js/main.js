@@ -26,7 +26,7 @@ var avmlp = {
     currentSection: false,
     lastSection: false,
 
-    aniJsonFile: "js/animation.min.json", // set this to "js/animation.json" if you want to make changes
+    aniJsonFile: "js/animation.json", // set this to "js/animation.json" if you want to make changes
     aniSpeed: 20,
     aniTimeoutID: null,
     aniImages: [],
@@ -114,6 +114,7 @@ var avmlp = {
 
         $( window ).trigger( "sectionChange", [ this.currentSection ] );
 
+
     },
 
     initScrollAnimation: function(animationData) {
@@ -198,6 +199,14 @@ var avmlp = {
         }
 
     },
+    bindKeyDown: function() {
+        $(document).keydown(function(e){
+            if (e.keyCode == 40) { 
+               $('section.active').find('.arrow-next').trigger('click');
+               return false;
+            }
+        });
+    },
 
     scrollToSection: function(fragment) {
         var sectionName = fragment.slice(1);
@@ -217,8 +226,9 @@ var avmlp = {
         // show/hide sections
         var currentSection = this.animationData.frames[this.aniStep].s;
         if (this.lastSection !== currentSection) {
-            $("#" + currentSection).show();
-            $("#" + this.lastSection).hide();
+
+            $("#" + currentSection).show().addClass('active');
+            $("#" + this.lastSection).hide().removeClass('active');
             if (!this.animationData.frames[this.aniStep].imgCss) { // reset img position
                 $("#packshot").css({
                     "top": "136px"
@@ -249,6 +259,7 @@ var avmlp = {
 
         // additional properties
         var a = this.animationData.frames[this.aniStep].a;
+  
         var properties;
         if (a) {
             for (var e in a) {
@@ -259,6 +270,7 @@ var avmlp = {
                 $("#" + currentSection + " " + e).css(properties);
             }
         }
+ 
 
         // execute code - always remember, eval is evil
         if (this.animationData.frames[this.aniStep].code) {
@@ -294,6 +306,9 @@ var avmlp = {
                     $('#packshot').attr('src', aniImage.low.src);
                     $('#packshot').css({
                         "top": aniImage.top + "px",
+                        "left": aniImage.left+ "px",
+                        "margin-left": aniImage.marginLeft+ "px",
+
                     });
                 }
             }
@@ -310,7 +325,7 @@ var avmlp = {
 
     animateSlider: function(pos) {
         $(".drag-wrapper").animate({ "left": pos }, {
-            duration: 1200,
+            duration: 1500,
             easing: "easeOutElastic",
             progress: function() {
                 avmlp.updateSlider();
@@ -327,6 +342,11 @@ var avmlp = {
 
 // Document ready handler
 jQuery( document ).ready(function( $ ) {
+
+
+
+    // KeyDown
+    avmlp.bindKeyDown();
     // Debug
     if (window.location.search.slice(1) === "debug") {
         avmlp.debug = true;
@@ -356,14 +376,21 @@ jQuery( document ).ready(function( $ ) {
     });
 
     // clickable bullets in Navigation
-    $("#primary li").css("cursor", "pointer");
-    $("#primary li").on("click", function(e) {
+    $(".primary li").css("cursor", "pointer");
+    $(".primary li").on("click", function(e) {
+        console.log('hey baby!');
         e.preventDefault();
         var href = $(this).find("a").attr("href");
         if (href) {
             window.location = href;
+ 
+
+
+           
             $(this).parents("ul").find("li").removeClass("active");
             $(this).addClass("active");
+            avmlp.setNavigationState();
+
         }
     });
 
@@ -393,6 +420,8 @@ jQuery( document ).ready(function( $ ) {
     });
 
 
+
+
 });
 
 // resize handler
@@ -403,6 +432,7 @@ jQuery( window ).on( "resize", function() {
 
 // with the sectionChange event we can control some animations taht should play when a slide is entered
 jQuery( window ).on( "sectionChange", function(e, sectionName ) {
+   console.log(sectionName);
     $('section').removeClass('active');
     setTimeout(function(){
         $('#' + sectionName ).addClass('active');
