@@ -23,6 +23,7 @@ var avmlp = {
         "fritzos",
         "auszeichnungen"
     ],
+    offsetSize: 0,
     currentSection: false,
     lastSection: false,
 
@@ -73,6 +74,7 @@ var avmlp = {
             }
         }
     },
+  
 
     resizeSections: function() {
         var h = jQuery("html").height();
@@ -96,8 +98,8 @@ var avmlp = {
     },
 
     applyZoom: function() {
-        // var top = -(this.defaultHeight - this.defaultHeight * this.zoom) / 2;
-        // apply scaling to slides
+       var top = (this.defaultHeight - this.defaultHeight * this.zoom) / 2;
+       this.offsetSize = top;
         var left = ($("body").width() - (1200 * this.zoom)) / 2;
         if (left < 0) {
             left = 0;
@@ -106,7 +108,10 @@ var avmlp = {
             "-webkit-transform": "scale(" + this.zoom + ", " + this.zoom + ")",
             "-ms-transform": "scale(" + this.zoom + ", " + this.zoom + ")",
             "transform": "scale(" + this.zoom + ", " + this.zoom + ")",
-            "left": left + "px"
+            "left": left + "px",
+            "z-index": 2,
+            "margin-top":'' + top + 'px',
+            'box-sizing': 'content-box'
         });
     },
 
@@ -160,7 +165,7 @@ var avmlp = {
             "position": "absolute",
             "top": 0
         });
-
+ 
 
 
         $slide.appendTo($section);
@@ -208,6 +213,8 @@ var avmlp = {
         });
     },
 
+
+
     scrollToSection: function(fragment) {
         var sectionName = fragment.slice(1);
         var offset=0;
@@ -228,6 +235,11 @@ var avmlp = {
         if (this.lastSection !== currentSection) {
 
             $("#" + currentSection).show().addClass('active');
+
+            // Update navigation
+            $('nav.primary').find('li').removeClass('active');
+            $('nav.primary').find('li.' + currentSection).addClass('active');
+
             $("#" + this.lastSection).hide().removeClass('active');
             if (!this.animationData.frames[this.aniStep].imgCss) { // reset img position
                 $("#packshot").css({
@@ -344,7 +356,7 @@ var avmlp = {
 jQuery( document ).ready(function( $ ) {
 
 
-
+ 
     // KeyDown
     avmlp.bindKeyDown();
     // Debug
@@ -368,7 +380,19 @@ jQuery( document ).ready(function( $ ) {
         url: avmlp.aniJsonFile,
         dataType: "json",
         success: function(data) {
-            avmlp.initScrollAnimation(data);
+            if($('html').hasClass('desktop')) {
+                avmlp.initScrollAnimation(data);
+            } else {
+                // $('section').waypoint(function(direction) {
+                //   $('section').removeClass('active');
+                //   $(this).addClass('active');
+
+                //   var href =  $(this).attr('id');
+                //   $('nav.primary li').removeClass('active');
+                //   $('nav.primary').find('li.' + href + '').addClass('active');
+                // });
+            }
+
         },
         error: function(jqXHR, textStatus, errorThrown) {
             console.log("Oh noes! Getting animation properties failed because: ", errorThrown);
@@ -378,18 +402,17 @@ jQuery( document ).ready(function( $ ) {
     // clickable bullets in Navigation
     $(".primary li").css("cursor", "pointer");
     $(".primary li").on("click", function(e) {
-        console.log('hey baby!');
         e.preventDefault();
+        $('section').removeClass('active');
+ 
         var href = $(this).find("a").attr("href");
         if (href) {
             window.location = href;
  
-
-
-           
             $(this).parents("ul").find("li").removeClass("active");
             $(this).addClass("active");
             avmlp.setNavigationState();
+            $('' + href + '').addClass('active');
 
         }
     });
@@ -417,6 +440,21 @@ jQuery( document ).ready(function( $ ) {
     $(".hotspot").on("mouseenter", function() {
         $(".hotspot").removeClass("active");
         $(this).addClass("active");
+    });
+
+    $('.link-next').on('click', function(e){
+        e.preventDefault();
+
+      var obj = $(this);
+      getHref = obj.attr("href").split("#")[1];
+      $('section').removeClass('active');
+      $('section#' + getHref + '').addClass('active');
+      $('nav.primary li').removeClass('active').next('.' + getHref + '').addClass('active');
+      offsetSize = avmlp.offsetSize;
+
+      $(window).scrollTop($("[id*='"+getHref+"']").offset().top - offsetSize);
+
+
     });
 
 

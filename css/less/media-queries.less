@@ -1,0 +1,85 @@
+
+// Media Querries for tablet
+.tablet {
+	nav#primary ul, nav.primary ul {
+		font-size: 16px !important;
+		line-hzeight: 20px;
+	}
+	body * { text-rendering: optimizeLegibility !important; }
+	#fritzos .icon-list, .fritzos .icon-list {
+		top: 20px !important;
+	}
+	nav#primary h2, nav.primary h2 {
+		font-size: 20px !important;
+	}
+	.description, .product-features span, .description p {
+		font-size: 20px !important;
+		line-height: 24px !important;
+	}
+
+	#wlan .product-graphics, .wlan .product-graphics, 
+	#wlan .product-features, .wlan .product-features {
+		top:250px !important;
+	}
+	.icon-list ul li p {
+		font-size: 20px !important;
+		line-height: 24px !important;
+	}
+	.inside-view-after, .drag-wrapper {
+		display:none;
+	}
+	.inside-view-before {
+		display:block;
+		opacity:1 !important;
+		width:960px !important;
+		background-position: 0 0;
+	}
+
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) { 
+		nav#primary ul, nav.primary ul {
+			font-size: 16px !important;
+			line-hzeight: 20px;
+		}
+		body * { text-rendering: optimizeLegibility !important; }
+
+	}
+
+	@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) { 
+		#fritzos .icon-list, .fritzos .icon-list {
+			top: 20px !important;
+		}
+	}
+
+}
+
+
+// Media Querries for tablets
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) { 
+
+	.description, .product-features span, .description p {
+		font-size: 20px !important;
+		line-height: 24px !important;
+	}
+
+	#wlan .product-graphics, .wlan .product-graphics, 
+	#wlan .product-features, .wlan .product-features {
+		top:250px !important;
+	}
+	.icon-list ul li p {
+		font-size: 20px !important;
+		line-height: 24px !important;
+	}
+	// .inside-view-after, .drag-wrapper {
+	// 	display:none;
+	// }
+	// .inside-view-before {
+	// 	display:block;
+	// 	opacity:1 !important;
+	// 	width:960px !important;
+	// 	background-position: 0 0;
+	// }
+}
