@@ -74,6 +74,69 @@ var avmlp = {
             }
         }
     },
+
+
+     
+    redrawDotNav: function(){
+
+
+        var section1Top =  0;
+        // The top of each section is offset by half the distance to the previous section.
+        var section2Top =  $('#start').offset().top - (($('#heimnetz').offset().top - $('#start').offset().top) / 2);
+        var section3Top =  $('#heimnetz').offset().top - (($('#wlan').offset().top - $('#heimnetz').offset().top) / 2);
+        var section4Top =  $('#wlan').offset().top - (($('#usb3').offset().top - $('#wlan').offset().top) / 2);
+        var section5Top =  $('#usb3').offset().top - (($('#telefonie').offset().top - $('#usb3').offset().top) / 2);
+        var section6Top =  $('#telefonie').offset().top - (($('#fritzos').offset().top - $('#telefonie').offset().top) / 2);
+        var section7Top =  $('#fritzos').offset().top - (($('#auszeichnungen').offset().top - $('#fritzos').offset().top) / 2);
+        var section8Top =  $('#auszeichnungen').offset().top - (($(document).height() - $('#auszeichnungen').offset().top) / 2);
+
+        $('nav.primary li').removeClass('active');
+        if($(document).scrollTop() <= section1Top && $(document).scrollTop() < section2Top){
+           
+        } else if ($(document).scrollTop() >= section2Top && $(document).scrollTop() < section3Top){
+             $('nav.primary li.start').addClass('active');
+             $('section').removeClass('active');
+             $('section#start').addClass('active');
+            
+        }
+         else if ($(document).scrollTop() >= section3Top && $(document).scrollTop() < section4Top){
+            $('nav.primary li.heimnetz').addClass('active');
+            $('section').removeClass('active');
+            $('section#heimnetz').addClass('active');
+         
+        } 
+         else if ($(document).scrollTop() >= section4Top && $(document).scrollTop() < section5Top){
+            $('nav.primary li.wlan').addClass('active');
+            $('section').removeClass('active');
+            $('section#wlan').addClass('active');
+            
+        } 
+         else if ($(document).scrollTop() >= section5Top && $(document).scrollTop() < section6Top){
+             $('nav.primary li.usb3').addClass('active');
+             $('section').removeClass('active');
+             $('section#usb3').addClass('active');
+         
+        } 
+         else if ($(document).scrollTop() >= section6Top && $(document).scrollTop() < section7Top){
+            $('nav.primary li.telefonie').addClass('active');
+            $('section').removeClass('active');
+            $('section#telefonie').addClass('active');
+  
+        } 
+         else if ($(document).scrollTop() >= section7Top && $(document).scrollTop() < section8Top){
+           $('nav.primary li.fritzos').addClass('active');
+           $('section').removeClass('active');
+           $('section#fritzos').addClass('active');
+        
+        } 
+        else if ($(document).scrollTop() >= section8Top){
+            $('nav.primary li.auszeichnungen').addClass('active');
+            $('section').removeClass('active');
+            $('section#auszeichnungen').addClass('active');
+        }
+  
+        
+    },
   
 
     resizeSections: function() {
@@ -98,8 +161,14 @@ var avmlp = {
     },
 
     applyZoom: function() {
-       var top = (this.defaultHeight - this.defaultHeight * this.zoom) / 2;
-       this.offsetSize = top;
+       var top = ($(window).height() - this.defaultHeight * this.zoom) / 2;
+       if($(window).height() > $(window).width()) {
+            this.offsetSize = top;
+       } else {
+        this.offsetSize = 0;
+        top = 0;
+       }
+    
         var left = ($("body").width() - (1200 * this.zoom)) / 2;
         if (left < 0) {
             left = 0;
@@ -355,6 +424,19 @@ var avmlp = {
 // Document ready handler
 jQuery( document ).ready(function( $ ) {
 
+    var ua = navigator.userAgent.toLowerCase();
+
+    var isAndroid = ua.indexOf("android") > -1; 
+    if(!isAndroid)  {
+        $('#viewport').append('<img src="images/avm-logo.svg" class="logo-avm" width="70" height="42" alt="AVM logo">');
+    } else {   
+        $('#viewport').append('<img src="images/logo-avm.png" class="logo-avm" width="79" height="43" alt="avm" />');
+      
+    }
+
+
+    
+    
 
  
     // KeyDown
@@ -382,15 +464,6 @@ jQuery( document ).ready(function( $ ) {
         success: function(data) {
             if($('html').hasClass('desktop')) {
                 avmlp.initScrollAnimation(data);
-            } else {
-                // $('section').waypoint(function(direction) {
-                //   $('section').removeClass('active');
-                //   $(this).addClass('active');
-
-                //   var href =  $(this).attr('id');
-                //   $('nav.primary li').removeClass('active');
-                //   $('nav.primary').find('li.' + href + '').addClass('active');
-                // });
             }
 
         },
@@ -443,16 +516,20 @@ jQuery( document ).ready(function( $ ) {
     });
 
     $('.link-next').on('click', function(e){
+
+
+    if(!$('html').hasClass('desktop')) {
         e.preventDefault();
+        var obj = $(this);
+        getHref = obj.attr("href").split("#")[1];
+        $('section').removeClass('active');
+        $('section#' + getHref + '').addClass('active');
+        $('nav.primary li').removeClass('active').next('.' + getHref + '').addClass('active');
+        offsetSize = avmlp.offsetSize;
 
-      var obj = $(this);
-      getHref = obj.attr("href").split("#")[1];
-      $('section').removeClass('active');
-      $('section#' + getHref + '').addClass('active');
-      $('nav.primary li').removeClass('active').next('.' + getHref + '').addClass('active');
-      offsetSize = avmlp.offsetSize;
+        $(window).scrollTop($("[id*='"+getHref+"']").offset().top - offsetSize);
+    }
 
-      $(window).scrollTop($("[id*='"+getHref+"']").offset().top - offsetSize);
 
 
     });
@@ -466,11 +543,21 @@ jQuery( document ).ready(function( $ ) {
 jQuery( window ).on( "resize", function() {
     avmlp.resizeSections();
 });
+jQuery( window ).on( "orientationchange", function( event ) { 
+    avmlp.applyZoom();
+ });
+jQuery( window ).on( "scroll", function(event) { 
+    if(!$('html').hasClass('desktop')) {
+        avmlp.redrawDotNav();
+    }
+
+ });
+
 
 
 // with the sectionChange event we can control some animations taht should play when a slide is entered
 jQuery( window ).on( "sectionChange", function(e, sectionName ) {
-   console.log(sectionName);
+
     $('section').removeClass('active');
     setTimeout(function(){
         $('#' + sectionName ).addClass('active');
