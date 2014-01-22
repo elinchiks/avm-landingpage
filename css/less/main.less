@@ -245,20 +245,23 @@ section {
         width: 960px;
         height: 640px;
     }
-    #packshot {
-
-    }
-
-
     .description {
         position: absolute;
-        width: @para-width;
-        left: @para-left;
+        width: 100%;
+        max-width:100%;
         bottom: 150px;
         font-family: @font-text;
         font-size: 18px;
         text-align: center;
+
+        span {
+            width:@para-width;
+            clear:left !important;
+            display:block;
+            margin:0 auto !important;
+        }
     }
+    
 
     .logo-fritz-color {
         position: absolute;
@@ -496,13 +499,10 @@ section {
     .packshot {
         top: 136px;
         .animation(scale-in 1s ease-in-out 200ms forwards);
-        .bar-5 {
-            .animation(fade-in 1s ease-in-out 300ms forwards);
-        }
     }
     .description {
         text-align:center;
-        p {
+        span {
             width:500px;
             max-width:100%;
             margin-left:auto;
@@ -788,6 +788,7 @@ section {
     // .slide{
     //     background-image: url("../images/bg-layout-07.jpg");
     // }
+
 
     .packshot {
         top:245px;
@@ -1099,6 +1100,9 @@ section.active {
 
 .packshot {
     .transition(bottom 1s ease-out);
+    display:block;
+    clear: both !important; 
+    margin-bottom:3px;
 }
 
 .product-graphics {
@@ -1195,6 +1199,7 @@ section.active {
         padding:13px 55px 15px;
         .border-radius(10px);
         display:inline-block;
+        position:relative;
         .border-box();
         .no-underline();
         .box-shadow(1px -1px 1px #3c426a);

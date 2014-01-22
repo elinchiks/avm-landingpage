@@ -11,6 +11,12 @@
 	-o-transition-delay: @time;
 	transition-delay: @time;
 }
+.transition-timing-function(@props) {
+  -webkit-transition: @props;
+  -moz-transition: @props;
+  -o-transition: @props;
+  transition: @props;
+}
 .transform(@props) {
   -webkit-transform: @props;
   -moz-transform: @props;
@@ -71,11 +77,46 @@
   0%   { .transform(scale(0.7)); opacity:0;}
   100% { .transform(scale(1)); opacity:1; }
 }
+
+
+@-webkit-keyframes jump {
+  0%   { .transform(translate(0,0));}
+  50%   { .transform(translate(0,10px));}
+  100%   { .transform(translate(0,0));}
+}
+@-moz-keyframes jump {
+  0%   { .transform(translate(0,0));}
+  50%   { .transform(translate(0,10px));}
+  100%   { .transform(translate(0,0));}
+}
+@-o-keyframes jump {
+ 0%   { .transform(translate(0,0));}
+ 50%   { .transform(translate(0,10px));}
+ 100%   { .transform(translate(0,0));}
+}
+@keyframes jump {
+ 0%   { .transform(translate(0,0));}
+ 50%   { .transform(translate(0,10px));}
+ 100%   { .transform(translate(0,0));}
+}
+
 .animation(@name) {
   -webkit-animation: @name;
   -moz-animation:    @name;
   -o-animation:      @name;
   animation:         @name;
+}
+.animation-delay(@time) {
+  -webkit-animation-delay: @time;
+  -moz-animation-delay:    @time;
+  -o-animation-delay:      @time;
+  animation-delay:         @time;
+}
+.transition-delay(@time) {
+  -webkit-transition-delay: @time;
+  -moz-transition-delay:    @time;
+  -o-transition-delay:      @time;
+  transition-delay:         @time;
 }
 
 .block(@width, @height) {
