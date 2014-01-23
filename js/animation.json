@@ -7330,7 +7330,7 @@
         },
         {
 "_comment": "start section fritzos",
-            "kf": "start",
+            "kf": "begin",
             "s": "fritzos",
             "img": "0181.png",
             "imgCss": {
