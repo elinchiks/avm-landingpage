@@ -37,6 +37,7 @@ var avmlp = {
     aniLastStep: null,
     animationData: false,
     isAnimationReady: false,
+    isAnimationRunning: true,
     keyframes: { // retrieved from animation.json
         "begin": [],
         "poster": [],
@@ -236,7 +237,6 @@ var avmlp = {
     },
 
     initScrollAnimation: function(animationData) {
-        console.log("initScrollAnimation");
 
         this.animationData = animationData;
         this.isAnimationReady = true;
@@ -261,8 +261,6 @@ var avmlp = {
             "position": "absolute",
             "top": 0
         });
-
-
 
         $slide.appendTo($section);
         $section.prependTo($("#viewport"));
@@ -362,7 +360,7 @@ var avmlp = {
         if (this.sectionNames.indexOf(sectionName) > -1) {
             this.targetOffset = this.keyframes["poster"][this.sectionNames.indexOf(sectionName)];
             if (this.targetOffset !== $(window).scrollTop()) {
-                var dist = this.targetOffset - $(window).scrollTop();
+                                var dist = this.targetOffset - $(window).scrollTop();
                 if (dist < 0) {
                     this.scrollDir = "up";
                 } else {
@@ -373,15 +371,43 @@ var avmlp = {
 
                 var _this = this;
 
-
                 if (this.scrollDistance < 2400) { // small jump - next or prev section
+
                     window.setTimeout(function() {
                         _this.slowScroll(_this.targetOffset);
                     }, 40);
+
                 } else { // bigger jump - probably 2 or more sections
-                    window.setTimeout(function() {
-                        _this.slowScroll(_this.targetOffset);
-                    }, 40);
+
+                    var i = Math.floor($(window).scrollTop() / this.aniSpeed);
+                    var currentSection = this.animationData.frames[i].s
+                    if (currentSection) {
+                        this.isAnimationRunning = false;
+                        $("#packshot-wrapper, #"+currentSection).animate({
+                            opacity: 0
+                        }, {
+                            duration: 400,
+                            complete: function() {
+                                $("section").css("display", "none");
+                                $("#"+currentSection).css("opacity", 1);
+
+                                if (_this.scrollDir === "up") {
+                                   $(window).scrollTop(_this.keyframes["end"][_this.sectionNames.indexOf(sectionName)]);
+                                } else {
+                                    $(window).scrollTop(_this.keyframes["begin"][_this.sectionNames.indexOf(sectionName)]);
+                                }
+                                $("#packshot-wrapper").css("display", "block");
+                                $("#packshot-wrapper").animate({
+                                    opacity: 1
+                                }, 400);
+                                _this.isAnimationRunning = true;
+
+                                _this.scrollToSection("#"+sectionName);
+                            }
+                        });
+                    }
+
+
                 }
             }
         }
@@ -582,7 +608,6 @@ jQuery( document ).ready(function( $ ) {
     $(".primary li").css("cursor", "pointer");
     $(".primary li").on("click", function(e) {
         e.preventDefault();
-        $('section').removeClass('active');
 
         var href = $(this).find("a").attr("href");
         if (href) {
@@ -591,8 +616,8 @@ jQuery( document ).ready(function( $ ) {
             $(this).parents("ul").find("li").removeClass("active");
             $(this).addClass("active");
             avmlp.setNavigationState();
+            $('section').removeClass('active');
             $('' + href + '').addClass('active');
-
         }
     });
 
@@ -708,6 +733,7 @@ var requestAnimFrame = (function() {
 (function animloop(){ // the smoothest animation loop possible
     requestAnimFrame(animloop);
 
+
     var t = $(window).scrollTop();
     avmlp.aniTargetStep = Math.ceil ( t / avmlp.aniSpeed );
 
@@ -715,6 +741,10 @@ var requestAnimFrame = (function() {
     if( avmlp.aniTargetStep !== avmlp.aniStep ) {
         // increment the step until we arrive at the target step
         avmlp.aniStep += Math.ceil( ( avmlp.aniTargetStep - avmlp.aniStep) / 5);
+    }
+
+    if (!avmlp.isAnimationRunning) {
+        avmlp.aniStep = avmlp.aniLastStep = avmlp.aniTargetStep;
     }
 
     if (avmlp.isAnimationReady && avmlp.aniStep !== avmlp.aniLastStep && avmlp.aniStep < avmlp.animationData.frames.length) {
