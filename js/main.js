@@ -366,6 +366,8 @@ var avmlp = {
         // additional properties
         var a = this.animationData.frames[this.aniStep].a;
 
+        var f = this.animationData.frames[this.aniStep].f;
+
         var properties;
         if (a) {
             for (var e in a) {
@@ -377,6 +379,15 @@ var avmlp = {
             }
         }
 
+        if (f) {
+            for (var e in f) {
+                if (!f.hasOwnProperty(e)) {
+                    continue;
+                }
+                properties = f[e];
+                $(e).css(properties);
+            }
+        }
 
         // execute code - always remember, eval is evil
         if (this.animationData.frames[this.aniStep].code) {

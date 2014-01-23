@@ -1189,11 +1189,7 @@ section.active {
         .box-shadow(1px -1px 1px #3c426a);
     }
 }
-.logo-section {
-    position:absolute;
-    bottom:35px;
-    left: 120px;
-}
+
 
 #footer-section {
     // display: none;
@@ -1201,12 +1197,18 @@ section.active {
     bottom: 50px;
     left:20px;
     z-index:999;
+    opacity:0;
+    .logo-section {
+       position:relative;
+       float:left;
+
+    }
     .imprint {
+        position:relative;
+        float:left;
         font-size: 14px;
         color: #fff;
-        position: absolute;
-        bottom: 38px;
-        right: 160px;
+        
         a {
             color: #fff;
             text-decoration: none;
