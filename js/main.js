@@ -9,7 +9,7 @@
 // global landingpage object
 var avmlp = {
     // properties
-    debug: false,
+    debug: true,
 
     defaultHeight: 960,
     defaultWidth: 1200,
@@ -106,7 +106,7 @@ var avmlp = {
              $('section#start').addClass('active');
 
              $("#footer-section").removeClass('active');
-            
+
 
 
 
@@ -117,8 +117,8 @@ var avmlp = {
             $('section#heimnetz').addClass('active');
 
             $("#footer-section").removeClass('active');
-         
-        } 
+
+        }
 
 
 
@@ -129,8 +129,8 @@ var avmlp = {
             $('section#wlan').addClass('active');
 
             $("#footer-section").removeClass('active');
-            
-        } 
+
+        }
 
 
 
@@ -141,8 +141,8 @@ var avmlp = {
              $('section#usb3').addClass('active');
 
              $("#footer-section").removeClass('active');
-         
-        } 
+
+        }
 
 
 
@@ -152,8 +152,8 @@ var avmlp = {
             $('section#telefonie').addClass('active');
 
             $("#footer-section").removeClass('active');
-  
-        } 
+
+        }
 
 
 
@@ -164,8 +164,8 @@ var avmlp = {
            $('section#fritzos').addClass('active');
 
            $("#footer-section").removeClass('active');
-        
-        } 
+
+        }
 
 
         else if ($(document).scrollTop() >= section8Top){
@@ -305,22 +305,23 @@ var avmlp = {
         });
     },
 
-
-
     scrollToSection: function(fragment) {
         var sectionName = fragment.slice(1);
         var offset;
         if (this.sectionNames.indexOf(sectionName) > -1) {
             offset = this.keyframes["poster"][this.sectionNames.indexOf(sectionName)];
             if (offset !== $(window).scrollTop()) {
-                var _this = this;
-                window.setTimeout(function() {
-                    _this.slowScroll(offset)
-                }, 25);
-            }
 
+                var distance = Math.abs(offset - $(window).scrollTop());
+                if (distance < 2400) { // small jump - next or prev section
+                    window.setTimeout(function() {
+                        _this.slowScroll(offset)
+                    }, 25);
+                } else { // bigger jump - probably 2 or more sections
+
+                }
+            }
         }
-        // $(window).scrollTop(offset);
     },
 
     slowScroll: function(offset) {
@@ -484,8 +485,15 @@ jQuery( document ).ready(function( $ ) {
     // SVG Logo, if browser can handle it
     if($("html").hasClass("svg")) {
         $('#viewport').append('<img src="images/avm-logo.svg" class="logo-avm" width="70" height="42" alt="AVM logo">');
+        if (avmlp.debug) {
+            $("#debug-svg-support").text("YES");
+        }
     } else {
         $('#viewport').append('<img src="images/logo-avm.png" class="logo-avm" width="79" height="43" alt="avm" />');
+        if (avmlp.debug) {
+            $("#debug-svg-support").text("NO");
+        }
+
     }
 
     // KeyDown
