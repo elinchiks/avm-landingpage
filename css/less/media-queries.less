@@ -94,6 +94,12 @@ and (max-device-width : 1024px) {
 	// }
 }
 .tablet.cssanimations, .mobile.cssanimations {
+	section * {
+		opacity: 0;
+	}
+	section.active * {
+		opacity: 1;
+	}
 	.icon-list li {
 		opacity:0;
 	}
@@ -171,3 +177,16 @@ and (max-device-width : 1024px) {
 
 }
 
+html.cssanimations.csstransitions {
+	.link-next img {
+		opacity:0;
+	}
+	.active {
+		.link-next img {
+			opacity:1;
+			.transition(opacity ease-in-out 2.5s);
+			.animation(jump 1s 3);
+			.animation-delay(2.5s);
+		}
+	}
+}

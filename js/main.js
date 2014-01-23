@@ -304,26 +304,6 @@ var avmlp = {
             }
         });
     },
-
-    scrollToSection: function(fragment) {
-        var sectionName = fragment.slice(1);
-        var offset;
-        if (this.sectionNames.indexOf(sectionName) > -1) {
-            offset = this.keyframes["poster"][this.sectionNames.indexOf(sectionName)];
-            if (offset !== $(window).scrollTop()) {
-
-                var distance = Math.abs(offset - $(window).scrollTop());
-                if (distance < 2400) { // small jump - next or prev section
-                    window.setTimeout(function() {
-                        _this.slowScroll(offset)
-                    }, 25);
-                } else { // bigger jump - probably 2 or more sections
-
-                }
-            }
-        }
-    },
-
     slowScroll: function(offset) {
         var o = $(window).scrollTop();
         if (o < offset) {
@@ -334,11 +314,31 @@ var avmlp = {
         if (Math.floor((offset - $(window).scrollTop()) / 20) !== 0 ) {
             var _this = this;
             window.setTimeout(function() {
-                _this.slowScroll(offset)
+                this.slowScroll(offset)
             }, 25);
         }
         // console.log("slowScroll", offset);
     },
+    scrollToSection: function(fragment) {
+        var sectionName = fragment.slice(1);
+        var offset;
+        if (this.sectionNames.indexOf(sectionName) > -1) {
+            offset = this.keyframes["poster"][this.sectionNames.indexOf(sectionName)];
+            if (offset !== $(window).scrollTop()) {
+
+                var distance = Math.abs(offset - $(window).scrollTop());
+                if (distance < 2400) { // small jump - next or prev section
+                    window.setTimeout(function() {
+                        this.slowScroll(offset)
+                    }, 25);
+                } else { // bigger jump - probably 2 or more sections
+
+                }
+            }
+        }
+    },
+
+
 
     // change product animation
     changeFrame: function() {
