@@ -42,6 +42,11 @@ var avmlp = {
         "poster": [],
         "end": []
     },
+    scrollDistance: 0,
+    targetOffset: -1,
+    scrollDir: "",
+    scrollMiddle: 0,
+    scrollSpeedFactor: 1,
 
     // methods
     loadAnimationImages: function() {
@@ -227,10 +232,7 @@ var avmlp = {
     },
 
     setNavigationState: function() {
-
         $( window ).trigger( "sectionChange", [ this.currentSection ] );
-
-
     },
 
     initScrollAnimation: function(animationData) {
@@ -278,26 +280,28 @@ var avmlp = {
         var docHeight = this.animationData.frames.length * this.aniSpeed + this.defaultHeight;
         $("#scroll-placeholder").height(docHeight);
 
-        // the fragment links need fixing
-        var _this = this;
-        $(window).on('hashchange',function() {
-            _this.scrollToSection(location.hash);
-        });
-
         $("section").hide();
         $("section#start").show();
         $("section#packshot-wrapper").show();
+
+
+        // the fragment links need fixing
+        $(window).on('hashchange',function() {
+            // only scroll if last scroll has completed
+            if (avmlp.targetOffset === -1) {
+                avmlp.scrollToSection(location.hash);
+            }
+        });
 
         // jump to section if hash is set
         if (location.hash) {
             window.setTimeout(function() {
                 // give it a little time
-                _this.scrollToSection(location.hash);
+                avmlp.jumpToSection(location.hash);
             }, 200);
-
         }
-
     },
+
     bindKeyDown: function() {
         $(document).keydown(function(e){
             if (e.keyCode == 40) {
@@ -309,36 +313,75 @@ var avmlp = {
 
     slowScroll: function(offset) {
         var o = $(window).scrollTop();
-        if (o < offset) {
-            $(window).scrollTop(o + 20);
-        } else {
-            $(window).scrollTop(o - 20);
+        if (this.scrollDir === "down") {
+            if (o < this.scrollMiddle) {
+                this.scrollSpeedFactor += 0.4;
+            } else {
+                this.scrollSpeedFactor -= 0.4;
+            }
         }
-        if (Math.floor((offset - $(window).scrollTop()) / 20) !== 0 ) {
+        if (this.scrollDir === "up") {
+            if (o > this.scrollMiddle) {
+                this.scrollSpeedFactor += 0.4;
+            } else {
+                this.scrollSpeedFactor -= 0.4;
+            }
+        }
+        if (this.scrollSpeedFactor < 1) {
+            this.scrollSpeedFactor = 1;
+        }
+        var speed = (this.aniSpeed * this.scrollSpeedFactor) * 0.05 ;
+
+        if (o < offset) {
+            $(window).scrollTop(o + speed);
+        } else {
+            $(window).scrollTop(o - speed);
+        }
+        var x = Math.floor((offset - $(window).scrollTop()) / this.aniSpeed);
+        if (x !== 0 ) {
             var _this = this;
             window.setTimeout(function() {
                 _this.slowScroll(offset)
-            }, 25);
+            }, 40);
+        } else {
+            this.targetOffset = -1;
+            this.scrollDir = "";
         }
-        // console.log("slowScroll", offset);
     },
-    scrollToSection: function(fragment) {
-        console.log("scrollToSection", fragment);
-        var sectionName = fragment.slice(1);
-        var offset;
-        if (this.sectionNames.indexOf(sectionName) > -1) {
-            offset = this.keyframes["poster"][this.sectionNames.indexOf(sectionName)];
-            console.log(offset);
-            if (offset !== $(window).scrollTop()) {
-                var distance = Math.abs(offset - $(window).scrollTop());
-                if (distance < 2400) { // small jump - next or prev section
-                    console.log(distance, "go");
-                    var _this = this;
-                    window.setTimeout(function() {
-                        _this.slowScroll(offset);
-                    }, 25);
-                } else { // bigger jump - probably 2 or more sections
 
+    jumpToSection: function(fragment) {
+        var sectionName = fragment.slice(1);
+        var offset = this.keyframes["poster"][this.sectionNames.indexOf(sectionName)];
+        if (offset) {
+            $(window).scrollTop(offset);
+        }
+    },
+
+    scrollToSection: function(fragment) {
+        var sectionName = fragment.slice(1);
+        if (this.sectionNames.indexOf(sectionName) > -1) {
+            this.targetOffset = this.keyframes["poster"][this.sectionNames.indexOf(sectionName)];
+            if (this.targetOffset !== $(window).scrollTop()) {
+                var dist = this.targetOffset - $(window).scrollTop();
+                if (dist < 0) {
+                    this.scrollDir = "up";
+                } else {
+                    this.scrollDir = "down";
+                }
+                this.scrollMiddle = this.targetOffset - (dist / 2);
+                this.scrollDistance = Math.abs(dist);
+
+                var _this = this;
+
+
+                if (this.scrollDistance < 2400) { // small jump - next or prev section
+                    window.setTimeout(function() {
+                        _this.slowScroll(_this.targetOffset);
+                    }, 40);
+                } else { // bigger jump - probably 2 or more sections
+                    window.setTimeout(function() {
+                        _this.slowScroll(_this.targetOffset);
+                    }, 40);
                 }
             }
         }
