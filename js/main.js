@@ -9,7 +9,7 @@
 // global landingpage object
 var avmlp = {
     // properties
-    debug: true,
+    debug: false,
 
     defaultHeight: 960,
     defaultWidth: 1200,
@@ -26,6 +26,7 @@ var avmlp = {
     offsetSize: 0,
     currentSection: false,
     lastSection: false,
+    targetOffset: 0,
 
     aniJsonFile: "js/animation.json", // set this to "js/animation.json" if you want to make changes
     aniSpeed: 20,
@@ -287,11 +288,34 @@ var avmlp = {
 
     scrollToSection: function(fragment) {
         var sectionName = fragment.slice(1);
-        var offset=0;
+        var offset;
         if (this.sectionNames.indexOf(sectionName) > -1) {
             offset = this.sectionOffset[this.sectionNames.indexOf(sectionName)];
+            if (offset !== $(window).scrollTop()) {
+                var _this = this;
+                window.setTimeout(function() {
+                    _this.slowScroll(offset)
+                }, 25);
+            }
+
         }
-        $(window).scrollTop(offset);
+        // $(window).scrollTop(offset);
+    },
+
+    slowScroll: function(offset) {
+        var o = $(window).scrollTop();
+        if (o < offset) {
+            $(window).scrollTop(o + 20);
+        } else {
+            $(window).scrollTop(o - 20);
+        }
+        if (Math.floor((offset - $(window).scrollTop()) / 20) !== 0 ) {
+            var _this = this;
+            window.setTimeout(function() {
+                _this.slowScroll(offset)
+            }, 25);
+        }
+        // console.log("slowScroll", offset);
     },
 
     // change product animation
