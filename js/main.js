@@ -397,12 +397,20 @@ var avmlp = {
                                     $(window).scrollTop(_this.keyframes["begin"][_this.sectionNames.indexOf(sectionName)]);
                                 }
                                 $("#packshot-wrapper").css("display", "block");
-                                $("#packshot-wrapper").animate({
-                                    opacity: 1
-                                }, 400);
-                                _this.isAnimationRunning = true;
 
-                                _this.scrollToSection("#"+sectionName);
+                                window.setTimeout(function() {
+                                    var t = $(window).scrollTop();
+                                    avmlp.aniTargetStep = Math.ceil ( t / avmlp.aniSpeed );
+                                    avmlp.aniStep = avmlp.aniTargetStep;
+                                    avmlp.aniLastStep = avmlp.aniTargetStep;
+                                    _this.scrollToSection("#"+sectionName);
+                                    _this.isAnimationRunning = true;
+                                    window.setTimeout(function() {
+                                        $("#packshot-wrapper").animate({
+                                            opacity: 1
+                                        }, 400);
+                                    }, 50);
+                                }, 50);
                             }
                         });
                     }
@@ -417,6 +425,9 @@ var avmlp = {
 
     // change product animation
     changeFrame: function() {
+        if (!this.isAnimationRunning) {
+            return;
+        }
         if (this.debug) {
             $("#debug-section").text(this.animationData.frames[this.aniStep].s);
         }
@@ -733,24 +744,26 @@ var requestAnimFrame = (function() {
 (function animloop(){ // the smoothest animation loop possible
     requestAnimFrame(animloop);
 
-
-    var t = $(window).scrollTop();
-    avmlp.aniTargetStep = Math.ceil ( t / avmlp.aniSpeed );
-
-    // what frame to animate to
-    if( avmlp.aniTargetStep !== avmlp.aniStep ) {
-        // increment the step until we arrive at the target step
-        avmlp.aniStep += Math.ceil( ( avmlp.aniTargetStep - avmlp.aniStep) / 5);
-    }
-
     if (!avmlp.isAnimationRunning) {
         avmlp.aniStep = avmlp.aniLastStep = avmlp.aniTargetStep;
+    } else {
+
+        var t = $(window).scrollTop();
+        avmlp.aniTargetStep = Math.ceil ( t / avmlp.aniSpeed );
+
+        // what frame to animate to
+        if( avmlp.aniTargetStep !== avmlp.aniStep ) {
+            // increment the step until we arrive at the target step
+            avmlp.aniStep += Math.ceil( ( avmlp.aniTargetStep - avmlp.aniStep) / 5);
+        }
+
+        if (avmlp.isAnimationReady && avmlp.aniStep !== avmlp.aniLastStep && avmlp.aniStep < avmlp.animationData.frames.length && avmlp.aniStep >= 0) {
+            avmlp.changeFrame();
+            avmlp.aniLastStep = avmlp.aniStep;
+        }
+
     }
 
-    if (avmlp.isAnimationReady && avmlp.aniStep !== avmlp.aniLastStep && avmlp.aniStep < avmlp.animationData.frames.length) {
-        avmlp.changeFrame();
-        avmlp.aniLastStep = avmlp.aniStep;
-    }
 
     if (avmlp.debug) {
         $("#debug-animation-step").text(avmlp.aniStep);
