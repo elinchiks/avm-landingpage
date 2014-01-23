@@ -286,6 +286,7 @@ var avmlp = {
         $(window).on('hashchange',function() {
             if($('html').hasClass('desktop')) {
                 _this.scrollToSection(location.hash);
+                $('#footer-section').css('opacity', '0');
             }
           
         });
@@ -582,9 +583,9 @@ var avmlp = {
 jQuery( document ).ready(function( $ ) {
 
 
-   // document.ontouchmove = function(e){
-   //  e.preventDefault();
-   // }
+   document.ontouchmove = function(e){
+    e.preventDefault();
+   }
 
     // SVG Logo, if browser can handle it
     if($("html").hasClass("svg")) {
