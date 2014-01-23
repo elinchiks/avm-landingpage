@@ -98,42 +98,50 @@ var avmlp = {
              $('nav.primary li.start').addClass('active');
              $('section').removeClass('active');
              $('section#start').addClass('active');
+             $("#footer-section").removeClass('active');
             
         }
          else if ($(document).scrollTop() >= section3Top && $(document).scrollTop() < section4Top){
             $('nav.primary li.heimnetz').addClass('active');
             $('section').removeClass('active');
             $('section#heimnetz').addClass('active');
+            $("#footer-section").removeClass('active');
          
         } 
          else if ($(document).scrollTop() >= section4Top && $(document).scrollTop() < section5Top){
             $('nav.primary li.wlan').addClass('active');
             $('section').removeClass('active');
             $('section#wlan').addClass('active');
+            $("#footer-section").removeClass('active');
             
         } 
          else if ($(document).scrollTop() >= section5Top && $(document).scrollTop() < section6Top){
              $('nav.primary li.usb3').addClass('active');
              $('section').removeClass('active');
              $('section#usb3').addClass('active');
+             $("#footer-section").removeClass('active');
          
         } 
          else if ($(document).scrollTop() >= section6Top && $(document).scrollTop() < section7Top){
             $('nav.primary li.telefonie').addClass('active');
             $('section').removeClass('active');
             $('section#telefonie').addClass('active');
+            $("#footer-section").removeClass('active');
   
         } 
          else if ($(document).scrollTop() >= section7Top && $(document).scrollTop() < section8Top){
            $('nav.primary li.fritzos').addClass('active');
            $('section').removeClass('active');
            $('section#fritzos').addClass('active');
+           $("#footer-section").removeClass('active');
         
         } 
         else if ($(document).scrollTop() >= section8Top){
             $('nav.primary li.auszeichnungen').addClass('active');
             $('section').removeClass('active');
             $('section#auszeichnungen').addClass('active');
+            $("#footer-section").addClass('active');
+
             // $('#footer-section').css('display', 'block');
         }
   
@@ -249,7 +257,7 @@ var avmlp = {
         $("img.packshot").remove();
 
         // remove background from other slides, we'll use the background from the packshot-wrapper
-        $(".slide").not(".packshot-slide").css("background", "transparent");
+        // $(".slide").not(".packshot-slide").css("background", "transparent");
 
         // we need an element with the original height to re-enable scrolling
         var docHeight = this.animationData.frames.length * this.aniSpeed + this.defaultHeight;
@@ -349,8 +357,8 @@ var avmlp = {
         }
 
         // Opacity for paragraph
-        if ($("#" + currentSection + " p.para").css("opacity") !== this.animationData.frames[this.aniStep].po ) {
-            $("#" + currentSection + " p.para").css("opacity", this.animationData.frames[this.aniStep].po);
+        if ($("#" + currentSection + " .description").css("opacity") !== this.animationData.frames[this.aniStep].po ) {
+            $("#" + currentSection + " .description").css("opacity", this.animationData.frames[this.aniStep].po);
         }
 
         // opacity fritz logo - not on every slide
