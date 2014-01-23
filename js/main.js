@@ -270,7 +270,7 @@ var avmlp = {
         $("img.packshot").remove();
 
         // remove background from other slides, we'll use the background from the packshot-wrapper
-        // $(".slide").not(".packshot-slide").css("background", "transparent");
+        $(".slide").not(".packshot-slide").css("background", "transparent");
 
         // we need an element with the original height to re-enable scrolling
         var docHeight = this.animationData.frames.length * this.aniSpeed + this.defaultHeight;
