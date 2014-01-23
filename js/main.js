@@ -77,7 +77,7 @@ var avmlp = {
     },
 
 
-     
+
     redrawDotNav: function(){
 
 
@@ -93,53 +93,53 @@ var avmlp = {
 
         $('nav.primary li').removeClass('active');
         if($(document).scrollTop() <= section1Top && $(document).scrollTop() < section2Top){
-           
+
         } else if ($(document).scrollTop() >= section2Top && $(document).scrollTop() < section3Top){
              $('nav.primary li.start').addClass('active');
              $('section').removeClass('active');
              $('section#start').addClass('active');
-            
+
         }
          else if ($(document).scrollTop() >= section3Top && $(document).scrollTop() < section4Top){
             $('nav.primary li.heimnetz').addClass('active');
             $('section').removeClass('active');
             $('section#heimnetz').addClass('active');
-         
-        } 
+
+        }
          else if ($(document).scrollTop() >= section4Top && $(document).scrollTop() < section5Top){
             $('nav.primary li.wlan').addClass('active');
             $('section').removeClass('active');
             $('section#wlan').addClass('active');
-            
-        } 
+
+        }
          else if ($(document).scrollTop() >= section5Top && $(document).scrollTop() < section6Top){
              $('nav.primary li.usb3').addClass('active');
              $('section').removeClass('active');
              $('section#usb3').addClass('active');
-         
-        } 
+
+        }
          else if ($(document).scrollTop() >= section6Top && $(document).scrollTop() < section7Top){
             $('nav.primary li.telefonie').addClass('active');
             $('section').removeClass('active');
             $('section#telefonie').addClass('active');
-  
-        } 
+
+        }
          else if ($(document).scrollTop() >= section7Top && $(document).scrollTop() < section8Top){
            $('nav.primary li.fritzos').addClass('active');
            $('section').removeClass('active');
            $('section#fritzos').addClass('active');
-        
-        } 
+
+        }
         else if ($(document).scrollTop() >= section8Top){
             $('nav.primary li.auszeichnungen').addClass('active');
             $('section').removeClass('active');
             $('section#auszeichnungen').addClass('active');
             // $('#footer-section').css('display', 'block');
         }
-  
-        
+
+
     },
-  
+
 
     resizeSections: function() {
         var h = jQuery("html").height();
@@ -170,7 +170,7 @@ var avmlp = {
         this.offsetSize = 0;
         top = 0;
        }
-    
+
         var left = ($("body").width() - (1200 * this.zoom)) / 2;
         if (left < 0) {
             left = 0;
@@ -236,7 +236,7 @@ var avmlp = {
             "position": "absolute",
             "top": 0
         });
- 
+
 
 
         $slide.appendTo($section);
@@ -277,7 +277,7 @@ var avmlp = {
     },
     bindKeyDown: function() {
         $(document).keydown(function(e){
-            if (e.keyCode == 40) { 
+            if (e.keyCode == 40) {
                $('section.active').find('.arrow-next').trigger('click');
                return false;
             }
@@ -365,7 +365,7 @@ var avmlp = {
 
         // additional properties
         var a = this.animationData.frames[this.aniStep].a;
-  
+
         var properties;
         if (a) {
             for (var e in a) {
@@ -376,7 +376,7 @@ var avmlp = {
                 $("#" + currentSection + " " + e).css(properties);
             }
         }
- 
+
 
         // execute code - always remember, eval is evil
         if (this.animationData.frames[this.aniStep].code) {
@@ -451,19 +451,19 @@ jQuery( document ).ready(function( $ ) {
 
     var ua = navigator.userAgent.toLowerCase();
 
-    var isAndroid = ua.indexOf("android") > -1; 
+    var isAndroid = ua.indexOf("android") > -1;
     if(!isAndroid)  {
         $('#viewport').append('<img src="images/avm-logo.svg" class="logo-avm" width="70" height="42" alt="AVM logo">');
-    } else {   
+    } else {
         $('#viewport').append('<img src="images/logo-avm.png" class="logo-avm" width="79" height="43" alt="avm" />');
-      
+
     }
 
 
-    
-    
 
- 
+
+
+
     // KeyDown
     avmlp.bindKeyDown();
     // Debug
@@ -502,11 +502,11 @@ jQuery( document ).ready(function( $ ) {
     $(".primary li").on("click", function(e) {
         e.preventDefault();
         $('section').removeClass('active');
- 
+
         var href = $(this).find("a").attr("href");
         if (href) {
             window.location = href;
- 
+
             $(this).parents("ul").find("li").removeClass("active");
             $(this).addClass("active");
             avmlp.setNavigationState();
@@ -542,21 +542,17 @@ jQuery( document ).ready(function( $ ) {
 
     $('.link-next').on('click', function(e){
 
+        if(!$('html').hasClass('desktop')) {
+            e.preventDefault();
+            var obj = $(this);
+            var getHref = obj.attr("href").split("#")[1];
+            $('section').removeClass('active');
+            $('section#' + getHref + '').addClass('active');
+            $('nav.primary li').removeClass('active').next('.' + getHref + '').addClass('active');
+            var offsetSize = avmlp.offsetSize;
 
-    if(!$('html').hasClass('desktop')) {
-        e.preventDefault();
-        var obj = $(this);
-        getHref = obj.attr("href").split("#")[1];
-        $('section').removeClass('active');
-        $('section#' + getHref + '').addClass('active');
-        $('nav.primary li').removeClass('active').next('.' + getHref + '').addClass('active');
-        offsetSize = avmlp.offsetSize;
-
-        $(window).scrollTop($("[id*='"+getHref+"']").offset().top - offsetSize);
-    }
-
-
-
+            $(window).scrollTop($("[id*='"+getHref+"']").offset().top - offsetSize);
+        }
     });
 
 
@@ -568,10 +564,10 @@ jQuery( document ).ready(function( $ ) {
 jQuery( window ).on( "resize", function() {
     avmlp.resizeSections();
 });
-jQuery( window ).on( "orientationchange", function( event ) { 
+jQuery( window ).on( "orientationchange", function( event ) {
     avmlp.applyZoom();
  });
-jQuery( window ).on( "scroll", function(event) { 
+jQuery( window ).on( "scroll", function(event) {
     if(!$('html').hasClass('desktop')) {
         avmlp.redrawDotNav();
     }
