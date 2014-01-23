@@ -37,12 +37,19 @@ var avmlp = {
     aniLastStep: null,
     animationData: false,
     isAnimationReady: false,
+    isAnimationRunning: true,
     keyframes: { // retrieved from animation.json
         "begin": [],
         "poster": [],
         "end": []
     },
-    lastScrollTop: 0,
+
+    scrollDistance: 0,
+    targetOffset: -1,
+    scrollDir: "",
+    scrollMiddle: 0,
+    scrollSpeedFactor: 1,
+
 
     // methods
     loadAnimationImages: function() {
@@ -228,14 +235,10 @@ var avmlp = {
     },
 
     setNavigationState: function() {
-
         $( window ).trigger( "sectionChange", [ this.currentSection ] );
-
-
     },
 
     initScrollAnimation: function(animationData) {
-        console.log("initScrollAnimation");
 
         this.animationData = animationData;
         this.isAnimationReady = true;
@@ -261,8 +264,6 @@ var avmlp = {
             "top": 0
         });
 
-
-
         $slide.appendTo($section);
         $section.prependTo($("#viewport"));
 
@@ -279,6 +280,7 @@ var avmlp = {
         var docHeight = this.animationData.frames.length * this.aniSpeed + this.defaultHeight;
         $("#scroll-placeholder").height(docHeight);
 
+
         // the fragment links need fixing
         var _this = this;
         $(window).on('hashchange',function() {
@@ -288,20 +290,29 @@ var avmlp = {
           
         });
 
+
         $("section").hide();
         $("section#start").show();
         $("section#packshot-wrapper").show();
+
+
+        // the fragment links need fixing
+        $(window).on('hashchange',function() {
+            // only scroll if last scroll has completed
+            if (avmlp.targetOffset === -1) {
+                avmlp.scrollToSection(location.hash);
+            }
+        });
 
         // jump to section if hash is set
         if (location.hash) {
             window.setTimeout(function() {
                 // give it a little time
-                _this.scrollToSection(location.hash);
+                avmlp.jumpToSection(location.hash);
             }, 200);
-
         }
-
     },
+
     bindKeyDown: function() {
         $(document).keydown(function(e){
             if (e.keyCode == 40) {
@@ -313,35 +324,110 @@ var avmlp = {
 
     slowScroll: function(offset) {
         var o = $(window).scrollTop();
-        if (o < offset) {
-            $(window).scrollTop(o + 20);
-        } else {
-            $(window).scrollTop(o - 20);
+        if (this.scrollDir === "down") {
+            if (o < this.scrollMiddle) {
+                this.scrollSpeedFactor += 0.4;
+            } else {
+                this.scrollSpeedFactor -= 0.4;
+            }
         }
-        if (Math.floor((offset - $(window).scrollTop()) / 20) !== 0 ) {
+        if (this.scrollDir === "up") {
+            if (o > this.scrollMiddle) {
+                this.scrollSpeedFactor += 0.4;
+            } else {
+                this.scrollSpeedFactor -= 0.4;
+            }
+        }
+        if (this.scrollSpeedFactor < 1) {
+            this.scrollSpeedFactor = 1;
+        }
+        var speed = (this.aniSpeed * this.scrollSpeedFactor) * 0.05 ;
+
+        if (o < offset) {
+            $(window).scrollTop(o + speed);
+        } else {
+            $(window).scrollTop(o - speed);
+        }
+        var x = Math.floor((offset - $(window).scrollTop()) / this.aniSpeed);
+        if (x !== 0 ) {
             var _this = this;
             window.setTimeout(function() {
                 _this.slowScroll(offset)
-            }, 25);
+            }, 40);
+        } else {
+            this.targetOffset = -1;
+            this.scrollDir = "";
         }
-        // console.log("slowScroll", offset);
     },
-    scrollToSection: function(fragment) {
-        console.log("scrollToSection", fragment);
+
+    jumpToSection: function(fragment) {
         var sectionName = fragment.slice(1);
-        var offset;
+        var offset = this.keyframes["poster"][this.sectionNames.indexOf(sectionName)];
+        if (offset) {
+            $(window).scrollTop(offset);
+        }
+    },
+
+    scrollToSection: function(fragment) {
+        var sectionName = fragment.slice(1);
         if (this.sectionNames.indexOf(sectionName) > -1) {
-            offset = this.keyframes["poster"][this.sectionNames.indexOf(sectionName)];
-            console.log(offset);
-            if (offset !== $(window).scrollTop()) {
-                var distance = Math.abs(offset - $(window).scrollTop());
-                if (distance < 2400) { // small jump - next or prev section
-                    console.log(distance, "go");
-                    var _this = this;
+            this.targetOffset = this.keyframes["poster"][this.sectionNames.indexOf(sectionName)];
+            if (this.targetOffset !== $(window).scrollTop()) {
+                                var dist = this.targetOffset - $(window).scrollTop();
+                if (dist < 0) {
+                    this.scrollDir = "up";
+                } else {
+                    this.scrollDir = "down";
+                }
+                this.scrollMiddle = this.targetOffset - (dist / 2);
+                this.scrollDistance = Math.abs(dist);
+
+                var _this = this;
+
+                if (this.scrollDistance < 2400) { // small jump - next or prev section
+
                     window.setTimeout(function() {
-                        _this.slowScroll(offset);
-                    }, 25);
+                        _this.slowScroll(_this.targetOffset);
+                    }, 40);
+
                 } else { // bigger jump - probably 2 or more sections
+
+                    var i = Math.floor($(window).scrollTop() / this.aniSpeed);
+                    var currentSection = this.animationData.frames[i].s
+                    if (currentSection) {
+                        this.isAnimationRunning = false;
+                        $("#packshot-wrapper, #"+currentSection).animate({
+                            opacity: 0
+                        }, {
+                            duration: 400,
+                            complete: function() {
+                                $("section").css("display", "none");
+                                $("#"+currentSection).css("opacity", 1);
+
+                                if (_this.scrollDir === "up") {
+                                   $(window).scrollTop(_this.keyframes["end"][_this.sectionNames.indexOf(sectionName)]);
+                                } else {
+                                    $(window).scrollTop(_this.keyframes["begin"][_this.sectionNames.indexOf(sectionName)]);
+                                }
+                                $("#packshot-wrapper").css("display", "block");
+
+                                window.setTimeout(function() {
+                                    var t = $(window).scrollTop();
+                                    avmlp.aniTargetStep = Math.ceil ( t / avmlp.aniSpeed );
+                                    avmlp.aniStep = avmlp.aniTargetStep;
+                                    avmlp.aniLastStep = avmlp.aniTargetStep;
+                                    _this.scrollToSection("#"+sectionName);
+                                    _this.isAnimationRunning = true;
+                                    window.setTimeout(function() {
+                                        $("#packshot-wrapper").animate({
+                                            opacity: 1
+                                        }, 400);
+                                    }, 50);
+                                }, 50);
+                            }
+                        });
+                    }
+
 
                 }
             }
@@ -352,6 +438,9 @@ var avmlp = {
 
     // change product animation
     changeFrame: function() {
+        if (!this.isAnimationRunning) {
+            return;
+        }
         if (this.debug) {
             $("#debug-section").text(this.animationData.frames[this.aniStep].s);
         }
@@ -548,17 +637,21 @@ jQuery( document ).ready(function( $ ) {
     $(".primary li").css("cursor", "pointer");
     $(".primary a").on("click", function(e) {
         e.preventDefault();
-        $('section').removeClass('active');
 
         var href = $(this).attr("href");
         if (href) {
             window.location = href;
 
             $(this).parents("ul").find("li").removeClass("active");
+
             $(this).parents('li').addClass("active");
             // avmlp.setNavigationState();
-            $('' + href + '').addClass('active');
 
+
+            avmlp.setNavigationState();
+            $('section').removeClass('active');
+
+            $('' + href + '').addClass('active');
         }
     });
 
@@ -681,19 +774,26 @@ var requestAnimFrame = (function() {
 (function animloop(){ // the smoothest animation loop possible
     requestAnimFrame(animloop);
 
-    var t = $(window).scrollTop();
-    avmlp.aniTargetStep = Math.ceil ( t / avmlp.aniSpeed );
+    if (!avmlp.isAnimationRunning) {
+        avmlp.aniStep = avmlp.aniLastStep = avmlp.aniTargetStep;
+    } else {
 
-    // what frame to animate to
-    if( avmlp.aniTargetStep !== avmlp.aniStep ) {
-        // increment the step until we arrive at the target step
-        avmlp.aniStep += Math.ceil( ( avmlp.aniTargetStep - avmlp.aniStep) / 5);
+        var t = $(window).scrollTop();
+        avmlp.aniTargetStep = Math.ceil ( t / avmlp.aniSpeed );
+
+        // what frame to animate to
+        if( avmlp.aniTargetStep !== avmlp.aniStep ) {
+            // increment the step until we arrive at the target step
+            avmlp.aniStep += Math.ceil( ( avmlp.aniTargetStep - avmlp.aniStep) / 5);
+        }
+
+        if (avmlp.isAnimationReady && avmlp.aniStep !== avmlp.aniLastStep && avmlp.aniStep < avmlp.animationData.frames.length && avmlp.aniStep >= 0) {
+            avmlp.changeFrame();
+            avmlp.aniLastStep = avmlp.aniStep;
+        }
+
     }
 
-    if (avmlp.isAnimationReady && avmlp.aniStep !== avmlp.aniLastStep && avmlp.aniStep < avmlp.animationData.frames.length) {
-        avmlp.changeFrame();
-        avmlp.aniLastStep = avmlp.aniStep;
-    }
 
     if (avmlp.debug) {
         $("#debug-animation-step").text(avmlp.aniStep);
