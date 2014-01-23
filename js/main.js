@@ -37,15 +37,11 @@ var avmlp = {
     aniLastStep: null,
     animationData: false,
     isAnimationReady: false,
-    sectionOffset: [ // update these, if you insert new frames in animation.json
-        0,
-        69,
-        148,
-        266,
-        323,
-        400,
-        485
-    ],
+    keyframes: { // retrieved from animation.json
+        "begin": [],
+        "poster": [],
+        "end": []
+    },
 
     // methods
     loadAnimationImages: function() {
@@ -66,17 +62,27 @@ var avmlp = {
                     "highSrc": this.animationData.hiSrcPrefix + frames[i].img
                 };
                 this.aniImages[i].low.src = this.animationData.lowSrcPrefix + frames[i].img;
-                // $(this.aniImages[i].low).on("load", function() {
-                //     $("#led-5-off").toggle();
-                //     window.setTimeout(function() {
-                //         $("#led-5-off").hide();
-                //     }, 400);
-                // });
             }
         }
     },
 
-
+    setKeyframes: function() {
+        for (var i = 0; i < this.animationData.frames.length; i++) {
+            if (this.animationData.frames[i].kf) {
+                switch (this.animationData.frames[i].kf) {
+                    case "begin":
+                        this.keyframes["begin"].push(i * this.aniSpeed);
+                        break;
+                    case "poster":
+                        this.keyframes["poster"].push(i * this.aniSpeed);
+                        break;
+                    case "end":
+                        this.keyframes["end"].push(i * this.aniSpeed);
+                        break;
+                }
+            }
+        }
+    },
 
     redrawDotNav: function(){
 
@@ -237,28 +243,9 @@ var avmlp = {
         var $packshot =$('<img src="frames/960px/0000.png" id="packshot" width="960" height="640" alt="FRITZ!Box 7490" />');
         $packshot.appendTo($slide);
 
-        // LED's off to visualize loading
-        // $('<img src="images/led-2-off.png" width="39" height="101" id="led-2-off" />').appendTo($slide);
-        // $('<img src="images/led-3-off.png" width="34" height="104" id="led-3-off" />').appendTo($slide);
-        // $('<img src="images/led-4-off.png" width="36" height="104" id="led-4-off" />').appendTo($slide);
-        // $('<img src="images/led-5-off.png" width="38" height="104" id="led-5-off" />').appendTo($slide);
-        // window.setTimeout(function() {
-        //     $("#led-2-off").hide();
-        // }, 400);
-        // window.setTimeout(function() {
-        //     $("#led-3-off").hide();
-        // }, 800);
-        // window.setTimeout(function() {
-        //     $("#led-4-off").hide();
-        // }, 1200);
-
+        this.setKeyframes();
 
         this.loadAnimationImages();
-
-        // multiple frame-offset with speed to get actual pixels
-        for(var i = 0; i < this.sectionOffset.length; i++) {
-            this.sectionOffset[i] = this.sectionOffset[i] * this.aniSpeed;
-        }
 
         // the section wrapper get's a fixed position
         // all sections have absolute pos with top 0
@@ -324,7 +311,7 @@ var avmlp = {
         var sectionName = fragment.slice(1);
         var offset;
         if (this.sectionNames.indexOf(sectionName) > -1) {
-            offset = this.sectionOffset[this.sectionNames.indexOf(sectionName)];
+            offset = this.keyframes["poster"][this.sectionNames.indexOf(sectionName)];
             if (offset !== $(window).scrollTop()) {
                 var _this = this;
                 window.setTimeout(function() {
@@ -495,13 +482,11 @@ var avmlp = {
 jQuery( document ).ready(function( $ ) {
 
     // SVG Logo, if browser can handle it
-    if($("html").hasClass("svg"))  {
+    if($("html").hasClass("svg")) {
         $('#viewport').append('<img src="images/avm-logo.svg" class="logo-avm" width="70" height="42" alt="AVM logo">');
     } else {
         $('#viewport').append('<img src="images/logo-avm.png" class="logo-avm" width="79" height="43" alt="avm" />');
     }
-
-
 
     // KeyDown
     avmlp.bindKeyDown();
