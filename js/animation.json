@@ -6,6 +6,7 @@
     "_comment": "'flo': fritz logo opacity",
     "_comment": "'alo': avm logo opacity",
     "_comment": "'a': additional elements, an object with the selector and the css properties to set",
+    "_comment": "'f': footer properties",
     "_comment": "'code': this will get eval'd",
     "_comment": "'img': low img src - some path's link to the hi src here anyway",
     "_comment": "'imgHi': high img src",
@@ -9915,6 +9916,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 0
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 0
                 },
                 ".logo-1": {
                     "opacity": 0
@@ -9948,6 +9954,11 @@
             "alo": 0,
             "a": {
                 ".action-buttons": {
+                    "opacity": 0
+                }
+            },
+            "f": {
+                "#footer-section": {
                     "opacity": 0
                 },
                 ".logo-1": {
@@ -9983,6 +9994,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 0
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 0
                 },
                 ".logo-1": {
                     "opacity": 0
@@ -10016,6 +10032,11 @@
             "alo": 0,
             "a": {
                 ".action-buttons": {
+                    "opacity": 0
+                }
+            },
+            "f": {
+                "#footer-section": {
                     "opacity": 0
                 },
                 ".logo-1": {
@@ -10051,6 +10072,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 0
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 0
                 },
                 ".logo-1": {
                     "opacity": 0
@@ -10084,6 +10110,11 @@
             "alo": 0,
             "a": {
                 ".action-buttons": {
+                    "opacity": 0
+                }
+            },
+            "f": {
+                "#footer-section": {
                     "opacity": 0
                 },
                 ".logo-1": {
@@ -10119,6 +10150,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 0
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 0
                 },
                 ".logo-1": {
                     "opacity": 0
@@ -10152,6 +10188,11 @@
             "alo": 0,
             "a": {
                 ".action-buttons": {
+                    "opacity": 0
+                }
+            },
+            "f": {
+                "#footer-section": {
                     "opacity": 0
                 },
                 ".logo-1": {
@@ -10187,6 +10228,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 0
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 0
                 },
                 ".logo-1": {
                     "opacity": 0
@@ -10220,6 +10266,11 @@
             "alo": 0,
             "a": {
                 ".action-buttons": {
+                    "opacity": 0
+                }
+            },
+            "f": {
+                "#footer-section": {
                     "opacity": 0
                 },
                 ".logo-1": {
@@ -10255,6 +10306,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 0
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 0
                 },
                 ".logo-1": {
                     "opacity": 0
@@ -10289,6 +10345,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 0.1
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 0
                 },
                 ".logo-1": {
                     "opacity": 0
@@ -10323,6 +10384,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 0.2
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 0
                 },
                 ".logo-1": {
                     "opacity": 0
@@ -10357,6 +10423,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 0.3
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 0
                 },
                 ".logo-1": {
                     "opacity": 0
@@ -10391,6 +10462,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 0.4
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 0
                 },
                 ".logo-1": {
                     "opacity": 0
@@ -10425,6 +10501,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 0.5
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 0
                 },
                 ".logo-1": {
                     "opacity": 0
@@ -10459,6 +10540,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 0.6
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 0
                 },
                 ".logo-1": {
                     "opacity": 0
@@ -10493,6 +10579,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 0.7
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 0
                 },
                 ".logo-1": {
                     "opacity": 0
@@ -10527,6 +10618,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 0.8
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 0
                 },
                 ".logo-1": {
                     "opacity": 0
@@ -10561,6 +10657,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 0.9
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 0
                 },
                 ".logo-1": {
                     "opacity": 0
@@ -10595,6 +10696,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 1
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 0.1
                 },
                 ".logo-1": {
                     "opacity": 0.1
@@ -10629,6 +10735,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 1
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 0.2
                 },
                 ".logo-1": {
                     "opacity": 0.2
@@ -10663,6 +10774,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 1
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 0.3
                 },
                 ".logo-1": {
                     "opacity": 0.3
@@ -10697,6 +10813,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 1
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 0.4
                 },
                 ".logo-1": {
                     "opacity": 0.4
@@ -10731,6 +10852,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 1
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 0.5
                 },
                 ".logo-1": {
                     "opacity": 0.5
@@ -10765,6 +10891,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 1
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 0.6
                 },
                 ".logo-1": {
                     "opacity": 0.6
@@ -10799,6 +10930,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 1
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 0.7
                 },
                 ".logo-1": {
                     "opacity": 0.7
@@ -10833,6 +10969,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 1
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 0.8
                 },
                 ".logo-1": {
                     "opacity": 0.8
@@ -10867,6 +11008,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 1
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 0.9
                 },
                 ".logo-1": {
                     "opacity": 0.9
@@ -10901,6 +11047,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 1
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 1
                 },
                 ".logo-1": {
                     "opacity": 1
@@ -10934,6 +11085,11 @@
             "alo": 0,
             "a": {
                 ".action-buttons": {
+                    "opacity": 1
+                }
+            },
+            "f": {
+                "#footer-section": {
                     "opacity": 1
                 },
                 ".logo-1": {
@@ -10969,6 +11125,10 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 1
+                }            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 1
                 },
                 ".logo-1": {
                     "opacity": 1
@@ -10988,6 +11148,7 @@
                 ".imprint": {
                     "opacity": 0
                 }
+
             }
         },
         {
@@ -11002,6 +11163,11 @@
             "alo": 0,
             "a": {
                 ".action-buttons": {
+                    "opacity": 1
+                }
+            },
+            "f": {
+                "#footer-section": {
                     "opacity": 1
                 },
                 ".logo-1": {
@@ -11037,6 +11203,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 1
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 1
                 },
                 ".logo-1": {
                     "opacity": 1
@@ -11070,6 +11241,11 @@
             "alo": 0,
             "a": {
                 ".action-buttons": {
+                    "opacity": 1
+                }
+            },
+            "f": {
+                "#footer-section": {
                     "opacity": 1
                 },
                 ".logo-1": {
@@ -11105,6 +11281,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 1
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 1
                 },
                 ".logo-1": {
                     "opacity": 1
@@ -11138,6 +11319,11 @@
             "alo": 0,
             "a": {
                 ".action-buttons": {
+                    "opacity": 1
+                }
+            },
+            "f": {
+                "#footer-section": {
                     "opacity": 1
                 },
                 ".logo-1": {
@@ -11173,6 +11359,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 1
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 1
                 },
                 ".logo-1": {
                     "opacity": 1
@@ -11192,6 +11383,7 @@
                 ".imprint": {
                     "opacity": 0
                 }
+
             }
         },
         {
@@ -11206,6 +11398,11 @@
             "alo": 0.1,
             "a": {
                 ".action-buttons": {
+                    "opacity": 1
+                }
+            },
+            "f": {
+                "#footer-section": {
                     "opacity": 1
                 },
                 ".logo-1": {
@@ -11241,6 +11438,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 1
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 1
                 },
                 ".logo-1": {
                     "opacity": 1
@@ -11274,6 +11476,11 @@
             "alo": 0.3,
             "a": {
                 ".action-buttons": {
+                    "opacity": 1
+                }
+            },
+            "f": {
+                "#footer-section": {
                     "opacity": 1
                 },
                 ".logo-1": {
@@ -11309,6 +11516,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 1
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 1
                 },
                 ".logo-1": {
                     "opacity": 1
@@ -11342,6 +11554,11 @@
             "alo": 0.5,
             "a": {
                 ".action-buttons": {
+                    "opacity": 1
+                }
+            },
+            "f": {
+                "#footer-section": {
                     "opacity": 1
                 },
                 ".logo-1": {
@@ -11377,6 +11594,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 1
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 1
                 },
                 ".logo-1": {
                     "opacity": 1
@@ -11410,6 +11632,11 @@
             "alo": 0.7,
             "a": {
                 ".action-buttons": {
+                    "opacity": 1
+                }
+            },
+            "f": {
+                "#footer-section": {
                     "opacity": 1
                 },
                 ".logo-1": {
@@ -11445,6 +11672,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 1
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 1
                 },
                 ".logo-1": {
                     "opacity": 1
@@ -11478,6 +11710,11 @@
             "alo": 0.9,
             "a": {
                 ".action-buttons": {
+                    "opacity": 1
+                }
+            },
+            "f": {
+                "#footer-section": {
                     "opacity": 1
                 },
                 ".logo-1": {
@@ -11513,39 +11750,10 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 1
-                },
-                ".logo-1": {
-                    "opacity": 1
-                },
-                ".logo-2": {
-                    "opacity": 1
-                },
-                ".logo-3": {
-                    "opacity": 1
-                },
-                ".logo-4": {
-                    "opacity": 1
-                },
-                ".logo-5": {
-                    "opacity": 1
-                },
-                ".imprint": {
-                    "opacity": 1
                 }
-            }
-        },
-        {
-            "s": "auszeichnungen",
-            "img": "../960px/0000.png",
-            "imgCss": {
-                "top": "250px"
             },
-            "ho": 1,
-            "po": 1,
-            "flo": 1,
-            "alo": 1,
-            "a": {
-                ".action-buttons": {
+            "f": {
+                "#footer-section": {
                     "opacity": 1
                 },
                 ".logo-1": {
@@ -11581,39 +11789,10 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 1
-                },
-                ".logo-1": {
-                    "opacity": 1
-                },
-                ".logo-2": {
-                    "opacity": 1
-                },
-                ".logo-3": {
-                    "opacity": 1
-                },
-                ".logo-4": {
-                    "opacity": 1
-                },
-                ".logo-5": {
-                    "opacity": 1
-                },
-                ".imprint": {
-                    "opacity": 1
                 }
-            }
-        },
-        {
-            "s": "auszeichnungen",
-            "img": "../960px/0000.png",
-            "imgCss": {
-                "top": "250px"
             },
-            "ho": 1,
-            "po": 1,
-            "flo": 1,
-            "alo": 1,
-            "a": {
-                ".action-buttons": {
+            "f": {
+                "#footer-section": {
                     "opacity": 1
                 },
                 ".logo-1": {
@@ -11649,6 +11828,11 @@
             "a": {
                 ".action-buttons": {
                     "opacity": 1
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 1
                 },
                 ".logo-1": {
                     "opacity": 1
@@ -11668,6 +11852,86 @@
                 ".imprint": {
                     "opacity": 1
                 }
+            }
+        },
+        {
+            "s": "auszeichnungen",
+            "img": "../960px/0000.png",
+            "imgCss": {
+                "top": "250px"
+            },
+            "ho": 1,
+            "po": 1,
+            "flo": 1,
+            "alo": 1,
+            "a": {
+                ".action-buttons": {
+                    "opacity": 1
+                }
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 1
+                },
+                ".logo-1": {
+                    "opacity": 1
+                },
+                ".logo-2": {
+                    "opacity": 1
+                },
+                ".logo-3": {
+                    "opacity": 1
+                },
+                ".logo-4": {
+                    "opacity": 1
+                },
+                ".logo-5": {
+                    "opacity": 1
+                },
+                ".imprint": {
+                    "opacity": 1
+                }
+            }
+        },
+        {
+            "s": "auszeichnungen",
+            "img": "../960px/0000.png",
+            "imgCss": {
+                "top": "250px"
+            },
+            "ho": 1,
+            "po": 1,
+            "flo": 1,
+            "alo": 1,
+            "a": {
+                ".action-buttons": {
+                    "opacity": 1
+                }
+   
+            },
+            "f": {
+                "#footer-section": {
+                    "opacity": 1
+                },
+                ".logo-1": {
+                    "opacity": 1
+                },
+                ".logo-2": {
+                    "opacity": 1
+                },
+                ".logo-3": {
+                    "opacity": 1
+                },
+                ".logo-4": {
+                    "opacity": 1
+                },
+                ".logo-5": {
+                    "opacity": 1
+                },
+                ".imprint": {
+                    "opacity": 1
+                }
+                
             }
         }
     ]

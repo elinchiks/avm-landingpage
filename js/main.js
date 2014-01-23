@@ -365,6 +365,7 @@ var avmlp = {
 
         // additional properties
         var a = this.animationData.frames[this.aniStep].a;
+        var f = this.animationData.frames[this.aniStep].f;
   
         var properties;
         if (a) {
@@ -374,6 +375,15 @@ var avmlp = {
                 }
                 properties = a[e];
                 $("#" + currentSection + " " + e).css(properties);
+            }
+        }
+        if (f) {
+            for (var e in f) {
+                if (!f.hasOwnProperty(e)) {
+                    continue;
+                }
+                properties = f[e];
+                $(e).css(properties);
             }
         }
  
