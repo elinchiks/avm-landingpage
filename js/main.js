@@ -42,6 +42,7 @@ var avmlp = {
         "poster": [],
         "end": []
     },
+    lastScrollTop: 0,
 
     // methods
     loadAnimationImages: function() {
@@ -87,97 +88,97 @@ var avmlp = {
     redrawDotNav: function(){
 
 
-        var section1Top =  0;
-        // The top of each section is offset by half the distance to the previous section.
-        var section2Top =  $('#start').offset().top - (($('#heimnetz').offset().top - $('#start').offset().top) / 2);
-        var section3Top =  $('#heimnetz').offset().top - (($('#wlan').offset().top - $('#heimnetz').offset().top) / 2);
-        var section4Top =  $('#wlan').offset().top - (($('#usb3').offset().top - $('#wlan').offset().top) / 2);
-        var section5Top =  $('#usb3').offset().top - (($('#telefonie').offset().top - $('#usb3').offset().top) / 2);
-        var section6Top =  $('#telefonie').offset().top - (($('#fritzos').offset().top - $('#telefonie').offset().top) / 2);
-        var section7Top =  $('#fritzos').offset().top - (($('#auszeichnungen').offset().top - $('#fritzos').offset().top) / 2);
-        var section8Top =  $('#auszeichnungen').offset().top - (($(document).height() - $('#auszeichnungen').offset().top) / 2);
+    
+    var section1Top =  0;
+    // The top of each section is offset by half the distance to the previous section.
+    var section2Top =  $('#start').offset().top - (($('#heimnetz').offset().top - $('#start').offset().top) / 2);
+    var section3Top =  $('#heimnetz').offset().top - (($('#wlan').offset().top - $('#heimnetz').offset().top) / 2);
+    var section4Top =  $('#wlan').offset().top - (($('#usb3').offset().top - $('#wlan').offset().top) / 2);
+    var section5Top =  $('#usb3').offset().top - (($('#telefonie').offset().top - $('#usb3').offset().top) / 2);
+    var section6Top =  $('#telefonie').offset().top - (($('#fritzos').offset().top - $('#telefonie').offset().top) / 2);
+    var section7Top =  $('#fritzos').offset().top - (($('#auszeichnungen').offset().top - $('#fritzos').offset().top) / 2);
+    var section8Top =  $('#auszeichnungen').offset().top - (($(document).height() - $('#auszeichnungen').offset().top) / 2);
 
-        $('nav.primary li').removeClass('active');
-        if($(document).scrollTop() <= section1Top && $(document).scrollTop() < section2Top){
+    $('nav.primary li').removeClass('active');
+    if($(document).scrollTop() <= section1Top && $(document).scrollTop() < section2Top){
 
-        } else if ($(document).scrollTop() >= section2Top && $(document).scrollTop() < section3Top){
-             $('nav.primary li.start').addClass('active');
-             $('section').removeClass('active');
-             $('section#start').addClass('active');
+    } else if ($(document).scrollTop() >= section2Top && $(document).scrollTop() < section3Top){
+         $('nav.primary li.start').addClass('active');
+         $('section').removeClass('active');
+         $('section#start').addClass('active');
 
-             $("#footer-section").removeClass('active');
-
-
-
-
-        }
-         else if ($(document).scrollTop() >= section3Top && $(document).scrollTop() < section4Top){
-            $('nav.primary li.heimnetz').addClass('active');
-            $('section').removeClass('active');
-            $('section#heimnetz').addClass('active');
-
-            $("#footer-section").removeClass('active');
-
-        }
+         $("#footer-section").removeClass('active');
 
 
 
 
-         else if ($(document).scrollTop() >= section4Top && $(document).scrollTop() < section5Top){
-            $('nav.primary li.wlan').addClass('active');
-            $('section').removeClass('active');
-            $('section#wlan').addClass('active');
+    }
+     else if ($(document).scrollTop() >= section3Top && $(document).scrollTop() < section4Top){
+        $('nav.primary li.heimnetz').addClass('active');
+        $('section').removeClass('active');
+        $('section#heimnetz').addClass('active');
 
-            $("#footer-section").removeClass('active');
+        $("#footer-section").removeClass('active');
 
-        }
-
-
-
-
-         else if ($(document).scrollTop() >= section5Top && $(document).scrollTop() < section6Top){
-             $('nav.primary li.usb3').addClass('active');
-             $('section').removeClass('active');
-             $('section#usb3').addClass('active');
-
-             $("#footer-section").removeClass('active');
-
-        }
-
-
-
-         else if ($(document).scrollTop() >= section6Top && $(document).scrollTop() < section7Top){
-            $('nav.primary li.telefonie').addClass('active');
-            $('section').removeClass('active');
-            $('section#telefonie').addClass('active');
-
-            $("#footer-section").removeClass('active');
-
-        }
+    }
 
 
 
 
-         else if ($(document).scrollTop() >= section7Top && $(document).scrollTop() < section8Top){
-           $('nav.primary li.fritzos').addClass('active');
-           $('section').removeClass('active');
-           $('section#fritzos').addClass('active');
+     else if ($(document).scrollTop() >= section4Top && $(document).scrollTop() < section5Top){
+        $('nav.primary li.wlan').addClass('active');
+        $('section').removeClass('active');
+        $('section#wlan').addClass('active');
 
-           $("#footer-section").removeClass('active');
+        $("#footer-section").removeClass('active');
 
-        }
-
-
-        else if ($(document).scrollTop() >= section8Top){
-            $('nav.primary li.auszeichnungen').addClass('active');
-            $('section').removeClass('active');
-            $('section#auszeichnungen').addClass('active');
-            $("#footer-section").addClass('active');
-
-            // $('#footer-section').css('display', 'block');
-        }
+    }
 
 
+
+
+     else if ($(document).scrollTop() >= section5Top && $(document).scrollTop() < section6Top){
+         $('nav.primary li.usb3').addClass('active');
+         $('section').removeClass('active');
+         $('section#usb3').addClass('active');
+
+         $("#footer-section").removeClass('active');
+
+    }
+
+
+
+     else if ($(document).scrollTop() >= section6Top && $(document).scrollTop() < section7Top){
+        $('nav.primary li.telefonie').addClass('active');
+        $('section').removeClass('active');
+        $('section#telefonie').addClass('active');
+
+        $("#footer-section").removeClass('active');
+
+    }
+
+
+
+
+     else if ($(document).scrollTop() >= section7Top && $(document).scrollTop() < section8Top){
+       $('nav.primary li.fritzos').addClass('active');
+       $('section').removeClass('active');
+       $('section#fritzos').addClass('active');
+
+       $("#footer-section").removeClass('active');
+
+    }
+
+    else if ($(document).scrollTop() >= section8Top){
+        $('nav.primary li.auszeichnungen').addClass('active');
+        $('section').removeClass('active');
+        $('section#auszeichnungen').addClass('active');
+        $("#footer-section").addClass('active');
+
+        // $('#footer-section').css('display', 'block');
+    }
+
+  
     },
 
 
@@ -281,7 +282,10 @@ var avmlp = {
         // the fragment links need fixing
         var _this = this;
         $(window).on('hashchange',function() {
-            _this.scrollToSection(location.hash);
+            if($('html').hasClass('desktop')) {
+                _this.scrollToSection(location.hash);
+            }
+          
         });
 
         $("section").hide();
@@ -488,6 +492,11 @@ var avmlp = {
 // Document ready handler
 jQuery( document ).ready(function( $ ) {
 
+
+   // document.ontouchmove = function(e){
+   //  e.preventDefault();
+   // }
+
     // SVG Logo, if browser can handle it
     if($("html").hasClass("svg")) {
         $('#viewport').append('<img src="images/avm-logo.svg" class="logo-avm" width="70" height="42" alt="AVM logo">');
@@ -537,17 +546,17 @@ jQuery( document ).ready(function( $ ) {
 
     // clickable bullets in Navigation
     $(".primary li").css("cursor", "pointer");
-    $(".primary li").on("click", function(e) {
+    $(".primary a").on("click", function(e) {
         e.preventDefault();
         $('section').removeClass('active');
 
-        var href = $(this).find("a").attr("href");
+        var href = $(this).attr("href");
         if (href) {
             window.location = href;
 
             $(this).parents("ul").find("li").removeClass("active");
-            $(this).addClass("active");
-            avmlp.setNavigationState();
+            $(this).parents('li').addClass("active");
+            // avmlp.setNavigationState();
             $('' + href + '').addClass('active');
 
         }
@@ -596,6 +605,10 @@ jQuery( document ).ready(function( $ ) {
 
 
 
+
+
+
+
 });
 
 // resize handler
@@ -605,9 +618,12 @@ jQuery( window ).on( "resize", function() {
 jQuery( window ).on( "orientationchange", function( event ) {
     avmlp.applyZoom();
  });
+
+
 jQuery( window ).on( "scroll", function(event) {
     if(!$('html').hasClass('desktop')) {
-        avmlp.redrawDotNav();
+        // e.preventDefault();
+       avmlp.redrawDotNav();
     }
 
  });

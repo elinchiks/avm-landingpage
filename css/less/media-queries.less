@@ -1,6 +1,14 @@
 
 // Media Querries for tablet
 .tablet, .mobile {
+
+	.logo-section{
+		width: 50%;
+		img {
+			max-width:19%;
+			height:auto;
+		}
+	}
 	
 	.description {
 	   width:100%;
@@ -42,8 +50,14 @@
 		background-position: 0 0;
 	}
 
-	#footer-section.active {
-		opacity:1;
+	#footer-section {
+		opacity:0;
+		.transition(opacity 1s ease-in-out);
+		&.active {
+			opacity:1;
+			.transition(opacity 1s ease-in-out);
+			.transition-delay(2s);
+		}
 	}
 
 
