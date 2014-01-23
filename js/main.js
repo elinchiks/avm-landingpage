@@ -460,18 +460,12 @@ var avmlp = {
 // Document ready handler
 jQuery( document ).ready(function( $ ) {
 
-    var ua = navigator.userAgent.toLowerCase();
-
-    var isAndroid = ua.indexOf("android") > -1;
-    if(!isAndroid)  {
+    // SVG Logo, if browser can handle it
+    if($("html").hasClass("svg"))  {
         $('#viewport').append('<img src="images/avm-logo.svg" class="logo-avm" width="70" height="42" alt="AVM logo">');
     } else {
         $('#viewport').append('<img src="images/logo-avm.png" class="logo-avm" width="79" height="43" alt="avm" />');
-
     }
-
-
-
 
 
 
