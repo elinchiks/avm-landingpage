@@ -133,6 +133,7 @@ var avmlp = {
             $('nav.primary li.auszeichnungen').addClass('active');
             $('section').removeClass('active');
             $('section#auszeichnungen').addClass('active');
+            $('#footer-section').css('display', 'block');
         }
   
         
