@@ -234,6 +234,8 @@ var avmlp = {
     },
 
     initScrollAnimation: function(animationData) {
+        console.log("initScrollAnimation");
+
         this.animationData = animationData;
         this.isAnimationReady = true;
 
@@ -304,6 +306,7 @@ var avmlp = {
             }
         });
     },
+
     slowScroll: function(offset) {
         var o = $(window).scrollTop();
         if (o < offset) {
@@ -314,22 +317,25 @@ var avmlp = {
         if (Math.floor((offset - $(window).scrollTop()) / 20) !== 0 ) {
             var _this = this;
             window.setTimeout(function() {
-                this.slowScroll(offset)
+                _this.slowScroll(offset)
             }, 25);
         }
         // console.log("slowScroll", offset);
     },
     scrollToSection: function(fragment) {
+        console.log("scrollToSection", fragment);
         var sectionName = fragment.slice(1);
         var offset;
         if (this.sectionNames.indexOf(sectionName) > -1) {
             offset = this.keyframes["poster"][this.sectionNames.indexOf(sectionName)];
+            console.log(offset);
             if (offset !== $(window).scrollTop()) {
-
                 var distance = Math.abs(offset - $(window).scrollTop());
                 if (distance < 2400) { // small jump - next or prev section
+                    console.log(distance, "go");
+                    var _this = this;
                     window.setTimeout(function() {
-                        this.slowScroll(offset)
+                        _this.slowScroll(offset);
                     }, 25);
                 } else { // bigger jump - probably 2 or more sections
 
