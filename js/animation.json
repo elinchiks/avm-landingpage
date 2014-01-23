@@ -9925,6 +9925,7 @@
         },
         {
 "_comment": "start section auszeichnungen",
+            "kf": "start",
             "s": "auszeichnungen",
             "img": "../960px/0000.png",
             "imgCss": {
