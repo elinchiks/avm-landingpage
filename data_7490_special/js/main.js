@@ -26,7 +26,7 @@ var avmlp = {
     offsetSize: 0,
     currentSection: false,
     lastSection: false,
-    targetOffset: 0,
+    targetOffset: -1,
 
     aniJsonFile: "data_7490_special/js/animation.json", // set this to "js/animation.json" if you want to make changes
     aniSpeed: 20,
@@ -45,7 +45,6 @@ var avmlp = {
     },
 
     scrollDistance: 0,
-    targetOffset: -1,
     scrollDir: "",
     scrollMiddle: 0,
     scrollSpeedFactor: 1,
@@ -308,7 +307,7 @@ var avmlp = {
 
     bindKeyDown: function() {
         $(document).keydown(function(e){
-            if (e.keyCode == 40) {
+            if (e.keyCode === 40) {
                $('section.active').find('.arrow-next').trigger('click');
                return false;
             }
@@ -345,7 +344,7 @@ var avmlp = {
         if (x !== 0 ) {
             var _this = this;
             window.setTimeout(function() {
-                _this.slowScroll(offset)
+                _this.slowScroll(offset);
             }, 40);
         } else {
             avmlp.navReady = true;
@@ -387,7 +386,7 @@ var avmlp = {
                 } else { // bigger jump - probably 2 or more sections
 
                     var i = Math.floor($(window).scrollTop() / this.aniSpeed);
-                    var currentSection = this.animationData.frames[i].s
+                    var currentSection = this.animationData.frames[i].s;
                     if (currentSection) {
                         this.isAnimationRunning = false;
                         $("#packshot-wrapper, #"+currentSection).animate({
@@ -512,8 +511,9 @@ var avmlp = {
         var f = this.animationData.frames[this.aniStep].f;
 
         var properties;
+        var e;
         if (a) {
-            for (var e in a) {
+            for (e in a) {
                 if (!a.hasOwnProperty(e)) {
                     continue;
                 }
@@ -523,7 +523,7 @@ var avmlp = {
         }
 
         if (f) {
-            for (var e in f) {
+            for (e in f) {
                 if (!f.hasOwnProperty(e)) {
                     continue;
                 }
@@ -604,9 +604,9 @@ var avmlp = {
 jQuery( document ).ready(function( $ ) {
 
 if($('html').hasClass('tablet')) {
-   document.ontouchmove = function(e){
-    e.preventDefault();
-   }
+    document.ontouchmove = function(e) {
+        e.preventDefault();
+    };
 }
 
 
@@ -644,7 +644,9 @@ if($('html').hasClass('tablet')) {
 
         },
         error: function(jqXHR, textStatus, errorThrown) {
-            console.log("Oh noes! Getting animation properties failed because: ", errorThrown);
+            if (window.console) {
+                window.console.log("Oh noes! Getting animation properties failed because: ", errorThrown);
+            }
         }
     });
 
@@ -743,12 +745,13 @@ if($('html').hasClass('tablet')) {
 jQuery( window ).on( "resize", function() {
     avmlp.resizeSections();
 });
-jQuery( window ).on( "orientationchange", function( event ) {
+
+jQuery( window ).on( "orientationchange", function() {
     avmlp.applyZoom();
  });
 
 
-jQuery( window ).on( "scroll", function(event) {
+jQuery( window ).on( "scroll", function() {
     if(!$('html').hasClass('desktop')) {
         // e.preventDefault();
        avmlp.redrawDotNav();
