@@ -598,8 +598,8 @@ var avmlp = {
 
     animateSlider: function(pos) {
         $(".drag-wrapper").animate({ "left": pos }, {
-            duration: 1500,
-            easing: "easeOutElastic",
+            duration: 2000,
+            easing: "easeOutBack",
             progress: function() {
                 avmlp.updateSlider();
             }
