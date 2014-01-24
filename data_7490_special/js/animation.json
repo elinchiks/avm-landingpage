@@ -385,7 +385,8 @@
                 ".drag-wrapper": {
                     "opacity": 0
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -398,7 +399,8 @@
                 ".drag-wrapper": {
                     "opacity": 0.2
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -411,7 +413,8 @@
                 ".drag-wrapper": {
                     "opacity": 0.4
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -424,7 +427,8 @@
                 ".drag-wrapper": {
                     "opacity": 0.6
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -437,7 +441,8 @@
                 ".drag-wrapper": {
                     "opacity": 0.8
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -450,7 +455,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -476,7 +482,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -489,7 +496,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -502,7 +510,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -515,7 +524,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -528,7 +538,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -541,7 +552,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -554,7 +566,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -567,7 +580,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -580,7 +594,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -593,7 +608,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -606,7 +622,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -619,7 +636,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -632,7 +650,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -645,7 +664,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "kf": "poster",
@@ -673,7 +693,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -686,7 +707,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -699,7 +721,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -712,7 +735,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -725,7 +749,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -738,7 +763,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -751,7 +777,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -764,7 +791,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -777,7 +805,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -790,7 +819,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -803,7 +833,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -816,7 +847,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -829,7 +861,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -842,7 +875,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -855,7 +889,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -868,7 +903,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -881,7 +917,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -894,7 +931,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -907,7 +945,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -920,7 +959,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -933,7 +973,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -946,7 +987,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -959,7 +1001,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -972,7 +1015,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -985,7 +1029,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -998,7 +1043,8 @@
                 ".drag-wrapper": {
                     "opacity": 0.8
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -1011,7 +1057,8 @@
                 ".drag-wrapper": {
                     "opacity": 0.6
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -1024,7 +1071,8 @@
                 ".drag-wrapper": {
                     "opacity": 0.4
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
             "s": "heimnetz",
@@ -1037,7 +1085,8 @@
                 ".drag-wrapper": {
                     "opacity": 0.2
                 }
-            }
+            },
+            "code": "avmlp.updateSlider()"
         },
         {
 "_comment": "end section heimnetz",
@@ -1723,10 +1772,10 @@
             "alo": 0,
             "a": {
                 ".product-graphics": {
-                    "opacity": 0.1
+                    "opacity": 0
                 },
                 ".product-features": {
-                    "opacity": 0.1
+                    "opacity": 0
                 }
             }
         },
@@ -1746,10 +1795,10 @@
             "alo": 0,
             "a": {
                 ".product-graphics": {
-                    "opacity": 0.2
+                    "opacity": 0
                 },
                 ".product-features": {
-                    "opacity": 0.2
+                    "opacity": 0
                 }
             }
         },
@@ -1769,10 +1818,10 @@
             "alo": 0,
             "a": {
                 ".product-graphics": {
-                    "opacity": 0.3
+                    "opacity": 0
                 },
                 ".product-features": {
-                    "opacity": 0.3
+                    "opacity": 0
                 }
             }
         },
@@ -1792,10 +1841,10 @@
             "alo": 0,
             "a": {
                 ".product-graphics": {
-                    "opacity": 0.4
+                    "opacity": 0
                 },
                 ".product-features": {
-                    "opacity": 0.4
+                    "opacity": 0
                 }
             }
         },
@@ -1815,10 +1864,10 @@
             "alo": 0,
             "a": {
                 ".product-graphics": {
-                    "opacity": 0.5
+                    "opacity": 0
                 },
                 ".product-features": {
-                    "opacity": 0.5
+                    "opacity": 0
                 }
             }
         },
@@ -1838,10 +1887,10 @@
             "alo": 0,
             "a": {
                 ".product-graphics": {
-                    "opacity": 0.6
+                    "opacity": 0
                 },
                 ".product-features": {
-                    "opacity": 0.6
+                    "opacity": 0
                 }
             }
         },
@@ -1861,10 +1910,10 @@
             "alo": 0,
             "a": {
                 ".product-graphics": {
-                    "opacity": 0.7
+                    "opacity": 0
                 },
                 ".product-features": {
-                    "opacity": 0.7
+                    "opacity": 0
                 }
             }
         },
@@ -1884,10 +1933,10 @@
             "alo": 0,
             "a": {
                 ".product-graphics": {
-                    "opacity": 0.8
+                    "opacity": 0
                 },
                 ".product-features": {
-                    "opacity": 0.8
+                    "opacity": 0
                 }
             }
         },
@@ -1907,10 +1956,10 @@
             "alo": 0,
             "a": {
                 ".product-graphics": {
-                    "opacity": 0.9
+                    "opacity": 0
                 },
                 ".product-features": {
-                    "opacity": 0.9
+                    "opacity": 0
                 }
             }
         },
@@ -1930,10 +1979,10 @@
             "alo": 0,
             "a": {
                 ".product-graphics": {
-                    "opacity": 1
+                    "opacity": 0.1
                 },
                 ".product-features": {
-                    "opacity": 1
+                    "opacity": 0.1
                 }
             }
         },
@@ -1953,10 +2002,10 @@
             "alo": 0,
             "a": {
                 ".product-graphics": {
-                    "opacity": 1
+                    "opacity": 0.2
                 },
                 ".product-features": {
-                    "opacity": 1
+                    "opacity": 0.2
                 }
             }
         },
@@ -1976,10 +2025,10 @@
             "alo": 0,
             "a": {
                 ".product-graphics": {
-                    "opacity": 1
+                    "opacity": 0.3
                 },
                 ".product-features": {
-                    "opacity": 1
+                    "opacity": 0.3
                 }
             }
         },
@@ -1999,10 +2048,10 @@
             "alo": 0,
             "a": {
                 ".product-graphics": {
-                    "opacity": 1
+                    "opacity": 0.4
                 },
                 ".product-features": {
-                    "opacity": 1
+                    "opacity": 0.4
                 }
             }
         },
@@ -2022,10 +2071,10 @@
             "alo": 0,
             "a": {
                 ".product-graphics": {
-                    "opacity": 1
+                    "opacity": 0.5
                 },
                 ".product-features": {
-                    "opacity": 1
+                    "opacity": 0.5
                 }
             }
         },
@@ -2045,10 +2094,10 @@
             "alo": 0,
             "a": {
                 ".product-graphics": {
-                    "opacity": 1
+                    "opacity": 0.6
                 },
                 ".product-features": {
-                    "opacity": 1
+                    "opacity": 0.6
                 }
             }
         },
@@ -2068,10 +2117,10 @@
             "alo": 0,
             "a": {
                 ".product-graphics": {
-                    "opacity": 1
+                    "opacity": 0.7
                 },
                 ".product-features": {
-                    "opacity": 1
+                    "opacity": 0.7
                 }
             }
         },
@@ -2091,10 +2140,10 @@
             "alo": 0,
             "a": {
                 ".product-graphics": {
-                    "opacity": 1
+                    "opacity": 0.8
                 },
                 ".product-features": {
-                    "opacity": 1
+                    "opacity": 0.8
                 }
             }
         },
@@ -2114,10 +2163,10 @@
             "alo": 0,
             "a": {
                 ".product-graphics": {
-                    "opacity": 1
+                    "opacity": 0.9
                 },
                 ".product-features": {
-                    "opacity": 1
+                    "opacity": 0.9
                 }
             }
         },

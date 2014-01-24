@@ -543,6 +543,14 @@ var avmlp = {
 
         // css code for #packshot
         if (this.animationData.frames[this.aniStep].imgCss) {
+            var imgCss = this.animationData.frames[this.aniStep].imgCss;
+            if (!imgCss.width) {
+                imgCss.width = "960px";
+                imgCss.height = "640px";
+            }
+            if (!imgCss.top) {
+                imgCss.top = "136px";
+            }
             $("#packshot").css(this.animationData.frames[this.aniStep].imgCss);
         }
 
@@ -647,7 +655,6 @@ if($('html').hasClass('tablet')) {
             if($('html').hasClass('desktop')) {
                 avmlp.initScrollAnimation(data);
             }
-
         },
         error: function(jqXHR, textStatus, errorThrown) {
             if (window.console) {
