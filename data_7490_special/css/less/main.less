@@ -56,8 +56,6 @@ svg,
 video {
     vertical-align: middle;
 }
-
-
 /* ==========================================================================
    Browse Happy prompt
    ========================================================================== */
@@ -181,10 +179,11 @@ nav.primary {
     width:70px;
     height:42px;
     background: url("../images/logo-avm.png") no-repeat center center;
+    &.logo-svg {
+        background-image: url("../images/avm-logo.svg") !important;
+    }
 }
-.logo-svg {
-    background-image: url("../images/avm-logo.svg") !important;
-}
+
 // Section Defaults
 section {
     position: relative;
@@ -220,6 +219,8 @@ section {
             margin: 0 auto;
             font-size: 54px;
             line-height: 70px;
+            display:block;
+            position:relative !important;
         }
         h2 {
             text-rendering: optimizeLegibility;
@@ -1370,7 +1371,6 @@ section.active {
     img {
         max-width: 100% !important;
     }
-
     p,
     h2,
     h3 {
