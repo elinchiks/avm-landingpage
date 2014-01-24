@@ -667,7 +667,7 @@ if($('html').hasClass('tablet')) {
             }
             var href = $(this).attr("href");
             if (href) {
-                avmlp.scrollToSection(href)
+                avmlp.scrollToSection(href);
                 $(this).parents("ul").find("li").removeClass("active");
                 $(this).parents('li').addClass("active");
                 avmlp.setNavigationState();
@@ -720,12 +720,10 @@ if($('html').hasClass('tablet')) {
     $('.link-next').on('click', function(e){
         if(!$('html').hasClass('desktop')) {
             e.preventDefault();
-            var obj = $(this);
             var href = $(this).attr("href");
             $('section').removeClass('active');
             $('section' + href + '').addClass('active');
             $('nav.primary li').removeClass('active').next('.' + href.slice(1) + '').addClass('active');
-            var offsetSize = avmlp.offsetSize;
             avmlp.scrollToSection(href);
         }
     });
