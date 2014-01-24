@@ -434,19 +434,19 @@ var avmlp = {
         window.setTimeout(function() {
             $("#" + frame.s).css("opacity", 1);
             $("#" + frame.s).css("display", "block");
-            if (!frame.imgCss.top) {
+            if (!frame.imgCss || !frame.imgCss.top) {
                 $("#packshot").css("top", "136px");
             }
-            if (!frame.imgCss.width) {
+            if (!frame.imgCss || !frame.imgCss.width) {
                 $("#packshot").css("width", "960px");
             }
-            if (!frame.imgCss.height) {
+            if (!frame.imgCss || !frame.imgCss.height) {
                 $("#packshot").css("height", "640px");
             }
-            if (!frame.imgCss.left) {
+            if (!frame.imgCss || !frame.imgCss.left) {
                 $("#packshot").css("left", "50%");
             }
-            if (!frame.imgCss["margin-left"]) {
+            if (!frame.imgCss || !frame.imgCss["margin-left"]) {
                 $("#packshot").css("margin-left", "-480px");
             }
 
@@ -475,11 +475,6 @@ var avmlp = {
             $('nav.primary').find('li.' + currentSection).addClass('active');
 
             $("#" + this.lastSection).hide().removeClass('active');
-            if (!this.animationData.frames[this.aniStep].imgCss) { // reset img position
-                $("#packshot").css({
-                    "top": "136px"
-                });
-            }
         }
         this.lastSection = currentSection;
 
@@ -544,14 +539,20 @@ var avmlp = {
         // css code for #packshot
         if (this.animationData.frames[this.aniStep].imgCss) {
             var imgCss = this.animationData.frames[this.aniStep].imgCss;
-            if (!imgCss.width) {
+            if (!imgCss || !imgCss.width) {
                 imgCss.width = "960px";
                 imgCss.height = "640px";
             }
-            if (!imgCss.top) {
+            if (!imgCss || !imgCss.top) {
                 imgCss.top = "136px";
             }
             $("#packshot").css(this.animationData.frames[this.aniStep].imgCss);
+        }
+
+        if (currentSection !== "auszeichnungen") {
+            $("#footer-section").hide();
+        } else {
+            $("#footer-section").show();
         }
 
         // packshot images
