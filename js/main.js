@@ -582,10 +582,12 @@ var avmlp = {
 // Document ready handler
 jQuery( document ).ready(function( $ ) {
 
-
+if($('html').hasClass('tablet')) {
    document.ontouchmove = function(e){
     e.preventDefault();
-   }
+   } 
+}
+
 
     // SVG Logo, if browser can handle it
     if($("html").hasClass("svg")) {
@@ -636,25 +638,41 @@ jQuery( document ).ready(function( $ ) {
 
     // clickable bullets in Navigation
     $(".primary li").css("cursor", "pointer");
-    $(".primary a").on("click", function(e) {
-        e.preventDefault();
+    if($('html').hasClass('desktop')) {
+        $(".primary a").on("click", function(e) {
+            e.preventDefault();
 
-        var href = $(this).attr("href");
-        if (href) {
-            window.location = href;
+            var href = $(this).attr("href");
+            if (href) {
+                window.location = href;
 
-            $(this).parents("ul").find("li").removeClass("active");
+                $(this).parents("ul").find("li").removeClass("active");
 
-            $(this).parents('li').addClass("active");
-            // avmlp.setNavigationState();
+                $(this).parents('li').addClass("active");
+                // avmlp.setNavigationState();
 
 
-            avmlp.setNavigationState();
+                avmlp.setNavigationState();
+                $('section').removeClass('active');
+
+                $('' + href + '').addClass('active');
+            }
+
+        });
+    } else {
+        $(".primary a").on("click", function(e) {
+            e.preventDefault();
+            var obj = $(this);
+            var getHref = obj.attr("href").split("#")[1];
             $('section').removeClass('active');
+            $('section#' + getHref + '').addClass('active');
+            $('nav.primary li').removeClass('active').next('.' + getHref + '').addClass('active');
+            var offsetSize = avmlp.offsetSize;
 
-            $('' + href + '').addClass('active');
-        }
-    });
+            $(window).scrollTop($("[id*='"+getHref+"']").offset().top - offsetSize);
+            });
+    }
+
 
     avmlp.resizeSections();
 

@@ -2,6 +2,19 @@
 // Media Querries for tablet
 .tablet, .mobile {
 
+nav.primary {
+	display:none;
+	&.handheld {
+		display:block !important;
+		position:absolute;
+		a {
+			opacity:0;
+			&:hover {
+				opacity:1;
+			}
+		}
+	}
+}
 
 
 	.logo-section{
