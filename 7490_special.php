@@ -590,46 +590,46 @@
                     </li>
                 </ul>
             </nav>
-            <div id="footer-section">
-                <div class="logo-section">
-                    <img src="data_7490_special/images/logo-1.png" alt="" class="logo-1" />
-                    <img src="data_7490_special/images/logo-2.png" alt="" class="logo-2" />
-                    <img src="data_7490_special/images/logo-3.png" alt="" class="logo-3" />
-                    <img src="data_7490_special/images/logo-4.png" alt="" class="logo-4" />
-                    <img src="data_7490_special/images/logo-5.png" alt="" class="logo-5" />
-                </div>
-                <div class="imprint"><a href="http://www.avm.de/de/Unternehmen/Impressum.html">Impressum</a></div>
-            </div>
-            <div class="logo-avm"></div>
         </section>
 
 
-        <nav class="primary">
-            <ul>
-                <li class="start active">
-                    <a href="#start">Intro</a>
-                </li>
-                <li class="heimnetz">
-                    <a href="#heimnetz">Heimnetz</a>
-                </li>
-                <li class="wlan">
-                    <a href="#wlan">WLAN AC</a>
-                </li>
-                <li class="usb3">
-                    <a href="#usb3">USB 3.0</a>
-                </li>
-                <li class="telefonie">
-                    <a href="#telefonie">Telefonkomfort</a>
-                </li>
-                <li class="fritzos">
-                    <a href="#fritzos">FRITZ!OS 6.0</a>
-                </li>
-                <li class="auszeichnungen">
-                    <a href="#auszeichnungen">Auszeichnungen</a>
-                </li>
-            </ul>
-        </nav>
+                <nav class="primary">
+                    <ul>
+                        <li class="start active">
+                            <a href="#start">Intro</a>
+                        </li>
+                        <li class="heimnetz">
+                            <a href="#heimnetz">Heimnetz</a>
+                        </li>
+                        <li class="wlan">
+                            <a href="#wlan">WLAN AC</a>
+                        </li>
+                        <li class="usb3">
+                            <a href="#usb3">USB 3.0</a>
+                        </li>
+                        <li class="telefonie">
+                            <a href="#telefonie">Telefonkomfort</a>
+                        </li>
+                        <li class="fritzos">
+                            <a href="#fritzos">FRITZ!OS 6.0</a>
+                        </li>
+                        <li class="auszeichnungen">
+                            <a href="#auszeichnungen">Auszeichnungen</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="logo-avm"></div> 
 
+                <div id="footer-section">
+                    <div class="logo-section">
+                        <img src="data_7490_special/images/logo-1.png" alt="" class="logo-1" />
+                        <img src="data_7490_special/images/logo-2.png" alt="" class="logo-2" />
+                        <img src="data_7490_special/images/logo-3.png" alt="" class="logo-3" />
+                        <img src="data_7490_special/images/logo-4.png" alt="" class="logo-4" />
+                        <img src="data_7490_special/images/logo-5.png" alt="" class="logo-5" />
+                    </div>
+                    <div class="imprint"><a href="http://www.avm.de/de/Unternehmen/Impressum.html">Impressum</a></div>
+                </div>
     </div>
 
     <script src="data_7490_special/js/vendor/jquery.2.0.3.min.js"></script>

@@ -229,9 +229,9 @@ var avmlp = {
             "transform": "scale(" + this.zoom + ", " + this.zoom + ")",
             "left": left + "px",
             "z-index": 2,
-            "margin-top":'' + top + 'px',
-            'box-sizing': 'content-box'
+            "margin-top":'' + top + 'px'
         });
+
     },
 
     setNavigationState: function() {
