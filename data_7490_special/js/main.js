@@ -224,6 +224,7 @@ var avmlp = {
         }
         jQuery("section .slide").css({
             "-webkit-transform": "scale(" + this.zoom + ", " + this.zoom + ")",
+            "-moz-transform": "scale(" + this.zoom + ", " + this.zoom + ")",
             "-ms-transform": "scale(" + this.zoom + ", " + this.zoom + ")",
             "transform": "scale(" + this.zoom + ", " + this.zoom + ")",
             "left": left + "px",
@@ -608,6 +609,8 @@ var avmlp = {
 
 // Document ready handler
 jQuery( document ).ready(function( $ ) {
+
+avmlp.applyZoom();
 
 if($('html').hasClass('tablet')) {
     document.ontouchmove = function(e) {
