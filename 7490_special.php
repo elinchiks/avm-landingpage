@@ -11,8 +11,8 @@
     <meta name="description" content="Die FRITZ!Box 7490 bringt das High-Speed-Heimnetz an jeden DSL-Anschluss und deckt mit vielen Extras all Ihre Kommunikationswünsche rund um Internet, Telefonie und Netzwerk ab. Neuestes WLAN AC sorgt dabei für spektakuläre Gigabit-Geschwindigkeiten bis 1.300 MBit/s im kabellosen Heimnetz.">
 
 
-    <link rel="stylesheet" href="css/style.css?v=2014-01-17-1401">
-    <script src="js/vendor/modernizr.2.7.1.min.js"></script>
+    <link rel="stylesheet" href="data_7490_special/css/style.css?v=2014-01-17-1401">
+    <script src="data_7490_special/js/vendor/modernizr.2.7.1.min.js"></script>
 </head>
 <body>
     <!--[if lt IE 8]>
@@ -34,7 +34,7 @@
     <div id="scroll-placeholder"></div>
 
     <div id="viewport">
- 
+
 
 
         <section id="start" class="active">
@@ -45,9 +45,9 @@
                     <h3>Alles für das schnellste Heimnetz</h3>
                 </header>
 
-                <img src="images/logo-fritz-color.png" width="160" height="125" class="logo-fritz-color" alt="Fritz!"/>
+                <img src="data_7490_special/images/logo-fritz-color.png" width="160" height="125" class="logo-fritz-color" alt="Fritz!"/>
 
-                <img src="frames/960px/0000.png" width="960" height="640" alt="FRITZ!Box 7490" class="packshot" />
+                <img src="data_7490_special/frames/960px/0000.png" width="960" height="640" alt="FRITZ!Box 7490" class="packshot" />
 
 
                 <div class="description">
@@ -57,7 +57,7 @@
                 </div>
 
                 <a href="#heimnetz" class="link-next">
-                    <img src="images/arrow-down.png" width="66" height="36" alt="Weiter" class="arrow-next" />
+                    <img src="data_7490_special/images/arrow-down.png" width="66" height="36" alt="Weiter" class="arrow-next" />
                 </a>
 
                <!--  <img src="images/logo-avm.png" class="logo-avm" width="79" height="43" alt="avm" /> -->
@@ -162,7 +162,7 @@
                 </div>
 
                 <a href="#wlan" class="link-next">
-                    <img src="images/arrow-down.png"  width="66" height="36" alt="Weiter" class="arrow-next" />
+                    <img src="data_7490_special/images/arrow-down.png"  width="66" height="36" alt="Weiter" class="arrow-next" />
                 </a>
             </div>
             <nav class="primary handheld">
@@ -199,7 +199,7 @@
                     <h1>High-Speed WLAN AC</h1>
                 </header>
 
-                <img src="images/packshot-slide-3.png" width="941" height="244" alt="FRITZ!Box 7490" class="packshot" />
+                <img src="data_7490_special/images/packshot-slide-3.png" width="941" height="244" alt="FRITZ!Box 7490" class="packshot" />
 
                 <div class="product-graphics">
                     <ul>
@@ -256,7 +256,7 @@
                 </div>
 
                 <a href="#usb3" class="link-next">
-                    <img src="images/arrow-down.png"  width="66" height="36" alt="Weiter" class="arrow-next" />
+                    <img src="data_7490_special/images/arrow-down.png"  width="66" height="36" alt="Weiter" class="arrow-next" />
                 </a>
 
             </div>
@@ -353,7 +353,7 @@
                     </ul>
                 </div>
 
-                <img src="frames/960px/0135.png" width="960" height="640" alt="FRITZ!Box 7490" class="packshot" />
+                <img src="data_7490_special/frames/960px/0135.png" width="960" height="640" alt="FRITZ!Box 7490" class="packshot" />
 
                 <div class="description">
                     <span>
@@ -362,7 +362,7 @@
                 </div>
 
                 <a href="#telefonie" class="link-next">
-                    <img src="images/arrow-down.png"  width="66" height="36" alt="Weiter" class="arrow-next" />
+                    <img src="data_7490_special/images/arrow-down.png"  width="66" height="36" alt="Weiter" class="arrow-next" />
                 </a>
             </div>
             <nav class="primary handheld">
@@ -429,7 +429,7 @@
                     </ul>
                 </div>
 
-                <img src="frames/960px/0149.png" width="960" height="640" alt="FRITZ!Box 7490" class="packshot" />
+                <img src="data_7490_special/frames/960px/0149.png" width="960" height="640" alt="FRITZ!Box 7490" class="packshot" />
 
                 <div class="description">
                    <span>
@@ -438,7 +438,7 @@
                 </div>
 
                 <a href="#fritzos" class="link-next">
-                    <img src="images/arrow-down.png"  width="66" height="36" alt="Weiter" class="arrow-next" />
+                    <img src="data_7490_special/images/arrow-down.png"  width="66" height="36" alt="Weiter" class="arrow-next" />
                 </a>
             </div>
             <nav class="primary handheld">
@@ -520,10 +520,10 @@
                     </ul>
                 </div>
 
-                <img src="frames/960px/0000.png" width="960" height="640" alt="FRITZ!Box 7490" class="packshot" />
+                <img src="data_7490_special/frames/960px/0000.png" width="960" height="640" alt="FRITZ!Box 7490" class="packshot" />
 
                 <a href="#auszeichnungen" class="link-next">
-                    <img src="images/arrow-down.png"  width="66" height="36" alt="Weiter" class="arrow-next" />
+                    <img src="data_7490_special/images/arrow-down.png"  width="66" height="36" alt="Weiter" class="arrow-next" />
                 </a>
             </div>
             <nav class="primary handheld">
@@ -564,9 +564,9 @@
                     <a href="http://www.avm.de/de/Produkte/FRITZBox/FRITZ_Box_7490/" class="info-button">Alle Details auf avm.de &gt; </a>
                 </div>
 
-                <img src="frames/960px/0000.png" width="960" height="640" alt="FRITZ!Box 7490" class="packshot" />
+                <img src="data_7490_special/frames/960px/0000.png" width="960" height="640" alt="FRITZ!Box 7490" class="packshot" />
 
-                <img src="images/logo-fritz-color.png" width="160" height="125" class="logo-fritz-color" alt="Fritz!"/>
+                <img src="data_7490_special/images/logo-fritz-color.png" width="160" height="125" class="logo-fritz-color" alt="Fritz!"/>
 
             </div>
             <nav class="primary handheld">
@@ -622,8 +622,7 @@
                         </li>
                     </ul>
                 </nav>
-        <!--         <img src="images/logo-avm.png" class="logo-avm" width="79" height="43" alt="avm" />
-                <img src="images/avm-logo.svg" class="logo-avm" width="70" height="42" alt="AVM logo"> -->
+
                 <div id="footer-section">
                     <div class="logo-section">
                         <img src="images/logo-1.png" alt="" class="logo-1" />
@@ -636,12 +635,12 @@
                 </div>
     </div>
 
-    <script src="js/vendor/jquery.2.0.3.min.js"></script>
-    <script src="js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
-    <script src="js/vendor/categorizr.js"></script>
-    <script src="js/main.js"></script>
+    <script src="data_7490_special/js/vendor/jquery.2.0.3.min.js"></script>
+    <script src="data_7490_special/js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="data_7490_special/js/vendor/categorizr.js"></script>
+    <script src="data_7490_special/js/main.js"></script>
     <!--
-    <script src="js/scripts.js?v=2014-01-17-1401"></script>
+    <script src="data_7490_special/js/scripts.js?v=2014-01-17-1401"></script>
     //-->
 
 </body>

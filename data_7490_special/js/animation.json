@@ -13,8 +13,8 @@
     "_comment": "'img': low img src - some path's link to the hi src here anyway",
     "_comment": "'imgHi': high img src",
     "_comment": "'imgCss' additional styles for image #packshot (e.g. top)",
-    "lowSrcPrefix": "frames/320px/",
-    "hiSrcPrefix": "frames/960px/",
+    "lowSrcPrefix": "data_7490_special/frames/320px/",
+    "hiSrcPrefix": "data_7490_special/frames/960px/",
     "frames": [
         {
 "_comment": "begin section start",

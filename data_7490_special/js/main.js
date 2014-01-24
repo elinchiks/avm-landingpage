@@ -28,7 +28,7 @@ var avmlp = {
     lastSection: false,
     targetOffset: 0,
 
-    aniJsonFile: "js/animation.json", // set this to "js/animation.json" if you want to make changes
+    aniJsonFile: "data_7490_special/js/animation.json", // set this to "js/animation.json" if you want to make changes
     aniSpeed: 20,
     aniTimeoutID: null,
     aniImages: [],
@@ -95,7 +95,7 @@ var avmlp = {
     redrawDotNav: function(){
 
 
-    
+
     var section1Top =  0;
     // The top of each section is offset by half the distance to the previous section.
     var section2Top =  $('#start').offset().top - (($('#heimnetz').offset().top - $('#start').offset().top) / 2);
@@ -185,7 +185,7 @@ var avmlp = {
         // $('#footer-section').css('display', 'block');
     }
 
-  
+
     },
 
 
@@ -246,7 +246,7 @@ var avmlp = {
         // create new slide for the packshot animation
         var $section = $('<section id="packshot-wrapper" />');
         var $slide = $('<div class="slide packshot-slide" />');
-        var $packshot =$('<img src="frames/960px/0000.png" id="packshot" width="960" height="640" alt="FRITZ!Box 7490" />');
+        var $packshot =$('<img src="data_7490_special/frames/960px/0000.png" id="packshot" width="960" height="640" alt="FRITZ!Box 7490" />');
         $packshot.appendTo($slide);
 
         this.setKeyframes();
@@ -288,7 +288,7 @@ var avmlp = {
                 _this.scrollToSection(location.hash);
                 $('#footer-section').css('opacity', '0');
             }
-          
+
         });
 
 
@@ -429,8 +429,6 @@ var avmlp = {
                             }
                         });
                     }
-
-
                 }
             }
         }
@@ -438,6 +436,7 @@ var avmlp = {
 
     restoreDefaults: function() {
         var frame = this.animationData.frames[this.aniStep];
+        $(".logo-fritz-color").css("opacity", 0);
         window.setTimeout(function() {
             $("#" + frame.s).css("opacity", 1);
             $("#" + frame.s).css("display", "block");
@@ -611,18 +610,18 @@ jQuery( document ).ready(function( $ ) {
 if($('html').hasClass('tablet')) {
    document.ontouchmove = function(e){
     e.preventDefault();
-   } 
+   }
 }
 
 
     // SVG Logo, if browser can handle it
     if($("html").hasClass("svg")) {
-        $('#viewport').append('<img src="images/avm-logo.svg" class="logo-avm" width="70" height="42" alt="AVM logo">');
+        $('#viewport').append('<img src="data_7490_special/images/avm-logo.svg" class="logo-avm" width="70" height="42" alt="AVM logo">');
         if (avmlp.debug) {
             $("#debug-svg-support").text("YES");
         }
     } else {
-        $('#viewport').append('<img src="images/logo-avm.png" class="logo-avm" width="79" height="43" alt="avm" />');
+        $('#viewport').append('<img src="data_7490_special/images/logo-avm.png" class="logo-avm" width="79" height="43" alt="avm" />');
         if (avmlp.debug) {
             $("#debug-svg-support").text("NO");
         }
