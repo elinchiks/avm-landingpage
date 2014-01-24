@@ -47,11 +47,20 @@
 
 
 	.logo-section{
-		width: 50%;
+		width: 40%;
 		img {
 			max-width:19%;
 			height:auto;
 		}
+	}
+
+	#footer-section {
+	    bottom: 20px;
+	    left:20px;
+	}
+	.logo-avm {
+		bottom:20px;
+		right:20px;
 	}
 
 	nav#primary ul, nav.primary ul {
@@ -302,7 +311,7 @@ and (max-device-width : 1024px) {
 		opacity:0;
 	}
 
-	.product-graphics, .product-features {
+	.product-graphics, #usb3 .product-graphics, .product-features {
 		opacity: 0;
 	}
 	section.active {
@@ -313,7 +322,7 @@ and (max-device-width : 1024px) {
 			.transition-delay(1.3s);
 		}
 
-		.product-graphics, .product-features {
+		&#usb3 .product-graphics, .product-graphics, .product-features {
 			opacity:1;
 			.transition(all 2s);
 			.transition-timing-function(cubic-bezier(0,0.58,1.2,1));
