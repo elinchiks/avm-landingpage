@@ -437,6 +437,9 @@ var avmlp = {
     restoreDefaults: function() {
         var frame = this.animationData.frames[this.aniStep];
         $(".logo-fritz-color").css("opacity", 0);
+        if (frame.s === "heimnetz") {
+            $("#packshot").hide();
+        }
         window.setTimeout(function() {
             $("#" + frame.s).css("opacity", 1);
             $("#" + frame.s).css("display", "block");
