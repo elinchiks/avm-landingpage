@@ -49,7 +49,7 @@ var avmlp = {
     scrollDir: "",
     scrollMiddle: 0,
     scrollSpeedFactor: 1,
-
+    navReady: true,
 
     // methods
     loadAnimationImages: function() {
@@ -285,10 +285,10 @@ var avmlp = {
         var _this = this;
         $(window).on('hashchange',function() {
             if($('html').hasClass('desktop')) {
-                _this.scrollToSection(location.hash);
-                $('#footer-section').css('opacity', '0');
+                if (avmlp.navReady) {
+                    _this.scrollToSection(location.hash);
+                }
             }
-
         });
 
 
@@ -296,14 +296,6 @@ var avmlp = {
         $("section#start").show();
         $("section#packshot-wrapper").show();
 
-
-        // the fragment links need fixing
-        $(window).on('hashchange',function() {
-            // only scroll if last scroll has completed
-            if (avmlp.targetOffset === -1) {
-                avmlp.scrollToSection(location.hash);
-            }
-        });
 
         // jump to section if hash is set
         if (location.hash) {
@@ -356,6 +348,7 @@ var avmlp = {
                 _this.slowScroll(offset)
             }, 40);
         } else {
+            avmlp.navReady = true;
             this.targetOffset = -1;
             this.scrollDir = "";
         }
@@ -382,7 +375,7 @@ var avmlp = {
                 }
                 this.scrollMiddle = this.targetOffset - (dist / 2);
                 this.scrollDistance = Math.abs(dist);
-
+                avmlp.navReady = false;
                 var _this = this;
 
                 if (this.scrollDistance < 2400) { // small jump - next or prev section
@@ -668,8 +661,12 @@ if($('html').hasClass('tablet')) {
     $(".primary li").css("cursor", "pointer");
     if($('html').hasClass('desktop')) {
         $(".primary a").on("click", function(e) {
-            e.preventDefault();
 
+            e.preventDefault();
+            e.stopPropagation();
+            if (!avmlp.navReady) {
+                return false;
+            }
             var href = $(this).attr("href");
             if (href) {
                 window.location = href;
@@ -839,13 +836,15 @@ var requestAnimFrame = (function() {
             avmlp.aniLastStep = avmlp.aniStep;
         }
 
+        if (avmlp.debug) {
+            $("#debug-animation-step").text(avmlp.aniStep);
+            $("#debug-scroll-top").text(t + "px");
+        }
+
     }
 
 
-    if (avmlp.debug) {
-        $("#debug-animation-step").text(avmlp.aniStep);
-        $("#debug-scroll-top").text(t + "px");
-    }
+
 
 })();
 

@@ -25,7 +25,7 @@
         section: <span id="debug-section"></span>,
         animationStep: <span id="debug-animation-step"></span>,
         SVG: <span id="debug-svg-support"></span>,
-
+        NavReady: <span id="debug-nav-ready"></span>,
         click to hide ❌
     </div>
 
@@ -623,11 +623,11 @@
 
                 <div id="footer-section">
                     <div class="logo-section">
-                        <img src="images/logo-1.png" alt="" class="logo-1" />
-                        <img src="images/logo-2.png" alt="" class="logo-2" />
-                        <img src="images/logo-3.png" alt="" class="logo-3" />
-                        <img src="images/logo-4.png" alt="" class="logo-4" />
-                        <img src="images/logo-5.png" alt="" class="logo-5" />
+                        <img src="data_7490_special/images/logo-1.png" alt="" class="logo-1" />
+                        <img src="data_7490_special/images/logo-2.png" alt="" class="logo-2" />
+                        <img src="data_7490_special/images/logo-3.png" alt="" class="logo-3" />
+                        <img src="data_7490_special/images/logo-4.png" alt="" class="logo-4" />
+                        <img src="data_7490_special/images/logo-5.png" alt="" class="logo-5" />
                     </div>
                     <div class="imprint"><a href="http://www.avm.de/de/Unternehmen/Impressum.html">Impressum</a></div>
                 </div>
