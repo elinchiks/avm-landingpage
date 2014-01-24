@@ -9,7 +9,7 @@
 // global landingpage object
 var avmlp = {
     // properties
-    debug: true,
+    debug: false,
 
     defaultHeight: 960,
     defaultWidth: 1200,
