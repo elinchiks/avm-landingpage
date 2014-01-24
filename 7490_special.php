@@ -618,7 +618,7 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="logo-avm"></div> 
+                <div class="logo-avm"></div>
 
                 <div id="footer-section">
                     <div class="logo-section">
@@ -634,6 +634,8 @@
 
     <script src="data_7490_special/js/vendor/jquery.2.0.3.min.js"></script>
     <script src="data_7490_special/js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="data_7490_special/js/vendor/jquery.ui.draggable.js"></script>
+
     <script src="data_7490_special/js/vendor/categorizr.js"></script>
     <script src="data_7490_special/js/main.js"></script>
     <!--
