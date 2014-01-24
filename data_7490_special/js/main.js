@@ -282,14 +282,14 @@ var avmlp = {
 
 
         // the fragment links need fixing
-        var _this = this;
-        $(window).on('hashchange',function() {
-            if($('html').hasClass('desktop')) {
-                if (avmlp.navReady) {
-                    _this.scrollToSection(location.hash);
-                }
-            }
-        });
+        // var _this = this;
+        // $(window).on('hashchange',function() {
+        //     if($('html').hasClass('desktop')) {
+        //         if (avmlp.navReady) {
+        //             _this.scrollToSection(location.hash);
+        //         }
+        //     }
+        // });
 
 
         $("section").hide();
@@ -299,10 +299,7 @@ var avmlp = {
 
         // jump to section if hash is set
         if (location.hash) {
-            window.setTimeout(function() {
-                // give it a little time
-                avmlp.jumpToSection(location.hash);
-            }, 200);
+            window.location.href = window.location.href.split('#')[0];
         }
     },
 
@@ -663,7 +660,6 @@ if($('html').hasClass('tablet')) {
     $(".primary li").css("cursor", "pointer");
     if($('html').hasClass('desktop')) {
         $(".primary a").on("click", function(e) {
-
             e.preventDefault();
             e.stopPropagation();
             if (!avmlp.navReady) {
@@ -671,18 +667,13 @@ if($('html').hasClass('tablet')) {
             }
             var href = $(this).attr("href");
             if (href) {
-                window.location = href;
-
+                avmlp.scrollToSection(href)
                 $(this).parents("ul").find("li").removeClass("active");
-
                 $(this).parents('li').addClass("active");
-                // avmlp.setNavigationState();
-
-
                 avmlp.setNavigationState();
                 $('section').removeClass('active');
-
                 $('' + href + '').addClass('active');
+                return false;
             }
 
         });
@@ -727,27 +718,17 @@ if($('html').hasClass('tablet')) {
     });
 
     $('.link-next').on('click', function(e){
-
         if(!$('html').hasClass('desktop')) {
             e.preventDefault();
             var obj = $(this);
-            var getHref = obj.attr("href").split("#")[1];
+            var href = $(this).attr("href");
             $('section').removeClass('active');
-            $('section#' + getHref + '').addClass('active');
-            $('nav.primary li').removeClass('active').next('.' + getHref + '').addClass('active');
+            $('section' + href + '').addClass('active');
+            $('nav.primary li').removeClass('active').next('.' + href.slice(1) + '').addClass('active');
             var offsetSize = avmlp.offsetSize;
-
-            $(window).scrollTop($("[id*='"+getHref+"']").offset().top - offsetSize);
+            avmlp.scrollToSection(href);
         }
     });
-
-
-
-
-
-
-
-
 });
 
 // resize handler
