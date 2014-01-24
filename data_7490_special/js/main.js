@@ -432,6 +432,7 @@ var avmlp = {
         if (frame.s === "heimnetz") {
             $("#packshot").hide();
         }
+        $("#footer-section").css("opacity", "0");
         window.setTimeout(function() {
             $("#" + frame.s).css("opacity", 1);
             $("#" + frame.s).css("display", "block");
@@ -450,10 +451,9 @@ var avmlp = {
             if (!frame.imgCss["margin-left"]) {
                 $("#packshot").css("margin-left", "-480px");
             }
-            if (!frame.f) {
-                $("#footer-section").css("opacity", "0");
-            }
-        }, 50);
+
+
+        }, 25);
     },
 
 
