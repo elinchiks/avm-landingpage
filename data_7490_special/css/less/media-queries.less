@@ -38,6 +38,13 @@
 }
 .tablet, .mobile {
 
+.logo-svg {
+	width: 50px !important;
+	height: 28px !important;
+	background-size: contain;
+}
+
+
 
 	.logo-section{
 		width: 50%;
@@ -301,25 +308,30 @@ and (max-device-width : 1024px) {
 	section.active {
 		.packshot {
 			opacity:1;
-			.transition(opacity 2s);
-			.transition-timing-function(cubic-bezier(0,1.38,1,1.38));
+			.transition(all 3s);
+			.transition-timing-function(cubic-bezier(0,0.7,1,1.38));
+			.transition-delay(1.3s);
 		}
 
 		.product-graphics, .product-features {
 			opacity:1;
-			.transition(opacity 2s);
+			.transition(all 2s);
 			.transition-timing-function(cubic-bezier(0,1.38,1,1.38));
+			.transition-delay(1.5s);
 		}
 
 		h1 {
-			.transform(translate(0,0));
 			opacity:1;
+			.transform(translate(0,0));
+			.transition(all 1s);
 			.transition-delay(1s);
+
 		}
 
 		.description {
 			.transform(translate(0,0));
 			opacity:1;
+			.transition(all 1s);
 			.transition-delay(1.5s);
 		}
 
