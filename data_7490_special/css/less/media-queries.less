@@ -1,21 +1,27 @@
 
 // Media Querries for tablet
-.tablet, .mobile {
 
-nav.primary {
-	display:none;
-	&.handheld {
-		display:block !important;
-		position:absolute;
-		a {
-			opacity:0;
-			&:hover {
-				opacity:1;
+.tablet{
+	nav.primary {
+		display:none;
+		&.handheld {
+			display:block !important;
+			position:absolute;
+			a {
+				opacity:0;
+				&:hover {
+					opacity:1;
+				}
 			}
 		}
 	}
+	.description, .product-features span, .description p {
+		font-size: 18px !important;
+		line-height: 22px !important;
+	}
 }
 
+.tablet, .mobile {
 
 	.logo-section{
 		width: 50%;
@@ -27,7 +33,6 @@ nav.primary {
 	.description {
 	   width:100%;
 	   clear:both !important;
-	   bottom:100px;
 	   left:0;
 	}
 	nav#primary ul, nav.primary ul {
@@ -41,10 +46,7 @@ nav.primary {
 	nav#primary h2, nav.primary h2 {
 		font-size: 20px !important;
 	}
-	.description, .product-features span, .description p {
-		font-size: 20px !important;
-		line-height: 24px !important;
-	}
+
 
 	#wlan .product-graphics, .wlan .product-graphics, 
 	#wlan .product-features, .wlan .product-features {
@@ -102,7 +104,6 @@ and (max-device-width : 1024px) {
 		font-size: 20px !important;
 		line-height: 24px !important;
 	}
-
 	#wlan .product-graphics, .wlan .product-graphics, 
 	#wlan .product-features, .wlan .product-features {
 		top:250px !important;

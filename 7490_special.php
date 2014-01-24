@@ -4,8 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta name="viewport" content="width=device-width, user-scalable=no" />
-
 
     <title>FRITZ!Box 7490</title>
     <meta name="description" content="Die FRITZ!Box 7490 bringt das High-Speed-Heimnetz an jeden DSL-Anschluss und deckt mit vielen Extras all Ihre Kommunikationswünsche rund um Internet, Telefonie und Netzwerk ab. Neuestes WLAN AC sorgt dabei für spektakuläre Gigabit-Geschwindigkeiten bis 1.300 MBit/s im kabellosen Heimnetz.">
