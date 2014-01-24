@@ -750,7 +750,7 @@ jQuery( window ).on( "resize", function() {
 });
 
 jQuery( window ).on( "orientationchange", function() {
-    avmlp.applyZoom();
+    avmlp.resizeSections();
  });
 
 
