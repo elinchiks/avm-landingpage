@@ -518,6 +518,12 @@ var avmlp = {
                     continue;
                 }
                 properties = a[e];
+                if (properties["top"]) {
+                    properties["translate"] = "transformy("+properties["top"]+")";
+                    properties["-ms-translate"] = "transformy("+properties["top"]+")";
+                    properties["-webkit-translate"] = "transformy("+properties["top"]+")";
+                    delete properties["top"];
+                }
                 $("#" + currentSection + " " + e).css(properties);
             }
         }
