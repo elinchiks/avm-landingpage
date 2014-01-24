@@ -718,13 +718,20 @@ if($('html').hasClass('tablet')) {
     });
 
     $('.link-next').on('click', function(e){
-        if(!$('html').hasClass('desktop')) {
-            e.preventDefault();
-            var href = $(this).attr("href");
+        e.preventDefault();
+        var href = $(this).attr("href");
+        if ($('html').hasClass('desktop')) {
+
             $('section').removeClass('active');
             $('section' + href + '').addClass('active');
             $('nav.primary li').removeClass('active').next('.' + href.slice(1) + '').addClass('active');
             avmlp.scrollToSection(href);
+        } else {
+            $('section').removeClass('active');
+            $('section#' + href.slice(1) + '').addClass('active');
+            $('nav.primary li').removeClass('active').next('.' + href.slice(1) + '').addClass('active');
+            var offsetSize = avmlp.offsetSize;
+            $(window).scrollTop($("[id*='"+href.slice(1)+"']").offset().top - offsetSize);
         }
     });
 });
