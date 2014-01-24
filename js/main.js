@@ -418,6 +418,7 @@ var avmlp = {
                                     avmlp.aniStep = avmlp.aniTargetStep;
                                     avmlp.aniLastStep = avmlp.aniTargetStep;
                                     _this.scrollToSection("#"+sectionName);
+                                    _this.restoreDefaults();
                                     _this.isAnimationRunning = true;
                                     window.setTimeout(function() {
                                         $("#packshot-wrapper").animate({
@@ -435,6 +436,31 @@ var avmlp = {
         }
     },
 
+    restoreDefaults: function() {
+        var frame = this.animationData.frames[this.aniStep];
+        window.setTimeout(function() {
+            $("#" + frame.s).css("opacity", 1);
+            $("#" + frame.s).css("display", "block");
+            if (!frame.imgCss.top) {
+                $("#packshot").css("top", "136px");
+            }
+            if (!frame.imgCss.width) {
+                $("#packshot").css("width", "960px");
+            }
+            if (!frame.imgCss.height) {
+                $("#packshot").css("height", "640px");
+            }
+            if (!frame.imgCss.left) {
+                $("#packshot").css("left", "50%");
+            }
+            if (!frame.imgCss["margin-left"]) {
+                $("#packshot").css("margin-left", "-480px");
+            }
+            if (!frame.f) {
+                $("#footer-section").css("opacity", "0");
+            }
+        }, 50);
+    },
 
 
     // change product animation
