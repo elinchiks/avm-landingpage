@@ -620,6 +620,7 @@
                         </li>
                     </ul>
                 </nav>
+                <div class="logo-avm"></div> 
 
                 <div id="footer-section">
                     <div class="logo-section">

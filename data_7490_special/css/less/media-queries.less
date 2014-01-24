@@ -1,19 +1,26 @@
 
 // Media Querries for tablet
 
-.tablet{
+.tablet {
+	section {
+		position:relative;
+	}
 	nav.primary {
 		display:none;
 		&.handheld {
 			display:block !important;
 			position:absolute;
+			top: 395px;
+			margin-top: -68px;
+			z-index: 999;
+			height:135px;
+
 			li {
 				opacity: 0.1;
-				&:hover {
+				&:hover, &.active {
 					opacity:1;
 				}
 			}
-
 			a {
 				opacity:0;
 				&:hover {
@@ -24,12 +31,15 @@
 	}
 	.description, .product-features span, .description p {
 		font-size: 18px !important;
-		line-height: 22px !important;
+		line-height: 20px !important;
+	}
+	.description {
+	   width:100%;
+	   clear:both !important;
+	   left:0;
 	}
 }
-
 .tablet, .mobile {
-
 
 	.logo-section{
 		width: 50%;
@@ -38,11 +48,7 @@
 			height:auto;
 		}
 	}
-	.description {
-	   width:100%;
-	   clear:both !important;
-	   left:0;
-	}
+
 	nav#primary ul, nav.primary ul {
 		font-size: 16px !important;
 		line-hzeight: 20px;
@@ -88,7 +94,10 @@
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) { 
 		nav#primary ul, nav.primary ul {
 			font-size: 16px !important;
-			line-hzeight: 20px;
+			line-height: 20px;
+		}
+		nav.primary.handheld {
+
 		}
 		body * { text-rendering: optimizeLegibility !important; }
 

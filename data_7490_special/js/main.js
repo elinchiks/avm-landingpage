@@ -612,16 +612,7 @@ if($('html').hasClass('tablet')) {
 
     // SVG Logo, if browser can handle it
     if($("html").hasClass("svg")) {
-        $('#viewport').append('<img src="data_7490_special/images/avm-logo.svg" class="logo-avm" width="70" height="42" alt="AVM logo">');
-        if (avmlp.debug) {
-            $("#debug-svg-support").text("YES");
-        }
-    } else {
-        $('#viewport').append('<img src="data_7490_special/images/logo-avm.png" class="logo-avm" width="79" height="43" alt="avm" />');
-        if (avmlp.debug) {
-            $("#debug-svg-support").text("NO");
-        }
-
+        $('#viewport .logo-avm').addClass('svg-logo');
     }
 
     // KeyDown
