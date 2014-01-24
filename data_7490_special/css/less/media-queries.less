@@ -2,9 +2,6 @@
 // Media Querries for tablet
 
 .tablet {
-	section {
-		position:relative;
-	}
 	nav.primary {
 		display:none;
 		&.handheld {
@@ -40,6 +37,7 @@
 	}
 }
 .tablet, .mobile {
+
 
 	.logo-section{
 		width: 50%;
@@ -107,12 +105,21 @@
 		#fritzos .icon-list, .fritzos .icon-list {
 			top: 20px !important;
 		}
-
-
 		nav.primary {
 			&.handheld {
 				top: 300px;
 
+			}
+		}
+	}
+// Nexus
+	@media only screen and (min-device-width : 120px) and (max-device-width : 900px) and (orientation : landscape) { 
+		#fritzos .icon-list, .fritzos .icon-list {
+			top: 20px !important;
+		}
+		nav.primary {
+			&.handheld {
+				top: 250px;
 			}
 		}
 	}
@@ -133,17 +140,8 @@ and (max-device-width : 1024px) {
 		font-size: 20px !important;
 		line-height: 24px !important;
 	}
-	// .inside-view-after, .drag-wrapper {
-	// 	display:none;
-	// }
-	// .inside-view-before {
-	// 	display:block;
-	// 	opacity:1 !important;
-	// 	width:960px !important;
-	// 	background-position: 0 0;
-	// }
 }
-.tablet.cssanimations, .mobile.cssanimations {
+.tablet.cssanimations {
 	b {
 		opacity:0;
 	}
@@ -296,14 +294,12 @@ and (max-device-width : 1024px) {
 	.link-next img {
 		opacity:0;
 	}
-	.inside-view {
-		opacity:0;
-	}
+
 	.product-graphics, .product-features {
 		opacity: 0;
 	}
-	.active {
-		img.packshot {
+	section.active {
+		.packshot {
 			opacity:1;
 			.transition(opacity 2s);
 			.transition-timing-function(cubic-bezier(0,1.38,1,1.38));
@@ -313,11 +309,6 @@ and (max-device-width : 1024px) {
 			opacity:1;
 			.transition(opacity 2s);
 			.transition-timing-function(cubic-bezier(0,1.38,1,1.38));
-		}
-		.inside-view {
-			opacity:1;
-			.transition-timing-function(cubic-bezier(0,1.38,1,1.38));
-			.transition-delay(2s);
 		}
 
 		h1 {
