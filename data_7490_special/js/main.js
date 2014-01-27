@@ -275,21 +275,19 @@ var avmlp = {
 
         // remove background from other slides, we'll use the background from the packshot-wrapper
         $(".slide").not(".packshot-slide").css("background", "transparent");
+        $(".slide").not("#start").find("header").css("opacity", 0);
+        $(".slide").not("#start").find(".description").css("opacity", 0);
+        $(".slide").not("#start").find(".product-graphics").css("opacity", 0);
+        $(".slide").not("#start").find(".product-features").css("opacity", 0);
+        $(".slide").not("#start").find(".product-features").css("opacity", 0);
+        $(".slide").not("#start").find(".action-buttons").css("opacity", 0);
+        $(".slide").not("#start").find(".icon-list li").css("opacity", 0);
+
+
 
         // we need an element with the original height to re-enable scrolling
         var docHeight = this.animationData.frames.length * this.aniSpeed + this.defaultHeight;
         $("#scroll-placeholder").height(docHeight);
-
-
-        // the fragment links need fixing
-        // var _this = this;
-        // $(window).on('hashchange',function() {
-        //     if($('html').hasClass('desktop')) {
-        //         if (avmlp.navReady) {
-        //             _this.scrollToSection(location.hash);
-        //         }
-        //     }
-        // });
 
 
         $("section").hide();
@@ -401,7 +399,7 @@ var avmlp = {
                                     $(window).scrollTop(_this.keyframes["begin"][_this.sectionNames.indexOf(sectionName)]);
                                 }
                                 $("#packshot-wrapper").css("display", "block");
-
+                                $("#"+sectionName + " header").css("opacity", 0);
                                 window.setTimeout(function() {
                                     var t = $(window).scrollTop();
                                     avmlp.aniTargetStep = Math.ceil ( t / avmlp.aniSpeed );
@@ -475,6 +473,7 @@ var avmlp = {
             $('nav.primary').find('li.' + currentSection).addClass('active');
 
             $("#" + this.lastSection).hide().removeClass('active');
+            this.restoreDefaults();
         }
         this.lastSection = currentSection;
 
@@ -616,13 +615,14 @@ var avmlp = {
 // Document ready handler
 jQuery( document ).ready(function( $ ) {
 
-avmlp.applyZoom();
 
-if($('html').hasClass('tablet')) {
-    document.ontouchmove = function(e) {
-        e.preventDefault();
-    };
-}
+    avmlp.resizeSections();
+
+    if($('html').hasClass('tablet')) {
+        document.ontouchmove = function(e) {
+            e.preventDefault();
+        };
+    }
 
 
     // SVG Logo, if browser can handle it
@@ -700,7 +700,7 @@ if($('html').hasClass('tablet')) {
     }
 
 
-    avmlp.resizeSections();
+    // avmlp.resizeSections();
 
     // inside/outside image - using jquery ui draggable
     $(".drag-wrapper").draggable({
