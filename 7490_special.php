@@ -30,12 +30,6 @@
 
     <div id="viewport">
 
-        <section id="packshot-wrapper" class="first-animation">
-           <div class="slide packshot-slide first-animation">
-                <img src="data_7490_special/frames/960px/0000.png" id="packshot" width="960" height="640" alt="FRITZ!Box 7490" />
-           </div>
-        </section>
-
 
         <section id="start" class="active first-animation">
             <div class="slide" class="start">
@@ -167,10 +161,10 @@
             </div>
             <nav class="primary handheld">
                 <ul>
-                    <li class="start active">
+                    <li class="start ">
                         <a href="#start">Intro</a>
                     </li>
-                    <li class="heimnetz">
+                    <li class="heimnetz  active">
                         <a href="#heimnetz">Heimnetz</a>
                     </li>
                     <li class="wlan">
@@ -262,13 +256,13 @@
             </div>
             <nav class="primary handheld">
                 <ul>
-                    <li class="start active">
+                    <li class="start">
                         <a href="#start">Intro</a>
                     </li>
                     <li class="heimnetz">
                         <a href="#heimnetz">Heimnetz</a>
                     </li>
-                    <li class="wlan">
+                    <li class="wlan  active">
                         <a href="#wlan">WLAN AC</a>
                     </li>
                     <li class="usb3">
@@ -367,7 +361,7 @@
             </div>
             <nav class="primary handheld">
                 <ul>
-                    <li class="start active">
+                    <li class="start">
                         <a href="#start">Intro</a>
                     </li>
                     <li class="heimnetz">
@@ -376,7 +370,7 @@
                     <li class="wlan">
                         <a href="#wlan">WLAN AC</a>
                     </li>
-                    <li class="usb3">
+                    <li class="usb3  active">
                         <a href="#usb3">USB 3.0</a>
                     </li>
                     <li class="telefonie">
@@ -443,7 +437,7 @@
             </div>
             <nav class="primary handheld">
                 <ul>
-                    <li class="start active">
+                    <li class="start">
                         <a href="#start">Intro</a>
                     </li>
                     <li class="heimnetz">
@@ -455,7 +449,7 @@
                     <li class="usb3">
                         <a href="#usb3">USB 3.0</a>
                     </li>
-                    <li class="telefonie">
+                    <li class="telefonie  active">
                         <a href="#telefonie">Telefonkomfort</a>
                     </li>
                     <li class="fritzos">
@@ -528,7 +522,7 @@
             </div>
             <nav class="primary handheld">
                 <ul>
-                    <li class="start active">
+                    <li class="start">
                         <a href="#start">Intro</a>
                     </li>
                     <li class="heimnetz">
@@ -543,10 +537,10 @@
                     <li class="telefonie">
                         <a href="#telefonie">Telefonkomfort</a>
                     </li>
-                    <li class="fritzos">
+                    <li class="fritzos active">
                         <a href="#fritzos">FRITZ!OS 6.0</a>
                     </li>
-                    <li class="auszeichnungen">
+                    <li class="auszeichnungen ">
                         <a href="#auszeichnungen">Auszeichnungen</a>
                     </li>
                 </ul>
@@ -560,7 +554,7 @@
                     <h1  >Erlebe das Heimnetz <br> der nächsten Generation <br>FRITZ!Box 7490</h1>
                 </header>
 
-                <div class="action-buttons" style="width:100%" >
+                <div class="action-buttons" >
                     <a href="http://www.avm.de/de/Produkte/FRITZBox/FRITZ_Box_7490/" class="info-button">Alle Details auf avm.de &gt; </a>
                 </div>
 
@@ -569,9 +563,10 @@
                 <img src="data_7490_special/images/logo-fritz-color.png" width="160" height="125" class="logo-fritz-color" alt="Fritz!"/>
 
             </div>
+
             <nav class="primary handheld">
                 <ul>
-                    <li class="start active">
+                    <li class="start">
                         <a href="#start">Intro</a>
                     </li>
                     <li class="heimnetz">
@@ -589,7 +584,7 @@
                     <li class="fritzos">
                         <a href="#fritzos">FRITZ!OS 6.0</a>
                     </li>
-                    <li class="auszeichnungen">
+                    <li class="auszeichnungen active">
                         <a href="#auszeichnungen">Auszeichnungen</a>
                     </li>
                 </ul>
@@ -644,7 +639,9 @@
     <script src="data_7490_special/js/vendor/categorizr.min.js"></script>
     <script src="data_7490_special/js/main.js"></script>
 
-<!--     // <script src="data_7490_special/js/scripts.js?v=2014-01-24"></script> -->
+<!--    
+
+ // <script src="data_7490_special/js/scripts.js?v=2014-01-24"></script> -->
 
 
 

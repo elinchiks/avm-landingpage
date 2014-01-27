@@ -1291,30 +1291,36 @@ section.active {
     display:none;
 }
 
-.js {
+.desktop.js {
   #packshot-wrapper {
         opacity:1;  
         .transition(all ease-in-out 400ms);
         .transition-delay(0.5s); 
 }
-.start, #start {
-    opacity:1;
-    .transition(all ease-in-out 150ms);
-    .transition-delay(0.3s); 
+.js {
+    .start, #start {
+      &.first-animation {
+          opacity:0;
+      }
+  }
+}
+.js {
+    .start, #start {
+        opacity:1;
+        .transition(all ease-in-out 150ms);
+        .transition-delay(0.3s); 
+    }
 }
 
 }
-.js {
+.desktop.js {
   #packshot-wrapper { 
     &.first-animation {
         opacity:0;   
     }
   }  
-  .start, #start {
-    &.first-animation {
-        opacity:0;
-    }
-}
+
+
 
 }
 

@@ -11,6 +11,8 @@
 			margin-top: -68px;
 			z-index: 999;
 			height:135px;
+			width: 200px;
+			box-sizing:border-box;
 
 			li {
 				opacity: 0.1;
@@ -58,7 +60,7 @@
 
 	nav#primary ul, nav.primary ul {
 		font-size: 16px !important;
-		line-hzeight: 20px;
+		line-height: 20px;
 	}
 	body * { text-rendering: optimizeLegibility !important; }
 	#fritzos .icon-list, .fritzos .icon-list {
@@ -347,10 +349,7 @@ and (max-device-width : 1024px) {
 		}
 		
 
-		.logo-fritz-color, .info-button{
 
-
-		}
 		.icon-1 {
 		    .animation(fade-in 300ms  ease-in-out  2200ms forwards) !important;
 		}
@@ -380,6 +379,7 @@ and (max-device-width : 1024px) {
 			opacity:1;
 			.transition(all 1s);
 			.transition-delay(2s);
+			z-index:1;
 		}
 	}
 
