@@ -670,9 +670,11 @@ jQuery( document ).ready(function( $ ) {
         $(".primary a").on("click", function(e) {
             e.preventDefault();
             e.stopPropagation();
+
             if (!avmlp.navReady) {
                 return false;
             }
+
             var href = $(this).attr("href");
             if (href) {
                 avmlp.scrollToSection(href);
@@ -727,6 +729,9 @@ jQuery( document ).ready(function( $ ) {
 
     $('.link-next').on('click', function(e){
         e.preventDefault();
+        if (!avmlp.navReady) {
+            return false;
+        }
         var href = $(this).attr("href");
         if ($('html').hasClass('desktop')) {
 
@@ -755,7 +760,7 @@ jQuery( window ).on( "orientationchange", function() {
 
 
 jQuery( window ).on( "scroll", function() {
-    
+
     if(!$('html').hasClass('desktop')) {
         // e.preventDefault();
        avmlp.redrawDotNav();
@@ -819,7 +824,6 @@ var requestAnimFrame = (function() {
     if (!avmlp.isAnimationRunning) {
         avmlp.aniStep = avmlp.aniLastStep = avmlp.aniTargetStep;
     } else {
-
         var t = $(window).scrollTop();
         avmlp.aniTargetStep = Math.ceil ( t / avmlp.aniSpeed );
 
@@ -837,6 +841,11 @@ var requestAnimFrame = (function() {
         if (avmlp.debug) {
             $("#debug-animation-step").text(avmlp.aniStep);
             $("#debug-scroll-top").text(t + "px");
+            if (avmlp.navReady) {
+                $("#debug-nav-ready").html("YES");
+            } else {
+                $("#debug-nav-ready").html("NO");
+            }
         }
 
     }
