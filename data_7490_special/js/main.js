@@ -28,7 +28,7 @@ var avmlp = {
     lastSection: false,
     targetOffset: -1,
 
-    aniJsonFile: "data_7490_special/js/animation.min.json", // set this to "js/animation.json" if you want to make changes
+    aniJsonFile: "data_7490_special/js/animation.json", // set this to "js/animation.json" if you want to make changes
     aniSpeed: 20,
     aniTimeoutID: null,
     aniImages: [],
@@ -429,6 +429,8 @@ var avmlp = {
             $("#packshot").hide();
         }
         $("#footer-section").css("opacity", "0");
+
+
         window.setTimeout(function() {
             $("#" + frame.s).css("opacity", 1);
             $("#" + frame.s).css("display", "block");
@@ -444,9 +446,12 @@ var avmlp = {
             if (!frame.imgCss || !frame.imgCss.left) {
                 $("#packshot").css("left", "50%");
             }
-            if (!frame.imgCss || !frame.imgCss["margin-left"]) {
+            if (!frame.imgCss || !frame.imgCss["marginLeft"]) {
                 $("#packshot").css("margin-left", "-480px");
             }
+
+
+         
 
 
         }, 25);
