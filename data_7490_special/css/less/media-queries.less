@@ -346,9 +346,10 @@ and (max-device-width : 1024px) {
 
 		.link-next img {
 			opacity:1;
-			.transition(opacity ease-in-out 2.5s);
-			.animation(jump 1s 3);
+			.transition(all ease-in-out 2.5s);
+			.animation(jump 1s infinite);
 			.animation-delay(2.5s);
+			.transition-delay(2.5s);
 		}
 
 		.icon-1 {
@@ -386,9 +387,10 @@ html.cssanimations.csstransitions {
 	.active {
 		.link-next img {
 			opacity:1;
-			.transition(opacity ease-in-out 2.5s);
-			.animation(jump 1s 3);
+			.transition(all ease-in-out 2.5s);
+			.animation(jump 1s infinite);
 			.animation-delay(2.5s);
+			.transition-delay(2.5s);
 		}
 	}
 }
