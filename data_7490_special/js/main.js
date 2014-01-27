@@ -434,24 +434,24 @@ var avmlp = {
         window.setTimeout(function() {
             $("#" + frame.s).css("opacity", 1);
             $("#" + frame.s).css("display", "block");
-            if (!frame.imgCss || !frame.imgCss.top) {
-                $("#packshot").css("top", "136px");
-            }
-            if (!frame.imgCss || !frame.imgCss.width) {
-                $("#packshot").css("width", "960px");
-            }
-            if (!frame.imgCss || !frame.imgCss.height) {
-                $("#packshot").css("height", "640px");
-            }
-            if (!frame.imgCss || !frame.imgCss.left) {
-                $("#packshot").css("left", "50%");
-            }
-            if (!frame.imgCss || !frame.imgCss["marginLeft"]) {
-                $("#packshot").css("margin-left", "-480px");
-            }
+            // if (!frame.imgCss || !frame.imgCss.top) {
+            //     $("#packshot").css("top", "136px");
+            // }
+            // if (!frame.imgCss || !frame.imgCss.width) {
+            //     $("#packshot").css("width", "960px");
+            // }
+            // if (!frame.imgCss || !frame.imgCss.height) {
+            //     $("#packshot").css("height", "640px");
+            // }
+            // if (!frame.imgCss || !frame.imgCss.left) {
+            //     $("#packshot").css("left", "50%");
+            // }
+            // if (!frame.imgCss || !frame.imgCss["marginLeft"]) {
+            //     $("#packshot").css("margin-left", "-480px");
+            // }
 
 
-         
+
 
 
         }, 25);
