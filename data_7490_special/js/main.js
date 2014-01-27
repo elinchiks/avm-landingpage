@@ -74,6 +74,7 @@ var avmlp = {
     },
 
     setKeyframes: function() {
+        console.log(this.aniSpeed);
         for (var i = 0; i < this.animationData.frames.length; i++) {
             if (this.animationData.frames[i].kf) {
                 switch (this.animationData.frames[i].kf) {
@@ -362,7 +363,7 @@ var avmlp = {
         if (this.sectionNames.indexOf(sectionName) > -1) {
             this.targetOffset = this.keyframes["poster"][this.sectionNames.indexOf(sectionName)];
             if (this.targetOffset !== $(window).scrollTop()) {
-                                var dist = this.targetOffset - $(window).scrollTop();
+                var dist = this.targetOffset - $(window).scrollTop();
                 if (dist < 0) {
                     this.scrollDir = "up";
                 } else {
@@ -550,7 +551,7 @@ var avmlp = {
             if (!imgCss || !imgCss.top) {
                 imgCss.top = "136px";
             }
-            $("#packshot").css(this.animationData.frames[this.aniStep].imgCss);
+            // $("#packshot").css(this.animationData.frames[this.aniStep].imgCss);
         }
 
         if (currentSection !== "auszeichnungen") {
