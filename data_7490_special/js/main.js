@@ -245,7 +245,7 @@ var avmlp = {
 
         // create new slide for the packshot animation
         var $section = $('<section id="packshot-wrapper" />');
-        var $slide = $('<div class="slide packshot-slide" />');
+        var $slide = $('<div class="slide packshot-slide first-animation" />');
         var $packshot =$('<img src="data_7490_special/frames/960px/0000.png" id="packshot" width="960" height="640" alt="FRITZ!Box 7490" />');
         $packshot.appendTo($slide);
 
@@ -755,6 +755,7 @@ jQuery( window ).on( "orientationchange", function() {
 
 
 jQuery( window ).on( "scroll", function() {
+    
     if(!$('html').hasClass('desktop')) {
         // e.preventDefault();
        avmlp.redrawDotNav();

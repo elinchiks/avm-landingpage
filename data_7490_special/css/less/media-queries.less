@@ -43,9 +43,6 @@
 	height: 28px !important;
 	background-size: contain;
 }
-
-
-
 	.logo-section{
 		width: 40%;
 		img {
@@ -57,10 +54,6 @@
 	#footer-section {
 	    bottom: 20px;
 	    left:20px;
-	}
-	.logo-avm {
-		bottom:20px;
-		right:20px;
 	}
 
 	nav#primary ul, nav.primary ul {
@@ -287,7 +280,7 @@ and (max-device-width : 1024px) {
 	.icon-list li {
 		opacity:0;
 	}
-	h1 {
+	h1, h2 {
 		.transform(translate(0,-100%));
 		opacity:0;
 		
@@ -304,8 +297,7 @@ and (max-device-width : 1024px) {
 		.transform(translate(0,200%));
 		opacity:0;
 		.transition(all 600ms);
-		.transition-timing-function(cubic-bezier(0.17,0.67,0.79,1.61));
-		
+		.transition-timing-function(cubic-bezier(0.17,0.67,0.79,1.61));	
 	}
 	.link-next img {
 		opacity:0;
@@ -314,12 +306,15 @@ and (max-device-width : 1024px) {
 	.product-graphics, #usb3 .product-graphics, .product-features {
 		opacity: 0;
 	}
+	.logo-fritz-color, .info-button{
+		opacity: 0;
+	}
 	section.active {
 		.packshot {
 			opacity:1;
 			.transition(all 3s);
 			.transition-timing-function(cubic-bezier(0,0.7,1,1.38));
-			.transition-delay(1.3s);
+			.transition-delay(1s);
 		}
 
 		&#usb3 .product-graphics, .product-graphics, .product-features {
@@ -329,19 +324,18 @@ and (max-device-width : 1024px) {
 			.transition-delay(1.5s);
 		}
 
-		h1 {
+		h1, h2{
 			opacity:1;
 			.transform(translate(0,0));
 			.transition(all 1s);
 			.transition-delay(1s);
-
 		}
 
 		.description {
 			.transform(translate(0,0));
 			opacity:1;
 			.transition(all 1s);
-			.transition-delay(1.5s);
+			.transition-delay(2s);
 		}
 
 		.link-next img {
@@ -351,30 +345,41 @@ and (max-device-width : 1024px) {
 			.animation-delay(2.5s);
 			.transition-delay(2.5s);
 		}
+		
 
+		.logo-fritz-color, .info-button{
+
+
+		}
 		.icon-1 {
-		    .animation(fade-in 300ms  ease-in-out  200ms forwards) !important;
+		    .animation(fade-in 300ms  ease-in-out  2200ms forwards) !important;
 		}
 		.icon-2 {
-		    .animation(fade-in 300ms ease-in-out 300ms forwards) !important;
+		    .animation(fade-in 300ms ease-in-out 2300ms forwards) !important;
 		}
 		.icon-3 {
-		    .animation(fade-in 300ms ease-in-out 400ms forwards) !important;
+		    .animation(fade-in 300ms ease-in-out 2400ms forwards) !important;
 		}
 		.icon-4 {
-		    .animation(fade-in 300ms ease-in-out 500ms forwards) !important;
+		    .animation(fade-in 300ms ease-in-out 2500ms forwards) !important;
 		}
 		.icon-5 {
-		    .animation(fade-in 300ms ease-in-out 600ms forwards) !important;
+		    .animation(fade-in 300ms ease-in-out 2600ms forwards) !important;
 		}
 		.icon-6 {
-		    .animation(fade-in 300ms ease-in-out 700ms forwards) !important;
+		    .animation(fade-in 300ms ease-in-out 2700ms forwards) !important;
 		}
 		.icon-7 {
-		    .animation(fade-in 300ms ease-in-out 800ms forwards) !important;
+		    .animation(fade-in 300ms ease-in-out 2800ms forwards) !important;
 		}
 		.icon-8 {
-		    .animation(fade-in 300ms ease-in-out 900ms forwards) !important;
+		    .animation(fade-in 300ms ease-in-out 2900ms forwards) !important;
+		}
+
+		.logo-fritz-color, .info-button{
+			opacity:1;
+			.transition(all 1s);
+			.transition-delay(2s);
 		}
 	}
 
