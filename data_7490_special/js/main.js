@@ -29,6 +29,11 @@ var avmlp = {
     targetOffset: -1,
 
     aniJsonFile: "data_7490_special/js/animation.json", // set this to "js/animation.json" if you want to make changes
+    keyframes: { // retrieved from animation.json
+        "begin": [],
+        "poster": [],
+        "end": []
+    },
     aniSpeed: 20,
     aniTimeoutID: null,
     aniImages: [],
@@ -38,40 +43,64 @@ var avmlp = {
     animationData: false,
     isAnimationReady: false,
     isAnimationRunning: true,
-    keyframes: { // retrieved from animation.json
-        "begin": [],
-        "poster": [],
-        "end": []
-    },
-
     scrollDistance: 0,
     scrollDir: "",
     scrollMiddle: 0,
     scrollSpeedFactor: 1,
     navReady: true,
 
-    // methods
-    loadAnimationImages: function() {
+    redrawDotNav: function(){
+        var section1Top =  0;
+        // The top of each section is offset by half the distance to the previous section.
+        var section2Top =  $('#start').offset().top - (($('#heimnetz').offset().top - $('#start').offset().top) / 2);
+        var section3Top =  $('#heimnetz').offset().top - (($('#wlan').offset().top - $('#heimnetz').offset().top) / 2);
+        var section4Top =  $('#wlan').offset().top - (($('#usb3').offset().top - $('#wlan').offset().top) / 2);
+        var section5Top =  $('#usb3').offset().top - (($('#telefonie').offset().top - $('#usb3').offset().top) / 2);
+        var section6Top =  $('#telefonie').offset().top - (($('#fritzos').offset().top - $('#telefonie').offset().top) / 2);
+        var section7Top =  $('#fritzos').offset().top - (($('#auszeichnungen').offset().top - $('#fritzos').offset().top) / 2);
+        var section8Top =  $('#auszeichnungen').offset().top - (($(document).height() - $('#auszeichnungen').offset().top) / 2);
 
-        var frames = this.animationData.frames;
-
-        for (var i = 0; i < frames.length; i++) {
-            if (!frames[i].img) {
-                this.aniImages[i] = {
-                    "low": null,
-                    "high": null,
-                    "highSrc": null
-                };
-            } else {
-                this.aniImages[i] = {
-                    "low": new Image(),
-                    "high": new Image(),
-                    "highSrc": this.animationData.hiSrcPrefix + frames[i].img
-                };
-                this.aniImages[i].low.src = this.animationData.lowSrcPrefix + frames[i].img;
-            }
+        $('nav.primary li').removeClass('active');
+        if($(document).scrollTop() <= section1Top && $(document).scrollTop() < section2Top){
+        } else if ($(document).scrollTop() >= section2Top && $(document).scrollTop() < section3Top){
+             $('nav.primary li.start').addClass('active');
+             $('section').removeClass('active');
+             $('section#start').addClass('active');
+             $("#footer-section").removeClass('active');
+        } else if ($(document).scrollTop() >= section3Top && $(document).scrollTop() < section4Top){
+            $('nav.primary li.heimnetz').addClass('active');
+            $('section').removeClass('active');
+            $('section#heimnetz').addClass('active');
+            $("#footer-section").removeClass('active');
+        } else if ($(document).scrollTop() >= section4Top && $(document).scrollTop() < section5Top){
+            $('nav.primary li.wlan').addClass('active');
+            $('section').removeClass('active');
+            $('section#wlan').addClass('active');
+            $("#footer-section").removeClass('active');
+        } else if ($(document).scrollTop() >= section5Top && $(document).scrollTop() < section6Top){
+            $('nav.primary li.usb3').addClass('active');
+            $('section').removeClass('active');
+            $('section#usb3').addClass('active');
+            $("#footer-section").removeClass('active');
+        } else if ($(document).scrollTop() >= section6Top && $(document).scrollTop() < section7Top){
+            $('nav.primary li.telefonie').addClass('active');
+            $('section').removeClass('active');
+            $('section#telefonie').addClass('active');
+            $("#footer-section").removeClass('active');
+        } else if ($(document).scrollTop() >= section7Top && $(document).scrollTop() < section8Top){
+           $('nav.primary li.fritzos').addClass('active');
+           $('section').removeClass('active');
+           $('section#fritzos').addClass('active');
+           $("#footer-section").removeClass('active');
+        } else if ($(document).scrollTop() >= section8Top){
+            $('nav.primary li.auszeichnungen').addClass('active');
+            $('section').removeClass('active');
+            $('section#auszeichnungen').addClass('active');
+            $("#footer-section").addClass('active');
         }
     },
+
+
 
     setKeyframes: function() {
         for (var i = 0; i < this.animationData.frames.length; i++) {
@@ -90,103 +119,6 @@ var avmlp = {
             }
         }
     },
-
-    redrawDotNav: function(){
-
-
-
-    var section1Top =  0;
-    // The top of each section is offset by half the distance to the previous section.
-    var section2Top =  $('#start').offset().top - (($('#heimnetz').offset().top - $('#start').offset().top) / 2);
-    var section3Top =  $('#heimnetz').offset().top - (($('#wlan').offset().top - $('#heimnetz').offset().top) / 2);
-    var section4Top =  $('#wlan').offset().top - (($('#usb3').offset().top - $('#wlan').offset().top) / 2);
-    var section5Top =  $('#usb3').offset().top - (($('#telefonie').offset().top - $('#usb3').offset().top) / 2);
-    var section6Top =  $('#telefonie').offset().top - (($('#fritzos').offset().top - $('#telefonie').offset().top) / 2);
-    var section7Top =  $('#fritzos').offset().top - (($('#auszeichnungen').offset().top - $('#fritzos').offset().top) / 2);
-    var section8Top =  $('#auszeichnungen').offset().top - (($(document).height() - $('#auszeichnungen').offset().top) / 2);
-
-    $('nav.primary li').removeClass('active');
-    if($(document).scrollTop() <= section1Top && $(document).scrollTop() < section2Top){
-
-    } else if ($(document).scrollTop() >= section2Top && $(document).scrollTop() < section3Top){
-         $('nav.primary li.start').addClass('active');
-         $('section').removeClass('active');
-         $('section#start').addClass('active');
-
-         $("#footer-section").removeClass('active');
-
-
-
-
-    }
-     else if ($(document).scrollTop() >= section3Top && $(document).scrollTop() < section4Top){
-        $('nav.primary li.heimnetz').addClass('active');
-        $('section').removeClass('active');
-        $('section#heimnetz').addClass('active');
-
-        $("#footer-section").removeClass('active');
-
-    }
-
-
-
-
-     else if ($(document).scrollTop() >= section4Top && $(document).scrollTop() < section5Top){
-        $('nav.primary li.wlan').addClass('active');
-        $('section').removeClass('active');
-        $('section#wlan').addClass('active');
-
-        $("#footer-section").removeClass('active');
-
-    }
-
-
-
-
-     else if ($(document).scrollTop() >= section5Top && $(document).scrollTop() < section6Top){
-         $('nav.primary li.usb3').addClass('active');
-         $('section').removeClass('active');
-         $('section#usb3').addClass('active');
-
-         $("#footer-section").removeClass('active');
-
-    }
-
-
-
-     else if ($(document).scrollTop() >= section6Top && $(document).scrollTop() < section7Top){
-        $('nav.primary li.telefonie').addClass('active');
-        $('section').removeClass('active');
-        $('section#telefonie').addClass('active');
-
-        $("#footer-section").removeClass('active');
-
-    }
-
-
-
-
-     else if ($(document).scrollTop() >= section7Top && $(document).scrollTop() < section8Top){
-       $('nav.primary li.fritzos').addClass('active');
-       $('section').removeClass('active');
-       $('section#fritzos').addClass('active');
-
-       $("#footer-section").removeClass('active');
-
-    }
-
-    else if ($(document).scrollTop() >= section8Top){
-        $('nav.primary li.auszeichnungen').addClass('active');
-        $('section').removeClass('active');
-        $('section#auszeichnungen').addClass('active');
-        $("#footer-section").addClass('active');
-
-        // $('#footer-section').css('display', 'block');
-    }
-
-
-    },
-
 
     resizeSections: function() {
         var h = jQuery("html").height();
@@ -246,13 +178,14 @@ var avmlp = {
         // create new slide for the packshot animation
         var $section = $('<section id="packshot-wrapper" />');
         var $slide = $('<div class="slide packshot-slide first-animation" />');
-        var $packshot =$('<img src="data_7490_special/frames/960px/0000.png" id="packshot" width="960" height="640" alt="FRITZ!Box 7490" />');
+
+        // var $packshot =$('<img src="data_7490_special/frames/960px/0000.png" id="packshot" width="960" height="640" alt="FRITZ!Box 7490" />');
+
+        var $packshot =$('<video id="packshot"><source src="data_7490_special/fritzbox-7490.mp4" type=\'video/mp4; codecs="avc1.42E01E, mp4a.40.2"\' /></video>');
+
         $packshot.appendTo($slide);
 
-
         this.setKeyframes();
-
-        this.loadAnimationImages();
 
         // the section wrapper get's a fixed position
         // all sections have absolute pos with top 0
@@ -265,11 +198,6 @@ var avmlp = {
             "top": 0
         });
 
-        // $slide.appendTo($section);
-        // $section.prependTo($("#viewport"));
-
-        // set scale for new slide as well
-        // this.applyZoom();
 
         // remove packshot-images from slides
         $("img.packshot").remove();
@@ -431,6 +359,8 @@ var avmlp = {
         $(".logo-fritz-color").css("opacity", 0);
         if (frame.s === "heimnetz") {
             $("#packshot").hide();
+        } else {
+            $("#packshot").show();
         }
         $("#footer-section").css("opacity", "0");
 
@@ -554,44 +484,19 @@ var avmlp = {
             $("#packshot").css(this.animationData.frames[this.aniStep].imgCss);
         }
 
+        // video
+        console.log(this.animationData.frames[this.aniStep].v);
+        if (this.animationData.frames[this.aniStep].v === 0 || this.animationData.frames[this.aniStep].v) {
+            var video = document.getElementById("packshot");
+            video.currentTime = parseFloat(this.animationData.frames[this.aniStep].v);
+        }
+
         if (currentSection !== "auszeichnungen") {
             $("#footer-section").hide();
         } else {
             $("#footer-section").show();
         }
 
-        // packshot images
-        if(this.aniImages.length && this.aniImages[this.aniStep]) {
-            var aniImage = this.aniImages[this.aniStep];
-            if (!aniImage.low) {
-                if ($("#packshot:visible").length) {
-                    $('#packshot').hide();
-                }
-                return;
-            }
-            if(aniImage.low.complete) { // if the image is downloaded and ready
-                if (!$("#packshot:visible").length) {
-                    $('#packshot').show();
-                }
-                if($('#packshot').attr('src') !== aniImage.low.src &&
-                    $('#packshot').attr('src') !== aniImage.highSrc ) {
-
-
-                    window.clearTimeout(this.aniTimeoutID);
-                    // load hi-quality src
-                    this.aniTimeoutID = window.setTimeout(function() {
-                        $('#packshot').attr('src', aniImage.highSrc);
-                    }, 50);
-                    // change the source of our placeholder image
-                    $('#packshot').attr('src', aniImage.low.src);
-                    $('#packshot').css({
-                        "top": aniImage.top + "px",
-                        "left": aniImage.left+ "px",
-                        "margin-left": aniImage.marginLeft+ "px",
-                    });
-                }
-            }
-        }
     },
 
     // set inside/outside slider positions
@@ -622,6 +527,10 @@ var avmlp = {
 // Document ready handler
 jQuery( document ).ready(function( $ ) {
 
+    if (Modernizr.video && Modernizr.video.h264) {
+        avmlp.useVideo = true;
+        $("#debug-h264").text("OK");
+    }
 
     avmlp.resizeSections();
 

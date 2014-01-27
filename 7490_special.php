@@ -23,6 +23,7 @@
         animationStep: <span id="debug-animation-step"></span>,
         SVG: <span id="debug-svg-support"></span>,
         NavReady: <span id="debug-nav-ready"></span>,
+        H.264: <span id="debug-h264"></span>
         click to hide ❌
     </div>
 
@@ -32,7 +33,9 @@
 
         <section id="packshot-wrapper" class="first-animation">
            <div class="slide packshot-slide first-animation">
-                <img src="data_7490_special/frames/960px/0000.png" id="packshot" width="960" height="640" alt="FRITZ!Box 7490" />
+                <video id="packshot" src="data_7490_special/fritzbox-7490-960x640.mp4" />
+
+<!--                 <video id="packshot" src="data_7490_special/fritzbox-7490-480x320.mp4" /> -->
            </div>
         </section>
 
