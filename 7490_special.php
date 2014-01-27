@@ -30,9 +30,14 @@
 
     <div id="viewport">
 
+        <section id="packshot-wrapper" class="first-animation">
+           <div class="slide packshot-slide first-animation">
+                <img src="data_7490_special/frames/960px/0000.png" id="packshot" width="960" height="640" alt="FRITZ!Box 7490" />
+           </div>
+        </section>
 
 
-        <section id="start" class="active">
+        <section id="start" class="active first-animation">
             <div class="slide" class="start">
 
                 <header>

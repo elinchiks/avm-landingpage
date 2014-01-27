@@ -245,10 +245,10 @@ var avmlp = {
         this.isAnimationReady = true;
 
         // create new slide for the packshot animation
-        var $section = $('<section id="packshot-wrapper" />');
-        var $slide = $('<div class="slide packshot-slide first-animation" />');
-        var $packshot =$('<img src="data_7490_special/frames/960px/0000.png" id="packshot" width="960" height="640" alt="FRITZ!Box 7490" />');
-        $packshot.appendTo($slide);
+        // var $section = $('<section id="packshot-wrapper" />');
+        // var $slide = $('<div class="slide packshot-slide first-animation" />');
+        // var $packshot =$('<img src="data_7490_special/frames/960px/0000.png" id="packshot" width="960" height="640" alt="FRITZ!Box 7490" />');
+        // $packshot.appendTo($slide);
 
         this.setKeyframes();
 
@@ -265,11 +265,11 @@ var avmlp = {
             "top": 0
         });
 
-        $slide.appendTo($section);
-        $section.prependTo($("#viewport"));
+        // $slide.appendTo($section);
+        // $section.prependTo($("#viewport"));
 
         // set scale for new slide as well
-        this.applyZoom();
+        // this.applyZoom();
 
         // remove packshot-images from slides
         $("img.packshot").remove();
@@ -283,6 +283,9 @@ var avmlp = {
         $(".slide").not("#start").find(".product-features").css("opacity", 0);
         $(".slide").not("#start").find(".action-buttons").css("opacity", 0);
         $(".slide").not("#start").find(".icon-list li").css("opacity", 0);
+
+        $('#packshot-wrapper').removeClass('first-animation');
+        $('#start').removeClass('first-animation');
 
 
 
@@ -703,6 +706,8 @@ jQuery( document ).ready(function( $ ) {
     }
 
 
+
+
     // avmlp.resizeSections();
 
     // inside/outside image - using jquery ui draggable
@@ -748,6 +753,8 @@ jQuery( document ).ready(function( $ ) {
             $(window).scrollTop($("[id*='"+href.slice(1)+"']").offset().top - offsetSize);
         }
     });
+
+
 });
 
 // resize handler
