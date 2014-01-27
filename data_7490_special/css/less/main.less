@@ -519,14 +519,6 @@ section {
     }
 }
 
-// .js  {
-//     .first-animation {
-//         .packshot, #packshot {
-//             opacity:0;
-//             .animation(scale-in 1s ease-in-out 200ms forwards);
-//         }
-//     }
-// }
 
 // section 2 - interior
 #heimnetz, .heimnetz {
@@ -1301,6 +1293,34 @@ section.active {
 .primary.handheld {
     display:none;
 }
+
+.js {
+  #packshot-wrapper {
+        opacity:1;  
+        .transition(all ease-in-out 400ms);
+        .transition-delay(0.5s); 
+}
+.start, #start {
+    opacity:1;
+    .transition(all ease-in-out 150ms);
+    .transition-delay(0.3s); 
+}
+
+}
+.js {
+  #packshot-wrapper { 
+    &.first-animation {
+        opacity:0;   
+    }
+  }  
+  .start, #start {
+    &.first-animation {
+        opacity:0;
+    }
+}
+
+}
+
 
 /* ==========================================================================
    Helper classes
