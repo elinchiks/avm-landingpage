@@ -74,7 +74,6 @@ var avmlp = {
     },
 
     setKeyframes: function() {
-        console.log(this.aniSpeed);
         for (var i = 0; i < this.animationData.frames.length; i++) {
             if (this.animationData.frames[i].kf) {
                 switch (this.animationData.frames[i].kf) {
@@ -248,6 +247,7 @@ var avmlp = {
         var $section = $('<section id="packshot-wrapper" />');
         var $slide = $('<div class="slide packshot-slide first-animation" />');
         var $packshot =$('<img src="data_7490_special/frames/960px/0000.png" id="packshot" width="960" height="640" alt="FRITZ!Box 7490" />');
+
         $packshot.appendTo($slide);
 
         this.setKeyframes();
@@ -468,12 +468,12 @@ var avmlp = {
         if (this.lastSection !== currentSection) {
 
             $("#" + currentSection).show().addClass('active');
+            $("section").not("#" + currentSection).not("#packshot-wrapper").hide().removeClass('active');
 
             // Update navigation
             $('nav.primary').find('li').removeClass('active');
             $('nav.primary').find('li.' + currentSection).addClass('active');
 
-            $("#" + this.lastSection).hide().removeClass('active');
             this.restoreDefaults();
         }
         this.lastSection = currentSection;
@@ -539,6 +539,8 @@ var avmlp = {
         // css code for #packshot
         if (this.animationData.frames[this.aniStep].imgCss) {
             var imgCss = this.animationData.frames[this.aniStep].imgCss;
+
+
             if (!imgCss || !imgCss.width) {
                 imgCss.width = "960px";
                 imgCss.height = "640px";
@@ -570,6 +572,8 @@ var avmlp = {
                 }
                 if($('#packshot').attr('src') !== aniImage.low.src &&
                     $('#packshot').attr('src') !== aniImage.highSrc ) {
+
+
                     window.clearTimeout(this.aniTimeoutID);
                     // load hi-quality src
                     this.aniTimeoutID = window.setTimeout(function() {
@@ -581,7 +585,6 @@ var avmlp = {
                         "top": aniImage.top + "px",
                         "left": aniImage.left+ "px",
                         "margin-left": aniImage.marginLeft+ "px",
-
                     });
                 }
             }
