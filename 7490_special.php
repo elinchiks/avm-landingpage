@@ -6,7 +6,7 @@
 
     <title>FRITZ!Box 7490</title>
     <meta name="description" content="Die FRITZ!Box 7490 bringt das High-Speed-Heimnetz an jeden DSL-Anschluss und deckt mit vielen Extras all Ihre Kommunikationswünsche rund um Internet, Telefonie und Netzwerk ab. Neuestes WLAN AC sorgt dabei für spektakuläre Gigabit-Geschwindigkeiten bis 1.300 MBit/s im kabellosen Heimnetz.">
-    <link rel="stylesheet" href="data_7490_special/css/style.css?v=2014-01-24">
+    <link rel="stylesheet" href="data_7490_special/css/style.css?v=2014-01-27">
     <script src="data_7490_special/js/vendor/modernizr.2.7.1.min.js"></script>
 </head>
 <body>
@@ -631,6 +631,7 @@
         </div>
     </div>
 
+
     
  <!--    // <script src="data_7490_special/js/vendor/jquery.2.0.3.min.js"></script>
     // <script src="data_7490_special/js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
@@ -640,6 +641,7 @@
     // <script src="data_7490_special/js/main.js"></script> -->
   
     <script src="data_7490_special/js/scripts.js?v=2014-01-24"></script>
+
 
 
 </body>
