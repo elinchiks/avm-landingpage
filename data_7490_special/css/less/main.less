@@ -73,13 +73,14 @@ video {
 
 html {
     height: 100%;
+    background-color: #002c5a !important;
 }
 
 body {
     min-height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #002c5a;
+    background-color: #002c5a !important;
     color: #fff;
     font-family: @font-text;
     font-size:18px;
@@ -105,13 +106,11 @@ nav.primary {
     right:20px;
     left:auto;
     top:50%;
-    width: 120px;
+    width: 200px;
     margin-top:-75px;
     background-size: 100% 100%;
     z-index: 999;
     height: auto;
-
-
     h2 {
         margin: 0;
         font-size: 14px;
@@ -132,6 +131,7 @@ nav.primary {
         list-style-position: inside;
         opacity: 0.1;
         width:100%;
+        overflow:hidden;
         display:block;
         background: url("../images/list.png") no-repeat right center;
          list-style: none;
@@ -486,14 +486,17 @@ section {
     }
 }
 
-
 #packshot {
     position: absolute;
     z-index: 50;
     left: 118px;
-    // top: 118px;
     top: 136px;
+    width: 960px;
+    height: 640px;
+    left: 50%;
+    margin-left: -480px;
 }
+
 
 // section 1 - visible at start
 #start, .start {
