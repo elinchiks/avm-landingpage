@@ -105,11 +105,12 @@
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) { 
 		nav#primary ul, nav.primary ul {
-			font-size: 16px !important;
+			font-size: 18px !important;
 			line-height: 20px;
 		}
 		nav.primary.handheld {
 			top: 350px;
+
 		}
 		body * { text-rendering: optimizeLegibility !important; }
 
@@ -160,7 +161,7 @@ and (max-device-width : 1024px) {
 		opacity:0;
 	}
 	
-	section.active {
+	section#wlan.active , section#usb3.active{
 		   b {
 		       // Animations
 		       &.bar-1 {

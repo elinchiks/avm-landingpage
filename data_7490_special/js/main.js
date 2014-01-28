@@ -107,12 +107,12 @@ var avmlp = {
         var section8Top =  $('#auszeichnungen').offset().top - (($(document).height() - $('#auszeichnungen').offset().top) / 2);
 
         $('nav.primary li').removeClass('active');
-        if($(document).scrollTop() <= section1Top && $(document).scrollTop() < section2Top){
+        if ($(document).scrollTop() <= section1Top && $(document).scrollTop() < section2Top){
         } else if ($(document).scrollTop() >= section2Top && $(document).scrollTop() < section3Top){
-            $('nav.primary li.start').addClass('active');
-            $('section').removeClass('active');
-            $('section#start').addClass('active');
-            $("#footer-section").removeClass('active');
+             $('nav.primary li.start').addClass('active');
+             $('section').removeClass('active');
+             $('section#start').addClass('active');
+             $("#footer-section").removeClass('active');
         } else if ($(document).scrollTop() >= section3Top && $(document).scrollTop() < section4Top){
             $('nav.primary li.heimnetz').addClass('active');
             $('section').removeClass('active');
@@ -144,6 +144,7 @@ var avmlp = {
             $('section#auszeichnungen').addClass('active');
             $("#footer-section").addClass('active');
         }
+
     },
 
 
@@ -166,9 +167,12 @@ var avmlp = {
             jQuery("#debug-section-height").text(h + "px");
             jQuery("#debug-zoom").text(this.zoom.toPrecision(3));
         }
-        if($('html').hasClass('js')) {
-            $('#start').removeClass('first-animation');
-        }
+        setTimeout(function(){
+            if($('html').hasClass('js')) {
+                $('#start').removeClass('first-animation');
+            }
+        }, 100);
+
     },
 
     applyZoom: function() {
