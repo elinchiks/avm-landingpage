@@ -356,6 +356,9 @@ var avmlp = {
                 } else { // bigger jump - probably 2 or more sections
 
                     var i = Math.floor($(window).scrollTop() / this.aniSpeed);
+                    if (i > this.animationData.frames.length) {
+                        this.animationData.frames.length - 1;
+                    }
                     var currentSection = this.animationData.frames[i].s;
                     if (currentSection) {
                         this.isAnimationRunning = false;
@@ -439,6 +442,9 @@ var avmlp = {
             this.navReady = true;
         }
         this.lastSection = currentSection;
+        if (this.animationData.frames[this.aniStep].kf && this.animationData.frames[this.aniStep].kf === "poster") {
+            this.navReady = true;
+        }
 
         // Opacity for header
         if ($("#" + currentSection + " header").css("opacity") !== this.animationData.frames[this.aniStep].ho ) {
