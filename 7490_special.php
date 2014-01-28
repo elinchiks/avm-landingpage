@@ -551,8 +551,8 @@
         <section id="auszeichnungen">
             <div class="slide" class="auszeichnungen">
 
-                <header style="width:100%; left:0;">
-                    <h1  >Erlebe das Heimnetz <br> der nächsten Generation <br>FRITZ!Box 7490</h1>
+                <header>
+                    <h1> Erlebe das Heimnetz <br> der nächsten Generation <br>FRITZ!Box 7490 </h1>
                 </header>
 
                 <div class="action-buttons" >

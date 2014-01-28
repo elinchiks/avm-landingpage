@@ -11,7 +11,7 @@
 		&.handheld {
 			display:block !important;
 			position:absolute;
-			top: 395px;
+			top: 200px;
 			margin-top: -68px;
 			z-index: 999;
 			height:135px;
@@ -42,6 +42,9 @@
 	}
 }
 .tablet, .mobile {
+	.imprint{
+		margin-right:100px;
+	}
 
 .logo-svg {
 	width: 50px !important;
@@ -110,7 +113,6 @@
 		}
 		nav.primary.handheld {
 			top: 350px;
-
 		}
 		body * { text-rendering: optimizeLegibility !important; }
 
@@ -137,8 +139,11 @@
 				top: 250px;
 			}
 		}
-	}
 
+	}
+	// Nexus
+		@media only screen and (min-device-width : 120px) and (max-device-width : 900px) and (orientation : portrait) { 
+		}
 }
 
 // Media Querries for tablets
@@ -287,7 +292,7 @@ and (max-device-width : 1024px) {
 		opacity:0;
 	}
 	h1, h2 {
-		.transform(translate(0,-100%));
+		.transform(translateY(-100%));
 		opacity:0;
 		
 		.transition(all 100ms);
@@ -300,7 +305,7 @@ and (max-device-width : 1024px) {
 		.transition-delay(2s);
 	}
 	.description {
-		.transform(translate(0,200%));
+		.transform(translateY(200%));
 		opacity:0;
 		.transition(all 600ms);
 		.transition-timing-function(cubic-bezier(0.17,0.67,0.79,1.61));	
@@ -329,16 +334,15 @@ and (max-device-width : 1024px) {
 			.transition-timing-function(cubic-bezier(0,0.58,1.2,1));
 			.transition-delay(1.5s);
 		}
-
 		h1, h2{
 			opacity:1;
-			.transform(translate(0,0));
+			.transform(translateY(0));
 			.transition(all 1s);
 			.transition-delay(1s);
 		}
 
 		.description {
-			.transform(translate(0,0));
+			.transform(translateY(0));
 			opacity:1;
 			.transition(all 1s);
 			.transition-delay(2s);
