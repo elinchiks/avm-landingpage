@@ -28,7 +28,7 @@ var avmlp = {
     lastSection: false,
     targetOffset: -1,
 
-    aniJsonFile: "data_7490_special/js/animation.json", // set this to "js/animation.json" if you want to make changes
+    aniJsonFile: "data_7490_special/js/animation-min.json", // set this to "js/animation.json" if you want to make changes
     aniSpeed: 20,
     aniTimeoutID: null,
     aniImages: [],
@@ -50,6 +50,8 @@ var avmlp = {
     scrollSpeedFactor: 1,
     navReady: true,
     canvas: false,
+    canvasCtx: false,
+
 
     // methods
     loadAnimationImages: function() {
@@ -212,13 +214,12 @@ var avmlp = {
         // create new slide for the packshot animation
 
         var $section = $('<section id="packshot-wrapper" class="first-animation"/>');
-        var $slide = $('<div class="slide packshot-slide first-animation"><canvas id="canvas" /></div>');
+        var $slide = $('<div class="slide packshot-slide first-animation"><canvas id="canvas" width="960" height="640"></canvas></div>');
         var $packshot =$('<img src="data_7490_special/frames/960px/0000.png" id="packshot" width="960" height="640" alt="FRITZ!Box 7490" />');
         // $packshot.appendTo($slide);
 
 
         this.setKeyframes();
-
         this.loadAnimationImages();
 
         // the section wrapper get's a fixed position
@@ -235,13 +236,13 @@ var avmlp = {
         $slide.appendTo($section);
         $section.prependTo($("#viewport"));
 
-        this.canvas = document.getElementById("canvas").getContext('2d');
-
+        this.canvas = document.getElementById("canvas");
+        this.canvasCtx = this.canvas.getContext('2d');
         // set scale for new slide as well
         this.applyZoom();
 
         // remove packshot-images from slides
-        $("img.packshot").remove();
+        $("img.packshot").not("#packshot-start").remove();
 
         // remove background from other slides, we'll use the background from the packshot-wrapper
         $(".slide").not(".packshot-slide").css("background", "transparent");
@@ -447,6 +448,7 @@ var avmlp = {
             $('nav.primary').find('li.' + currentSection).addClass('active');
 
             this.restoreDefaults();
+            this.navReady = true;
         }
         this.lastSection = currentSection;
 
@@ -512,15 +514,17 @@ var avmlp = {
         if (this.animationData.frames[this.aniStep].imgCss) {
             var imgCss = this.animationData.frames[this.aniStep].imgCss;
 
+            delete imgCss.width;
+            delete imgCss.height;
+            delete imgCss.marginLeft;
+            delete imgCss.left;
 
-            if (!imgCss || !imgCss.width) {
-                imgCss.width = "960px";
-                imgCss.height = "640px";
-            }
             if (!imgCss || !imgCss.top) {
                 imgCss.top = "136px";
             }
-            $("#packshot").css(this.animationData.frames[this.aniStep].imgCss);
+
+            $("#canvas").css(this.animationData.frames[this.aniStep].imgCss);
+
         }
 
         if (currentSection !== "auszeichnungen") {
@@ -542,26 +546,21 @@ var avmlp = {
                 if (!$("#canvas:visible").length) {
                     $('#canvas').show();
                 }
-                this.canvas.clearRect ( 0, 0, 980, 640 );
-                this.canvas.drawImage(aniImage.low, 0, 0);
+                this.canvasCtx.clearRect ( 0, 0, 960, 640 );
 
-                // if($('#packshot').attr('src') !== aniImage.low.src &&
-                //     $('#packshot').attr('src') !== aniImage.highSrc ) {
+                this.canvasCtx.drawImage(aniImage.low, 0, 0, 320, 213, 0, 0, this.canvas.width, this.canvas.height );
 
-
-                //     window.clearTimeout(this.aniTimeoutID);
-                //     // load hi-quality src
-                //     this.aniTimeoutID = window.setTimeout(function() {
-                //         $('#packshot').attr('src', aniImage.highSrc);
-                //     }, 50);
-                //     // change the source of our placeholder image
-                //     $('#packshot').attr('src', aniImage.low.src);
-                //     $('#packshot').css({
-                //         "top": aniImage.top + "px",
-                //         "left": aniImage.left+ "px",
-                //         "margin-left": aniImage.marginLeft+ "px",
-                //     });
-                // }
+                window.clearTimeout(this.aniTimeoutID);
+                // load hi-quality src
+                var _this = this;
+                this.aniTimeoutID = window.setTimeout(function() {
+                    var imgHi = new Image;
+                    imgHi.src = aniImage.highSrc;
+                    $(imgHi).on("load", function() {
+                        _this.canvasCtx.clearRect ( 0, 0, 960, 640 );
+                        _this.canvasCtx.drawImage(imgHi, 0, 0, 960, 640, 0, 0, _this.canvas.width, _this.canvas.height );
+                    });
+                }, 100);
             }
         }
     },
@@ -603,7 +602,6 @@ jQuery( document ).ready(function( $ ) {
         };
 
     }
-
 
     // SVG Logo, if browser can handle it
     if($("html").hasClass("svg")) {
@@ -654,6 +652,9 @@ jQuery( document ).ready(function( $ ) {
             e.stopPropagation();
 
             if (!avmlp.navReady) {
+                window.setTimeout(function() {
+                    avmlp.navReady = true;
+                }, 2000);
                 return false;
             }
 
@@ -714,6 +715,9 @@ jQuery( document ).ready(function( $ ) {
     $('.link-next').on('click', function(e){
         e.preventDefault();
         if (!avmlp.navReady) {
+            window.setTimeout(function() {
+                avmlp.navReady = true;
+            }, 2000);
             return false;
         }
         var href = $(this).attr("href");

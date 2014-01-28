@@ -42,7 +42,7 @@
 
                 <img src="data_7490_special/images/logo-fritz-color.png" width="160" height="125" class="logo-fritz-color" alt="Fritz!"/>
 
-                <img src="data_7490_special/frames/960px/0000.png" width="960" height="640" alt="FRITZ!Box 7490" class="packshot" />
+                <img src="data_7490_special/frames/960px/0000.png" width="960" height="640" alt="FRITZ!Box 7490" class="packshot" id="packshot-start" />
 
 
                 <div class="description">
@@ -633,17 +633,16 @@
     </div>
 
 
-   <!--   // <script src="data_7490_special/js/vendor/jquery.2.0.3.min.js"></script>
-     // <script src="data_7490_special/js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
-     // <script src="data_7490_special/js/vendor/jquery.ui.draggable.js"></script>
-
-     // <script src="data_7490_special/js/vendor/categorizr.min.js"></script>
-     // <script src="data_7490_special/js/main.js"></script> -->
-
+    <script src="data_7490_special/js/vendor/jquery.2.0.3.min.js"></script>
+    <script src="data_7490_special/js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="data_7490_special/js/vendor/jquery.ui.draggable.js"></script>
+    <script src="data_7490_special/js/vendor/categorizr.min.js"></script>
+    <script src="data_7490_special/js/main.js"></script>
 
 
-     <script src="data_7490_special/js/scripts.js?v=2014-01-28"></script>
-
+    <!--
+    <script src="data_7490_special/js/scripts.js?v=2014-01-28"></script>
+    //-->
 
 
 
