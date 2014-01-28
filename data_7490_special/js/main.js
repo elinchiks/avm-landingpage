@@ -357,9 +357,8 @@ var avmlp = {
 
                     var i = Math.floor($(window).scrollTop() / this.aniSpeed);
                     if (i >= this.animationData.frames.length) {
-                        console.log("alt", i);
-                        this.animationData.frames.length - 1;
-                        console.log("neu", i);
+                        i = this.animationData.frames.length - 1;
+
                     }
                     var currentSection = this.animationData.frames[i].s;
                     if (currentSection) {
