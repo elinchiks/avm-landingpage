@@ -427,9 +427,8 @@
                 <img src="data_7490_special/frames/960px/0149.png" width="960" height="640" alt="FRITZ!Box 7490" class="packshot" />
 
                 <div class="description">
-                   <span>
-                    FRITZ!Box 7490 bringt die komplette Telefonanlage gleich mit und bietet dir dazu noch Anschluss für alle gängigen Telefone, ganz egal ob IP, ISDN, analog oder auch schnurlos per DECT. Zusätzlich kannst du mit deinem Smartphone im Festnetz telefonieren und sogar Gegensprechanlagen ins Heimnetz einbinden. Für weiteren Komfort sorgen individuell konfigurierbare Anrufbeantworter sowie die Faxfunktion und viele weitere Extras.
-                    </span>
+                    <span> FRITZ!Box 7490 bringt die komplette Telefonanlage gleich mit und bietet dir dazu noch Anschluss für alle gängigen Telefone, ganz egal ob IP, ISDN, analog oder auch schnurlos per DECT. Zusätzlich kannst du mit deinem Smartphone im Festnetz telefonieren und sogar Gegensprechanlagen ins Heimnetz einbinden. Für weiteren Komfort sorgen individuell konfigurierbare Anrufbeantworter sowie die Faxfunktion und viele weitere Extras.</span>
+                   
                 </div>
 
                 <a href="#fritzos" class="link-next">

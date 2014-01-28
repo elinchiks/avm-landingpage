@@ -662,7 +662,6 @@ jQuery( document ).ready(function( $ ) {
                 $('' + href + '').addClass('active');
                 return false;
             }
-
         });
     } else {
         $(".primary a").on("click", function(e) {
