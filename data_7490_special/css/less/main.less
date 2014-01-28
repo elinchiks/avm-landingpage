@@ -495,6 +495,15 @@ section {
     left: 50%;
     margin-left: -480px;
 }
+#canvas {
+    position: absolute;
+    z-index: 50;
+    left: 118px;
+    top: 136px;
+    width: 960px;
+    height: 640px;
+    // background: #000;
+}
 
 
 // section 1 - visible at start
@@ -1419,9 +1428,9 @@ section#usb3.active {
 
 .desktop.js {
   #packshot-wrapper {
-        opacity:1;  
+        opacity:1;
         .transition(all ease-in-out 400ms);
-        .transition-delay(0.5s); 
+        .transition-delay(0.5s);
 }
 .js {
    #start {
@@ -1440,15 +1449,13 @@ section#usb3.active {
 
 }
 .desktop.js {
-  #packshot-wrapper { 
+  #packshot-wrapper {
     &.first-animation {
-        opacity:0;   
+        opacity:0;
     }
-  }  
-
-
-
+  }
 }
+
 
 
 /* ==========================================================================
