@@ -356,8 +356,10 @@ var avmlp = {
                 } else { // bigger jump - probably 2 or more sections
 
                     var i = Math.floor($(window).scrollTop() / this.aniSpeed);
-                    if (i > this.animationData.frames.length) {
+                    if (i >= this.animationData.frames.length) {
+                        console.log("alt", i);
                         this.animationData.frames.length - 1;
+                        console.log("neu", i);
                     }
                     var currentSection = this.animationData.frames[i].s;
                     if (currentSection) {
@@ -445,6 +447,10 @@ var avmlp = {
         if (this.animationData.frames[this.aniStep].kf && this.animationData.frames[this.aniStep].kf === "poster") {
             this.navReady = true;
         }
+        // hide active hotspot
+        if($('#heimnetz').find(".hotspot").hasClass('active')) {
+            $(".hotspot").removeClass("active");
+        };
 
         // Opacity for header
         if ($("#" + currentSection + " header").css("opacity") !== this.animationData.frames[this.aniStep].ho ) {
@@ -745,20 +751,14 @@ jQuery( window ).on('beforeunload', function() {
     jQuery( window ).scrollTop(0);
 });
 
-
-jQuery( window ).on( "scroll", function() {
-    if($('#heimnetz').find(".hotspot").hasClass('active')) {
-        $(".hotspot").removeClass("active");
-    };
-
-
-    if(!$('html').hasClass('desktop')) {
-        // e.preventDefault();
-       avmlp.redrawDotNav();
-    }
-
- });
-
+if(!$('html').hasClass('desktop')) {
+    jQuery( window ).on( "scroll", function() {
+        if(!$('html').hasClass('desktop')) {
+            // e.preventDefault();
+           avmlp.redrawDotNav();
+        }
+    });
+}
 
 
 // with the sectionChange event we can control some animations taht should play when a slide is entered
