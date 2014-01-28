@@ -778,6 +778,10 @@ jQuery( window ).on( "orientationchange", function() {
 
 
 jQuery( window ).on( "scroll", function() {
+    if($('#heimnetz').find(".hotspot").hasClass('active')) {
+        $(".hotspot").removeClass("active");
+    };
+
 
     if(!$('html').hasClass('desktop')) {
         // e.preventDefault();
