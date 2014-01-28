@@ -744,6 +744,11 @@ jQuery( window ).on( "orientationchange", function() {
     avmlp.resizeSections();
  });
 
+jQuery( window ).on( "reload", function() {
+   avmlp.scrollToSection('#start');
+ });
+
+
 
 jQuery( window ).on( "scroll", function() {
     if($('#heimnetz').find(".hotspot").hasClass('active')) {
