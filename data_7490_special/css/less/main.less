@@ -78,13 +78,16 @@ body {
     min-height: 100%;
     margin: 0;
     padding: 0;
-    background: #002c59 !important;
+    // background-image: url("../images/bg-body.jpg");
+    background-repeat: repeat;
+    background-color: #002c59;
     color: #fff;
     font-family: @font-text;
     font-size:18px;
     width:100%;
     max-width:100%;
 }
+
 body.debug {
     background-color: #666;
 }
@@ -683,9 +686,9 @@ section {
     &.active {
         .product-graphics {
             z-index:5;
-            border-left: 1px solid rgba(255, 255, 255, 1);
+            border-left: 2px solid rgba(255, 255, 255, 1);
             .secondary-text {
-                border-bottom:1px solid rgba(255, 255, 255, 1);
+                border-bottom:2px solid rgba(255, 255, 255, 1);
             }
             &:before {
                 opacity:1;
@@ -714,7 +717,7 @@ section {
         z-index:2;
         width:50%;
         float:right;
-        border-left: 1px solid rgba(255, 255, 255, 1);
+        border-left: 2px solid rgba(255, 255, 255, 1);
         .transition(border-left 400ms ease-in 500ms);
 
         &:before {
@@ -1317,7 +1320,7 @@ section#usb3.active {
 }
 
 .product-features {
-    border-left:1px solid white;
+    border-left:2px solid white;
     padding-left:60px;
     float:right;
     width:45%;

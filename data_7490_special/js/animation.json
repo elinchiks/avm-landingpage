@@ -20,12 +20,7 @@
 "_comment": "begin section start",
             "kf": "begin",
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 1,
             "po": 1,
             "flo": 1,
@@ -34,12 +29,7 @@
         {
             "kf": "poster",
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 1,
             "po": 1,
             "flo": 1,
@@ -47,12 +37,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 1,
             "po": 1,
             "flo": 1,
@@ -60,12 +45,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 1,
             "po": 1,
             "flo": 1,
@@ -73,12 +53,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 1,
             "po": 1,
             "flo": 1,
@@ -86,12 +61,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 1,
             "po": 1,
             "flo": 1,
@@ -99,12 +69,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 1,
             "po": 1,
             "flo": 1,
@@ -112,12 +77,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 1,
             "po": 1,
             "flo": 1,
@@ -125,12 +85,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 1,
             "po": 1,
             "flo": 1,
@@ -138,12 +93,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 1,
             "po": 1,
             "flo": 1,
@@ -151,12 +101,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 1,
             "po": 1,
             "flo": 1,
@@ -164,12 +109,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 1,
             "po": 1,
             "flo": 1,
@@ -177,12 +117,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 1,
             "po": 1,
             "flo": 1,
@@ -190,12 +125,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 1,
             "po": 1,
             "flo": 1,
@@ -203,12 +133,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 1,
             "po": 1,
             "flo": 1,
@@ -216,12 +141,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 1,
             "po": 1,
             "flo": 1,
@@ -229,12 +149,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 1,
             "po": 1,
             "flo": 1,
@@ -242,12 +157,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 1,
             "po": 1,
             "flo": 1,
@@ -255,12 +165,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 0.9,
             "po": 1,
             "flo": 1,
@@ -268,12 +173,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 0.8,
             "po": 1,
             "flo": 1,
@@ -281,12 +181,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 0.7,
             "po": 1,
             "flo": 1,
@@ -294,12 +189,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 0.6,
             "po": 1,
             "flo": 1,
@@ -307,12 +197,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 0.5,
             "po": 1,
             "flo": 0.9,
@@ -320,12 +205,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 0.4,
             "po": 1,
             "flo": 0.8,
@@ -333,12 +213,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 0.3,
             "po": 1,
             "flo": 0.7,
@@ -346,12 +221,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 0.2,
             "po": 1,
             "flo": 0.6,
@@ -359,12 +229,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 0.1,
             "po": 1,
             "flo": 0.5,
@@ -372,12 +237,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 0,
             "po": 1,
             "flo": 0.4,
@@ -385,12 +245,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 0,
             "po": 1,
             "flo": 0.3,
@@ -398,12 +253,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 0,
             "po": 1,
             "flo": 0.2,
@@ -411,12 +261,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 0,
             "po": 1,
             "flo": 0.1,
@@ -424,12 +269,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 0,
             "po": 0.9,
             "flo": 0,
@@ -437,12 +277,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 0,
             "po": 0.8,
             "flo": 0,
@@ -450,12 +285,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 0,
             "po": 0.7,
             "flo": 0,
@@ -463,12 +293,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 0,
             "po": 0.6,
             "flo": 0,
@@ -476,12 +301,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 0,
             "po": 0.5,
             "flo": 0,
@@ -489,12 +309,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 0,
             "po": 0.4,
             "flo": 0,
@@ -502,12 +317,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 0,
             "po": 0.3,
             "flo": 0,
@@ -515,12 +325,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 0,
             "po": 0.2,
             "flo": 0,
@@ -528,12 +333,7 @@
         },
         {
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 0,
             "po": 0.1,
             "flo": 0,
@@ -543,12 +343,7 @@
 "_comment": "end section start",
             "kf": "end",
             "s": "start",
-            "img": "0000.png",
-            "imgCss": {
-                "width": "960px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-            },
+            "img": "",
             "ho": 0,
             "po": 0,
             "flo": 0,
@@ -568,7 +363,7 @@
                     "opacity": 0
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(10)"
         },
         {
             "s": "heimnetz",
@@ -582,7 +377,7 @@
                     "opacity": 0.2
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(40)"
         },
         {
             "s": "heimnetz",
@@ -596,7 +391,7 @@
                     "opacity": 0.4
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(70)"
         },
         {
             "s": "heimnetz",
@@ -610,7 +405,7 @@
                     "opacity": 0.6
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(100)"
         },
         {
             "s": "heimnetz",
@@ -624,7 +419,7 @@
                     "opacity": 0.8
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(130)"
         },
         {
             "s": "heimnetz",
@@ -638,7 +433,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(160)"
         },
         {
             "s": "heimnetz",
@@ -651,7 +446,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.setSliderPosition(190)"
         },
         {
             "s": "heimnetz",
@@ -665,7 +461,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(220)"
         },
         {
             "s": "heimnetz",
@@ -679,7 +475,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(250)"
         },
         {
             "s": "heimnetz",
@@ -693,7 +489,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(280)"
         },
         {
             "s": "heimnetz",
@@ -707,7 +503,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(310)"
         },
         {
             "s": "heimnetz",
@@ -721,7 +517,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(340)"
         },
         {
             "s": "heimnetz",
@@ -735,7 +531,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(370)"
         },
         {
             "s": "heimnetz",
@@ -749,7 +545,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(400)"
         },
         {
             "s": "heimnetz",
@@ -763,7 +559,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(430)"
         },
         {
             "s": "heimnetz",
@@ -777,7 +573,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(460)"
         },
         {
             "s": "heimnetz",
@@ -791,7 +587,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(490)"
         },
         {
             "s": "heimnetz",
@@ -805,7 +601,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(520)"
         },
         {
             "s": "heimnetz",
@@ -819,7 +615,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(550)"
         },
         {
             "s": "heimnetz",
@@ -833,7 +629,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(580)"
         },
         {
             "s": "heimnetz",
@@ -847,7 +643,63 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(610)"
+        },
+        {
+            "s": "heimnetz",
+            "img": "",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(640)"
+        },
+        {
+            "s": "heimnetz",
+            "img": "",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(670)"
+        },
+        {
+            "s": "heimnetz",
+            "img": "",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(700)"
+        },
+        {
+            "s": "heimnetz",
+            "img": "",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(730)"
         },
         {
             "kf": "poster",
@@ -862,7 +714,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.animateSlider(760)"
+            "code": "avmlp.setSliderPosition(760)"
         },
         {
             "s": "heimnetz",
@@ -876,7 +728,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(730)"
         },
         {
             "s": "heimnetz",
@@ -890,7 +742,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(700)"
         },
         {
             "s": "heimnetz",
@@ -904,7 +756,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(670)"
         },
         {
             "s": "heimnetz",
@@ -918,7 +770,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(640)"
         },
         {
             "s": "heimnetz",
@@ -932,77 +784,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
-        },
-        {
-            "s": "heimnetz",
-            "img": "",
-            "ho": 1,
-            "po": 1,
-            "flo": 0,
-            "alo": 0,
-            "a": {
-                ".drag-wrapper": {
-                    "opacity": 1
-                }
-            },
-            "code": "avmlp.updateSlider()"
-        },
-        {
-            "s": "heimnetz",
-            "img": "",
-            "ho": 1,
-            "po": 1,
-            "flo": 0,
-            "alo": 0,
-            "a": {
-                ".drag-wrapper": {
-                    "opacity": 1
-                }
-            },
-            "code": "avmlp.updateSlider()"
-        },
-        {
-            "s": "heimnetz",
-            "img": "",
-            "ho": 1,
-            "po": 1,
-            "flo": 0,
-            "alo": 0,
-            "a": {
-                ".drag-wrapper": {
-                    "opacity": 1
-                }
-            },
-            "code": "avmlp.updateSlider()"
-        },
-        {
-            "s": "heimnetz",
-            "img": "",
-            "ho": 1,
-            "po": 1,
-            "flo": 0,
-            "alo": 0,
-            "a": {
-                ".drag-wrapper": {
-                    "opacity": 1
-                }
-            },
-            "code": "avmlp.updateSlider()"
-        },
-        {
-            "s": "heimnetz",
-            "img": "",
-            "ho": 1,
-            "po": 1,
-            "flo": 0,
-            "alo": 0,
-            "a": {
-                ".drag-wrapper": {
-                    "opacity": 1
-                }
-            },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(610)"
         },
         {
             "s": "heimnetz",
@@ -1016,7 +798,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(580)"
         },
         {
             "s": "heimnetz",
@@ -1030,7 +812,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(550)"
         },
         {
             "s": "heimnetz",
@@ -1044,7 +826,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(520)"
         },
         {
             "s": "heimnetz",
@@ -1058,7 +840,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(490)"
         },
         {
             "s": "heimnetz",
@@ -1072,7 +854,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(460)"
         },
         {
             "s": "heimnetz",
@@ -1086,7 +868,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(430)"
         },
         {
             "s": "heimnetz",
@@ -1100,7 +882,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(400)"
         },
         {
             "s": "heimnetz",
@@ -1114,7 +896,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(370)"
         },
         {
             "s": "heimnetz",
@@ -1128,7 +910,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(340)"
         },
         {
             "s": "heimnetz",
@@ -1142,7 +924,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(310)"
         },
         {
             "s": "heimnetz",
@@ -1156,7 +938,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(280)"
         },
         {
             "s": "heimnetz",
@@ -1170,7 +952,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(250)"
         },
         {
             "s": "heimnetz",
@@ -1184,7 +966,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(220)"
         },
         {
             "s": "heimnetz",
@@ -1198,7 +980,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(190)"
         },
         {
             "s": "heimnetz",
@@ -1212,7 +994,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(160)"
         },
         {
             "s": "heimnetz",
@@ -1226,7 +1008,7 @@
                     "opacity": 0.8
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(130)"
         },
         {
             "s": "heimnetz",
@@ -1240,7 +1022,7 @@
                     "opacity": 0.6
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(100)"
         },
         {
             "s": "heimnetz",
@@ -1254,7 +1036,7 @@
                     "opacity": 0.4
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(70)"
         },
         {
             "s": "heimnetz",
@@ -1268,7 +1050,7 @@
                     "opacity": 0.2
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(40)"
         },
         {
 "_comment": "end section heimnetz",
@@ -1691,8 +1473,7 @@
             "s": "wlan",
             "img": "0023.png",
             "imgCss": {
-                "top": "370px",
-                "width": "960px"
+                "top": "370px"
             },
             "ho": 1,
             "po": 0,
@@ -1711,12 +1492,7 @@
             "s": "wlan",
             "img": "0024.png",
             "imgCss": {
-                "top": "382px",
-                "width": "960px",
-                "height": "640px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
-
+                "top": "382px"
             },
             "ho": 1,
             "po": 0,
@@ -1735,11 +1511,7 @@
             "s": "wlan",
             "img": "0025.png",
             "imgCss": {
-                "top": "394px",
-                "width": "970px",
-                "height": "647px",
-                "left" : "50%",
-                "marginLeft" : "-485px"
+                "top": "394px"
             },
             "ho": 1,
             "po": 0,
@@ -1758,11 +1530,7 @@
             "s": "wlan",
             "img": "0027.png",
             "imgCss": {
-                "top": "406px",
-                "width": "980px",
-                "height": "653px",
-                "left" : "50%",
-                "marginLeft" : "-490px"
+                "top": "406px"
             },
             "ho": 1,
             "po": 0,
@@ -1781,11 +1549,7 @@
             "s": "wlan",
             "img": "0028.png",
             "imgCss": {
-                "top": "418px",
-                "width": "990px",
-                "height": "660px",
-                "left" : "50%",
-                "marginLeft" : "-495px"
+                "top": "418px"
             },
             "ho": 1,
             "po": 0,
@@ -1804,11 +1568,7 @@
             "s": "wlan",
             "img": "0029.png",
             "imgCss": {
-                "top": "430px",
-                "width": "1000px",
-                "height": "667px",
-                "left" : "50%",
-                "marginLeft" : "-500px"
+                "top": "430px"
             },
             "ho": 1,
             "po": 0,
@@ -1827,11 +1587,7 @@
             "s": "wlan",
             "img": "0030.png",
             "imgCss": {
-                "top": "442px",
-                "width": "1010px",
-                "height": "673px",
-                "left" : "50%",
-                "marginLeft" : "-505px"
+                "top": "442px"
             },
             "ho": 1,
             "po": 0,
@@ -1850,11 +1606,7 @@
             "s": "wlan",
             "img": "0031.png",
             "imgCss": {
-                "top": "454px",
-                "width": "1020px",
-                "height": "680px",
-                "left" : "50%",
-                "marginLeft" : "-510px"
+                "top": "454px"
             },
             "ho": 1,
             "po": 0,
@@ -1873,11 +1625,7 @@
             "s": "wlan",
             "img": "0032.png",
             "imgCss": {
-                "top": "466px",
-                "width": "1030px",
-                "height": "687px",
-                "left" : "50%",
-                "marginLeft" : "-515px"
+                "top": "466px"
             },
             "ho": 1,
             "po": 0,
@@ -1896,11 +1644,7 @@
             "s": "wlan",
             "img": "0033.png",
             "imgCss": {
-                "top": "478px",
-               "width": "1040px",
-                "height": "693px",
-               "left" : "50%",
-               "marginLeft" : "-520px"
+                "top": "478px"
             },
             "ho": 1,
             "po": 0,
@@ -1919,11 +1663,7 @@
             "s": "wlan",
             "img": "0034.png",
             "imgCss": {
-                "top": "490px",
-                "width": "1050px",
-                "height": "700px",
-                "left" : "50%",
-                "marginLeft" : "-525px"
+                "top": "490px"
             },
             "ho": 1,
             "po": 0,
@@ -1942,11 +1682,7 @@
             "s": "wlan",
             "img": "0035.png",
             "imgCss": {
-                "top": "502px",
-               "width": "1060px",
-                "height": "706px",
-               "left" : "50%",
-               "marginLeft" : "-530px"
+                "top": "502px"
             },
             "ho": 1,
             "po": 0,
@@ -1965,11 +1701,7 @@
             "s": "wlan",
             "img": "0036.png",
             "imgCss": {
-                "top": "514px",
-                "width": "1070px",
-                "height": "713px",
-                "left" : "50%",
-                "marginLeft" : "-535px"
+                "top": "514px"
             },
             "ho": 1,
             "po": 0,
@@ -1988,11 +1720,7 @@
             "s": "wlan",
             "img": "0037.png",
             "imgCss": {
-                "top": "526px",
-                 "width": "1080px",
-                "height": "720px",
-                 "left" : "50%",
-                 "marginLeft" : "-540px"
+                "top": "526px"
             },
             "ho": 1,
             "po": 0,
@@ -2011,11 +1739,7 @@
             "s": "wlan",
             "img": "0038.png",
             "imgCss": {
-                "top": "538px",
-                "width": "1090px",
-                "height": "727px",
-                "left" : "50%",
-                "marginLeft" : "-545px"
+                "top": "538px"
             },
             "ho": 1,
             "po": 0,
@@ -2034,11 +1758,7 @@
             "s": "wlan",
             "img": "0039.png",
             "imgCss": {
-                "top": "550px",
-                 "width": "1100px",
-                "height": "733px",
-                 "left" : "50%",
-                 "marginLeft" : "-550px"
+                "top": "550px"
             },
             "ho": 1,
             "po": 0,
@@ -2057,11 +1777,7 @@
             "s": "wlan",
             "img": "0040.png",
             "imgCss": {
-                "top": "562px",
-                "width": "1110px",
-                "height": "740px",
-                "left" : "50%",
-                "marginLeft" : "-555px"
+                    "top": "562px"
             },
             "ho": 1,
             "po": 0,
@@ -2080,11 +1796,7 @@
             "s": "wlan",
             "img": "0041.png",
             "imgCss": {
-                "top": "574px",
-                "width": "1120px",
-                "height": "746px",
-                "left" : "50%",
-                "marginLeft" : "-560px"
+                "top": "574px"
             },
             "ho": 1,
             "po": 0,
@@ -2103,11 +1815,7 @@
             "s": "wlan",
             "img": "0042.png",
             "imgCss": {
-                "top": "586px",
-                "width": "1130px",
-                "height": "753px",
-                "left" : "50%",
-                "marginLeft" : "-565px"
+                "top": "586px"
             },
             "ho": 1,
             "po": 0,
@@ -2126,11 +1834,7 @@
             "s": "wlan",
             "img": "0043.png",
             "imgCss": {
-                "top": "598px",
-                "width": "1140px",
-                "height": "760px",
-                "left" : "50%",
-                "marginLeft" : "-570px"
+                "top": "598px"
             },
             "ho": 1,
             "po": 0,
@@ -2149,11 +1853,7 @@
             "s": "wlan",
             "img": "0044.png",
             "imgCss": {
-                "top": "610px",
-                 "width": "1150px",
-                "height": "766px",
-                 "left" : "50%",
-                 "marginLeft" : "-575px"
+                "top": "610px"
             },
             "ho": 1,
             "po": 0,
@@ -2172,11 +1872,7 @@
             "s": "wlan",
             "img": "0045.png",
             "imgCss": {
-                "top": "622px",
-                "width": "1160px",
-                "height": "773px",
-                "left" : "50%",
-                "marginLeft" : "-580px"
+                "top": "622px"
             },
             "ho": 1,
             "po": 0,
@@ -2195,11 +1891,7 @@
             "s": "wlan",
             "img": "0046.png",
             "imgCss": {
-                "top": "634px",
-                "width": "1170px",
-                "height": "780px",
-                "left" : "50%",
-                "marginLeft" : "-585px"
+                "top": "634px"
             },
             "ho": 1,
             "po": 0,
@@ -2218,11 +1910,7 @@
             "s": "wlan",
             "img": "0047.png",
             "imgCss": {
-                "top": "648px",
-                "width": "1180px",
-                "height": "787px",
-                "left" : "50%",
-                "marginLeft" : "-590px"
+                "top": "648px"
             },
             "ho": 1,
             "po": 0,
@@ -2241,11 +1929,7 @@
             "s": "wlan",
             "img": "0048.png",
             "imgCss": {
-                "top": "656px",
-                "width": "1190px",
-                "height": "793px",
-                "left" : "50%",
-                "marginLeft" : "-595px"
+                "top": "656px"
             },
             "ho": 1,
             "po": 0,
@@ -2264,11 +1948,7 @@
             "s": "wlan",
             "img": "0049.png",
             "imgCss": {
-                "top": "660px",
-                "width": "1200px",
-                "height": "800px",
-                "left" : "50%",
-                "marginLeft" : "-600px"
+                "top": "660px"
             },
             "ho": 1,
             "po": 0,
@@ -2287,11 +1967,7 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px",
-                "width": "1200px",
-                "height": "800px",
-                "left" : "50%",
-                "marginLeft" : "-600px"
+                "top": "662px"
             },
             "ho": 1,
             "po": 0,
@@ -2310,11 +1986,7 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px",
-                "width": "1200px",
-                "height": "800px",
-                "left" : "50%",
-                "marginLeft" : "-600px"
+                "top": "662px"
             },
             "ho": 1,
             "po": 0,
@@ -2333,11 +2005,7 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px",
-                "width": "1200px",
-                "height": "800px",
-                "left" : "50%",
-                "marginLeft" : "-600px"
+                "top": "662px"
             },
             "ho": 1,
             "po": 0,
@@ -2356,11 +2024,7 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px",
-                "width": "1200px",
-                "height": "800px",
-                "left" : "50%",
-                "marginLeft" : "-600px"
+                "top": "662px"
             },
             "ho": 1,
             "po": 0,
@@ -2379,11 +2043,7 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px",
-                "width": "1200px",
-                "height": "800px",
-                "left" : "50%",
-                "marginLeft" : "-600px"
+                "top": "662px"
             },
             "ho": 1,
             "po": 0,
@@ -2402,11 +2062,7 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px",
-                "width": "1200px",
-                "height": "800px",
-                "left" : "50%",
-                "marginLeft" : "-600px"
+                "top": "662px"
             },
             "ho": 1,
             "po": 0,
@@ -2425,11 +2081,7 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px",
-                "width": "1200px",
-                "height": "800px",
-                "left" : "50%",
-                "marginLeft" : "-600px"
+                "top": "662px"
             },
             "ho": 1,
             "po": 0,
@@ -2448,11 +2100,7 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px",
-                "width": "1200px",
-                "height": "800px",
-                "left" : "50%",
-                "marginLeft" : "-600px"
+                "top": "662px"
             },
             "ho": 1,
             "po": 0,
@@ -2471,11 +2119,7 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px",
-                "width": "1200px",
-                "height": "800px",
-                "left" : "50%",
-                "marginLeft" : "-600px"
+                "top": "662px"
             },
             "ho": 1,
             "po": 0,
@@ -2494,11 +2138,7 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px",
-                "width": "1200px",
-                "height": "800px",
-                "left" : "50%",
-                "marginLeft" : "-600px"
+                "top": "662px"
             },
             "ho": 1,
             "po": 0,
@@ -2517,11 +2157,7 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px",
-                "width": "1200px",
-                "height": "800px",
-                "left" : "50%",
-                "marginLeft" : "-600px"
+                "top": "662px"
             },
             "ho": 1,
             "po": 0,
@@ -2540,11 +2176,7 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px",
-                "width": "1200px",
-                "height": "800px",
-                "left" : "50%",
-                "marginLeft" : "-600px"
+                "top": "662px"
             },
             "ho": 1,
             "po": 0,
@@ -2563,11 +2195,7 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px",
-                "width": "1200px",
-                "height": "800px",
-                "left" : "50%",
-                "marginLeft" : "-600px"
+                "top": "662px"
             },
             "ho": 1,
             "po": 0,
@@ -2587,11 +2215,7 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px",
-                "width": "1200px",
-                "height": "800px",
-                "left" : "50%",
-                "marginLeft" : "-600px"
+                "top": "662px"
             },
             "ho": 1,
             "po": 0,
@@ -2610,11 +2234,7 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px",
-                "width": "1200px",
-                "height": "800px",
-                "left" : "50%",
-                "marginLeft" : "-600px"
+                "top": "662px"
             },
             "ho": 1,
             "po": 0,
@@ -2633,11 +2253,7 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px",
-                "width": "1200px",
-                "height": "800px",
-                "left" : "50%",
-                "marginLeft" : "-600px"
+                "top": "662px"
             },
             "ho": 0.9,
             "po": 0,
@@ -2656,11 +2272,7 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px",
-                "width": "1200px",
-                "height": "800px",
-                "left" : "50%",
-                "marginLeft" : "-600px"
+                "top": "662px"
             },
             "ho": 0.8,
             "po": 0,
@@ -2679,11 +2291,7 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px",
-                "width": "1200px",
-                "height": "800px",
-                "left" : "50%",
-                "marginLeft" : "-600px"
+                "top": "662px"
             },
             "ho": 0.7,
             "po": 0,
@@ -2702,11 +2310,7 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px",
-                "width": "1200px",
-                "height": "800px",
-                "left" : "50%",
-                "marginLeft" : "-600px"
+                "top": "662px"
             },
             "ho": 0.6,
             "po": 0,
@@ -2725,11 +2329,7 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px",
-                "width": "1200px",
-                "height": "800px",
-                "left" : "50%",
-                "marginLeft" : "-600px"
+                "top": "662px"
             },
             "ho": 0.5,
             "po": 0,
@@ -2748,11 +2348,7 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px",
-                "width": "1200px",
-                "height": "800px",
-                "left" : "50%",
-                "marginLeft" : "-600px"
+                "top": "662px"
             },
             "ho": 0.4,
             "po": 0,
@@ -2771,11 +2367,7 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px",
-                "width": "1200px",
-                "height": "800px",
-                "left" : "50%",
-                "marginLeft" : "-600px"
+                "top": "662px"
             },
             "ho": 0.3,
             "po": 0,
@@ -2794,11 +2386,7 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px",
-                "width": "1200px",
-                "height": "800px",
-                "left" : "50%",
-                "marginLeft" : "-600px"
+                "top": "662px"
             },
             "ho": 0.2,
             "po": 0,
@@ -2817,11 +2405,7 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px",
-                "width": "1200px",
-                "height": "800px",
-                "left" : "50%",
-                "marginLeft" : "-600px"
+                "top": "662px"
             },
             "ho": 0.1,
             "po": 0,
@@ -2842,11 +2426,7 @@
             "s": "wlan",
             "img": "0050.png",
             "imgCss": {
-                "top": "662px",
-                "width": "1200px",
-                "height": "800px",
-                "left" : "50%",
-                "marginLeft" : "-600px"
+                "top": "662px"
             },
             "ho": 0,
             "po": 0,
@@ -2867,11 +2447,7 @@
             "s": "usb3",
             "img": "0051.png",
             "imgCss": {
-                "top": "662px",
-                "width": "1190px",
-                "height": "793px",
-                "left" : "50%",
-                "marginLeft" : "-595px"
+                "top": "662px"
             },
             "ho": 0,
             "po": 0,
@@ -2890,11 +2466,7 @@
             "s": "usb3",
             "img": "0052.png",
             "imgCss": {
-                "top": "642px",
-                "width": "1180px",
-                "height": "787px",
-                "left" : "50%",
-                "marginLeft" : "-590px"
+                "top": "642px"
             },
             "ho": 0.1,
             "po": 0,
@@ -2913,11 +2485,7 @@
             "s": "usb3",
             "img": "0053.png",
             "imgCss": {
-                "top": "622px",
-                "width": "1170px",
-                "height": "780px",
-                "left" : "50%",
-                "marginLeft" : "-585px"
+                "top": "622px"
             },
             "ho": 0.2,
             "po": 0,
@@ -2936,11 +2504,7 @@
             "s": "usb3",
             "img": "0054.png",
             "imgCss": {
-                "top": "602px",
-                "width": "1160px",
-                "height": "753px",
-                "left" : "50%",
-                "marginLeft" : "-580px"
+                "top": "602px"
             },
             "ho": 0.3,
             "po": 0,
@@ -2959,11 +2523,7 @@
             "s": "usb3",
             "img": "0055.png",
             "imgCss": {
-                "top": "580px",
-                "width": "1150px",
-                "height": "767px",
-                "left" : "50%",
-                "marginLeft" : "-575px"
+                "top": "580px"
             },
             "ho": 0.4,
             "po": 0,
@@ -2982,11 +2542,7 @@
             "s": "usb3",
             "img": "0056.png",
             "imgCss": {
-                "top": "560px",
-                "width": "1140px",
-                "height": "760px",
-                "left" : "50%",
-                "marginLeft" : "-570px"
+                "top": "560px"
             },
             "ho": 0.5,
             "po": 0,
@@ -3005,11 +2561,7 @@
             "s": "usb3",
             "img": "0057.png",
             "imgCss": {
-                "top": "540px",
-                "width": "1130px",
-                "height": "753px",
-                "left" : "50%",
-                "marginLeft" : "-565px"
+                "top": "540px"
             },
             "ho": 0.6,
             "po": 0,
@@ -3028,11 +2580,7 @@
             "s": "usb3",
             "img": "0058.png",
             "imgCss": {
-                "top": "520px",
-                "width": "1120px",
-                "height": "747px",
-                "left" : "50%",
-                "marginLeft" : "-560px"
+                "top": "520px"
             },
             "ho": 0.7,
             "po": 0,
@@ -3051,11 +2599,7 @@
             "s": "usb3",
             "img": "0059.png",
             "imgCss": {
-                "top": "500px",
-                "width": "1110px",
-                "height": "740px",
-                "left" : "50%",
-                "marginLeft" : "-555px"
+                "top": "500px"
             },
             "ho": 0.8,
             "po": 0,
@@ -3074,11 +2618,7 @@
             "s": "usb3",
             "img": "0060.png",
             "imgCss": {
-                "top": "470px",
-                "width": "1100px",
-                "height": "733px",
-                "left" : "50%",
-                "marginLeft" : "-550px"
+                "top": "470px"
             },
             "ho": 0.9,
             "po": 0,
@@ -3097,11 +2637,7 @@
             "s": "usb3",
             "img": "0061.png",
             "imgCss": {
-                "top": "450px",
-                "width": "1090px",
-                "height": "727px",
-                "left" : "50%",
-                "marginLeft" : "-545px"
+                "top": "450px"
             },
             "ho": 1,
             "po": 0,
@@ -3120,11 +2656,7 @@
             "s": "usb3",
             "img": "0062.png",
             "imgCss": {
-                "top": "430px",
-                "width": "1080px",
-                "height": "720px",
-                "left" : "50%",
-                "marginLeft" : "-540px"
+                "top": "430px"
             },
             "ho": 1,
             "po": 0,
@@ -3143,11 +2675,7 @@
             "s": "usb3",
             "img": "0063.png",
             "imgCss": {
-                "top": "410px",
-                "width": "1070px",
-                "height": "713px",
-                "left" : "50%",
-                "marginLeft" : "-535px"
+                "top": "410px"
             },
             "ho": 1,
             "po": 0,
@@ -3166,11 +2694,7 @@
             "s": "usb3",
             "img": "0064.png",
             "imgCss": {
-                "top": "390px",
-                "width": "1060px",
-                "height": "707px",
-                "left" : "50%",
-                "marginLeft" : "-530px"
+                "top": "390px"
             },
             "ho": 1,
             "po": 0,
@@ -3189,11 +2713,7 @@
             "s": "usb3",
             "img": "0065.png",
             "imgCss": {
-                "top": "370px",
-                "width": "1050px",
-                "height": "700px",
-                "left" : "50%",
-                "marginLeft" : "-525px"
+                "top": "370px"
             },
             "ho": 1,
             "po": 0,
@@ -3212,11 +2732,7 @@
             "s": "usb3",
             "img": "0066.png",
             "imgCss": {
-                "top": "350px",
-                "width": "1040px",
-                "height": "693px",
-                "left" : "50%",
-                "marginLeft" : "-520px"
+                "top": "350px"
             },
             "ho": 1,
             "po": 0,
@@ -3235,11 +2751,7 @@
             "s": "usb3",
             "img": "0067.png",
             "imgCss": {
-                "top": "330px",
-                "width": "1030px",
-                "height": "687px",
-                "left" : "50%",
-                "marginLeft" : "-515px"
+                "top": "330px"
             },
             "ho": 1,
             "po": 0,
@@ -3258,11 +2770,7 @@
             "s": "usb3",
             "img": "0068.png",
             "imgCss": {
-                "top": "310px",
-                "width": "1020px",
-                "height": "680px",
-                "left" : "50%",
-                "marginLeft" : "-510px"
+                "top": "310px"
             },
             "ho": 1,
             "po": 0,
@@ -3281,11 +2789,7 @@
             "s": "usb3",
             "img": "0069.png",
             "imgCss": {
-                "top": "290px",
-                "width": "1010px",
-                "height": "673px",
-                "left" : "50%",
-                "marginLeft" : "-505px"
+                "top": "290px"
             },
             "ho": 1,
             "po": 0,
@@ -3304,11 +2808,7 @@
             "s": "usb3",
             "img": "0070.png",
             "imgCss": {
-                "top": "270px",
-                "width": "1000px",
-                "height": "667px",
-                "left" : "50%",
-                "marginLeft" : "-500px"
+                "top": "270px"
             },
             "ho": 1,
             "po": 0,
@@ -3327,11 +2827,7 @@
             "s": "usb3",
             "img": "0071.png",
             "imgCss": {
-                "top": "250px",
-                "width": "990px",
-                "height": "660px",
-                "left" : "50%",
-                "marginLeft" : "-495px"
+                "top": "250px"
             },
             "ho": 1,
             "po": 0,
@@ -3350,11 +2846,7 @@
             "s": "usb3",
             "img": "0072.png",
             "imgCss": {
-                "top": "250px",
-                "width": "980px",
-                "height": "653px",
-                "left" : "50%",
-                "marginLeft" : "-490px"
+                "top": "250px"
             },
             "ho": 1,
             "po": 0,
@@ -3373,11 +2865,7 @@
             "s": "usb3",
             "img": "0073.png",
             "imgCss": {
-                "top": "250px",
-                "width": "970px",
-                "height": "647px",
-                "left" : "50%",
-                "marginLeft" : "-485px"
+                "top": "250px"
             },
             "ho": 1,
             "po": 0,
@@ -3396,11 +2884,7 @@
             "s": "usb3",
             "img": "0074.png",
             "imgCss": {
-                "top": "250px",
-                "width": "960px",
-                "height": "640px",
-                "left" : "50%",
-                "marginLeft" : "-480px"
+                "top": "250px"
             },
             "ho": 1,
             "po": 0,

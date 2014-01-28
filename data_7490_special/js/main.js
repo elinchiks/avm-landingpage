@@ -50,6 +50,8 @@ var avmlp = {
     scrollSpeedFactor: 1,
     navReady: true,
     canvas: false,
+    canvasCtx: false,
+    currentLowSrc: false,
 
     // methods
     loadAnimationImages: function() {
@@ -212,13 +214,12 @@ var avmlp = {
         // create new slide for the packshot animation
 
         var $section = $('<section id="packshot-wrapper" class="first-animation"/>');
-        var $slide = $('<div class="slide packshot-slide first-animation"><canvas id="canvas" /></div>');
+        var $slide = $('<div class="slide packshot-slide first-animation"><canvas id="canvas" width="960" height="640"></canvas></div>');
         var $packshot =$('<img src="data_7490_special/frames/960px/0000.png" id="packshot" width="960" height="640" alt="FRITZ!Box 7490" />');
         // $packshot.appendTo($slide);
 
 
         this.setKeyframes();
-
         this.loadAnimationImages();
 
         // the section wrapper get's a fixed position
@@ -235,13 +236,13 @@ var avmlp = {
         $slide.appendTo($section);
         $section.prependTo($("#viewport"));
 
-        this.canvas = document.getElementById("canvas").getContext('2d');
-
+        this.canvas = document.getElementById("canvas");
+        this.canvasCtx = this.canvas.getContext('2d');
         // set scale for new slide as well
         this.applyZoom();
 
         // remove packshot-images from slides
-        $("img.packshot").remove();
+        $("img.packshot").not("#packshot-start").remove();
 
         // remove background from other slides, we'll use the background from the packshot-wrapper
         $(".slide").not(".packshot-slide").css("background", "transparent");
@@ -314,7 +315,7 @@ var avmlp = {
             var _this = this;
             window.setTimeout(function() {
                 _this.slowScroll(offset);
-            }, 40);
+            }, 20);
         } else {
             avmlp.navReady = true;
             this.targetOffset = -1;
@@ -350,7 +351,7 @@ var avmlp = {
 
                     window.setTimeout(function() {
                         _this.slowScroll(_this.targetOffset);
-                    }, 40);
+                    }, 20);
 
                 } else { // bigger jump - probably 2 or more sections
 
@@ -407,21 +408,9 @@ var avmlp = {
         window.setTimeout(function() {
             $("#" + frame.s).css("opacity", 1);
             $("#" + frame.s).css("display", "block");
-            if (!frame.imgCss || !frame.imgCss.top) {
-                $("#packshot").css("top", "136px");
-            }
-            if (!frame.imgCss || !frame.imgCss.width) {
-                $("#packshot").css("width", "960px");
-            }
-            if (!frame.imgCss || !frame.imgCss.height) {
-                $("#packshot").css("height", "640px");
-            }
-            if (!frame.imgCss || !frame.imgCss.left) {
-                $("#packshot").css("left", "50%");
-            }
-            if (!frame.imgCss || !frame.imgCss["marginLeft"]) {
-                $("#packshot").css("margin-left", "-480px");
-            }
+            // if (!frame.imgCss || !frame.imgCss.top) {
+            //     $("#packshot").css("top", "136px");
+            // }
         }, 25);
     },
 
@@ -447,6 +436,7 @@ var avmlp = {
             $('nav.primary').find('li.' + currentSection).addClass('active');
 
             this.restoreDefaults();
+            this.navReady = true;
         }
         this.lastSection = currentSection;
 
@@ -508,19 +498,13 @@ var avmlp = {
             eval(this.animationData.frames[this.aniStep].code);
         }
 
-        // css code for #packshot
+        // css code for #canvas
         if (this.animationData.frames[this.aniStep].imgCss) {
             var imgCss = this.animationData.frames[this.aniStep].imgCss;
-
-
-            if (!imgCss || !imgCss.width) {
-                imgCss.width = "960px";
-                imgCss.height = "640px";
-            }
             if (!imgCss || !imgCss.top) {
                 imgCss.top = "136px";
             }
-            $("#packshot").css(this.animationData.frames[this.aniStep].imgCss);
+            $("#canvas").css(this.animationData.frames[this.aniStep].imgCss);
         }
 
         if (currentSection !== "auszeichnungen") {
@@ -538,30 +522,28 @@ var avmlp = {
                 }
                 return;
             }
-            if(aniImage.low.complete) { // if the image is downloaded and ready
+            if(aniImage.low.complete && this.currentLowSrc !== aniImage.low.src ) { // if the image is downloaded and ready
                 if (!$("#canvas:visible").length) {
                     $('#canvas').show();
                 }
-                this.canvas.clearRect ( 0, 0, 980, 640 );
-                this.canvas.drawImage(aniImage.low, 0, 0);
+                this.canvasCtx.clearRect ( 0, 0, 960, 640 );
 
-                // if($('#packshot').attr('src') !== aniImage.low.src &&
-                //     $('#packshot').attr('src') !== aniImage.highSrc ) {
-
-
-                //     window.clearTimeout(this.aniTimeoutID);
-                //     // load hi-quality src
-                //     this.aniTimeoutID = window.setTimeout(function() {
-                //         $('#packshot').attr('src', aniImage.highSrc);
-                //     }, 50);
-                //     // change the source of our placeholder image
-                //     $('#packshot').attr('src', aniImage.low.src);
-                //     $('#packshot').css({
-                //         "top": aniImage.top + "px",
-                //         "left": aniImage.left+ "px",
-                //         "margin-left": aniImage.marginLeft+ "px",
-                //     });
-                // }
+                this.canvasCtx.drawImage(aniImage.low, 0, 0, 320, 213, 0, 0, 960, 640  );
+                this.currentLowSrc = aniImage.low.src;
+                window.clearTimeout(this.aniTimeoutID);
+                // load hi-quality src
+                var _this = this;
+                this.aniTimeoutID = window.setTimeout(function() {
+                    var to = _this.aniTimeoutID;
+                    var imgHi = new Image;
+                    imgHi.src = aniImage.highSrc;
+                    $(imgHi).on("load", function() {
+                        if (to === _this.aniTimeoutID) {
+                            _this.canvasCtx.clearRect ( 0, 0, 960, 640 );
+                            _this.canvasCtx.drawImage(imgHi, 0, 0, 960, 640, 0, 0, 960, 640 );
+                        }
+                    });
+                }, 100);
             }
         }
     },
@@ -603,7 +585,6 @@ jQuery( document ).ready(function( $ ) {
         };
 
     }
-
 
     // SVG Logo, if browser can handle it
     if($("html").hasClass("svg")) {
@@ -654,6 +635,9 @@ jQuery( document ).ready(function( $ ) {
             e.stopPropagation();
 
             if (!avmlp.navReady) {
+                window.setTimeout(function() {
+                    avmlp.navReady = true;
+                }, 2000);
                 return false;
             }
 
@@ -714,6 +698,9 @@ jQuery( document ).ready(function( $ ) {
     $('.link-next').on('click', function(e){
         e.preventDefault();
         if (!avmlp.navReady) {
+            window.setTimeout(function() {
+                avmlp.navReady = true;
+            }, 2000);
             return false;
         }
         var href = $(this).attr("href");
@@ -743,6 +730,14 @@ jQuery( window ).on( "resize", function() {
 jQuery( window ).on( "orientationchange", function() {
     avmlp.resizeSections();
  });
+
+jQuery( window ).on( "reload", function() {
+   avmlp.scrollToSection('#start');
+ });
+
+jQuery( window ).on('beforeunload', function() {
+    jQuery( window ).scrollTop(0);
+});
 
 
 jQuery( window ).on( "scroll", function() {
