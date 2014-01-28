@@ -49,6 +49,7 @@ var avmlp = {
     scrollMiddle: 0,
     scrollSpeedFactor: 1,
     navReady: true,
+    canvas: false,
 
     // methods
     loadAnimationImages: function() {
@@ -68,7 +69,10 @@ var avmlp = {
                     "high": new Image(),
                     "highSrc": this.animationData.hiSrcPrefix + frames[i].img
                 };
-                this.aniImages[i].low.src = this.animationData.lowSrcPrefix + frames[i].img;
+                var src = this.animationData.lowSrcPrefix + frames[i].img;
+                var $img = $('<img src="' + src + '" class="visuallyhidden" />');
+                $("body").append($img);
+                this.aniImages[i].low.src = src;
             }
         }
     },
@@ -92,99 +96,54 @@ var avmlp = {
     },
 
     redrawDotNav: function(){
+        var section1Top =  0;
+        // The top of each section is offset by half the distance to the previous section.
+        var section2Top =  $('#start').offset().top - (($('#heimnetz').offset().top - $('#start').offset().top) / 2);
+        var section3Top =  $('#heimnetz').offset().top - (($('#wlan').offset().top - $('#heimnetz').offset().top) / 2);
+        var section4Top =  $('#wlan').offset().top - (($('#usb3').offset().top - $('#wlan').offset().top) / 2);
+        var section5Top =  $('#usb3').offset().top - (($('#telefonie').offset().top - $('#usb3').offset().top) / 2);
+        var section6Top =  $('#telefonie').offset().top - (($('#fritzos').offset().top - $('#telefonie').offset().top) / 2);
+        var section7Top =  $('#fritzos').offset().top - (($('#auszeichnungen').offset().top - $('#fritzos').offset().top) / 2);
+        var section8Top =  $('#auszeichnungen').offset().top - (($(document).height() - $('#auszeichnungen').offset().top) / 2);
 
-
-
-    var section1Top =  0;
-    // The top of each section is offset by half the distance to the previous section.
-    var section2Top =  $('#start').offset().top - (($('#heimnetz').offset().top - $('#start').offset().top) / 2);
-    var section3Top =  $('#heimnetz').offset().top - (($('#wlan').offset().top - $('#heimnetz').offset().top) / 2);
-    var section4Top =  $('#wlan').offset().top - (($('#usb3').offset().top - $('#wlan').offset().top) / 2);
-    var section5Top =  $('#usb3').offset().top - (($('#telefonie').offset().top - $('#usb3').offset().top) / 2);
-    var section6Top =  $('#telefonie').offset().top - (($('#fritzos').offset().top - $('#telefonie').offset().top) / 2);
-    var section7Top =  $('#fritzos').offset().top - (($('#auszeichnungen').offset().top - $('#fritzos').offset().top) / 2);
-    var section8Top =  $('#auszeichnungen').offset().top - (($(document).height() - $('#auszeichnungen').offset().top) / 2);
-
-    $('nav.primary li').removeClass('active');
-    if($(document).scrollTop() <= section1Top && $(document).scrollTop() < section2Top){
-
-    } else if ($(document).scrollTop() >= section2Top && $(document).scrollTop() < section3Top){
-         $('nav.primary li.start').addClass('active');
-         $('section').removeClass('active');
-         $('section#start').addClass('active');
-
-         $("#footer-section").removeClass('active');
-
-
-
-
-    }
-     else if ($(document).scrollTop() >= section3Top && $(document).scrollTop() < section4Top){
-        $('nav.primary li.heimnetz').addClass('active');
-        $('section').removeClass('active');
-        $('section#heimnetz').addClass('active');
-
-        $("#footer-section").removeClass('active');
-
-    }
-
-
-
-
-     else if ($(document).scrollTop() >= section4Top && $(document).scrollTop() < section5Top){
-        $('nav.primary li.wlan').addClass('active');
-        $('section').removeClass('active');
-        $('section#wlan').addClass('active');
-
-        $("#footer-section").removeClass('active');
-
-    }
-
-
-
-
-     else if ($(document).scrollTop() >= section5Top && $(document).scrollTop() < section6Top){
-         $('nav.primary li.usb3').addClass('active');
-         $('section').removeClass('active');
-         $('section#usb3').addClass('active');
-
-         $("#footer-section").removeClass('active');
-
-    }
-
-
-
-     else if ($(document).scrollTop() >= section6Top && $(document).scrollTop() < section7Top){
-        $('nav.primary li.telefonie').addClass('active');
-        $('section').removeClass('active');
-        $('section#telefonie').addClass('active');
-
-        $("#footer-section").removeClass('active');
-
-    }
-
-
-
-
-     else if ($(document).scrollTop() >= section7Top && $(document).scrollTop() < section8Top){
-       $('nav.primary li.fritzos').addClass('active');
-       $('section').removeClass('active');
-       $('section#fritzos').addClass('active');
-
-       $("#footer-section").removeClass('active');
-
-    }
-
-    else if ($(document).scrollTop() >= section8Top){
-        $('nav.primary li.auszeichnungen').addClass('active');
-        $('section').removeClass('active');
-        $('section#auszeichnungen').addClass('active');
-        $("#footer-section").addClass('active');
-
-        // $('#footer-section').css('display', 'block');
-    }
-
-
+        $('nav.primary li').removeClass('active');
+        if($(document).scrollTop() <= section1Top && $(document).scrollTop() < section2Top){
+        } else if ($(document).scrollTop() >= section2Top && $(document).scrollTop() < section3Top){
+            $('nav.primary li.start').addClass('active');
+            $('section').removeClass('active');
+            $('section#start').addClass('active');
+            $("#footer-section").removeClass('active');
+        } else if ($(document).scrollTop() >= section3Top && $(document).scrollTop() < section4Top){
+            $('nav.primary li.heimnetz').addClass('active');
+            $('section').removeClass('active');
+            $('section#heimnetz').addClass('active');
+            $("#footer-section").removeClass('active');
+        } else if ($(document).scrollTop() >= section4Top && $(document).scrollTop() < section5Top){
+            $('nav.primary li.wlan').addClass('active');
+            $('section').removeClass('active');
+            $('section#wlan').addClass('active');
+            $("#footer-section").removeClass('active');
+        } else if ($(document).scrollTop() >= section5Top && $(document).scrollTop() < section6Top){
+             $('nav.primary li.usb3').addClass('active');
+             $('section').removeClass('active');
+             $('section#usb3').addClass('active');
+             $("#footer-section").removeClass('active');
+        } else if ($(document).scrollTop() >= section6Top && $(document).scrollTop() < section7Top){
+            $('nav.primary li.telefonie').addClass('active');
+            $('section').removeClass('active');
+            $('section#telefonie').addClass('active');
+            $("#footer-section").removeClass('active');
+        } else if ($(document).scrollTop() >= section7Top && $(document).scrollTop() < section8Top){
+           $('nav.primary li.fritzos').addClass('active');
+           $('section').removeClass('active');
+           $('section#fritzos').addClass('active');
+           $("#footer-section").removeClass('active');
+        } else if ($(document).scrollTop() >= section8Top){
+            $('nav.primary li.auszeichnungen').addClass('active');
+            $('section').removeClass('active');
+            $('section#auszeichnungen').addClass('active');
+            $("#footer-section").addClass('active');
+        }
     },
 
 
@@ -249,9 +208,9 @@ var avmlp = {
         // create new slide for the packshot animation
 
         var $section = $('<section id="packshot-wrapper" class="first-animation"/>');
-        var $slide = $('<div class="slide packshot-slide first-animation" />');
+        var $slide = $('<div class="slide packshot-slide first-animation"><canvas id="canvas" /></div>');
         var $packshot =$('<img src="data_7490_special/frames/960px/0000.png" id="packshot" width="960" height="640" alt="FRITZ!Box 7490" />');
-        $packshot.appendTo($slide);
+        // $packshot.appendTo($slide);
 
 
         this.setKeyframes();
@@ -271,6 +230,8 @@ var avmlp = {
 
         $slide.appendTo($section);
         $section.prependTo($("#viewport"));
+
+        this.canvas = document.getElementById("canvas").getContext('2d');
 
         // set scale for new slide as well
         this.applyZoom();
@@ -568,32 +529,35 @@ var avmlp = {
         if(this.aniImages.length && this.aniImages[this.aniStep]) {
             var aniImage = this.aniImages[this.aniStep];
             if (!aniImage.low) {
-                if ($("#packshot:visible").length) {
-                    $('#packshot').hide();
+                if ($("#canvas:visible").length) {
+                    $('#canvas').hide();
                 }
                 return;
             }
             if(aniImage.low.complete) { // if the image is downloaded and ready
-                if (!$("#packshot:visible").length) {
-                    $('#packshot').show();
+                if (!$("#canvas:visible").length) {
+                    $('#canvas').show();
                 }
-                if($('#packshot').attr('src') !== aniImage.low.src &&
-                    $('#packshot').attr('src') !== aniImage.highSrc ) {
+                this.canvas.clearRect ( 0, 0, 980, 640 );
+                this.canvas.drawImage(aniImage.low, 0, 0);
+
+                // if($('#packshot').attr('src') !== aniImage.low.src &&
+                //     $('#packshot').attr('src') !== aniImage.highSrc ) {
 
 
-                    window.clearTimeout(this.aniTimeoutID);
-                    // load hi-quality src
-                    this.aniTimeoutID = window.setTimeout(function() {
-                        $('#packshot').attr('src', aniImage.highSrc);
-                    }, 50);
-                    // change the source of our placeholder image
-                    $('#packshot').attr('src', aniImage.low.src);
-                    $('#packshot').css({
-                        "top": aniImage.top + "px",
-                        "left": aniImage.left+ "px",
-                        "margin-left": aniImage.marginLeft+ "px",
-                    });
-                }
+                //     window.clearTimeout(this.aniTimeoutID);
+                //     // load hi-quality src
+                //     this.aniTimeoutID = window.setTimeout(function() {
+                //         $('#packshot').attr('src', aniImage.highSrc);
+                //     }, 50);
+                //     // change the source of our placeholder image
+                //     $('#packshot').attr('src', aniImage.low.src);
+                //     $('#packshot').css({
+                //         "top": aniImage.top + "px",
+                //         "left": aniImage.left+ "px",
+                //         "margin-left": aniImage.marginLeft+ "px",
+                //     });
+                // }
             }
         }
     },
