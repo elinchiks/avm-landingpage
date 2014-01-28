@@ -105,6 +105,8 @@ var avmlp = {
     var section7Top =  $('#fritzos').offset().top - (($('#auszeichnungen').offset().top - $('#fritzos').offset().top) / 2);
     var section8Top =  $('#auszeichnungen').offset().top - (($(document).height() - $('#auszeichnungen').offset().top) / 2);
 
+
+
     $('nav.primary li').removeClass('active');
     if($(document).scrollTop() <= section1Top && $(document).scrollTop() < section2Top){
 
@@ -207,9 +209,12 @@ var avmlp = {
             jQuery("#debug-section-height").text(h + "px");
             jQuery("#debug-zoom").text(this.zoom.toPrecision(3));
         }
-        if($('html').hasClass('js')) {
-            $('#start').removeClass('first-animation');
-        }
+        setTimeout(function(){
+            if($('html').hasClass('js')) {
+                $('#start').removeClass('first-animation');
+            }
+        }, 100);
+
     },
 
     applyZoom: function() {
