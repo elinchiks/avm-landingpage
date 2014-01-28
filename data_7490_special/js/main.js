@@ -28,7 +28,7 @@ var avmlp = {
     lastSection: false,
     targetOffset: -1,
 
-    aniJsonFile: "data_7490_special/js/animation.json", // set this to "js/animation.json" if you want to make changes
+    aniJsonFile: "data_7490_special/js/animation-min.json", // set this to "js/animation.json" if you want to make changes
     aniSpeed: 20,
     aniTimeoutID: null,
     aniImages: [],
@@ -535,7 +535,7 @@ var avmlp = {
                 var _this = this;
                 this.aniTimeoutID = window.setTimeout(function() {
                     var to = _this.aniTimeoutID;
-                    var imgHi = new Image;
+                    var imgHi = new Image();
                     imgHi.src = aniImage.highSrc;
                     $(imgHi).on("load", function() {
                         if (to === _this.aniTimeoutID) {
