@@ -51,7 +51,7 @@ var avmlp = {
     navReady: true,
     canvas: false,
     canvasCtx: false,
-
+    currentLowSrc: false,
 
     // methods
     loadAnimationImages: function() {
@@ -315,7 +315,7 @@ var avmlp = {
             var _this = this;
             window.setTimeout(function() {
                 _this.slowScroll(offset);
-            }, 40);
+            }, 20);
         } else {
             avmlp.navReady = true;
             this.targetOffset = -1;
@@ -351,7 +351,7 @@ var avmlp = {
 
                     window.setTimeout(function() {
                         _this.slowScroll(_this.targetOffset);
-                    }, 40);
+                    }, 20);
 
                 } else { // bigger jump - probably 2 or more sections
 
@@ -408,21 +408,9 @@ var avmlp = {
         window.setTimeout(function() {
             $("#" + frame.s).css("opacity", 1);
             $("#" + frame.s).css("display", "block");
-            if (!frame.imgCss || !frame.imgCss.top) {
-                $("#packshot").css("top", "136px");
-            }
-            if (!frame.imgCss || !frame.imgCss.width) {
-                $("#packshot").css("width", "960px");
-            }
-            if (!frame.imgCss || !frame.imgCss.height) {
-                $("#packshot").css("height", "640px");
-            }
-            if (!frame.imgCss || !frame.imgCss.left) {
-                $("#packshot").css("left", "50%");
-            }
-            if (!frame.imgCss || !frame.imgCss["marginLeft"]) {
-                $("#packshot").css("margin-left", "-480px");
-            }
+            // if (!frame.imgCss || !frame.imgCss.top) {
+            //     $("#packshot").css("top", "136px");
+            // }
         }, 25);
     },
 
@@ -510,21 +498,13 @@ var avmlp = {
             eval(this.animationData.frames[this.aniStep].code);
         }
 
-        // css code for #packshot
+        // css code for #canvas
         if (this.animationData.frames[this.aniStep].imgCss) {
             var imgCss = this.animationData.frames[this.aniStep].imgCss;
-
-            delete imgCss.width;
-            delete imgCss.height;
-            delete imgCss.marginLeft;
-            delete imgCss.left;
-
             if (!imgCss || !imgCss.top) {
                 imgCss.top = "136px";
             }
-
             $("#canvas").css(this.animationData.frames[this.aniStep].imgCss);
-
         }
 
         if (currentSection !== "auszeichnungen") {
@@ -542,23 +522,27 @@ var avmlp = {
                 }
                 return;
             }
-            if(aniImage.low.complete) { // if the image is downloaded and ready
+            if(aniImage.low.complete && this.currentLowSrc !== aniImage.low.src ) { // if the image is downloaded and ready
                 if (!$("#canvas:visible").length) {
                     $('#canvas').show();
                 }
+                console.log(this.currentLowSrc, aniImage.low.src);
                 this.canvasCtx.clearRect ( 0, 0, 960, 640 );
 
-                this.canvasCtx.drawImage(aniImage.low, 0, 0, 320, 213, 0, 0, this.canvas.width, this.canvas.height );
-
+                this.canvasCtx.drawImage(aniImage.low, 0, 0, 320, 213, 0, 0, 960, 640  );
+                this.currentLowSrc = aniImage.low.src;
                 window.clearTimeout(this.aniTimeoutID);
                 // load hi-quality src
                 var _this = this;
                 this.aniTimeoutID = window.setTimeout(function() {
+                    var to = _this.aniTimeoutID;
                     var imgHi = new Image;
                     imgHi.src = aniImage.highSrc;
                     $(imgHi).on("load", function() {
-                        _this.canvasCtx.clearRect ( 0, 0, 960, 640 );
-                        _this.canvasCtx.drawImage(imgHi, 0, 0, 960, 640, 0, 0, _this.canvas.width, _this.canvas.height );
+                        if (to === _this.aniTimeoutID) {
+                            _this.canvasCtx.clearRect ( 0, 0, 960, 640 );
+                            _this.canvasCtx.drawImage(imgHi, 0, 0, 960, 640, 0, 0, 960, 640 );
+                        }
                     });
                 }, 100);
             }
@@ -752,6 +736,9 @@ jQuery( window ).on( "reload", function() {
    avmlp.scrollToSection('#start');
  });
 
+jQuery( window ).on('beforeunload', function() {
+    jQuery( window ).scrollTop(0);
+});
 
 
 jQuery( window ).on( "scroll", function() {
