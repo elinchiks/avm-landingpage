@@ -28,7 +28,7 @@ var avmlp = {
     lastSection: false,
     targetOffset: -1,
 
-    aniJsonFile: "data_7490_special/js/animation-min.json", // set this to "js/animation.json" if you want to make changes
+    aniJsonFile: "data_7490_special/js/animation.json", // set this to "js/animation.json" if you want to make changes
     aniSpeed: 20,
     aniTimeoutID: null,
     aniImages: [],
@@ -526,7 +526,6 @@ var avmlp = {
                 if (!$("#canvas:visible").length) {
                     $('#canvas').show();
                 }
-                console.log(this.currentLowSrc, aniImage.low.src);
                 this.canvasCtx.clearRect ( 0, 0, 960, 640 );
 
                 this.canvasCtx.drawImage(aniImage.low, 0, 0, 320, 213, 0, 0, 960, 640  );

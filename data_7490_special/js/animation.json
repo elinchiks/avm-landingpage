@@ -363,7 +363,7 @@
                     "opacity": 0
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(10)"
         },
         {
             "s": "heimnetz",
@@ -377,7 +377,7 @@
                     "opacity": 0.2
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(40)"
         },
         {
             "s": "heimnetz",
@@ -391,7 +391,7 @@
                     "opacity": 0.4
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(70)"
         },
         {
             "s": "heimnetz",
@@ -405,7 +405,7 @@
                     "opacity": 0.6
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(100)"
         },
         {
             "s": "heimnetz",
@@ -419,7 +419,7 @@
                     "opacity": 0.8
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(130)"
         },
         {
             "s": "heimnetz",
@@ -433,7 +433,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(160)"
         },
         {
             "s": "heimnetz",
@@ -446,7 +446,8 @@
                 ".drag-wrapper": {
                     "opacity": 1
                 }
-            }
+            },
+            "code": "avmlp.setSliderPosition(190)"
         },
         {
             "s": "heimnetz",
@@ -460,7 +461,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(220)"
         },
         {
             "s": "heimnetz",
@@ -474,7 +475,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(250)"
         },
         {
             "s": "heimnetz",
@@ -488,7 +489,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(280)"
         },
         {
             "s": "heimnetz",
@@ -502,7 +503,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(310)"
         },
         {
             "s": "heimnetz",
@@ -516,7 +517,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(340)"
         },
         {
             "s": "heimnetz",
@@ -530,7 +531,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(370)"
         },
         {
             "s": "heimnetz",
@@ -544,7 +545,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(400)"
         },
         {
             "s": "heimnetz",
@@ -558,7 +559,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(430)"
         },
         {
             "s": "heimnetz",
@@ -572,7 +573,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(460)"
         },
         {
             "s": "heimnetz",
@@ -586,7 +587,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(490)"
         },
         {
             "s": "heimnetz",
@@ -600,7 +601,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(520)"
         },
         {
             "s": "heimnetz",
@@ -614,7 +615,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(550)"
         },
         {
             "s": "heimnetz",
@@ -628,7 +629,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(580)"
         },
         {
             "s": "heimnetz",
@@ -642,7 +643,63 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(610)"
+        },
+        {
+            "s": "heimnetz",
+            "img": "",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(640)"
+        },
+        {
+            "s": "heimnetz",
+            "img": "",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(670)"
+        },
+        {
+            "s": "heimnetz",
+            "img": "",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(700)"
+        },
+        {
+            "s": "heimnetz",
+            "img": "",
+            "ho": 1,
+            "po": 1,
+            "flo": 0,
+            "alo": 0,
+            "a": {
+                ".drag-wrapper": {
+                    "opacity": 1
+                }
+            },
+            "code": "avmlp.setSliderPosition(730)"
         },
         {
             "kf": "poster",
@@ -657,7 +714,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.animateSlider(760)"
+            "code": "avmlp.setSliderPosition(760)"
         },
         {
             "s": "heimnetz",
@@ -671,7 +728,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(730)"
         },
         {
             "s": "heimnetz",
@@ -685,7 +742,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(700)"
         },
         {
             "s": "heimnetz",
@@ -699,7 +756,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(670)"
         },
         {
             "s": "heimnetz",
@@ -713,7 +770,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(640)"
         },
         {
             "s": "heimnetz",
@@ -727,77 +784,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
-        },
-        {
-            "s": "heimnetz",
-            "img": "",
-            "ho": 1,
-            "po": 1,
-            "flo": 0,
-            "alo": 0,
-            "a": {
-                ".drag-wrapper": {
-                    "opacity": 1
-                }
-            },
-            "code": "avmlp.updateSlider()"
-        },
-        {
-            "s": "heimnetz",
-            "img": "",
-            "ho": 1,
-            "po": 1,
-            "flo": 0,
-            "alo": 0,
-            "a": {
-                ".drag-wrapper": {
-                    "opacity": 1
-                }
-            },
-            "code": "avmlp.updateSlider()"
-        },
-        {
-            "s": "heimnetz",
-            "img": "",
-            "ho": 1,
-            "po": 1,
-            "flo": 0,
-            "alo": 0,
-            "a": {
-                ".drag-wrapper": {
-                    "opacity": 1
-                }
-            },
-            "code": "avmlp.updateSlider()"
-        },
-        {
-            "s": "heimnetz",
-            "img": "",
-            "ho": 1,
-            "po": 1,
-            "flo": 0,
-            "alo": 0,
-            "a": {
-                ".drag-wrapper": {
-                    "opacity": 1
-                }
-            },
-            "code": "avmlp.updateSlider()"
-        },
-        {
-            "s": "heimnetz",
-            "img": "",
-            "ho": 1,
-            "po": 1,
-            "flo": 0,
-            "alo": 0,
-            "a": {
-                ".drag-wrapper": {
-                    "opacity": 1
-                }
-            },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(610)"
         },
         {
             "s": "heimnetz",
@@ -811,7 +798,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(580)"
         },
         {
             "s": "heimnetz",
@@ -825,7 +812,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(550)"
         },
         {
             "s": "heimnetz",
@@ -839,7 +826,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(520)"
         },
         {
             "s": "heimnetz",
@@ -853,7 +840,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(490)"
         },
         {
             "s": "heimnetz",
@@ -867,7 +854,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(460)"
         },
         {
             "s": "heimnetz",
@@ -881,7 +868,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(430)"
         },
         {
             "s": "heimnetz",
@@ -895,7 +882,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(400)"
         },
         {
             "s": "heimnetz",
@@ -909,7 +896,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(370)"
         },
         {
             "s": "heimnetz",
@@ -923,7 +910,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(340)"
         },
         {
             "s": "heimnetz",
@@ -937,7 +924,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(310)"
         },
         {
             "s": "heimnetz",
@@ -951,7 +938,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(280)"
         },
         {
             "s": "heimnetz",
@@ -965,7 +952,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(250)"
         },
         {
             "s": "heimnetz",
@@ -979,7 +966,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(220)"
         },
         {
             "s": "heimnetz",
@@ -993,7 +980,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(190)"
         },
         {
             "s": "heimnetz",
@@ -1007,7 +994,7 @@
                     "opacity": 1
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(160)"
         },
         {
             "s": "heimnetz",
@@ -1021,7 +1008,7 @@
                     "opacity": 0.8
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(130)"
         },
         {
             "s": "heimnetz",
@@ -1035,7 +1022,7 @@
                     "opacity": 0.6
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(100)"
         },
         {
             "s": "heimnetz",
@@ -1049,7 +1036,7 @@
                     "opacity": 0.4
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(70)"
         },
         {
             "s": "heimnetz",
@@ -1063,7 +1050,7 @@
                     "opacity": 0.2
                 }
             },
-            "code": "avmlp.updateSlider()"
+            "code": "avmlp.setSliderPosition(40)"
         },
         {
 "_comment": "end section heimnetz",
