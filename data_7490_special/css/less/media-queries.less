@@ -1,0 +1,405 @@
+
+// Media Querries for tablet
+
+.tablet {
+	section {
+		width:100%;
+		height:100%;
+	}
+	nav.primary {
+		display:none;
+		&.handheld {
+			display:block !important;
+			position:absolute;
+			top: 395px;
+			margin-top: -68px;
+			z-index: 999;
+			height:135px;
+			width: 200px;
+
+			li {
+				opacity: 0.1;
+				&:hover, &.active {
+					opacity:1;
+				}
+			}
+			a {
+				opacity:0;
+				&:hover {
+					opacity:1;
+				}
+			}
+		}
+	}
+	.description, .product-features span, .description p, .description span {
+		font-size: 18px;
+		line-height: 22px;
+	}
+	.description {
+	   width:100%;
+	   clear:both;
+	   left:0;
+	}
+}
+.tablet, .mobile {
+
+.logo-svg {
+	width: 50px !important;
+	height: 28px !important;
+	background-size: contain;
+}
+	.logo-section{
+		width: 40%;
+		img {
+			max-width:19%;
+			height:auto;
+		}
+	}
+
+	#footer-section {
+	    bottom: 30px;
+	    left:20px;
+	}
+
+	nav#primary ul, nav.primary ul {
+		font-size: 16px !important;
+		line-height: 20px;
+	}
+	body * { text-rendering: optimizeLegibility !important; }
+	#fritzos .icon-list, .fritzos .icon-list {
+		top: 20px !important;
+	}
+	nav#primary h2, nav.primary h2 {
+		font-size: 20px !important;
+	}
+
+
+	#wlan .product-graphics, .wlan .product-graphics, 
+	#wlan .product-features, .wlan .product-features {
+		top:250px !important;
+	}
+	.icon-list ul li p {
+		font-size: 20px !important;
+		line-height: 24px !important;
+	}
+	.inside-view-after, .drag-wrapper {
+		display:none;
+	}
+	.inside-view-before {
+		display:block;
+		opacity:1 !important;
+		width:960px !important;
+		background-position: 0 0;
+	}
+
+	#footer-section {
+		opacity:0;
+		.transition(opacity 1s ease-in-out);
+		&.active {
+			opacity:1;
+			.transition(opacity 1s ease-in-out);
+			.transition-delay(2s);
+		}
+	}
+
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) { 
+		nav#primary ul, nav.primary ul {
+			font-size: 18px !important;
+			line-height: 20px;
+		}
+		nav.primary.handheld {
+			top: 350px;
+
+		}
+		body * { text-rendering: optimizeLegibility !important; }
+
+	}
+
+	@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) { 
+		#fritzos .icon-list, .fritzos .icon-list {
+			top: 20px !important;
+		}
+		nav.primary {
+			&.handheld {
+				top: 300px;
+
+			}
+		}
+	}
+// Nexus
+	@media only screen and (min-device-width : 120px) and (max-device-width : 900px) and (orientation : landscape) { 
+		#fritzos .icon-list, .fritzos .icon-list {
+			top: 20px !important;
+		}
+		nav.primary {
+			&.handheld {
+				top: 250px;
+			}
+		}
+	}
+
+}
+
+// Media Querries for tablets
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) { 
+
+	#wlan .product-graphics, .wlan .product-graphics, 
+	#wlan .product-features, .wlan .product-features {
+		top:250px !important;
+	}
+	.icon-list ul li p {
+		font-size: 20px !important;
+		line-height: 24px !important;
+	}
+}
+.tablet.cssanimations {
+	b {
+		opacity:0;
+	}
+	
+	section#wlan.active , section#usb3.active{
+		   b {
+		       // Animations
+		       &.bar-1 {
+		           .animation(fade-in 1s  ease-in-out  2200ms forwards);
+		       }
+		       &.bar-2 {
+		           .animation(fade-in 1s ease-in-out 2225ms forwards);
+		       }
+		       &.bar-3 {
+		           .animation(fade-in 1s ease-in-out 2250ms forwards) ;
+		       }
+		       &.bar-4 {
+		           .animation(fade-in 1s ease-in-out 2275ms forwards);
+		       }
+		       &.bar-5 {
+		           .animation(fade-in 1s ease-in-out 2300ms forwards);
+		       }
+		       &.bar-6 {
+		           .animation(fade-in 1s ease-in-out 2325ms forwards);
+		       }
+		       &.bar-7 {
+		           .animation(fade-in 1s ease-in-out 2350ms forwards) ;
+		       }
+		       &.bar-8 {
+		           .animation(fade-in 1s ease-in-out 2375ms forwards) ;
+		       }
+		       &.bar-9 {
+		           .animation(fade-in 1s ease-in-out 2400ms forwards);
+		       }
+		       &.bar-10 {
+		           .animation(fade-in 1s ease-in-out 2425ms forwards) ;
+		       }
+		       &.bar-11 {
+		           .animation(fade-in 1s ease-in-out 2450ms forwards);
+		       }
+		       &.bar-12 {
+		           .animation(fade-in 1s ease-in-out 2475ms forwards);
+		       }
+		       &.bar-13 {
+		           .animation(fade-in 1s ease-in-out 2500ms forwards);
+		       }
+		       &.bar-14 {
+		           .animation(fade-in 1s ease-in-out 2525ms forwards);
+		       }
+		       &.bar-15 {
+		           .animation(fade-in 1.5s ease-in-out 2550ms forwards);
+		       }
+		       &.bar-16 {
+		           .animation(fade-in 1.5s ease-in-out 2575ms forwards);
+		       }
+		       &.bar-17 {
+		           .animation(fade-in 1.5s ease-in-out 2600ms forwards);
+		       }
+		       &.bar-18 {
+		           .animation(fade-in 1.5s ease-in-out 2625ms forwards);
+		       }
+		       &.bar-19 {
+		           .animation(fade-in 1.5s ease-in-out 2650ms forwards);
+		       }
+		       &.bar-20 {
+		           .animation(fade-in 1.5s ease-in-out 2675ms forwards);
+		       }
+		       &.bar-21 {
+		           .animation(fade-in 1.5s ease-in-out 2700ms forwards);
+		       }
+		       &.bar-22 {
+		           .animation(fade-in 1.5s ease-in-out 2725ms forwards);
+		       }
+		       &.bar-23 {
+		           .animation(fade-in 1.5s ease-in-out 2750ms forwards);
+		       }
+		       &.bar-24 {
+		           .animation(fade-in 1.5s ease-in-out 2775ms forwards);
+		       }
+		       &.bar-25 {
+		           .animation(fade-in 1.5s ease-in-out 2800ms forwards);
+		       }
+		       &.bar-26 {
+		           .animation(fade-in 1.5s ease-in-out 2825ms forwards);
+		       }
+		       &.bar-27 {
+		           .animation(fade-in 1.5s ease-in-out 2850ms forwards);
+		       }
+		       &.bar-28 {
+		           .animation(fade-in 1.5s ease-in-out 2875ms forwards);
+		       }
+		       &.bar-29 {
+		           .animation(fade-in 1.5s ease-in-out 2900ms forwards);
+		       }
+		       &.bar-30 {
+		           .animation(fade-in 1.5s ease-in-out 2925ms forwards);
+		       }
+		       &.bar-28 {
+		           .animation(fade-in 1.5s ease-in-out 2950ms forwards);
+		       }
+		       &.bar-29 {
+		           .animation(fade-in 1.5s ease-in-out 2975ms forwards);
+		       }
+		       &.bar-30 {
+		           .animation(fade-in 1.5s ease-in-out 3000ms forwards);
+		       }
+		       &.bar-31 {
+		           .animation(fade-in 1.5s ease-in-out 3025ms forwards);
+		       }
+		       &.bar-32 {
+		           .animation(fade-in 1.5s ease-in-out 3050ms forwards);
+		       }
+		       &.bar-33 {
+		           .animation(fade-in 1.5s ease-in-out 3075ms forwards);
+		       }
+		       &.bar-34 {
+		           .animation(fade-in 1.5s ease-in-out 3100ms forwards);
+		       }
+		       &.bar-35 {
+		           .animation(fade-in 1.5s ease-in-out 3125ms forwards);
+		       }
+		       &.bar-36 {
+		           .animation(fade-in 1.5s ease-in-out 3150ms forwards);
+		       }
+		}
+	}
+	.icon-list li {
+		opacity:0;
+	}
+	h1, h2 {
+		.transform(translate(0,-100%));
+		opacity:0;
+		
+		.transition(all 100ms);
+		.transition-timing-function(cubic-bezier(0,1.38,1,1.38));
+	}
+	.packshot {
+		opacity:0;
+		.transition(all 1s);
+		.transition-timing-function(cubic-bezier(0,1.38,1,1.38));
+		.transition-delay(2s);
+	}
+	.description {
+		.transform(translate(0,200%));
+		opacity:0;
+		.transition(all 600ms);
+		.transition-timing-function(cubic-bezier(0.17,0.67,0.79,1.61));	
+	}
+	.link-next img {
+		opacity:0;
+	}
+
+	.product-graphics, #usb3 .product-graphics, .product-features {
+		opacity: 0;
+	}
+	.logo-fritz-color, .info-button{
+		opacity: 0;
+	}
+	section.active {
+		.packshot {
+			opacity:1;
+			.transition(all 3s);
+			.transition-timing-function(cubic-bezier(0,0.7,1,1.38));
+			.transition-delay(1s);
+		}
+
+		&#usb3 .product-graphics, .product-graphics, .product-features {
+			opacity:1;
+			.transition(all 2s);
+			.transition-timing-function(cubic-bezier(0,0.58,1.2,1));
+			.transition-delay(1.5s);
+		}
+
+		h1, h2{
+			opacity:1;
+			.transform(translate(0,0));
+			.transition(all 1s);
+			.transition-delay(1s);
+		}
+
+		.description {
+			.transform(translate(0,0));
+			opacity:1;
+			.transition(all 1s);
+			.transition-delay(2s);
+		}
+
+		.link-next img {
+			opacity:1;
+			.transition(all ease-in-out 2.5s);
+			.animation(jump 1s infinite);
+			.animation-delay(2.5s);
+			.transition-delay(2.5s);
+		}
+		
+
+
+		.icon-1 {
+		    .animation(fade-in 300ms  ease-in-out  2200ms forwards) !important;
+		}
+		.icon-2 {
+		    .animation(fade-in 300ms ease-in-out 2300ms forwards) !important;
+		}
+		.icon-3 {
+		    .animation(fade-in 300ms ease-in-out 2400ms forwards) !important;
+		}
+		.icon-4 {
+		    .animation(fade-in 300ms ease-in-out 2500ms forwards) !important;
+		}
+		.icon-5 {
+		    .animation(fade-in 300ms ease-in-out 2600ms forwards) !important;
+		}
+		.icon-6 {
+		    .animation(fade-in 300ms ease-in-out 2700ms forwards) !important;
+		}
+		.icon-7 {
+		    .animation(fade-in 300ms ease-in-out 2800ms forwards) !important;
+		}
+		.icon-8 {
+		    .animation(fade-in 300ms ease-in-out 2900ms forwards) !important;
+		}
+
+		.logo-fritz-color, .info-button{
+			opacity:1;
+			.transition(all 1s);
+			.transition-delay(2s);
+			z-index:1;
+		}
+	}
+
+}
+
+html.cssanimations.csstransitions {
+	.link-next img {
+		opacity:0;
+	}
+	.active {
+		.link-next img {
+			opacity:1;
+			.transition(all ease-in-out 2.5s);
+			.animation(jump 1s infinite);
+			.animation-delay(2.5s);
+			.transition-delay(2.5s);
+		}
+	}
+}

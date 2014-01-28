@@ -1,0 +1,1615 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #002c59 !important;
+    color: #fff;
+    font-family: @font-text;
+    font-size:18px;
+    width:100%;
+    max-width:100%;
+}
+body.debug {
+    background-color: #666;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+// Navigation
+nav#primary,
+nav.primary {
+    z-index: 9999;
+    position: fixed;
+    // top: 60px;
+    // left: 10px;
+    right:20px;
+    left:auto;
+    top:50%;
+    width: 200px;
+    margin-top:-75px;
+    background-size: 100% 100%;
+    z-index: 999;
+    height: auto;
+    h2 {
+        margin: 0;
+        font-size: 14px;
+        font-family: @font-text;
+        margin-bottom: 12px;
+    }
+
+    ul {
+        margin: 0;
+        padding:0;
+        font-size: 14px;
+        font-family: @font-text;
+        width:100%;
+    }
+
+    li {
+        text-align:right;
+        list-style-position: inside;
+        opacity: 0.1;
+        width:100%;
+        overflow:hidden;
+        display:block;
+        background: url("../images/list.png") no-repeat right center;
+         list-style: none;
+         margin: 0;
+         padding-right:0px;
+         &:hover {
+            a {
+                opacity:1;
+            }
+
+         }
+        a {
+            color: #fff;
+            text-decoration: none;
+            display:block;
+            padding-right:15px;
+            width:auto;
+            opacity:0;
+            &:hover {
+                opacity:1;
+            }
+        }
+        &.active {
+            opacity: 1;
+            a {
+                opacity: 0;
+            }
+        }
+        &:hover {
+            opacity: 1;
+            a {
+                opacity: 1;
+            }
+        }
+    }
+}
+.logo-avm {
+    position: fixed;
+    bottom: 40px;
+    right:40px;
+    z-index:999;
+    opacity:1 !important;
+    background: url("../images/logo-avm.png") no-repeat center center;
+    width:79px;
+    height:43px;
+    bottom: 35px;
+    right:40px;
+    &.svg-logo {
+        background-size: 70px 42px;
+        background-image: url("../images/avm-logo.svg");
+        width:70px !important;
+        height:42px !important;
+        bottom: 30px !important;
+        right:35px !important;
+    }
+}
+
+// Section Defaults
+section {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    height: 960px;
+
+    // [1]: transform-origin so we don't need to set top
+    .slide {
+        -webkit-transform-origin: 0% 0%; // [1]
+        transform-origin: 0% 0%; // [1]
+        position: relative;
+        margin: 0 auto;
+        background: transparent url("../images/bg-section.jpg") no-repeat center center;
+        width: 1200px;
+        height: 960px;
+        overflow: hidden;
+    }
+
+    header {
+        position: relative;
+        margin-top: 55px;
+        left: @para-left;
+        font-family: @font-headline;
+        text-align: center;
+        width: @para-width;
+
+        h1 {
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            margin: 0 auto;
+            font-size: 54px;
+            line-height: 70px;
+            display:block;
+            position:relative !important;
+        }
+        h2 {
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-family: @font-subline;
+            margin: -10px auto 0;
+            padding-top: 20px;
+            font-size: 30px;
+            line-height: 30px;
+        }
+        h3 {
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            margin: 0 auto;
+            font-size: 34px;
+            line-height: 40px;
+        }
+    }
+    .packshot {
+        display: block;
+        position: absolute;
+        left: 118px;
+        top: 118px;
+        width: 960px;
+        height: 640px;
+        z-index:2;
+    }
+    .description {
+        position: absolute;
+        width: 100%;
+        max-width:100%;
+        bottom:95px;
+        top:auto;
+        font-family: @font-text;
+        font-size: 18px;
+        text-align: center;
+
+        span {
+            width:@para-width;
+            clear:left !important;
+            display:block;
+            margin:0 auto !important;
+        }
+    }
+
+
+    .logo-fritz-color {
+        position: absolute;
+        top: 230px;
+        left: 127px;
+    }
+
+    .logo-fritz {
+        position: absolute;
+        bottom: 48px;
+        left: 40px;
+    }
+
+    .link-next {
+        position: absolute;
+        bottom: 35px;
+        left: 568px;
+        cursor: pointer;
+        width: 64px;
+        height: 32px;
+        opacity: .6;
+        z-index:5;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    p {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+}
+
+// the slider
+.inside-view {
+    position: absolute;
+    width:960px;
+    height:640px;
+    left: 0;
+    top: 0;
+    overflow:hidden;
+
+    .drag-wrapper {
+        z-index: 20;
+        position: absolute;
+        height: 640px;
+        width: 36px;
+        top: 0;
+        left: 0;
+    }
+
+    .drag-divider {
+        position: absolute;
+        width: 2px;
+        height: 350px;
+        top: 180px;
+        left: 17px;
+        background: rgba(255,255,255,.6);
+    }
+
+    .drag-handle {
+        position: absolute;
+        width: 36px;
+        height: 37px;
+        background: url("../images/drag-handle2.png") no-repeat center center;
+        cursor: move;
+        left: 0;
+        bottom: 99px;
+        top:auto;
+    }
+
+    .inside-view-before {
+        background-image: url("../images/packshot-transparent.png");
+        z-index: 10;
+        width: 18px;
+        height: 640px;
+        position: absolute;
+        overflow: visible;
+        left: 0;
+    }
+
+    .inside-view-after {
+        background-image: url("../frames/960px/0000.png");
+        z-index: 10;
+        width: 942px;
+        height: 640px;
+        position: absolute;
+        overflow: hidden;
+        right: 0;
+        background-position: 942px 0;
+    }
+
+    .hotspot {
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        background: url("../images/icon-hotspot.png") no-repeat;
+
+        &.active {
+            .callout {
+                opacity:1;
+            }
+
+        }
+
+        .callout {
+            display: none;
+            z-index: 25;
+            position: absolute;
+            left: 15px;
+            border-left: 2px solid #fff; // 2px border-width to prevent line from disappearing on small scales
+            padding: 0 0 20px 20px;
+            z-index:2;
+            opacity:0;
+
+            .tip { // the round tip
+                display: block;
+                position: absolute;
+                background: #fff;
+                width: 8px;
+                height: 8px;
+                .border-radius(4px);
+                left: -5px;
+                top: 0;
+            }
+            h3 {
+                width: 200px;
+                margin: -3px 0 0;
+                font-size: 20px;
+                line-height: 22px;
+            }
+            p {
+                width: 200px;
+                margin: 0;
+                font-size: 18px;
+                line-height: 20px;
+            }
+        }
+
+        &:hover,
+        &.active {
+            .callout {
+                display: block;
+            }
+
+        }
+
+    }
+
+
+}
+.slide-contents {
+    max-width:100%;
+    width:100%;
+    overflow:hidden;
+}
+
+#hotspot-1 {
+    left: 147px;
+    top: 306px;
+    .callout {
+        top: -206px;
+        height: 185px;
+    }
+}
+
+#hotspot-2 {
+    left: 392px;
+    top: 255px;
+
+    .callout {
+        top: -155px;
+        height: 134px;
+    }
+}
+
+#hotspot-3 {
+    left: 413px;
+    top: 306px;
+
+    .callout {
+        top: -206px;
+        height: 185px;
+    }
+}
+
+#hotspot-4 {
+    left: 630px;
+    top: 255px;
+    .callout {
+        top: -155px;
+        height: 134px;
+    }
+}
+
+#hotspot-5 {
+    left: 706px;
+    top: 393px;
+    .callout {
+        top: -293px;
+        height: 272px;
+    }
+}
+
+#hotspot-6 {
+    left: 678px;
+    top: 292px;
+    .callout {
+        top: -182px;
+        height: 161px;
+    }
+}
+
+#packshot {
+    position: absolute;
+    z-index: 50;
+    left: 118px;
+    top: 136px;
+    width: 960px;
+    height: 640px;
+    left: 50%;
+    margin-left: -480px;
+}
+#canvas {
+    position: absolute;
+    z-index: 50;
+    left: 118px;
+    top: 136px;
+    width: 960px;
+    height: 640px;
+    // background: #000;
+}
+
+
+// section 1 - visible at start
+#start, .start {
+    // .slide{
+    //     background-image: url("../images/bg-layout-01.jpg");
+    // }
+    .packshot {
+        top: 136px;
+        // .animation(scale-in 1s ease-in-out 200ms forwards);
+    }
+    .description {
+        text-align:center;
+        bottom: 150px;
+        span {
+            width:500px;
+            max-width:100%;
+            margin-left:auto;
+            margin-right:auto;
+        }
+    }
+}
+
+
+// section 2 - interior
+#heimnetz, .heimnetz {
+    // .slide {
+    //     background-image: url("../images/bg-layout-02.jpg");
+    // }
+    .packshot {
+        top: 136px;
+        left: 120px;
+    }
+    p {
+        bottom: 120px;
+    }
+
+    .description {
+        text-align:center;
+        span {
+            width:800px;
+            max-width:100%;
+            margin-left:auto;
+            margin-right:auto;
+        }
+    }
+}
+
+// section 3 - wlan
+#wlan, .wlan {
+    // .slide{
+    //     background-image: url("../images/bg-layout-03.jpg");
+    // }
+    .description {
+        text-align:center;
+        span {
+            width:800px;
+            max-width:100%;
+            margin-left:auto;
+            margin-right:auto;
+        }
+    }
+    .packshot {
+        top: 716px;
+        width: 941px;
+        height: 244px;
+    }
+    h1 {
+        margin-bottom: 115px !important;
+    }
+    .product-graphics {
+        position: absolute;
+        top: 280px;
+        left: 80px;
+        width: 440px;
+
+        ul {
+            display:table !important;
+            overflow:hidden;
+            padding-top:0;
+            padding-left: 0;
+            margin-top:0;
+            width: 110%;
+            left: -10%;
+
+        }
+        li {
+            display:table-cell !important;
+            vertical-align:bottom !important;
+            height:100%;
+            clear:both;
+            float:none !important;
+            &.white-bars {
+                padding-left:20px;
+            }
+        }
+        span {
+            display:block;
+            width:100%;
+            float:right;
+            &.additional-info {
+                position: absolute;
+                top: 45px;
+                width: auto;
+                margin-left: 80px;
+
+            }
+        }
+        .info-text {
+            font-family: @font-headline;
+            margin-top: 0;
+            margin-bottom: 2px;
+            font-size: 42px;
+        }
+        ul {
+            list-style-type: none;
+        }
+        .vertical-list {
+            bottom: 20px;
+            position: relative;
+            margin-top:20px;
+        }
+    }
+    .product-features {
+        position: absolute;
+        top: 280px;
+        left: 550px;
+        width: 500px;
+
+        ul {
+            margin-top:0;
+            padding-top:0;
+            padding-left:0;
+        }
+        p {
+            margin-top:0;
+        }
+    }
+
+    .product-features {
+        margin-right: 60px;
+        li:nth-child(2) {
+            margin-bottom: 0;
+        }
+        ul {
+            margin-bottom:0;
+        }
+    }
+    .packshot {
+        top:730px;
+    }
+
+
+}
+
+// section 4 - usb3
+#usb3, .usb3 {
+    .description {
+        text-align:center;
+        span {
+            width:800px;
+            max-width:100%;
+            margin-left:auto;
+            margin-right:auto;
+        }
+    }
+    // .slide{
+    //     background-image: url("../images/bg-layout-04.jpg");
+    // }
+    .packshot {
+        top: 250px;
+    }
+    p {
+        bottom: 100px;
+    }
+
+    h1 {
+        margin-bottom: 100px !important;
+    }
+    &.active {
+        .product-graphics {
+            z-index:5;
+            border-left: 1px solid rgba(255, 255, 255, 1);
+            .secondary-text {
+                border-bottom:1px solid rgba(255, 255, 255, 1);
+            }
+            &:before {
+                opacity:1;
+            }
+        }
+    }
+    .product-features {
+        width:auto;
+        float:right;
+        border:none;
+        margin-right:50px;
+        ul {
+            list-style-type:none;
+            margin-top:0;
+            li {
+                margin:0;
+                padding:0;
+            }
+        }
+
+        .info-text {
+            font-family: @font-featured;
+        }
+    }
+    .product-graphics {
+        z-index:2;
+        width:50%;
+        float:right;
+        border-left: 1px solid rgba(255, 255, 255, 1);
+        .transition(border-left 400ms ease-in 500ms);
+
+        &:before {
+            content:"";
+            .block(10px, 10px);
+            background: @white;
+            position:absolute;
+            top:0;
+            left:0;
+            .border-radius(50%);
+            left:-5px;
+            opacity:1;
+            .transition(opacity 0.1s ease-in-out 1.5s);
+        }
+        ul {
+            padding-bottom:0;
+            padding-top:0;
+            margin-top:0;
+            margin-bottom:0;
+            p {
+                margin:0;
+            }
+        }
+
+        li {
+            display:block;
+            width:100%;
+            text-align:left;
+            margin-bottom:15px;
+            &.blue-bars {
+                text-align:left !important;
+                margin-bottom: 8px;
+            }
+            &.last {
+                margin-bottom:0;
+            }
+        }
+        p {
+            font-size: 18px;
+            font-family:  'AVMMetaOT-Book';
+            &.secondary-text {
+                color: @grey-text;
+            }
+        }
+        .secondary-text {
+            border-bottom:1px solid rgba(255, 255, 255, 1);
+            margin-bottom:0;
+            max-width:205px;
+            width:155px;
+            margin-left:-40px;
+            padding-left:40px;
+            padding-bottom:214px;
+            .transition(border-bottom 400ms ease-in-out);
+        }
+    }
+}
+
+// section 5 - telefonie
+#telefonie, .telefonie {
+    .description {
+        text-align:center;
+        span {
+            width:800px;
+            max-width:100%;
+            margin-left:auto;
+            margin-right:auto;
+        }
+    }
+    // .slide {
+    //     background-image: url("../images/bg-layout-05.jpg");
+    // }
+    .packshot {
+        top: 250px;
+    }
+    .icon-list {
+        width: 1000px;
+        position: absolute;
+        left: 120px;
+        top: 110px;
+    }
+    p {
+        bottom: 90px;
+    }
+}
+
+// slide 6 - fritz os
+#fritzos, .fritzos {
+    // .slide {
+    //     background-image: url("../images/bg-layout-06.jpg");
+    // }
+    .description {
+        text-align:center;
+        span {
+            width:800px;
+            max-width:100%;
+            margin-left:auto;
+            margin-right:auto;
+        }
+    }
+    header {
+        width:100%;
+        max-width:100%;
+        left:0;
+    }
+
+    .icon-list {
+        position: absolute;
+        left: 120px;
+        top: 42px;
+        width: 960px;
+        li {
+            width:25%;
+            margin-bottom:20px;
+            h4 {
+                margin-top: 10px;
+                margin-bottom: 6px;
+            }
+            p {
+                line-height: 20px;
+            }
+            &.clearfix {
+                clear:left;
+            }
+        }
+    }
+    .packshot {
+        top:370px;
+    }
+}
+
+// section 7 - Awards
+.auszeichnungen, #auszeichnungen {
+
+    .description {
+        text-align:center;
+        span {
+            width:800px;
+            max-width:100%;
+            margin-left:auto;
+            margin-right:auto;
+        }
+    }
+    // .slide{
+    //     background-image: url("../images/bg-layout-07.jpg");
+    // }
+
+
+    .packshot {
+        top:245px;
+    }
+    .logo-fritz-color {
+        position: absolute;
+        top: 375px;
+    }
+}
+
+.icon-list {
+    width:100%;
+    margin-top:110px;
+    position:relative;
+    float:left;
+    ul {
+        list-style-type: none;
+        margin:0;
+        padding:0;
+        width:100%;
+        .border-box();
+        li {
+            text-align: center;
+            display: block;
+            float: left;
+            width: 19%;
+            .border-box();
+            margin: 0;
+            padding: 0;
+            p {
+                font-size: 16px;
+                width: 90%;
+                margin: 0 auto;
+            }
+            h4 {
+                margin: 20px 0 10px;
+            }
+        }
+    }
+}
+
+// Icons
+.icon {
+    width: 60px;
+    height: 60px;
+    display: block;
+    background-image: url("../images/icon-sprite.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    margin: 0 auto;
+
+    &.icon-ab { background-position: 0 0; }
+    &.icon-app { background-position: -60px 0; }
+    &.icon-dect { background-position: -120px 0; }
+    &.icon-dsl { background-position: -180px 0; }
+    &.icon-fritz { background-position: -240px 0; }
+    &.icon-home { background-position: -300px 0; }
+    &.icon-mediaserver { background-position: 0 -60px; }
+    &.icon-sound { background-position: -60px -60px; }
+    &.icon-telefon { background-position: -120px -60px; }
+    &.icon-tv { background-position: -180px -60px; }
+    &.icon-vpn { background-position: -240px -60px; }
+    &.icon-wlan { background-position: -300px -60px; }
+}
+
+
+// http://stackoverflow.com/questions/4770025/how-to-disable-scrolling-temporarily
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+// Loading indicator
+img#led-1-off {
+    position: absolute;
+    left: 328px;
+    top: 512px;
+    z-index: 51;
+}
+img#led-2-off {
+    position: absolute;
+    left: 413px;
+    top: 511px;
+    z-index: 51;
+}
+img#led-3-off {
+    position: absolute;
+    left: 502px;
+    top: 510px;
+    z-index: 51;
+}
+img#led-4-off {
+    position: absolute;
+    left: 592px;
+    top: 510px;
+    z-index: 51;
+}
+img#led-5-off {
+    position: absolute;
+    left: 681px;
+    top: 510px;
+    z-index: 51;
+}
+
+/* --- DEBUG ---
+TODO: Remove me before deployment */
+#debug-bar {
+    display: none;
+    font-family: "Lucida Grande", sans-serif;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    color: #002c5a;
+    font-size: 11px;
+    font-weight: bold;
+    z-index: 999999;
+    cursor: pointer;
+    padding: 5px;
+    background: rgba(255,255,255,0.4);
+}
+
+.debug #debug-bar {
+    display: block;
+}
+
+
+.white-bars b, .blue-bars b {
+    width:7px;
+    height:30px;
+    display:inline-block;
+    background: white;
+    margin-right:2px;
+    -webkit-transform: translateZ(0);
+}
+
+.white-bars {
+    color: @white;
+}
+
+
+.blue-bars {
+    b {
+        background: #809cb6;
+    }
+    .info-text {
+        color:@grey-text;
+    }
+}
+
+
+.white-bars.vertical-list {
+    text-align:left;
+    width:25%;
+}
+.blue-bars.vertical-list {
+    text-align:right;
+    width:25%;
+}
+.white-bars.vertical-list b, .blue-bars.vertical-list b {
+    width:62px;
+    height:9px;
+    display:block;
+    margin-bottom:4px;
+}
+ b {
+    opacity:0;
+}
+
+section#wlan.active {
+   b {
+       // Animations
+       &.bar-1 {
+           .animation(fade-in 1s  ease-in-out  1000ms forwards);
+       }
+       &.bar-2 {
+           .animation(fade-in 1s ease-in-out 1025ms forwards);
+       }
+       &.bar-3 {
+           .animation(fade-in 1s ease-in-out 1050ms forwards) ;
+       }
+       &.bar-4 {
+           .animation(fade-in 1s ease-in-out 1075ms forwards);
+       }
+       &.bar-5 {
+           .animation(fade-in 1s ease-in-out 1100ms forwards);
+       }
+       &.bar-6 {
+           .animation(fade-in 1s ease-in-out 1125ms forwards);
+       }
+       &.bar-7 {
+           .animation(fade-in 1s ease-in-out 1150ms forwards) ;
+       }
+       &.bar-8 {
+           .animation(fade-in 1s ease-in-out 1175ms forwards) ;
+       }
+       &.bar-9 {
+           .animation(fade-in 1s ease-in-out 1200ms forwards);
+       }
+       &.bar-10 {
+           .animation(fade-in 1s ease-in-out 1225ms forwards) ;
+       }
+       &.bar-11 {
+           .animation(fade-in 1s ease-in-out 1250ms forwards);
+       }
+       &.bar-12 {
+           .animation(fade-in 1s ease-in-out 1275ms forwards);
+       }
+       &.bar-13 {
+           .animation(fade-in 1s ease-in-out 1300ms forwards);
+       }
+       &.bar-14 {
+           .animation(fade-in 1s ease-in-out 1325ms forwards);
+       }
+       &.bar-15 {
+           .animation(fade-in 1.5s ease-in-out 1350ms forwards);
+       }
+       &.bar-16 {
+           .animation(fade-in 1.5s ease-in-out 1375ms forwards);
+       }
+       &.bar-17 {
+           .animation(fade-in 1.5s ease-in-out 1400ms forwards);
+       }
+       &.bar-18 {
+           .animation(fade-in 1.5s ease-in-out 1425ms forwards);
+       }
+       &.bar-19 {
+           .animation(fade-in 1.5s ease-in-out 1450ms forwards);
+       }
+       &.bar-20 {
+           .animation(fade-in 1.5s ease-in-out 1475ms forwards);
+       }
+       &.bar-21 {
+           .animation(fade-in 1.5s ease-in-out 1500ms forwards);
+       }
+       &.bar-22 {
+           .animation(fade-in 1.5s ease-in-out 1525ms forwards);
+       }
+       &.bar-23 {
+           .animation(fade-in 1.5s ease-in-out 1550ms forwards);
+       }
+       &.bar-24 {
+           .animation(fade-in 1.5s ease-in-out 1575ms forwards);
+       }
+       &.bar-25 {
+           .animation(fade-in 1.5s ease-in-out 1600ms forwards);
+       }
+       &.bar-26 {
+           .animation(fade-in 1.5s ease-in-out 1625ms forwards);
+       }
+       &.bar-27 {
+           .animation(fade-in 1.5s ease-in-out 1650ms forwards);
+       }
+       &.bar-28 {
+           .animation(fade-in 1.5s ease-in-out 1675ms forwards);
+       }
+       &.bar-29 {
+           .animation(fade-in 1.5s ease-in-out 1700ms forwards);
+       }
+       &.bar-30 {
+           .animation(fade-in 1.5s ease-in-out 1725ms forwards);
+       }
+       &.bar-28 {
+           .animation(fade-in 1.5s ease-in-out 1750ms forwards);
+       }
+       &.bar-29 {
+           .animation(fade-in 1.5s ease-in-out 1775ms forwards);
+       }
+       &.bar-30 {
+           .animation(fade-in 1.5s ease-in-out 1800ms forwards);
+       }
+       &.bar-31 {
+           .animation(fade-in 1.5s ease-in-out 1825ms forwards);
+       }
+       &.bar-32 {
+           .animation(fade-in 1.5s ease-in-out 1850ms forwards);
+       }
+       &.bar-33 {
+           .animation(fade-in 1.5s ease-in-out 1875ms forwards);
+       }
+       &.bar-34 {
+           .animation(fade-in 1.5s ease-in-out 1800ms forwards);
+       }
+       &.bar-35 {
+           .animation(fade-in 1.5s ease-in-out 1825ms forwards);
+       }
+       &.bar-36 {
+           .animation(fade-in 1.5s ease-in-out 1850ms forwards);
+       }
+
+   }
+
+}
+section#usb3.active {
+   b {
+       // Animations
+       &.bar-1 {
+           .animation(fade-in 1s  ease-in-out  2200ms forwards);
+       }
+       &.bar-2 {
+           .animation(fade-in 1s ease-in-out 2225ms forwards);
+       }
+       &.bar-3 {
+           .animation(fade-in 1s ease-in-out 2250ms forwards) ;
+       }
+       &.bar-4 {
+           .animation(fade-in 1s ease-in-out 2275ms forwards);
+       }
+       &.bar-5 {
+           .animation(fade-in 1s ease-in-out 2300ms forwards);
+       }
+       &.bar-6 {
+           .animation(fade-in 1s ease-in-out 2325ms forwards);
+       }
+       &.bar-7 {
+           .animation(fade-in 1s ease-in-out 2350ms forwards) ;
+       }
+       &.bar-8 {
+           .animation(fade-in 1s ease-in-out 2375ms forwards) ;
+       }
+       &.bar-9 {
+           .animation(fade-in 1s ease-in-out 2400ms forwards);
+       }
+       &.bar-10 {
+           .animation(fade-in 1s ease-in-out 2425ms forwards) ;
+       }
+       &.bar-11 {
+           .animation(fade-in 1s ease-in-out 2450ms forwards);
+       }
+       &.bar-12 {
+           .animation(fade-in 1s ease-in-out 2475ms forwards);
+       }
+       &.bar-13 {
+           .animation(fade-in 1s ease-in-out 2500ms forwards);
+       }
+       &.bar-14 {
+           .animation(fade-in 1s ease-in-out 2525ms forwards);
+       }
+       &.bar-15 {
+           .animation(fade-in 1.5s ease-in-out 2550ms forwards);
+       }
+       &.bar-16 {
+           .animation(fade-in 1.5s ease-in-out 2575ms forwards);
+       }
+       &.bar-17 {
+           .animation(fade-in 1.5s ease-in-out 2600ms forwards);
+       }
+       &.bar-18 {
+           .animation(fade-in 1.5s ease-in-out 2625ms forwards);
+       }
+       &.bar-19 {
+           .animation(fade-in 1.5s ease-in-out 2650ms forwards);
+       }
+       &.bar-20 {
+           .animation(fade-in 1.5s ease-in-out 2675ms forwards);
+       }
+       &.bar-21 {
+           .animation(fade-in 1.5s ease-in-out 2700ms forwards);
+       }
+       &.bar-22 {
+           .animation(fade-in 1.5s ease-in-out 2725ms forwards);
+       }
+       &.bar-23 {
+           .animation(fade-in 1.5s ease-in-out 2750ms forwards);
+       }
+       &.bar-24 {
+           .animation(fade-in 1.5s ease-in-out 2775ms forwards);
+       }
+       &.bar-25 {
+           .animation(fade-in 1.5s ease-in-out 2800ms forwards);
+       }
+       &.bar-26 {
+           .animation(fade-in 1.5s ease-in-out 2825ms forwards);
+       }
+       &.bar-27 {
+           .animation(fade-in 1.5s ease-in-out 2850ms forwards);
+       }
+       &.bar-28 {
+           .animation(fade-in 1.5s ease-in-out 2875ms forwards);
+       }
+       &.bar-29 {
+           .animation(fade-in 1.5s ease-in-out 2900ms forwards);
+       }
+       &.bar-30 {
+           .animation(fade-in 1.5s ease-in-out 2925ms forwards);
+       }
+       &.bar-28 {
+           .animation(fade-in 1.5s ease-in-out 2950ms forwards);
+       }
+       &.bar-29 {
+           .animation(fade-in 1.5s ease-in-out 2975ms forwards);
+       }
+       &.bar-30 {
+           .animation(fade-in 1.5s ease-in-out 3000ms forwards);
+       }
+       &.bar-31 {
+           .animation(fade-in 1.5s ease-in-out 3025ms forwards);
+       }
+       &.bar-32 {
+           .animation(fade-in 1.5s ease-in-out 3050ms forwards);
+       }
+       &.bar-33 {
+           .animation(fade-in 1.5s ease-in-out 3075ms forwards);
+       }
+       &.bar-34 {
+           .animation(fade-in 1.5s ease-in-out 3100ms forwards);
+       }
+       &.bar-35 {
+           .animation(fade-in 1.5s ease-in-out 3125ms forwards);
+       }
+       &.bar-36 {
+           .animation(fade-in 1.5s ease-in-out 3150ms forwards);
+       }
+
+   }
+
+}
+
+.packshot {
+    .transition(bottom 1s ease-out);
+    display:block;
+    clear: both !important;
+    margin-bottom:3px;
+}
+
+.product-graphics {
+    float:left;
+    width:45%;
+    box-sizing:border-box;
+    position:relative;
+    ul {
+        position:relative;
+    }
+    li {
+        width:45%;
+        .border-box();
+        float:right;
+        &.blue-bars {
+            text-align:right !important;
+            float:left;
+            .vertical-list {
+                width:61px;
+                float:right;
+            }
+        }
+    }
+    .right-box {
+        float:right;
+        li {
+            display:block;
+        }
+    }
+
+}
+
+.product-features {
+    border-left:1px solid white;
+    padding-left:60px;
+    float:right;
+    width:45%;
+    box-sizing:border-box;
+    position:relative;
+    li {
+        margin-bottom: 45px;
+    }
+    span {
+        font-size:16px;
+        font-family: 'AVMMetaOT-Book';
+    }
+}
+
+.featured-text {
+    color:@featured-text !important;
+    font-size:20px;
+    font-family: @font-featured;
+}
+
+.wlan {
+    .packshot {
+        top:auto !important;
+        bottom:-300px;
+        .transition(bottom 1s cubic-bezier(0.5, -0.5, 0.5, 1.5));
+
+    }
+}
+
+.mega-text {
+    font-size:50px;
+    font-family:'AVMMetaOT-CondBlack' !important;
+}
+.vertical-list {
+    b {
+        .block(61px, 9px);
+        margin-bottom:4px;
+    }
+}
+
+.info-text {
+    font-size: 50px;
+    margin-bottom: 20px;
+    line-height:50px;
+}
+
+
+
+.action-buttons{
+    text-align: center;
+    margin-top: 30px;
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+    font-size: 24px;
+    a {
+        background:@action-color;
+        text-align:center;
+        color:@white;
+        padding:13px 55px 15px;
+        .border-radius(10px);
+        display:inline-block;
+        position:relative;
+        .border-box();
+        .no-underline();
+        .box-shadow(1px -1px 1px #3c426a);
+    }
+}
+
+
+#footer-section {
+    // display: none;
+    width:100%;
+    position: fixed;
+    bottom: 30px;
+    left:20px;
+    z-index:999;
+    opacity:0;
+    .logo-section {
+       position:relative;
+       float:left;
+
+    }
+    .imprint {
+        position:relative;
+        float:right;
+        margin-right:200px;
+        font-size: 14px;
+        color: #fff;
+        margin-top:35px;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            opacity: .6;
+            &:hover {
+                opacity: 1;
+
+            }
+        }
+    }
+}
+.primary.handheld {
+    display:none;
+}
+
+.desktop.js {
+  #packshot-wrapper {
+        opacity:1;
+        .transition(all ease-in-out 400ms);
+        .transition-delay(0.5s);
+}
+.js {
+   #start {
+      &.first-animation {
+          opacity:0;
+      }
+  }
+}
+.js {
+     #start {
+        opacity:1;
+        .transition(all ease-in-out 150ms);
+        .transition-delay(0.3s);
+    }
+}
+
+}
+.desktop.js {
+  #packshot-wrapper {
+    &.first-animation {
+        opacity:0;
+    }
+  }
+}
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
