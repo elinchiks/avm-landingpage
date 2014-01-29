@@ -156,6 +156,9 @@ var avmlp = {
     resizeSections: function() {
         var h = jQuery("html").height();
         var w = jQuery("html").width();
+
+
+
         // update zoom
         if (h < this.defaultHeight) {
             this.zoom = h / this.defaultHeight;
@@ -447,6 +450,18 @@ var avmlp = {
         }
         this.lastSection = currentSection;
         if (this.animationData.frames[this.aniStep].kf && this.animationData.frames[this.aniStep].kf === "poster") {
+            // stop scrolling when poster frame is reached, buggy
+            // console.log("poster frame reached", this.aniStep)
+            // if (!$("body").hasClass("stop-scrolling") && this.aniStep != 1) {
+            //     this.aniTargetStep = this.aniStep;
+            //     this.isAnimationRunning = false;
+            //     $("body").addClass("stop-scrolling");
+            //     var _this = this;
+            //     window.setTimeout(function() {
+            //         _this.isAnimationRunning = true
+            //         $("body").removeClass("stop-scrolling");
+            //     }, 2000);
+            // }
             this.navReady = true;
         }
         // hide active hotspot
@@ -622,8 +637,9 @@ var avmlp = {
 
 // Document ready handler
 jQuery( document ).ready(function( $ ) {
-    avmlp.setCapableBrowser();
+
     avmlp.setOS();
+    avmlp.setCapableBrowser();
 
     avmlp.resizeSections();
 
