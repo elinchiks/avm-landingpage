@@ -731,7 +731,7 @@ jQuery( document ).ready(function( $ ) {
     // inside/outside image - using jquery ui draggable
     $(".drag-wrapper").draggable({
         axis: "x",
-        cursor: "move",
+        cursor: "pointer",
         handle: ".drag-handle",
         containment: ".inside-view",
         start: function(){
