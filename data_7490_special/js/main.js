@@ -177,7 +177,7 @@ var avmlp = {
                 $('#start').removeClass('first-animation');
                 $('#packshot-wrapper').removeClass('first-animation');
             }
-        }, 50);
+        }, 70);
 
     },
 
