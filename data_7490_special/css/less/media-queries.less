@@ -316,11 +316,11 @@ and (max-device-width : 1024px) {
 		.transform(translateY(-100%));
 		opacity:0;
 		
-		-webkit-transition: -webkit-transform 100ms;
-		-moz-transition: -moz-transform 100ms;
-		-ms-transition: -ms-transform 100ms;
-		-o-transition: -o-transform 100ms;
-		transition: transform 100ms;
+		-webkit-transition: -webkit-transform 100ms,  opacity 100ms;
+		-moz-transition: -moz-transform 100ms,  opacity 100ms;
+		-ms-transition: -ms-transform 100ms,  opacity 100ms;
+		-o-transition: -o-transform 100ms,  opacity 100ms;
+		transition: transform 100ms,  opacity 100ms;
 		.transition-timing-function(cubic-bezier(0,1.38,1,1.38));
 	}
 	.packshot {
@@ -337,12 +337,11 @@ and (max-device-width : 1024px) {
 	.description {
 		.transform(translateY(200%));
 		opacity:0;
-		.transition(all 600ms);
-		-webkit-transition-property: -webkit-transform;
-		-moz-transition-property: -moz-transform;
-		-ms-transition-property: -ms-transform;
-		-o-transition-property: -o-transform;
-		transition-property: transform;
+		-webkit-transition: -webkit-transform 600ms,  opacity 600ms;
+		-moz-transition: -moz-transform 600ms,  opacity 600ms;
+		-ms-transition: -ms-transform 600ms,  opacity 600ms;
+		-o-transition: -o-transform 600ms,  opacity 600ms;
+		transition: transform 600ms,  opacity 600ms;
 		.transition-timing-function(cubic-bezier(0.17,0.67,0.79,1.61));	
 	}
 	.link-next img {
@@ -372,23 +371,22 @@ and (max-device-width : 1024px) {
 		h1, h2{
 			opacity:1;
 			.transform(translateY(0));
-			-webkit-transition: -webkit-transform 100ms;
-			-moz-transition: -moz-transform 100ms;
-			-ms-transition: -ms-transform 100ms;
-			-o-transition: -o-transform 100ms;
-			transition: transform 100ms;
+			-webkit-transition: -webkit-transform 100ms, opacity 100ms;
+			-moz-transition: -moz-transform 100ms, opacity 100ms;
+			-ms-transition: -ms-transform 100ms,  opacity 100ms;
+			-o-transition: -o-transform 100ms,  opacity 100ms;
+			transition: transform 100ms,  opacity 100ms;
 			.transition-delay(1s);
 		}
 
 		.description {
 			.transform(translateY(0));
 			opacity:1;
-			.transition(all 1s);
-			-webkit-transition-property: -webkit-transform;
-			-moz-transition-property: -moz-transform;
-			-ms-transition-property: -ms-transform;
-			-o-transition-property: -o-transform;
-			transition-property: transform;
+			-webkit-transition: -webkit-transform 600ms,  opacity 600ms;
+			-moz-transition: -moz-transform 600ms,  opacity 600ms;
+			-ms-transition: -ms-transform 600ms,  opacity 600ms;
+			-o-transition: -o-transform 600ms,  opacity 600ms;
+			transition: transform 600ms,  opacity 600ms;
 			.transition-delay(2s);
 	
 		}

@@ -508,7 +508,7 @@
                         </li>
                         <li class="icon-8">
                             <span class="icon icon-vpn"></span>
-                            <h4 class="featured-text">Smart Home</h4>
+                            <h4 class="featured-text">VPN</h4>
                             <p>Im Handumdrehen weltweit sicherer Zugang zu deinem Heimnetz </p>
                         </li>
                     </ul>
