@@ -508,7 +508,7 @@
                         </li>
                         <li class="icon-8">
                             <span class="icon icon-vpn"></span>
-                            <h4 class="featured-text">VPN</h4>
+                            <h4 class="featured-text">Smart Home</h4>
                             <p>Im Handumdrehen weltweit sicherer Zugang zu deinem Heimnetz </p>
                         </li>
                     </ul>
@@ -631,7 +631,6 @@
         </div>
     </div>
 
-
     <?php /*
     <script src="data_7490_special/js/vendor/jquery.2.0.3.min.js"></script>
     <script src="data_7490_special/js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
@@ -640,7 +639,7 @@
     <script src="data_7490_special/js/main.js"></script>
     */ ?>
 
-    <script src="data_7490_special/js/scripts.js?v=2014-01-29-1655"></script>
+    <script src="data_7490_special/js/scripts.js?v=2014-01-29-1742"></script>
 
 
 </body>

@@ -56,6 +56,7 @@ var avmlp = {
     isWindows: null,
     isCapableBrowser: null,
     lastOffset: false,
+    noScrollToTop: true,
 
     // methods
     loadAnimationImages: function() {
@@ -638,7 +639,7 @@ jQuery( document ).ready(function( $ ) {
     avmlp.setOS();
     avmlp.setCapableBrowser();
     // avmlp.isCapableBrowser = false;
-
+    avmlp.noScrollToTop = true;
     avmlp.resizeSections();
 
     if($('html').hasClass('tablet')) {
@@ -726,8 +727,14 @@ jQuery( document ).ready(function( $ ) {
             var offsetSize = avmlp.offsetSize;
 
             $(window).scrollTop($("[id*='"+getHref+"']").offset().top - offsetSize);
-            });
+        });
     }
+
+    // action button
+    $(".action-buttons a").on("click", function() {
+        avmlp.noScrollToTop = true;
+        window.location.href=$(this).attr("href");
+    });
 
 
 
@@ -796,7 +803,7 @@ jQuery( window ).on( "orientationchange", function() {
     avmlp.resizeSections();
     if(avmlp.currentSection == false) {
     avmlp.currentSection = '#start';
-    } 
+    }
 
     var top = ($(window).height() - this.defaultHeight * this.zoom) / 2;
     if($(window).height() > $(window).width()) {
@@ -815,7 +822,9 @@ jQuery( window ).on( "reload", function() {
  });
 
 jQuery( window ).on('beforeunload', function() {
-    jQuery( window ).scrollTop(0);
+    if (!avmlp.noScrollToTop) {
+        jQuery( window ).scrollTop(0);
+    }
 });
 
 if(!$('html').hasClass('desktop')) {
