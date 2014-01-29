@@ -52,6 +52,9 @@ var avmlp = {
     canvas: false,
     canvasCtx: false,
     currentLowSrc: false,
+    isWindows: null,
+    isCapableBrowser: null,
+    lastOffset: false,
 
     // methods
     loadAnimationImages: function() {
@@ -258,7 +261,6 @@ var avmlp = {
         $('#start','.start').removeClass('first-animation');
 
 
-
         // we need an element with the original height to re-enable scrolling
         var docHeight = this.animationData.frames.length * this.aniSpeed + this.defaultHeight;
         $("#scroll-placeholder").height(docHeight);
@@ -285,6 +287,10 @@ var avmlp = {
     },
 
     slowScroll: function(offset) {
+        if (offset != this.lastOffset && this.lastOffset) {
+            return;
+        }
+        this.lastOffset = offset;
         var o = $(window).scrollTop();
         if (this.scrollDir === "down") {
             if (o < this.scrollMiddle) {
@@ -336,6 +342,7 @@ var avmlp = {
         if (this.sectionNames.indexOf(sectionName) > -1) {
             this.targetOffset = this.keyframes["poster"][this.sectionNames.indexOf(sectionName)];
             if (this.targetOffset !== $(window).scrollTop()) {
+                this.lastOffset = false;
                 var dist = this.targetOffset - $(window).scrollTop();
                 if (dist < 0) {
                     this.scrollDir = "up";
@@ -412,9 +419,6 @@ var avmlp = {
         window.setTimeout(function() {
             $("#" + frame.s).css("opacity", 1);
             $("#" + frame.s).css("display", "block");
-            // if (!frame.imgCss || !frame.imgCss.top) {
-            //     $("#packshot").css("top", "136px");
-            // }
         }, 25);
     },
 
@@ -580,13 +584,47 @@ var avmlp = {
     setSliderPosition: function(pos) {
         $(".drag-wrapper").css({ "left": pos });
         avmlp.updateSlider();
-    }
+    },
 
+    setCapableBrowser: function() {
+        this.isCapableBrowser = true;
+        if (this.isWindows) {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.indexOf("msie 9") !=-1) {
+                this.isCapableBrowser = false;
+            }
+            if (ua.indexOf("msie 8") !=-1) {
+                this.isCapableBrowser = false;
+            }
+            if (ua.indexOf("msie 7") !=-1) {
+                this.isCapableBrowser = false;
+            }
+            if (ua.indexOf("msie 6") !=-1) {
+                this.isCapableBrowser = false;
+            }
+            if (ua.indexOf("safari") !=-1) {
+                this.isCapableBrowser = false;
+            }
+            if (ua.indexOf("opera ") !=-1) {
+                this.isCapableBrowser = false;
+            }
+        }
+    },
+
+    setOS: function() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.indexOf("win") !== -1 && ua.indexOf("darwin") === -1) {
+            this.isWindows = true;
+        } else {
+            this.isWindows = false;
+        }
+    }
 };
 
 // Document ready handler
 jQuery( document ).ready(function( $ ) {
-
+    avmlp.setCapableBrowser();
+    avmlp.setOS();
 
     avmlp.resizeSections();
 
@@ -621,26 +659,26 @@ jQuery( document ).ready(function( $ ) {
     }
 
     // Ajax-Load animation properties & and initialize animation
-    if($('html').hasClass('desktop')) {
-    $.ajax({
-        url: avmlp.aniJsonFile,
-        dataType: "json",
-        success: function(data) {
-            if($('html').hasClass('desktop')) {
-                avmlp.initScrollAnimation(data);
+    if($('html').hasClass('desktop') && avmlp.isCapableBrowser) {
+        $.ajax({
+            url: avmlp.aniJsonFile,
+            dataType: "json",
+            success: function(data) {
+                if($('html').hasClass('desktop')) {
+                    avmlp.initScrollAnimation(data);
+                }
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                if (window.console) {
+                    window.console.log("Oh noes! Getting animation properties failed because: ", errorThrown);
+                }
             }
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-            if (window.console) {
-                window.console.log("Oh noes! Getting animation properties failed because: ", errorThrown);
-            }
-        }
-    });
-}
+        });
+    }
 
     // clickable bullets in Navigation
     $(".primary li").css("cursor", "pointer");
-    if($('html').hasClass('desktop')) {
+    if($('html').hasClass('desktop') && avmlp.isCapableBrowser) {
         $(".primary a").on("click", function(e) {
             e.preventDefault();
             e.stopPropagation();
@@ -728,8 +766,6 @@ jQuery( document ).ready(function( $ ) {
             $(window).scrollTop($("[id*='"+href.slice(1)+"']").offset().top - offsetSize);
         }
     });
-
-
 });
 
 // resize handler
@@ -751,10 +787,7 @@ jQuery( window ).on('beforeunload', function() {
 
 if(!$('html').hasClass('desktop')) {
     jQuery( window ).on( "scroll", function() {
-        if(!$('html').hasClass('desktop')) {
-            // e.preventDefault();
-           avmlp.redrawDotNav();
-        }
+       avmlp.redrawDotNav();
     });
 }
 
