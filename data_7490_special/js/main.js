@@ -622,7 +622,7 @@ var avmlp = {
             if (ua.indexOf("msie 6") !=-1) {
                 this.isCapableBrowser = false;
             }
-            if (ua.indexOf("safari") !=-1) {
+            if (ua.indexOf("safari") !=-1 && ua.indexOf("chrome") == -1) {
                 this.isCapableBrowser = false;
             }
             if (ua.indexOf("opera ") !=-1) {
