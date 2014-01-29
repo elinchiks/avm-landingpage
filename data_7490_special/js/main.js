@@ -261,7 +261,7 @@ var avmlp = {
         $(".slide").not("#start").find(".action-buttons").css("opacity", 0);
         $(".slide").not("#start").find(".icon-list li").css("opacity", 0);
 
-    
+
 
         // we need an element with the original height to re-enable scrolling
         var docHeight = this.animationData.frames.length * this.aniSpeed + this.defaultHeight;
@@ -372,7 +372,13 @@ var avmlp = {
                     var currentSection = this.animationData.frames[i].s;
                     if (currentSection) {
                         this.isAnimationRunning = false;
-                        $("#packshot-wrapper, #"+currentSection).animate({
+                        if (sectionName === "start" || sectionName === "heimnetz") {
+                            $("#canvas").hide();
+                        } else {
+                            $("#canvas").show();
+                        }
+
+                        $("#"+currentSection).animate({
                             opacity: 0
                         }, {
                             duration: 400,
