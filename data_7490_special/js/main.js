@@ -207,7 +207,11 @@ var avmlp = {
             "z-index": 2,
             "margin-top":'' + top + 'px'
         });
-
+        if (!this.isCapableBrowser && $("html").hasClass("desktop")) {
+            jQuery("section .slide").css({
+                "left": "0"
+            });
+        }
     },
 
     setNavigationState: function() {
@@ -633,6 +637,7 @@ jQuery( document ).ready(function( $ ) {
 
     avmlp.setOS();
     avmlp.setCapableBrowser();
+    // avmlp.isCapableBrowser = false;
 
     avmlp.resizeSections();
 
