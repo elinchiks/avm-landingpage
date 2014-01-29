@@ -718,6 +718,7 @@ jQuery( document ).ready(function( $ ) {
         $(".primary a").on("click", function(e) {
             e.preventDefault();
             var obj = $(this);
+            avmlp.currentSection = obj.attr("href");
             var getHref = obj.attr("href").split("#")[1];
             $('section').removeClass('active');
             $('section#' + getHref + '').addClass('active');
@@ -765,6 +766,7 @@ jQuery( document ).ready(function( $ ) {
             return false;
         }
         var href = $(this).attr("href");
+        avmlp.currentSection = href;
         if ($('html').hasClass('desktop')) {
 
             $('section').removeClass('active');
@@ -786,8 +788,26 @@ jQuery( window ).on( "resize", function() {
     avmlp.resizeSections();
 });
 
+
+// resize handler
+
+
 jQuery( window ).on( "orientationchange", function() {
     avmlp.resizeSections();
+    if(avmlp.currentSection == false) {
+    avmlp.currentSection = '#start';
+    } 
+
+    var top = ($(window).height() - this.defaultHeight * this.zoom) / 2;
+    if($(window).height() > $(window).width()) {
+         this.offsetSize = top;
+    } else {
+     this.offsetSize = 0;
+     top = 0;
+    }
+    $(window).scrollTop($(avmlp.currentSection).offset().top - offsetSize);
+
+
  });
 
 jQuery( window ).on( "reload", function() {
