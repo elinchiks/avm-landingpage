@@ -175,8 +175,9 @@ var avmlp = {
         setTimeout(function(){
             if($('html').hasClass('js')) {
                 $('#start').removeClass('first-animation');
+                $('#packshot-wrapper').removeClass('first-animation');
             }
-        }, 100);
+        }, 50);
 
     },
 
@@ -216,8 +217,8 @@ var avmlp = {
 
         // create new slide for the packshot animation
 
-        var $section = $('<section id="packshot-wrapper" class="first-animation"/>');
-        var $slide = $('<div class="slide packshot-slide first-animation"><canvas id="canvas" width="960" height="640"></canvas></div>');
+        var $section = $('<section id="packshot-wrapper" class="first-animation" />');
+        var $slide = $('<div class="slide packshot-slide"><canvas id="canvas" width="960" height="640"></canvas></div>');
         var $packshot =$('<img src="data_7490_special/frames/960px/0000.png" id="packshot" width="960" height="640" alt="FRITZ!Box 7490" />');
         // $packshot.appendTo($slide);
 
@@ -257,9 +258,7 @@ var avmlp = {
         $(".slide").not("#start").find(".action-buttons").css("opacity", 0);
         $(".slide").not("#start").find(".icon-list li").css("opacity", 0);
 
-        $('#packshot-wrapper').removeClass('first-animation');
-        $('#start','.start').removeClass('first-animation');
-
+    
 
         // we need an element with the original height to re-enable scrolling
         var docHeight = this.animationData.frames.length * this.aniSpeed + this.defaultHeight;
