@@ -56,6 +56,7 @@ var avmlp = {
     isWindows: null,
     isCapableBrowser: null,
     lastOffset: false,
+    noScrollToTop: true,
 
     // methods
     loadAnimationImages: function() {
@@ -638,7 +639,7 @@ jQuery( document ).ready(function( $ ) {
     avmlp.setOS();
     avmlp.setCapableBrowser();
     // avmlp.isCapableBrowser = false;
-
+    avmlp.noScrollToTop = true;
     avmlp.resizeSections();
 
     if($('html').hasClass('tablet')) {
@@ -728,7 +729,11 @@ jQuery( document ).ready(function( $ ) {
             });
     }
 
-
+    // action button
+    $(".action-buttons a").on("click", function() {
+        avmlp.noScrollToTop = true;
+        window.location.href=$(this).attr("href");
+    });
 
 
     // avmlp.resizeSections();
@@ -779,6 +784,8 @@ jQuery( document ).ready(function( $ ) {
             $(window).scrollTop($("[id*='"+href.slice(1)+"']").offset().top - offsetSize);
         }
     });
+
+
 });
 
 // resize handler
@@ -795,7 +802,9 @@ jQuery( window ).on( "reload", function() {
  });
 
 jQuery( window ).on('beforeunload', function() {
-    jQuery( window ).scrollTop(0);
+    if (!avmlp.noScrollToTop) {
+        jQuery( window ).scrollTop(0);
+    }
 });
 
 if(!$('html').hasClass('desktop')) {
@@ -884,9 +893,6 @@ var requestAnimFrame = (function() {
         }
 
     }
-
-
-
 
 })();
 
