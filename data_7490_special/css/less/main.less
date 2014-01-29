@@ -214,7 +214,6 @@ section {
         font-family: @font-headline;
         text-align: center;
         width: @para-width;
-
         h1 {
             text-rendering: optimizeLegibility;
             -webkit-font-smoothing: antialiased;
@@ -1400,10 +1399,19 @@ section#usb3.active {
     left:20px;
     z-index:999;
     opacity:0;
+    display:table;
+    height:42px;
     .logo-section {
-       position:relative;
-       float:left;
 
+        height:auto;
+        display:table-cell;
+        vertical-align:bottom !important;
+        img {
+            width:16%;
+            height:auto;
+            float:left;
+
+        }
     }
     .imprint {
         width:auto;

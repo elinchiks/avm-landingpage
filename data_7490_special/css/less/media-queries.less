@@ -48,10 +48,11 @@
 	background-size: contain;
 }
 	.logo-section{
-		width: 40%;
+		width: 40% !important;
+		height:42px;
+
 		img {
-			max-width:19%;
-			height:auto;
+			max-width:16%;
 		}
 	}
 
@@ -139,6 +140,24 @@
 	}
 	// Nexus
 		@media only screen and (min-device-width : 120px) and (max-device-width : 900px) and (orientation : portrait) { 
+			.description {
+			    position: absolute !important;
+			    width: 500px  !important;
+			    bottom:80px  !important;
+			    top:auto;
+			    left:350px  !important;
+			    margin:0 !important;
+
+		}
+		.first-animation .description {
+			   .transition(none) !important;
+			   .animation(none) !important;
+		}
+		.auszeichnungen h1, #auszeichnungen h1 {
+			width:600px !important;
+			left:300px !important;
+
+		}
 		}
 }
 
