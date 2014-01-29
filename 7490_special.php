@@ -631,7 +631,6 @@
         </div>
     </div>
 
-
     <?php /*
     <script src="data_7490_special/js/vendor/jquery.2.0.3.min.js"></script>
     <script src="data_7490_special/js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
@@ -641,11 +640,6 @@
     */ ?>
 
     <script src="data_7490_special/js/scripts.js?v=2014-01-29"></script>
-
-
-
-
-
 
 </body>
 </html>

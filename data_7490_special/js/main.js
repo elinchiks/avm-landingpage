@@ -48,6 +48,7 @@ var avmlp = {
     scrollDir: "",
     scrollMiddle: 0,
     scrollSpeedFactor: 1,
+    scrollToOffset: 0,
     navReady: true,
     canvas: false,
     canvasCtx: false,
@@ -288,11 +289,8 @@ var avmlp = {
         });
     },
 
-    slowScroll: function(offset) {
-        if (offset != this.lastOffset && this.lastOffset) {
-            return;
-        }
-        this.lastOffset = offset;
+    slowScroll: function() {
+        var offset = this.scrollToOffset;
         var o = $(window).scrollTop();
         if (this.scrollDir === "down") {
             if (o < this.scrollMiddle) {
@@ -322,7 +320,7 @@ var avmlp = {
         if (x !== 0 ) {
             var _this = this;
             window.setTimeout(function() {
-                _this.slowScroll(offset);
+                _this.slowScroll();
             }, 20);
         } else {
             avmlp.navReady = true;
@@ -343,6 +341,7 @@ var avmlp = {
         var sectionName = fragment.slice(1);
         if (this.sectionNames.indexOf(sectionName) > -1) {
             this.targetOffset = this.keyframes["poster"][this.sectionNames.indexOf(sectionName)];
+            this.scrollToOffset = this.targetOffset;
             if (this.targetOffset !== $(window).scrollTop()) {
                 this.lastOffset = false;
                 var dist = this.targetOffset - $(window).scrollTop();
@@ -359,7 +358,7 @@ var avmlp = {
                 if (this.scrollDistance < 2400) { // small jump - next or prev section
 
                     window.setTimeout(function() {
-                        _this.slowScroll(_this.targetOffset);
+                        _this.slowScroll();
                     }, 20);
 
                 } else { // bigger jump - probably 2 or more sections
@@ -456,18 +455,6 @@ var avmlp = {
         }
         this.lastSection = currentSection;
         if (this.animationData.frames[this.aniStep].kf && this.animationData.frames[this.aniStep].kf === "poster") {
-            // stop scrolling when poster frame is reached, buggy
-            // console.log("poster frame reached", this.aniStep)
-            // if (!$("body").hasClass("stop-scrolling") && this.aniStep != 1) {
-            //     this.aniTargetStep = this.aniStep;
-            //     this.isAnimationRunning = false;
-            //     $("body").addClass("stop-scrolling");
-            //     var _this = this;
-            //     window.setTimeout(function() {
-            //         _this.isAnimationRunning = true
-            //         $("body").removeClass("stop-scrolling");
-            //     }, 2000);
-            // }
             this.navReady = true;
         }
         // hide active hotspot
