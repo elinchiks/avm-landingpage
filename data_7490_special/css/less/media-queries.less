@@ -317,11 +317,21 @@ and (max-device-width : 1024px) {
 		opacity:0;
 		
 		.transition(all 100ms);
+		-webkit-transition-property: -webkit-transform;
+		-moz-transition-property: -moz-transform;
+		-ms-transition-property: -ms-transform;
+		-o-transition-property: -o-transform;
+		transition-property: transform;
 		.transition-timing-function(cubic-bezier(0,1.38,1,1.38));
 	}
 	.packshot {
 		opacity:0;
 		.transition(all 1s);
+		-webkit-transition-property: opacity;
+		-moz-transition-property: opacity;
+		-ms-transition-property: opacity;
+		-o-transition-property: opacity;
+		transition-property: opacity;
 		.transition-timing-function(cubic-bezier(0,1.38,1,1.38));
 		.transition-delay(2s);
 	}
@@ -329,6 +339,11 @@ and (max-device-width : 1024px) {
 		.transform(translateY(200%));
 		opacity:0;
 		.transition(all 600ms);
+		-webkit-transition-property: -webkit-transform;
+		-moz-transition-property: -moz-transform;
+		-ms-transition-property: -ms-transform;
+		-o-transition-property: -o-transform;
+		transition-property: transform;
 		.transition-timing-function(cubic-bezier(0.17,0.67,0.79,1.61));	
 	}
 	.link-next img {
@@ -366,7 +381,13 @@ and (max-device-width : 1024px) {
 			.transform(translateY(0));
 			opacity:1;
 			.transition(all 1s);
+			-webkit-transition-property: -webkit-transform;
+			-moz-transition-property: -moz-transform;
+			-ms-transition-property: -ms-transform;
+			-o-transition-property: -o-transform;
+			transition-property: transform;
 			.transition-delay(2s);
+	
 		}
 
 		.link-next img {
